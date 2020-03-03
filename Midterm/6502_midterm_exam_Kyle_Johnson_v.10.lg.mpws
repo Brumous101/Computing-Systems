@@ -1,0 +1,683 @@
+v.10
+
+6502_final_exam.mpws
+
+Complete all of the exercises in this worksheet by placing
+the code you write for each exercise into the empty fold
+which is provided in each exercise section.
+
+Save the worksheet before running any tests.
+
+
+
+%group,name="Problem 0",description="Programmer's information."
+========================================================================================================
+Problem 0
+
+In the following fold, replace "xxx" with your
+first name, replace "yyy" with your last name, and
+replace "000000" with your SSU ID number:
+
+%mathpiper,name="Problem 0",subtype="problem",unassign_all="true",truncate="6000",timeout="5000"
+
+[
+["firstName", "Kyle"],
+["lastName", "Johnson"],
+["ssuIDNumber", "264694"],
+];
+
+%/mathpiper
+
+    %output,parent="Problem 0",mpversion=".276",preserve="false"
+            Result: [["firstName","Kyle"],["lastName","Johnson"],["ssuIDNumber","264694"]]
+.   %/output
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 0",base_six_four="true"
+
+CkxvY2FsU3ltYm9scyhmb2xkUmVzdWx0KQp7CiAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgCiAgICBGb2xkR3JhZGUoIlRoZSBjb2RlIGRvZXMgbm90IHRocm93IGFuIGV4Y2VwdGlvbiB3aGVuIGV2YWx1YXRlZCIsIDEsIFRydWUpCiAgICB7CiAgICAgICAgRXhjZXB0aW9uQ2F0Y2goZm9sZFJlc3VsdCA6PSBFdmFsKD9mb2xkQ29kZVsxXSksICIiLCAnRXhjZXB0aW9uKSAhPT8gJ0V4Y2VwdGlvbjsKICAgIH0KICAgIAogICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgIAogICAgRm9sZEdyYWRlKCJNYXRoUGlwZXIgdmVyc2lvbiA+PSAuMjc2IiwgMSwgVHJ1ZSkKICAgIHsKICAgICAgICBTdHJpbmdUb051bWJlcihWZXJzaW9uKCkpID49PyAuMjc2OwogICAgfQogICAgCiAgICAvLy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tICAgIAogICAgCgogICAgRm9sZEdyYWRlKCJUaGUgY29kZSBkb2VzIG5vdCBwcm9kdWNlIHNpZGUgZWZmZWN0IG91dHB1dCIsIDEsIEZhbHNlKQogICAgTG9jYWxTeW1ib2xzKHByb2NlZHVyZU5hbWVzKQogICAgewogICAgICAgIHByb2NlZHVyZU5hbWVzIDo9IFByb2NlZHVyZUxpc3QoP2ZvbGRDb2RlKTsKICAgICAgICAKICAgICAgICAhPyBDb250YWlucz8ocHJvY2VkdXJlTmFtZXMsIkVjaG8iKSAmPyAhPyBDb250YWlucz8ocHJvY2VkdXJlTmFtZXMsIldyaXRlIikgJj8gIT8gQ29udGFpbnM/KHByb2NlZHVyZU5hbWVzLCJUYWJsZUZvcm0iKTsKICAgIH0KICAgIAogICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgIAogICAgRm9sZEdyYWRlKCJUaGUgdmFyaWFibGUgJ2ZpcnN0TmFtZScgYSBzdHJpbmcgdGhhdCBpcyBub3QgJ3h4eCciLCAxLCBUcnVlKQogICAgewogICAgICAgIFN0cmluZz8oZm9sZFJlc3VsdFsiZmlyc3ROYW1lIl0pICY/IGZvbGRSZXN1bHRbImZpcnN0TmFtZSJdICE9PyAieHh4IjsKICAgIH0KICAgIAogICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgIAogICAgRm9sZEdyYWRlKCJUaGUgdmFyaWFibGUgJ2xhc3ROYW1lJyBpcyBhIHN0cmluZyB0aGF0IGlzIG5vdCAneXl5JyIsIDEsIFRydWUpCiAgICB7CiAgICAgICAgU3RyaW5nPyhmb2xkUmVzdWx0WyJsYXN0TmFtZSJdKSAmPyBmb2xkUmVzdWx0WyJsYXN0TmFtZSJdICE9PyAieXl5IjsKICAgIH0KICAgIAogICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgIAogICAgRm9sZEdyYWRlKCJUaGUgdmFyaWFibGUgJ3NzdUlETnVtYmVyJyBpcyBub3QgJzAwMDAwMCciLCAxLCBUcnVlKQogICAgewogICAgICAgIGZvbGRSZXN1bHRbInNzdUlETnVtYmVyIl0gIT0/ICIwMDAwMDAiICY/IGZvbGRSZXN1bHRbInNzdUlETnVtYmVyIl0gIT0/IDA7CiAgICB9Cn0KCg==
+
+%/mathpiper_grade
+
+    %output,parent="Problem 0",mpversion=".276",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        [["firstName","Kyle"],["lastName","Johnson"],["ssuIDNumber","264694"]];
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: The code does not throw an exception when evaluated. (1/1)
+        PASS: MathPiper version >= .276. (1/1)
+        PASS: The code does not produce side effect output. (1/1)
+        PASS: The variable 'firstName' a string that is not 'xxx'. (1/1)
+        PASS: The variable 'lastName' is a string that is not 'yyy'. (1/1)
+        PASS: The variable 'ssuIDNumber' is not '000000'. (1/1)
+      
+        11/11 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 1",description="Subtract 1."
+========================================================================================================
+Problem 1
+
+Write a 6502 program that will subtract 1 from
+each number in the following table using a DEC
+instruction (you can paste this table into your
+program):
+
+      org 0500h 
+data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d
+
+The table named 'data' must be placed in memory
+starting at 0500h using a second ORG directive.
+
+The program must use Absolute X addressing mode in
+a single noninfinite loop to access the numbers.
+The numbers in the table after the program ends
+must all be one less than the original numbers
+that were in the table.
+
+Do not use an SBC instruction in your program.
+
+%uasm65,name="Problem 1",subtype="problem"
+ org 0200h 
+ 
+ ldx #0d
+ 
+subtract:
+ dec 0500h,x
+ inx
+ cpx #10d
+ bne subtract
+ brk
+  
+ end
+ 
+ org 0500h 
+data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d
+
+ end
+    
+%/uasm65
+
+    %output,parent="Problem 1",mpversion=".276",preserve="false"
+      *** Executable Code ***
+      
+      %s19,description="Execute this fold to send program to U6502 monitor.",preserve="false"
+      	S00700005541534DC2
+      	S10E0200A200DE0005E8E00AD0F800D0
+      	S10D05005D71E610CCC692C3AB0D8A
+      	S9030000FC
+      %/s19
+       
+      *** List File ***
+      
+      0200            000001 | org 0200h 
+                      000002 | 
+      0200 A2 00      000003 | ldx #0d
+                      000004 | 
+      0202            000005 |subtract:
+      0202 DE 00 05   000006 | dec 0500h,x
+      0205 E8         000007 | inx
+      0206 E0 0A      000008 | cpx #10d
+      0208 D0 F8      000009 | bne subtract
+      020A 00         000010 | brk
+                      000011 |  
+                      000012 | end
+                      000013 | 
+      0500            000014 | org 0500h 
+      0500 5D         000015 |data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d
+      0501 71               
+      0502 E6               
+      0503 10               
+      0504 CC               
+      0505 C6               
+      0506 92               
+      0507 C3               
+      0508 AB               
+      0509 0D               
+                      000016 |
+                      000017 | end
+      
+      *** Symbol Table ***
+      {DATA=1280, SUBTRACT=514, =0}
+.   %/output
+ 
+
+
+
+
+%uasm65_grade,name="Problem 1",target_fold_type="uasm65",assessment_unit="points",base_six_four="true"
+
+CnsKICAgIExvY2FsKHJlc3VsdCwgYW5hbHlzaXMsIHMxOSwgdWFydCwgdHJhbnNwb3NlLCBjb21tYW5kcyk7CiAgICAKICAgIHJlc3VsdCA6PSBVNjUwMkFzc2VtYmxlKD9mb2xkQ29kZSk7CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiTWF0aFBpcGVyIHZlcnNpb24gPj0gLjI3NiIsIDEsIFRydWUpCiAgICB7CiAgICAgICAgU3RyaW5nVG9OdW1iZXIoVmVyc2lvbigpKSA+PT8gLjI3NjsKICAgIH0gICAgCiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiVGhlIGNvZGUgY29udGFpbnMgbm8gc3ludGF4IGVycm9ycyIsIDEsIFRydWUpIAogICAgewogICAgICAgIExlbmd0aChyZXN1bHQpID4/IDE7CiAgICB9CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIElmKExlbmd0aChyZXN1bHQpID4/IDEpCiAgICB7CiAgICAgICAgdWFydCA6PSBKYXZhQ2FsbCgib3JnLm1hdGhwaXBlci5pZGUudTY1MDIuRU1VNjU1MSIsImdldEluc3RhbmNlIik7CiAgICAgICAgCiAgICAgICAgSmF2YUNhbGwodWFydCwgInRleHRBcmVhQ2xlYXIiKTsKICAgICAgICAKICAgICAgICBVNjUwMlJlc2V0KCk7CiAgICAgICAgCiAgICAgICAgVTY1MDJGaWxsKCIyMDAiaGV4LCAiNjAwImhleCwgIDApOwogICAgICAgIAogICAgICAgIHMxOSA6PSByZXN1bHRbMl07CiAgICAgICAgCiAgICAgICAgYW5hbHlzaXMgOj0gVTY1MDJDb252ZXJ0SmF2YUxpc3QocmVzdWx0WzRdKTsKICAgICAgICAKICAgICAgICB0cmFuc3Bvc2UgOj0gVHJhbnNwb3NlKGFuYWx5c2lzKTsKICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgdHdvIE9SRyBjb21tYW5kcyIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgTGVuZ3RoKGNvbW1hbmRzIDo9IFU2NTAyRmluZE9wZXJhdG9ycyhhbmFseXNpcywgIk9SRyIpKSA9PyAyOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gc3RhcnRzIGF0IDAyMDBoIGluIG1lbW9yeSIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgY29tbWFuZHNbMV1bNF0gPT8gIjAyMDAiOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHRhYmxlIHN0YXJ0cyBhdCAwNTAwaCBpbiBtZW1vcnkiLCAxLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIGNvbW1hbmRzWzJdWzRdID0/ICIwNTAwIjsKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAKICAgICAgICBGb2xkR3JhZGUoIlRoZSByZXN1bHQgdGFibGUgaXMgbm90IGxvYWRlZCBpbnRvIG1lbW9yeSB3aGVuIHRoZSBwcm9ncmFtIGlzIGxvYWRlZCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgVTY1MDJEdW1wKCI1MDAiaGV4LCAiNTA5ImhleCwgKSAhPT8gWzkyLDExMiwyMjksMTUsMjAzLDE5NywxNDUsMTk0LDE3MCwxMl07CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgcHJvZ3JhbSB1c2VzIGEgbG9vcCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQkNDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCQ1MiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJFUSIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQk5FIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCTUkiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJQTCIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQlZDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCVlMiKSA+PyAwOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gZG9lcyBub3QgdXNlIGFueSBTQkMgaW5zdHJ1Y3Rpb25zIiwgMSwgVHJ1ZSkgCiAgICAgICAgewogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJTQkMiKSA9PyAwOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgb25lIERFQyBjb21tYW5kIHRoYXQgdXNlcyBBYnNvbHV0ZSxYIGFkZHJlc3NpbmcgbW9kZSIsIDMsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgTG9jYWwocmVzdWx0KTsKICAgICAgICAgICAgCiAgICAgICAgICAgIHJlc3VsdCA6PSBGYWxzZTsKICAgIAogICAgICAgICAgICBjb21tYW5kcyA6PSBVNjUwMkZpbmRPcGVyYXRvcnMoYW5hbHlzaXMsICJERUMiKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIElmKExlbmd0aChjb21tYW5kcykgPj8gMCkKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgRm9yRWFjaChjb21tYW5kLCBjb21tYW5kcykKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICBJZihTdHJpbmdTdGFydHNXaXRoPyhjb21tYW5kWzZdLCAiREUiKSkKICAgICAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgICAgIHJlc3VsdCA6PSBUcnVlOwogICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgcmVzdWx0OwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIGNvcnJlY3QgcmVzdWx0IGlzIHBsYWNlZCBpbnRvIGFkZHJlc3MgMDUwMGgiLCA1LCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIHVhcnQgOj0gSmF2YUNhbGwoIm9yZy5tYXRocGlwZXIuaWRlLnU2NTAyLkVNVTY1NTEiLCJnZXRJbnN0YW5jZSIpOwogICAgICAgICAgICAKICAgICAgICAgICAgVTY1MDJSZXNldCgpOwogICAgICAgICAgICAKICAgICAgICAgICAgSmF2YUNhbGwodWFydCwgInNlbmQiLCJMIiArIFVuaWNvZGVUb1N0cmluZygxMykpOwogICAgICAgICAgICAKICAgICAgICAgICAgSmF2YUNhbGwodWFydCwgInNlbmQiLCBUb1N0cmluZyhzMTkpKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIFU2NTAyU2V0TW9uaXRvck5vdFJlYWR5KCk7IFdoaWxlKCE/IFU2NTAyTW9uaXRvclJlYWR5PygpKSBEZWxheSgxMDApOwogICAgICAgICAgICAKICAgICAgICAgICAgSmF2YUNhbGwodWFydCwgInNlbmQiLCAiZyAwMjAwIiArIFVuaWNvZGVUb1N0cmluZygxMykpOwogICAgICAgICAgICAKICAgICAgICAgICAgVTY1MDJTZXRNb25pdG9yTm90UmVhZHkoKTsgV2hpbGUoIT8gVTY1MDJNb25pdG9yUmVhZHk/KCkpIERlbGF5KDEwMCk7CiAgICAgICAgICAgIAogICAgICAgICAgICBVNjUwMkR1bXAoIjUwMCJoZXgsICI1MDkiaGV4LCApID0/IFs5MiwxMTIsMjI5LDE1LDIwMywxOTcsMTQ1LDE5NCwxNzAsMTJdOwogICAgICAgIH0KICAgIH0KfQogCg==
+
+%/uasm65_grade
+
+    %output,parent="Problem 1",mpversion=".276",preserve="false"
+      Result: True
+      
+      Side Effects:
+        PASS: MathPiper version >= .276. (1/1)
+        PASS: The code contains no syntax errors. (1/1)
+        PASS: The program contains two ORG commands. (1/1)
+        PASS: The program starts at 0200h in memory. (1/1)
+        PASS: The table starts at 0500h in memory. (1/1)
+        PASS: The result table is not loaded into memory when the program is loaded. (1/1)
+        PASS: The program uses a loop. (1/1)
+        PASS: The program does not use any SBC instructions. (1/1)
+        PASS: The program contains one DEC command that uses Absolute,X addressing mode. (3/3)
+        PASS: The correct result is placed into address 0500h. (5/5)
+      
+        16/16 points
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 2",description="Increase by 3."
+========================================================================================================
+Problem 2
+
+Write a 6502 program that will increase each
+number in the following table by 3 using three INC
+instructions (you can paste this table into your
+program):
+
+      org 0500h
+data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d
+
+The table named 'data' must be placed in memory
+starting at 0500h using a second ORG directive.
+
+The program must use Absolute X addressing mode in
+a single noninfinite loop to access the numbers.
+The numbers in the table after the program ends
+must all be three greater than the original
+numbers that were in the table.
+
+Do not use an ADC instruction in your program.
+
+%uasm65,name="Problem 2",subtype="problem"
+
+ org 0200h 
+ 
+ ldx #0d
+ 
+add3:
+ inc 0500h,x
+ inc 0500h,x
+ inc 0500h,x
+ inx
+ cpx #10d
+ bne add3
+ brk
+  
+ end
+ 
+ org 0500h 
+data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d
+
+ end
+ 
+%/uasm65
+
+    %output,parent="Problem 2",mpversion=".276",preserve="false"
+      *** Executable Code ***
+      
+      %s19,description="Execute this fold to send program to U6502 monitor.",preserve="false"
+      	S00700005541534DC2
+      	S1140200A200FE0005FE0005FE0005E8E00AD0F200AA
+      	S10D05005D71E610CCC692C3AB0D8A
+      	S9030000FC
+      %/s19
+       
+      *** List File ***
+      
+                      000001 |
+      0200            000002 | org 0200h 
+                      000003 | 
+      0200 A2 00      000004 | ldx #0d
+                      000005 | 
+      0202            000006 |add3:
+      0202 FE 00 05   000007 | inc 0500h,x
+      0205 FE 00 05   000008 | inc 0500h,x
+      0208 FE 00 05   000009 | inc 0500h,x
+      020B E8         000010 | inx
+      020C E0 0A      000011 | cpx #10d
+      020E D0 F2      000012 | bne add3
+      0210 00         000013 | brk
+                      000014 |  
+                      000015 | end
+                      000016 | 
+      0500            000017 | org 0500h 
+      0500 5D         000018 |data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d
+      0501 71               
+      0502 E6               
+      0503 10               
+      0504 CC               
+      0505 C6               
+      0506 92               
+      0507 C3               
+      0508 AB               
+      0509 0D               
+                      000019 |
+                      000020 | end
+      
+      *** Symbol Table ***
+      {DATA=1280, ADD3=514, =0}
+.   %/output
+ 
+
+
+
+
+%uasm65_grade,name="Problem 2",target_fold_type="uasm65",assessment_unit="points",base_six_four="true"
+
+CnsKICAgIExvY2FsKHJlc3VsdCwgYW5hbHlzaXMsIHMxOSwgdWFydCwgdHJhbnNwb3NlLCBjb21tYW5kcyk7CiAgICAKICAgIHJlc3VsdCA6PSBVNjUwMkFzc2VtYmxlKD9mb2xkQ29kZSk7CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiTWF0aFBpcGVyIHZlcnNpb24gPj0gLjI3NiIsIDEsIFRydWUpCiAgICB7CiAgICAgICAgU3RyaW5nVG9OdW1iZXIoVmVyc2lvbigpKSA+PT8gLjI3NjsKICAgIH0gICAgCiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiVGhlIGNvZGUgY29udGFpbnMgbm8gc3ludGF4IGVycm9ycyIsIDEsIFRydWUpIAogICAgewogICAgICAgIExlbmd0aChyZXN1bHQpID4/IDE7CiAgICB9CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIElmKExlbmd0aChyZXN1bHQpID4/IDEpCiAgICB7CiAgICAgICAgdWFydCA6PSBKYXZhQ2FsbCgib3JnLm1hdGhwaXBlci5pZGUudTY1MDIuRU1VNjU1MSIsImdldEluc3RhbmNlIik7CiAgICAgICAgSmF2YUNhbGwodWFydCwgInRleHRBcmVhQ2xlYXIiKTsKICAgICAgICAKICAgICAgICBVNjUwMlJlc2V0KCk7CiAgICAgICAgCiAgICAgICAgVTY1MDJGaWxsKCIyMDAiaGV4LCAiNjAwImhleCwgIDApOwogICAgICAgIAogICAgICAgIHMxOSA6PSByZXN1bHRbMl07CiAgICAgICAgCiAgICAgICAgYW5hbHlzaXMgOj0gVTY1MDJDb252ZXJ0SmF2YUxpc3QocmVzdWx0WzRdKTsKICAgICAgICAKICAgICAgICB0cmFuc3Bvc2UgOj0gVHJhbnNwb3NlKGFuYWx5c2lzKTsKICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgdHdvIE9SRyBjb21tYW5kcyIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgTGVuZ3RoKGNvbW1hbmRzIDo9IFU2NTAyRmluZE9wZXJhdG9ycyhhbmFseXNpcywgIk9SRyIpKSA9PyAyOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gc3RhcnRzIGF0IDAyMDBoIGluIG1lbW9yeSIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgY29tbWFuZHNbMV1bNF0gPT8gIjAyMDAiOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHRhYmxlIHN0YXJ0cyBhdCAwNTAwaCBpbiBtZW1vcnkiLCAxLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIGNvbW1hbmRzWzJdWzRdID0/ICIwNTAwIjsKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAKICAgICAgICBGb2xkR3JhZGUoIlRoZSByZXN1bHQgdGFibGUgaXMgbm90IGxvYWRlZCBpbnRvIG1lbW9yeSB3aGVuIHRoZSBwcm9ncmFtIGlzIGxvYWRlZCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgVTY1MDJEdW1wKCI1MDAiaGV4LCAiNTA5ImhleCwgKSAhPT8gWzk2LDExNiwyMzMsMTksMjA3LDIwMSwxNDksMTk4LDE3NCwxNl07CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgcHJvZ3JhbSB1c2VzIGEgbG9vcCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQkNDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCQ1MiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJFUSIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQk5FIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCTUkiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJQTCIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQlZDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCVlMiKSA+PyAwOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gZG9lcyBub3QgdXNlIGFueSBBREMgaW5zdHJ1Y3Rpb25zIiwgMSwgVHJ1ZSkgCiAgICAgICAgewogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJBREMiKSA9PyAwOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgdGhyZWUgSU5DIGNvbW1hbmQgdGhhdCB1c2VzIEFic29sdXRlLFggYWRkcmVzc2luZyBtb2RlIiwgMywgVHJ1ZSkgCiAgICAgICAgewogICAgICAgICAgICBMb2NhbChyZXN1bHQpOwogICAgICAgICAgICAKICAgICAgICAgICAgcmVzdWx0IDo9IEZhbHNlOwogICAgCiAgICAgICAgICAgIGNvbW1hbmRzIDo9IFU2NTAyRmluZE9wZXJhdG9ycyhhbmFseXNpcywgIklOQyIpOwogICAgICAgICAgICAKICAgICAgICAgICAgSWYoTGVuZ3RoKGNvbW1hbmRzKSA+PyAwKQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBGb3JFYWNoKGNvbW1hbmQsIGNvbW1hbmRzKQogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgIElmKFN0cmluZ1N0YXJ0c1dpdGg/KGNvbW1hbmRbNl0sICJGRSIpKQogICAgICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAgICAgcmVzdWx0IDo9IFRydWU7CiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICByZXN1bHQ7CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgY29ycmVjdCByZXN1bHQgaXMgcGxhY2VkIGludG8gYWRkcmVzcyAwNTAwaCIsIDUsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgdWFydCA6PSBKYXZhQ2FsbCgib3JnLm1hdGhwaXBlci5pZGUudTY1MDIuRU1VNjU1MSIsImdldEluc3RhbmNlIik7CiAgICAgICAgICAgIAogICAgICAgICAgICBVNjUwMlJlc2V0KCk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsIkwiICsgVW5pY29kZVRvU3RyaW5nKDEzKSk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsIFRvU3RyaW5nKHMxOSkpOwogICAgICAgICAgICAKICAgICAgICAgICAgVTY1MDJTZXRNb25pdG9yTm90UmVhZHkoKTsgV2hpbGUoIT8gVTY1MDJNb25pdG9yUmVhZHk/KCkpIERlbGF5KDEwMCk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsICJnIDAyMDAiICsgVW5pY29kZVRvU3RyaW5nKDEzKSk7CiAgICAgICAgICAgIAogICAgICAgICAgICBVNjUwMlNldE1vbml0b3JOb3RSZWFkeSgpOyBXaGlsZSghPyBVNjUwMk1vbml0b3JSZWFkeT8oKSkgRGVsYXkoMTAwKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIFU2NTAyRHVtcCgiNTAwImhleCwgIjUwOSJoZXgsICkgPT8gWzk2LDExNiwyMzMsMTksMjA3LDIwMSwxNDksMTk4LDE3NCwxNl07CiAgICAgICAgfQogICAgfQp9CiAK
+
+%/uasm65_grade
+
+    %output,parent="Problem 2",mpversion=".276",preserve="false"
+      Result: True
+      
+      Side Effects:
+        PASS: MathPiper version >= .276. (1/1)
+        PASS: The code contains no syntax errors. (1/1)
+        PASS: The program contains two ORG commands. (1/1)
+        PASS: The program starts at 0200h in memory. (1/1)
+        PASS: The table starts at 0500h in memory. (1/1)
+        PASS: The result table is not loaded into memory when the program is loaded. (1/1)
+        PASS: The program uses a loop. (1/1)
+        PASS: The program does not use any ADC instructions. (1/1)
+        PASS: The program contains three INC command that uses Absolute,X addressing mode. (3/3)
+        PASS: The correct result is placed into address 0500h. (5/5)
+      
+        16/16 points
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 3",description="Swap bytes."
+========================================================================================================
+Problem 3
+
+Write a 6502 program that will swap each number
+that is at an even address in the following table
+with the number that is at the next greater
+address than it (you can paste this table into
+your program):
+
+      org 0500h 
+data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d
+
+The table named 'data' must be placed in memory
+starting at 0500h using a second ORG directive.
+
+The program must use Absolute X addressing mode in
+a single noninfinite loop to access the numbers.
+Remember, you can use variables as needed.
+
+%uasm65,name="Problem 3",subtype="problem"
+
+ org 0200h 
+ 
+ ldx #0d
+ 
+Loop:
+ lda 0500h, x
+ sta 0550h, x
+ 
+ lda 0501h, x
+ sta 0500h, x
+ 
+ lda 0550h, x
+ sta 0501h, x
+ 
+ inx
+ inx
+ 
+ cpx #10d
+ bne Loop
+ brk
+  
+ end
+ 
+ org 0500h 
+data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d
+
+ end
+%/uasm65
+
+    %output,parent="Problem 3",mpversion=".276",preserve="false"
+      *** Executable Code ***
+      
+      %s19,description="Execute this fold to send program to U6502 monitor.",preserve="false"
+      	S00700005541534DC2
+      	S1170200A200BD00059D5005BD01059D0005BD50059D010576
+      	S10A0214E8E8E00AD0E8006D
+      	S10D05005D71E610CCC692C3AB0D8A
+      	S9030000FC
+      %/s19
+       
+      *** List File ***
+      
+                      000001 |
+      0200            000002 | org 0200h 
+                      000003 | 
+      0200 A2 00      000004 | ldx #0d
+                      000005 | 
+      0202            000006 |Loop:
+      0202 BD 00 05   000007 | lda 0500h,x
+      0205 9D 50 05   000008 | sta 0550h,x
+                      000009 | 
+      0208 BD 01 05   000010 | lda 0501h,x
+      020B 9D 00 05   000011 | sta 0500h,x
+                      000012 | 
+      020E BD 50 05   000013 | lda 0550h,x
+      0211 9D 01 05   000014 | sta 0501h,x
+                      000015 | 
+      0214 E8         000016 | inx
+      0215 E8         000017 | inx
+                      000018 | 
+      0216 E0 0A      000019 | cpx #10d
+      0218 D0 E8      000020 | bne Loop
+      021A 00         000021 | brk
+                      000022 |  
+                      000023 | end
+                      000024 | 
+      0500            000025 | org 0500h 
+      0500 5D         000026 |data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d
+      0501 71               
+      0502 E6               
+      0503 10               
+      0504 CC               
+      0505 C6               
+      0506 92               
+      0507 C3               
+      0508 AB               
+      0509 0D               
+                      000027 |
+                      000028 | end
+      
+      *** Symbol Table ***
+      {DATA=1280, LOOP=514, =0}
+.   %/output
+ 
+
+
+
+
+%uasm65_grade,name="Problem 3",target_fold_type="uasm65",assessment_unit="points",base_six_four="true"
+
+CnsKICAgIExvY2FsKHJlc3VsdCwgYW5hbHlzaXMsIHMxOSwgdWFydCwgdHJhbnNwb3NlLCBjb21tYW5kcyk7CiAgICAKICAgIHJlc3VsdCA6PSBVNjUwMkFzc2VtYmxlKD9mb2xkQ29kZSk7CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiTWF0aFBpcGVyIHZlcnNpb24gPj0gLjI3NiIsIDEsIFRydWUpCiAgICB7CiAgICAgICAgU3RyaW5nVG9OdW1iZXIoVmVyc2lvbigpKSA+PT8gLjI3NjsKICAgIH0gICAgCiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiVGhlIGNvZGUgY29udGFpbnMgbm8gc3ludGF4IGVycm9ycyIsIDEsIFRydWUpIAogICAgewogICAgICAgIExlbmd0aChyZXN1bHQpID4/IDE7CiAgICB9CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIElmKExlbmd0aChyZXN1bHQpID4/IDEpCiAgICB7CiAgICAgICAgdWFydCA6PSBKYXZhQ2FsbCgib3JnLm1hdGhwaXBlci5pZGUudTY1MDIuRU1VNjU1MSIsImdldEluc3RhbmNlIik7CiAgICAgICAgSmF2YUNhbGwodWFydCwgInRleHRBcmVhQ2xlYXIiKTsKICAgICAgICAKICAgICAgICBVNjUwMlJlc2V0KCk7CiAgICAgICAgCiAgICAgICAgVTY1MDJGaWxsKCIyMDAiaGV4LCAiNjAwImhleCwgIDApOwogICAgICAgIAogICAgICAgIHMxOSA6PSByZXN1bHRbMl07CiAgICAgICAgCiAgICAgICAgYW5hbHlzaXMgOj0gVTY1MDJDb252ZXJ0SmF2YUxpc3QocmVzdWx0WzRdKTsKICAgICAgICAKICAgICAgICB0cmFuc3Bvc2UgOj0gVHJhbnNwb3NlKGFuYWx5c2lzKTsKICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgdHdvIE9SRyBjb21tYW5kcyIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgTGVuZ3RoKGNvbW1hbmRzIDo9IFU2NTAyRmluZE9wZXJhdG9ycyhhbmFseXNpcywgIk9SRyIpKSA9PyAyOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gc3RhcnRzIGF0IDAyMDBoIGluIG1lbW9yeSIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgY29tbWFuZHNbMV1bNF0gPT8gIjAyMDAiOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHRhYmxlIHN0YXJ0cyBhdCAwNTAwaCBpbiBtZW1vcnkiLCAxLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIGNvbW1hbmRzWzJdWzRdID0/ICIwNTAwIjsKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAKICAgICAgICBGb2xkR3JhZGUoIlRoZSByZXN1bHQgdGFibGUgaXMgbm90IGxvYWRlZCBpbnRvIG1lbW9yeSB3aGVuIHRoZSBwcm9ncmFtIGlzIGxvYWRlZCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgVTY1MDJEdW1wKCI1MDAiaGV4LCAiNTA5ImhleCwgKSAhPT8gWzExMyw5MywxNiwyMzAsMTk4LDIwNCwxOTUsMTQ2LDEzLDE3MV07CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgcHJvZ3JhbSB1c2VzIGEgbG9vcCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQkNDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCQ1MiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJFUSIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQk5FIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCTUkiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJQTCIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQlZDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCVlMiKSA+PyAwOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgYXQgbGVhc3QgdHdvIGluc3RydWN0aW9ucyB0aGF0IHVzZSBBYnNvbHV0ZSxYIGFkZHJlc3NpbmcgbW9kZSIsIDMsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgTG9jYWwoYWJzb2x1dGVYQ291bnQpOwogICAgICAgICAgICAKICAgICAgICAgICAgYWJzb2x1dGVYQ291bnQgOj0gMDsKICAgIAogICAgICAgICAgICBGb3JFYWNoKGNvbW1hbmQsIGFuYWx5c2lzKQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBJZihjb21tYW5kWzNdICE9PyAiREJUIiAmPyBMZW5ndGgoY29tbWFuZFs2XSkgPj8gMSkKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICBJZihCaXRBbmQoU3RyaW5nU3Vic3RyaW5nKGNvbW1hbmRbNl0sIDEsIDIpIGhleCwgIjFDIiBoZXgpID0/ICIxQyIgaGV4KQogICAgICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAgICAgYWJzb2x1dGVYQ291bnQrKzsKICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGFic29sdXRlWENvdW50ID4/IDE7CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgY29ycmVjdCByZXN1bHQgaXMgcGxhY2VkIGludG8gYWRkcmVzcyAwNTAwaCIsIDUsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgdWFydCA6PSBKYXZhQ2FsbCgib3JnLm1hdGhwaXBlci5pZGUudTY1MDIuRU1VNjU1MSIsImdldEluc3RhbmNlIik7CiAgICAgICAgICAgIAogICAgICAgICAgICBVNjUwMlJlc2V0KCk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsIkwiICsgVW5pY29kZVRvU3RyaW5nKDEzKSk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsIFRvU3RyaW5nKHMxOSkpOwogICAgICAgICAgICAKICAgICAgICAgICAgVTY1MDJTZXRNb25pdG9yTm90UmVhZHkoKTsgV2hpbGUoIT8gVTY1MDJNb25pdG9yUmVhZHk/KCkpIERlbGF5KDEwMCk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsICJnIDAyMDAiICsgVW5pY29kZVRvU3RyaW5nKDEzKSk7CiAgICAgICAgICAgIAogICAgICAgICAgICBVNjUwMlNldE1vbml0b3JOb3RSZWFkeSgpOyBXaGlsZSghPyBVNjUwMk1vbml0b3JSZWFkeT8oKSkgRGVsYXkoMTAwKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIFU2NTAyRHVtcCgiNTAwImhleCwgIjUwOSJoZXgsICkgPT8gWzExMyw5MywxNiwyMzAsMTk4LDIwNCwxOTUsMTQ2LDEzLDE3MV07CiAgICAgICAgfQogICAgfQp9CiAK
+
+%/uasm65_grade
+
+    %output,parent="Problem 3",mpversion=".276",preserve="false"
+      Result: True
+      
+      Side Effects:
+        PASS: MathPiper version >= .276. (1/1)
+        PASS: The code contains no syntax errors. (1/1)
+        PASS: The program contains two ORG commands. (1/1)
+        PASS: The program starts at 0200h in memory. (1/1)
+        PASS: The table starts at 0500h in memory. (1/1)
+        PASS: The result table is not loaded into memory when the program is loaded. (1/1)
+        PASS: The program uses a loop. (1/1)
+        PASS: The program contains at least two instructions that use Absolute,X addressing mode. (3/3)
+        PASS: The correct result is placed into address 0500h. (5/5)
+      
+        15/15 points
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 4",description="Rotate numbers in a table."
+========================================================================================================
+Problem 4
+
+Write a 6502 program that will rotate the numbers
+(these are bytes, not bits) in the following table
+7 positions to the left (you can paste this table
+into your program):
+
+      org 0500h 
+data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d 
+     
+After your program finishes, the numbers starting
+at address 'data' should be in the following
+sequence:
+
+195d,171d,13d,93d,113d,230d,16d,204d,198d,146d
+
+The table named 'data' must be placed in memory
+starting at 0500h using a second ORG directive.
+
+The program must use Absolute X addressing mode
+and one or more noninfinite loop to access the
+numbers.
+
+%uasm65,name="Problem 4",subtype="problem"
+
+ org 0200h 
+ 
+ ldx #0d
+ 
+Loop:
+;Storing the first 7 somewhere else
+ lda 0500h, x
+ sta 0550h, x
+ lda 0501h, x
+ sta 0551h, x
+ lda 0502h, x
+ sta 0552h, x
+ lda 0503h, x
+ sta 0553h, x
+ lda 0504h, x
+ sta 0554h, x
+ lda 0505h, x
+ sta 0555h, x
+ lda 0506h, x
+ sta 0556h, x
+ 
+;Moving the ones on the right to the left
+ lda 0507h, x
+ sta 0500h, x
+ lda 0508h, x
+ sta 0501h, x
+ lda 0509h, x
+ sta 0502h, x
+ 
+;Bringing back the ones that were on the left to the back
+;of the ones on the right now
+ lda 0550h, x
+ sta 0503h, x
+ lda 0551h, x
+ sta 0504h, x
+ lda 0552h, x
+ sta 0505h, x
+ lda 0553h, x
+ sta 0506h, x
+ lda 0554h, x
+ sta 0507h, x
+ lda 0555h, x
+ sta 0508h, x
+ lda 0556h, x
+ sta 0509h, x
+
+ inx
+ 
+ cpx #1d
+ bne Loop
+ brk
+  
+ end
+ 
+;195d,171d,13d,93d,113d,230d,16d,204d,198d,146d
+
+ org 0500h 
+data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d
+
+ end
+%/uasm65
+
+    %output,parent="Problem 4",mpversion=".276",preserve="false"
+      *** Executable Code ***
+      
+      %s19,description="Execute this fold to send program to U6502 monitor.",preserve="false"
+      	S00700005541534DC2
+      	S1170200A200BD00059D5005BD01059D5105BD02059D520522
+      	S1170214BD03059D5305BD04059D5405BD05059D5505BD06DB
+      	S1170228059D5605BD07059D0005BD08059D0105BD09059D81
+      	S117023C0205BD50059D0305BD51059D0405BD52059D050578
+      	S1170250BD53059D0605BD54059D0705BD55059D0805BD5646
+      	S10D0264059D0905E8E001D09500AE
+      	S10D05005D71E610CCC692C3AB0D8A
+      	S9030000FC
+      %/s19
+       
+      *** List File ***
+      
+                      000001 |
+      0200            000002 | org 0200h 
+                      000003 | 
+      0200 A2 00      000004 | ldx #0d
+                      000005 | 
+      0202            000006 |Loop:
+                      000007 |;Storing the first 7 somewhere else
+      0202 BD 00 05   000008 | lda 0500h,x
+      0205 9D 50 05   000009 | sta 0550h,x
+      0208 BD 01 05   000010 | lda 0501h,x
+      020B 9D 51 05   000011 | sta 0551h,x
+      020E BD 02 05   000012 | lda 0502h,x
+      0211 9D 52 05   000013 | sta 0552h,x
+      0214 BD 03 05   000014 | lda 0503h,x
+      0217 9D 53 05   000015 | sta 0553h,x
+      021A BD 04 05   000016 | lda 0504h,x
+      021D 9D 54 05   000017 | sta 0554h,x
+      0220 BD 05 05   000018 | lda 0505h,x
+      0223 9D 55 05   000019 | sta 0555h,x
+      0226 BD 06 05   000020 | lda 0506h,x
+      0229 9D 56 05   000021 | sta 0556h,x
+                      000022 | 
+                      000023 |;Moving the ones on the right to the left
+      022C BD 07 05   000024 | lda 0507h,x
+      022F 9D 00 05   000025 | sta 0500h,x
+      0232 BD 08 05   000026 | lda 0508h,x
+      0235 9D 01 05   000027 | sta 0501h,x
+      0238 BD 09 05   000028 | lda 0509h,x
+      023B 9D 02 05   000029 | sta 0502h,x
+                      000030 | 
+                      000031 |;Bringing back the ones that were on the left to the back
+                      000032 |;of the ones on the right now
+      023E BD 50 05   000033 | lda 0550h,x
+      0241 9D 03 05   000034 | sta 0503h,x
+      0244 BD 51 05   000035 | lda 0551h,x
+      0247 9D 04 05   000036 | sta 0504h,x
+      024A BD 52 05   000037 | lda 0552h,x
+      024D 9D 05 05   000038 | sta 0505h,x
+      0250 BD 53 05   000039 | lda 0553h,x
+      0253 9D 06 05   000040 | sta 0506h,x
+      0256 BD 54 05   000041 | lda 0554h,x
+      0259 9D 07 05   000042 | sta 0507h,x
+      025C BD 55 05   000043 | lda 0555h,x
+      025F 9D 08 05   000044 | sta 0508h,x
+      0262 BD 56 05   000045 | lda 0556h,x
+      0265 9D 09 05   000046 | sta 0509h,x
+                      000047 |
+      0268 E8         000048 | inx
+                      000049 | 
+      0269 E0 01      000050 | cpx #1d
+      026B D0 95      000051 | bne Loop
+      026D 00         000052 | brk
+                      000053 |  
+                      000054 | end
+                      000055 | 
+                      000056 |;195d,171d,13d,93d,113d,230d,16d,204d,198d,146d
+                      000057 |
+      0500            000058 | org 0500h 
+      0500 5D         000059 |data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d
+      0501 71               
+      0502 E6               
+      0503 10               
+      0504 CC               
+      0505 C6               
+      0506 92               
+      0507 C3               
+      0508 AB               
+      0509 0D               
+                      000060 |
+                      000061 | end
+      
+      *** Symbol Table ***
+      {DATA=1280, LOOP=514, =0}
+.   %/output
+ 
+
+
+
+
+%uasm65_grade,name="Problem 4",target_fold_type="uasm65",assessment_unit="points",base_six_four="true"
+
+CnsKICAgIExvY2FsKHJlc3VsdCwgYW5hbHlzaXMsIHMxOSwgdWFydCwgdHJhbnNwb3NlLCBjb21tYW5kcywgdG9vTG9uZ1RpbWUpOwogICAgCiAgICByZXN1bHQgOj0gVTY1MDJBc3NlbWJsZSg/Zm9sZENvZGUpOwogICAgCiAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgCiAgICBGb2xkR3JhZGUoIk1hdGhQaXBlciB2ZXJzaW9uID49IC4yNzYiLCAxLCBUcnVlKQogICAgewogICAgICAgIFN0cmluZ1RvTnVtYmVyKFZlcnNpb24oKSkgPj0/IC4yNzY7CiAgICB9ICAgIAogICAgCiAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgCiAgICBGb2xkR3JhZGUoIlRoZSBjb2RlIGNvbnRhaW5zIG5vIHN5bnRheCBlcnJvcnMiLCAxLCBUcnVlKSAKICAgIHsKICAgICAgICBMZW5ndGgocmVzdWx0KSA+PyAxOwogICAgfQogICAgCiAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgCiAgICBJZihMZW5ndGgocmVzdWx0KSA+PyAxKQogICAgewogICAgICAgIHVhcnQgOj0gSmF2YUNhbGwoIm9yZy5tYXRocGlwZXIuaWRlLnU2NTAyLkVNVTY1NTEiLCJnZXRJbnN0YW5jZSIpOwogICAgICAgIAogICAgICAgIEphdmFDYWxsKHVhcnQsICJ0ZXh0QXJlYUNsZWFyIik7CiAgICAgICAgCiAgICAgICAgVTY1MDJSZXNldCgpOwogICAgICAgIAogICAgICAgIFU2NTAyRmlsbCgiMjAwImhleCwgIjYwMCJoZXgsICAwKTsKICAgICAgICAKICAgICAgICBzMTkgOj0gcmVzdWx0WzJdOwogICAgICAgIAogICAgICAgIGFuYWx5c2lzIDo9IFU2NTAyQ29udmVydEphdmFMaXN0KHJlc3VsdFs0XSk7CiAgICAgICAgCiAgICAgICAgdHJhbnNwb3NlIDo9IFRyYW5zcG9zZShhbmFseXNpcyk7CiAgICAgICAgCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAKICAgICAgICBGb2xkR3JhZGUoIlRoZSBwcm9ncmFtIGNvbnRhaW5zIHR3byBPUkcgY29tbWFuZHMiLCAxLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIExlbmd0aChjb21tYW5kcyA6PSBVNjUwMkZpbmRPcGVyYXRvcnMoYW5hbHlzaXMsICJPUkciKSkgPT8gMjsKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAKICAgICAgICBGb2xkR3JhZGUoIlRoZSBwcm9ncmFtIHN0YXJ0cyBhdCAwMjAwaCBpbiBtZW1vcnkiLCAxLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIGNvbW1hbmRzWzFdWzRdID0/ICIwMjAwIjsKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAKICAgICAgICBGb2xkR3JhZGUoIlRoZSB0YWJsZSBzdGFydHMgYXQgMDUwMGggaW4gbWVtb3J5IiwgMSwgVHJ1ZSkgCiAgICAgICAgewogICAgICAgICAgICBjb21tYW5kc1syXVs0XSA9PyAiMDUwMCI7CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgcmVzdWx0IHRhYmxlIGlzIG5vdCBsb2FkZWQgaW50byBtZW1vcnkgd2hlbiB0aGUgcHJvZ3JhbSBpcyBsb2FkZWQiLCAxLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIFU2NTAyRHVtcCgiNTAwImhleCwgIjUwOSJoZXgsICkgIT0/IFsxOTUsMTcxLDEzLDkzLDExMywyMzAsMTYsMjA0LDE5OCwxNDZdOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gdXNlcyBhIGxvb3AiLCAxLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJDQyIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQkNTIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCRVEiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJORSIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQk1JIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCUEwiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJWQyIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQlZTIikgPj8gMDsKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAKICAgICAgICBGb2xkR3JhZGUoIlRoZSBwcm9ncmFtIGNvbnRhaW5zIGF0IGxlYXN0IHR3byBpbnN0cnVjdGlvbnMgdGhhdCB1c2UgQWJzb2x1dGUsWCBhZGRyZXNzaW5nIG1vZGUiLCAzLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIExvY2FsKGFic29sdXRlWENvdW50KTsKICAgICAgICAgICAgCiAgICAgICAgICAgIGFic29sdXRlWENvdW50IDo9IDA7CiAgICAKICAgICAgICAgICAgRm9yRWFjaChjb21tYW5kLCBhbmFseXNpcykKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgSWYoY29tbWFuZFszXSAhPT8gIkRCVCIgJj8gTGVuZ3RoKGNvbW1hbmRbNl0pID4/IDEpCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgSWYoQml0QW5kKFN0cmluZ1N1YnN0cmluZyhjb21tYW5kWzZdLCAxLCAyKSBoZXgsICIxQyIgaGV4KSA9PyAiMUMiIGhleCkKICAgICAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgICAgIGFic29sdXRlWENvdW50Kys7CiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CgogICAgICAgICAgICBhYnNvbHV0ZVhDb3VudCA+PyAxOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIGNvcnJlY3QgcmVzdWx0IGlzIHBsYWNlZCBpbnRvIGFkZHJlc3MgMDUwMGgiLCA1LCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIHVhcnQgOj0gSmF2YUNhbGwoIm9yZy5tYXRocGlwZXIuaWRlLnU2NTAyLkVNVTY1NTEiLCJnZXRJbnN0YW5jZSIpOwogICAgICAgICAgICAKICAgICAgICAgICAgVTY1MDJSZXNldCgpOwogICAgICAgICAgICAKICAgICAgICAgICAgSmF2YUNhbGwodWFydCwgInNlbmQiLCJMIiArIFVuaWNvZGVUb1N0cmluZygxMykpOwogICAgICAgICAgICAKICAgICAgICAgICAgSmF2YUNhbGwodWFydCwgInNlbmQiLCBUb1N0cmluZyhzMTkpKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIFU2NTAyU2V0TW9uaXRvck5vdFJlYWR5KCk7IFdoaWxlKCE/IFU2NTAyTW9uaXRvclJlYWR5PygpKSBEZWxheSgxMDApOwogICAgICAgICAgICAKICAgICAgICAgICAgSmF2YUNhbGwodWFydCwgInNlbmQiLCAiZyAwMjAwIiArIFVuaWNvZGVUb1N0cmluZygxMykpOwogICAgICAgICAgICAKICAgICAgICAgICAgVTY1MDJTZXRNb25pdG9yTm90UmVhZHkoKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIHRvb0xvbmdUaW1lIDo9IFN5c3RlbVRpbWVyKCkgKyA1MDAwOwogICAgICAgICAgICAKICAgICAgICAgICAgV2hpbGUoIT8gVTY1MDJNb25pdG9yUmVhZHk/KCkpCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIElmKFN5c3RlbVRpbWVyKCkgPj0/IHRvb0xvbmdUaW1lKQogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgIEV4Y2VwdGlvblRocm93KCJUSU1FT1VUIiwgIlRoZSBwcm9ncmFtIHdhcyB0YWtpbmcgdG9vIGxvbmcgdG8gcnVuLiIpOwogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgRGVsYXkoMTAwKTsKICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgVTY1MDJEdW1wKCI1MDAiaGV4LCAiNTA5ImhleCwgKSA9PyBbMTk1LDE3MSwxMyw5MywxMTMsMjMwLDE2LDIwNCwxOTgsMTQ2XTsKICAgICAgICB9CiAgICB9Cn0KIAo=
+
+%/uasm65_grade
+
+    %output,parent="Problem 4",mpversion=".276",preserve="false"
+      Result: True
+      
+      Side Effects:
+        PASS: MathPiper version >= .276. (1/1)
+        PASS: The code contains no syntax errors. (1/1)
+        PASS: The program contains two ORG commands. (1/1)
+        PASS: The program starts at 0200h in memory. (1/1)
+        PASS: The table starts at 0500h in memory. (1/1)
+        PASS: The result table is not loaded into memory when the program is loaded. (1/1)
+        PASS: The program uses a loop. (1/1)
+        PASS: The program contains at least two instructions that use Absolute,X addressing mode. (3/3)
+        PASS: The correct result is placed into address 0500h. (5/5)
+      
+        15/15 points
+.   %/output
+
+%/group
+
+
+

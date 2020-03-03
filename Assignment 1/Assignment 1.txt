@@ -1,0 +1,59 @@
+Kyle Johnson
+Computing Systems
+5:30 PM TR
+Prof. Kosan
+
+1) List 8 microprocessors that were available between 1975 and 1990 (here is one to get you started: the 6502).
+	A) MOS Technology 6502
+	B) RCA 1802
+	C) Z80
+	D) Motorola 6800
+	E) 8080
+	F) LSI-11
+	G) 2650
+	H) Signetics 2650
+	
+2) The Altair 8800 was one of the first microcomputers, and it was made available in 1975. List 8 microcomputers that were available anytime between 1975 and 1990 along with the microprocessor each one used.
+	A) Apple I / MOS Technology 6502
+	B) Nascom 1 / Zilog Z80
+	C) Nascom 2 / Z80
+	D) Telmac 1800 / RCA 1802
+	E) Acorn System 1 / 6502
+	F) Heathkit H8 / 8080
+	G) SuperELF / RCA 1802
+	H) Sinclair ZX81 / Z80
+
+3) For the 8 computers you listed in question 2, list how much RAM they came with.
+	A) Apple I / 4kB
+	B) Nascom 1 / 2kB
+	C) Nascom 2 / 8kB
+	D) Telmac 1800 / 2kB
+	E) Acorn System 1 / 1.125K
+	F) Heathkit H8 / 4 kB
+	G) SuperELF / 	4 kB
+	H) Sinclair ZX81 / 1 kB
+
+For the following questions, read chapter 1 of "How A Computer Works". The answers to questions 4-12 are contained in this book. 
+
+4) Jon Von Neumann was the inventor of one of the first modern computers from the 1940s
+
+5) A CPU is similar to a calculator because the CPU copies bytes of information from the memory map to it's registers and then
+is able to perform simple operations on the bytes. They are also similar as they are always waiting for human inputs when turned
+on.
+
+6) The Program Counter holds the memory address of the current instruction.
+
+7) A CPU mnemonics is a key phrase that makes remembering the opcodes inside a computer easier.
+
+8) The three main types of Computer Memory is RAM, ROM, and hard drives. 
+
+9) ESD is Electro Static Discharge and happens when the electrostatic levels between two objects are uneven.
+
+10) The purpose of ROM is so the CPU can follow instructions upon startup and always know where to go to find it. It is also
+not able to be overwritten.
+
+11) POST stands for Power On Self Test code and the purpose of POST is to check and see if all the componenets are in place
+upon startup.
+
+12) Secondary storage or Mass storage is memory that is not located inside of the computer's memory map. Examples are
+hard drives, flash drives, CDROMs, DVDs, and magnetic tapes. 

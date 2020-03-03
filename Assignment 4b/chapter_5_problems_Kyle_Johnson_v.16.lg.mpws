@@ -1,0 +1,851 @@
+v.16
+
+chapter_5_problems.mpws
+
+Complete all of the exercises in this worksheet by placing
+the code you write for each exercise into the empty fold
+which is provided in each exercise section.
+
+Save the worksheet before running any tests.
+
+
+
+%group,name="Problem 0",description="Programmer's information."
+========================================================================================================
+Problem 0
+
+In the following fold, replace "xxx" with your
+first name, replace "yyy" with your last name, and
+replace "000000" with your SSU ID number:
+
+%mathpiper,name="Problem 0",subtype="problem",unassign_all="true",truncate="6000",timeout="5000"
+
+[
+["firstName", "Kyle"],
+["lastName", "Johnson"],
+["ssuIDNumber", "264694"],
+];
+
+%/mathpiper
+
+    %output,parent="Problem 0",mpversion=".269",preserve="false"
+      Result: [["firstName","Kyle"],["lastName","Johnson"],["ssuIDNumber","264694"]]
+.   %/output
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 0"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .251", 1, True)
+    {
+        StringToNumber(Version()) >=? .251;
+    }
+    
+    //-----------------------------------------------------------------------------------------    
+    
+
+    FoldGrade("The code does not produce side effect output", 1, False)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        
+        !? Contains?(procedureNames,"Echo") &? !? Contains?(procedureNames,"Write") &? !? Contains?(procedureNames,"TableForm");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'firstName' a string that is not 'xxx'", 1, True)
+    {
+        String?(foldResult["firstName"]) &? foldResult["firstName"] !=? "xxx";
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'lastName' is a string that is not 'yyy'", 1, True)
+    {
+        String?(foldResult["lastName"]) &? foldResult["lastName"] !=? "yyy";
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'ssuIDNumber' is not '000000'", 1, True)
+    {
+        foldResult["ssuIDNumber"] !=? "000000" &? foldResult["ssuIDNumber"] !=? 0;
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 0",mpversion=".269",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        [["firstName","Kyle"],["lastName","Johnson"],["ssuIDNumber","264694"]];
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: The code does not throw an exception when evaluated. (1/1)
+        PASS: MathPiper version >= .251. (1/1)
+        PASS: The code does not produce side effect output. (1/1)
+        PASS: The variable 'firstName' a string that is not 'xxx'. (1/1)
+        PASS: The variable 'lastName' is a string that is not 'yyy'. (1/1)
+        PASS: The variable 'ssuIDNumber' is not '000000'. (1/1)
+      
+        11/11 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+%group,name="Problem 1",description="Search for zeros in memory."
+========================================================================================================
+Problem 1
+
+Write an assembly language program that uses a
+loop which searches memory locations E000h - E0FEh
+for locations that contain zeros and places the
+total into location 0500h. Have the program start
+at 0200h in memory. Assemble the program, load it
+into the emulator, run it, and verify that it
+works correctly.
+
+
+%mathpiper,name="Problem 1",subtype="hint"
+Hint("CiAgICBvcmcgMDIwMGgKICAgIAogICAgbGR4ICMwZAogICAgc3R4IDA1MDBoCkxvb3A6CiAgICBsZGEgMGUwMDBoLHgKCiAgICBjbXAgIzBkCiAgICBibmUgTm90WmVybwogICAgCiAgICA7Q291bnQgYSAwLgogICAgaW5jIDA1MDBoCiAgICAKTm90WmVybzoKICAgIDtDaGVjayB0byBzZWUgaWYgdGhlIFggcmVnaXN0ZXIKICAgIDtoYXMgcmVhY2hlZCAwRkZoCiAgICBpbngKICAgIGNweCAjMGZmaAogICAgCiAgICBibmUgTG9vcAogICAgCiAgICBicmsKCiAgICBlbmQKICAgICAK");
+%/mathpiper
+
+    %output,parent="Problem 1",mpversion=".269",preserve="false"
+      Result: True
+.   %/output
+
+
+%uasm65,name="Problem 1",subtype="problem"
+
+ org 0200h
+ 
+ 
+ ldx #0d
+ 
+ stx 0500h
+ 
+Loop:
+ lda 0e000h,x 
+ 
+ cmp #0d
+ 
+ bne NotZero 
+ 
+ inc 0500h 
+NotZero:
+ inx
+ 
+ cpx #0ffh
+ 
+ bne Loop
+ 
+ brk
+ 
+ 
+ end
+
+%/uasm65
+
+    %output,parent="Problem 1",mpversion=".269",preserve="false"
+      *** Executable Code ***
+      
+      %s19,description="Execute this fold to send program to U6502 monitor.",preserve="false"
+      	S00700005541534DC2
+      	S1170200A2008E0005BD00E0C900D003EE0005E8E0FFD0F1FD
+      	S104021400E5
+      	S9030000FC
+      %/s19
+       
+      *** List File ***
+      
+                      000001 |
+      0200            000002 | org 0200h
+                      000003 | 
+                      000004 | 
+      0200 A2 00      000005 | ldx #0d
+                      000006 | 
+      0202 8E 00 05   000007 | stx 0500h
+                      000008 | 
+      0205            000009 |Loop:
+      0205 BD 00 E0   000010 | lda 0e000h,x 
+                      000011 | 
+      0208 C9 00      000012 | cmp #0d
+                      000013 | 
+      020A D0 03      000014 | bne NotZero 
+                      000015 | 
+      020C EE 00 05   000016 | inc 0500h 
+      020F            000017 |NotZero:
+      020F E8         000018 | inx
+                      000019 | 
+      0210 E0 FF      000020 | cpx #0ffh
+                      000021 | 
+      0212 D0 F1      000022 | bne Loop
+                      000023 | 
+      0214 00         000024 | brk
+                      000025 | 
+                      000026 | 
+                      000027 | end        
+      
+      *** Symbol Table ***
+      {LOOP=517, NOTZERO=527, =0}
+.   %/output
+ 
+
+
+
+
+%uasm65_grade,name="Problem 1",target_fold_type="uasm65"
+
+{
+    Local(result, analysis, s19, uart, transpose, commands);
+    
+    result := U6502Assemble(?foldCode);
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .251", 1, True)
+    {
+        StringToNumber(Version()) >=? .251;
+    }    
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The code contains no syntax errors", 1, True) 
+    {
+        Length(result) >? 1;
+    }
+    
+    // --------------------------------------------------------
+    
+    If(Length(result) >? 1)
+    {
+        U6502Reset();
+        
+        U6502Fill("200"hex, "600"hex,  0);
+        
+        s19 := result[2];
+        
+        analysis := U6502ConvertJavaList(result[4]);
+        
+        transpose := Transpose(analysis);
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains one ORG command", 1, True) 
+        {
+            Length(commands := U6502FindOperators(analysis, "ORG")) =? 1;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program starts at 0200h in memory", 1, True) 
+        {
+            commands[1][4] =? "0200";
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program uses a loop", 1, True) 
+        {
+            Count(transpose[3], "BCC") >? 0 |?
+            Count(transpose[3], "BCS") >? 0 |?
+            Count(transpose[3], "BEQ") >? 0 |?
+            Count(transpose[3], "BNE") >? 0 |?
+            Count(transpose[3], "BMI") >? 0 |?
+            Count(transpose[3], "BPL") >? 0 |?
+            Count(transpose[3], "BVC") >? 0 |?
+            Count(transpose[3], "BVS") >? 0;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The correct result is placed into address 0500h", 1, True) 
+        {
+            uart := JavaCall("org.mathpiper.ide.u6502.EMU6551","getInstance");
+            
+            U6502Reset();
+            
+            JavaCall(uart, "send","L" + UnicodeToString(13));
+            
+            JavaCall(uart, "send", ToString(s19));
+            
+            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);
+            
+            JavaCall(uart, "send", "g 0200" + UnicodeToString(13));
+            
+            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);
+            
+            U6502Dump("500"hex) =? "1E"hex;
+        }
+    }
+}
+ 
+%/uasm65_grade
+
+    %output,parent="Problem 1",mpversion=".269",preserve="false"
+      Result: True
+      
+      Side Effects:
+        PASS: MathPiper version >= .251. (1/1)
+        PASS: The code contains no syntax errors. (1/1)
+        PASS: The program contains one ORG command. (1/1)
+        PASS: The program starts at 0200h in memory. (1/1)
+        PASS: The program uses a loop. (1/1)
+        PASS: The correct result is placed into address 0500h. (1/1)
+      
+        6/6 passes
+.   %/output
+
+%/group
+
+
+
+
+
+%group,name="Problem 2",description="Search for lower case 'a's in memory."
+========================================================================================================
+Problem 2
+
+Write an assembly language program that searches
+memory locations F454h - F503h for memory
+locations that contain the ASCII value for a lower
+case 'a' and places the total into location 0500h.
+Have the program start at 0200h in memory.
+Assemble the program, load it into the emulator,
+run it, and verify that it works correctly.
+
+
+%mathpiper,name="Problem 2",subtype="hint"
+Hint("CiAgICBvcmcgMDIwMGgKICAgIAogICAgbGR4ICMwZAogICAgc3R4IDA1MDBoCiAgICAKTG9vcDoKICAgIGxkYSAwRjQ1NGgseAogICAgY21wICMnYScKICAgIGJuZSBOb3RBCiAgICAKICAgIGluYyAwNTAwaAogICAgCk5vdEE6CiAgICBpbngKICAgIAogICAgY3B4ICMxNzZkCiAgICBibmUgTG9vcAogICAgCgogICAgYnJrCgogICAgZW5kCiAgICAgCg==");
+%/mathpiper
+
+    %output,parent="Problem 2",mpversion=".269",preserve="false"
+      Result: True
+.   %/output
+
+
+%uasm65,name="Problem 2",subtype="problem"
+
+ org 0200h
+
+ 
+ ldx #0d
+
+ stx 0500h
+
+Loop:
+ lda 0F454h,x
+
+ cmp #'a'
+
+ bne NotA
+
+ inc 0500h 
+NotA:
+ inx
+
+ cpx #176d
+
+ bne Loop
+
+
+ brk
+ 
+ end        
+
+%/uasm65
+
+    %output,parent="Problem 2",mpversion=".269",preserve="false"
+      *** Executable Code ***
+      
+      %s19,description="Execute this fold to send program to U6502 monitor.",preserve="false"
+      	S00700005541534DC2
+      	S1170200A2008E0005BD54F4C961D003EE0005E8E0B0D0F183
+      	S104021400E5
+      	S9030000FC
+      %/s19
+       
+      *** List File ***
+      
+                      000001 |
+      0200            000002 | org 0200h
+                      000003 |
+                      000004 | 
+      0200 A2 00      000005 | ldx #0d
+                      000006 |
+      0202 8E 00 05   000007 | stx 0500h
+                      000008 |
+      0205            000009 |Loop:
+      0205 BD 54 F4   000010 | lda 0F454h,x
+                      000011 |
+      0208 C9 61      000012 | cmp #'a'
+                      000013 |
+      020A D0 03      000014 | bne NotA
+                      000015 |
+      020C EE 00 05   000016 | inc 0500h 
+      020F            000017 |NotA:
+      020F E8         000018 | inx
+                      000019 |
+      0210 E0 B0      000020 | cpx #176d
+                      000021 |
+      0212 D0 F1      000022 | bne Loop
+                      000023 |
+                      000024 |
+      0214 00         000025 | brk
+                      000026 | 
+                      000027 | end
+      
+      *** Symbol Table ***
+      {NOTA=527, LOOP=517, =0}
+.   %/output
+
+
+
+
+
+%uasm65_grade,name="Problem 2",target_fold_type="uasm65"
+
+{
+    Local(result, analysis, s19, uart, transpose, commands);
+    
+    result := U6502Assemble(?foldCode);
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .251", 1, True)
+    {
+        StringToNumber(Version()) >=? .251;
+    }    
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The code contains no syntax errors", 1, True) 
+    {
+        Length(result) >? 1;
+    }
+    
+    // --------------------------------------------------------
+    
+    If(Length(result) >? 1)
+    {
+        U6502Reset();
+        
+        U6502Fill("200"hex, "600"hex,  0);
+        
+        s19 := result[2];
+        
+        analysis := U6502ConvertJavaList(result[4]);
+        
+        transpose := Transpose(analysis);
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains one ORG command", 1, True) 
+        {
+            Length(commands := U6502FindOperators(analysis, "ORG")) =? 1;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program starts at 0200h in memory", 1, True) 
+        {
+            commands[1][4] =? "0200";
+        }    
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program uses a loop", 1, True) 
+        {
+            Count(transpose[3], "BCC") >? 0 |?
+            Count(transpose[3], "BCS") >? 0 |?
+            Count(transpose[3], "BEQ") >? 0 |?
+            Count(transpose[3], "BNE") >? 0 |?
+            Count(transpose[3], "BMI") >? 0 |?
+            Count(transpose[3], "BPL") >? 0 |?
+            Count(transpose[3], "BVC") >? 0 |?
+            Count(transpose[3], "BVS") >? 0;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The correct result is placed  into address 0500h", 1, True) 
+        {
+            uart := JavaCall("org.mathpiper.ide.u6502.EMU6551","getInstance");
+            
+            U6502Reset();
+            
+            JavaCall(uart, "send","L" + UnicodeToString(13));
+            
+            JavaCall(uart, "send", ToString(s19));
+            
+            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);
+            
+            JavaCall(uart, "send", "g 0200" + UnicodeToString(13));
+            
+            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);
+            
+            U6502Dump("500"hex) =? "4"hex;
+        }
+    }
+}
+
+%/uasm65_grade
+
+    %output,parent="Problem 2",mpversion=".269",preserve="false"
+      Result: True
+      
+      Side Effects:
+        PASS: MathPiper version >= .251. (1/1)
+        PASS: The code contains no syntax errors. (1/1)
+        PASS: The program contains one ORG command. (1/1)
+        PASS: The program starts at 0200h in memory. (1/1)
+        PASS: The program uses a loop. (1/1)
+        PASS: The correct result is placed  into address 0500h. (1/1)
+      
+        6/6 passes
+.   %/output
+
+%/group
+
+
+
+
+
+%group,name="Problem 3",description="Search for the string 'series' in memory."
+========================================================================================================
+Problem 3
+
+Write an assembly language program that searches
+memory locations F454h - F503h for consecutive
+locations that contain the ASCII characters
+'series'. If they are found, place a 1 into
+location 0500h and if they are not found, place a
+0 into location 0500h. Have the program start at
+0200h in memory. Assemble the program, load it
+into the emulator, run it, and verify that it
+works correctly.
+
+
+%mathpiper,name="Problem 3",subtype="hint"
+Hint("CiAgICBvcmcgMDIwMGgKICAgIAogICAgbGR4ICMwZAogICAgc3R4IDA1MDBoCiAgICAKO0ZpcnN0ICJzIi4KczFfYToKICAgIGxkYSAwZjQ1NGgseApzMV9iOgogICAgY21wICM3M2gKICAgIGJlcSBlMQoKICAgIGlueAogICAgY3B4ICMwQjFoCiAgICBibmUgczFfYQogICAgam1wIGRvbmUKICAgIAo7Rmlyc3QgImUiLgplMToKICAgIGlueAogICAgY3B4ICMwQjFoCiAgICBiZXEgRG9uZQogICAgbGRhIDBmNDU0aCx4CiAgICBjbXAgIzY1aAogICAgYm5lIHMxX2IKICAgIAo7InIiLgogICAgaW54CiAgICBjcHggIzBCMWgKICAgIGJlcSBEb25lCiAgICBsZGEgMGY0NTRoLHgKICAgIGNtcCAjNzJoCiAgICBibmUgczFfYgogICAgCjsiaSIuCiAgICBpbngKICAgIGNweCAjMEIxaAogICAgYmVxIERvbmUKICAgIGxkYSAwZjQ1NGgseAogICAgY21wICM2OWgKICAgIGJuZSBzMV9iCiAgICAKO1NlY29uZCAiZSIKICAgIGlueAogICAgY3B4ICMwQjFoCiAgICBiZXEgRG9uZQogICAgbGRhIDBmNDU0aCx4CiAgICBjbXAgIzY1aAogICAgYm5lIHMxX2IKICAgIAo7U2Vjb25kICJzIgogICAgaW54CiAgICBjcHggIzBCMWgKICAgIGJlcSBEb25lCiAgICBsZGEgMGY0NTRoLHgKICAgIGNtcCAjNzNoCiAgICBibmUgczFfYgogICAgCjtUaGUgd29yZCAic2VyaWVzIiB3YXMgZm91bmQuCiAgICBsZHkgIzFkCiAgICBzdHkgMDUwMGgKICAgIApEb25lOgogICAgYnJrCgogICAgZW5kCiAgICAgCg==");
+%/mathpiper
+
+    %output,parent="Problem 3",mpversion=".269",preserve="false"
+      Result: True
+.   %/output
+
+
+%uasm65,name="Problem 3",subtype="problem"
+
+ org 0200h
+
+ 
+ ldx #0d
+
+ stx 0500h
+
+; the ,x below means add x!
+load:
+ lda 0f454h,x
+
+searchStartS:
+;#73h is s in Ascii
+ cmp #73h
+ beq searchWord
+ 
+ inx
+ cpx #0B1h
+ bne load
+ jmp Done
+
+searchWord:
+;cpx #0b1h is the same number as #176d
+;looking for the first e
+;refer to ascii table for the letter beside cmp
+ inx
+ cpx #0B1h
+ beq Done
+ lda 0f454h,x
+ cmp #65h
+ bne searchStartS
+ 
+;looking for the first r
+;refer to ascii table for the letter beside cmp
+ inx
+ cpx #0B1h
+ beq Done
+ lda 0f454h,x
+ cmp #72h
+ bne searchStartS
+
+;looking for the first i
+;refer to ascii table for the letter beside cmp
+ inx
+ cpx #0B1h
+ beq Done
+ lda 0f454h,x
+ cmp #69h
+ bne searchStartS
+
+;looking for the second e
+;refer to ascii table for the letter beside cmp
+ inx
+ cpx #0B1h
+ beq Done
+ lda 0f454h,x
+ cmp #65h
+ bne searchStartS
+
+;looking for the second s
+;refer to ascii table for the letter beside cmp
+ inx
+ cpx #0B1h
+ beq Done
+ lda 0f454h,x
+ cmp #73h
+ bne searchStartS
+ 
+;The word "series" is found!
+ ldy #1d
+ sty 0500h
+
+Done:
+ brk
+ 
+ end    
+%/uasm65
+
+    %output,parent="Problem 3",mpversion=".269",preserve="false"
+      *** Executable Code ***
+      
+      %s19,description="Execute this fold to send program to U6502 monitor.",preserve="false"
+      	S00700005541534DC2
+      	S1170200A2008E0005BD54F4C973F008E8E0B1D0F44C550298
+      	S1170214E8E0B1F03CBD54F4C965D0E8E8E0B1F030BD54F4A4
+      	S1170228C972D0DCE8E0B1F024BD54F4C969D0D0E8E0B1F00A
+      	S117023C18BD54F4C965D0C4E8E0B1F00CBD54F4C973D0B88D
+      	S1090250A0018C00050072
+      	S9030000FC
+      %/s19
+      
+      *** List File ***
+      
+                      000001 |
+      0200            000002 | org 0200h
+                      000003 |
+                      000004 | 
+      0200 A2 00      000005 | ldx #0d
+                      000006 |
+      0202 8E 00 05   000007 | stx 0500h
+                      000008 |
+                      000009 |; the ,x below means add x!
+      0205            000010 |load:
+      0205 BD 54 F4   000011 | lda 0f454h,x
+                      000012 |
+      0208            000013 |searchStartS:
+                      000014 |;#73h is s in Ascii
+      0208 C9 73      000015 | cmp #73h
+      020A F0 08      000016 | beq searchWord
+                      000017 | 
+      020C E8         000018 | inx
+      020D E0 B1      000019 | cpx #0B1h
+      020F D0 F4      000020 | bne load
+      0211 4C 55 02   000021 | jmp Done
+                      000022 |
+      0214            000023 |searchWord:
+                      000024 |;cpx #0b1h is the same number as #176d
+                      000025 |;looking for the first e
+                      000026 |;refer to ascii table for the letter beside cmp
+      0214 E8         000027 | inx
+      0215 E0 B1      000028 | cpx #0B1h
+      0217 F0 3C      000029 | beq Done
+      0219 BD 54 F4   000030 | lda 0f454h,x
+      021C C9 65      000031 | cmp #65h
+      021E D0 E8      000032 | bne searchStartS
+                      000033 | 
+                      000034 |;looking for the first r
+                      000035 |;refer to ascii table for the letter beside cmp
+      0220 E8         000036 | inx
+      0221 E0 B1      000037 | cpx #0B1h
+      0223 F0 30      000038 | beq Done
+      0225 BD 54 F4   000039 | lda 0f454h,x
+      0228 C9 72      000040 | cmp #72h
+      022A D0 DC      000041 | bne searchStartS
+                      000042 |
+                      000043 |;looking for the first i
+                      000044 |;refer to ascii table for the letter beside cmp
+      022C E8         000045 | inx
+      022D E0 B1      000046 | cpx #0B1h
+      022F F0 24      000047 | beq Done
+      0231 BD 54 F4   000048 | lda 0f454h,x
+      0234 C9 69      000049 | cmp #69h
+      0236 D0 D0      000050 | bne searchStartS
+                      000051 |
+                      000052 |;looking for the second e
+                      000053 |;refer to ascii table for the letter beside cmp
+      0238 E8         000054 | inx
+      0239 E0 B1      000055 | cpx #0B1h
+      023B F0 18      000056 | beq Done
+      023D BD 54 F4   000057 | lda 0f454h,x
+      0240 C9 65      000058 | cmp #65h
+      0242 D0 C4      000059 | bne searchStartS
+                      000060 |
+                      000061 |;looking for the second s
+                      000062 |;refer to ascii table for the letter beside cmp
+      0244 E8         000063 | inx
+      0245 E0 B1      000064 | cpx #0B1h
+      0247 F0 0C      000065 | beq Done
+      0249 BD 54 F4   000066 | lda 0f454h,x
+      024C C9 73      000067 | cmp #73h
+      024E D0 B8      000068 | bne searchStartS
+                      000069 | 
+                      000070 |;The word "series" is found!
+      0250 A0 01      000071 | ldy #1d
+      0252 8C 00 05   000072 | sty 0500h
+                      000073 |
+      0255            000074 |Done:
+      0255 00         000075 | brk
+                      000076 | 
+                      000077 | end
+      
+      *** Symbol Table ***
+      {SEARCHWORD=532, LOAD=517, SEARCHSTARTS=520, DONE=597, =0}
+.   %/output
+
+
+
+
+
+%uasm65_grade,name="Problem 3",target_fold_type="uasm65"
+
+{
+    Local(result, analysis, s19, uart, transpose, commands);
+    
+    result := U6502Assemble(?foldCode);
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .251", 1, True)
+    {
+        StringToNumber(Version()) >=? .251;
+    }    
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The code contains no syntax errors", 1, True) 
+    {
+        Length(result) >? 1;
+    }
+    
+    // --------------------------------------------------------
+    
+    If(Length(result) >? 1)
+    {
+        U6502Reset();
+        
+        U6502Fill("200"hex, "600"hex,  0);
+        
+        s19 := result[2];
+        
+        analysis := U6502ConvertJavaList(result[4]);
+        
+        transpose := Transpose(analysis);
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains one ORG command", 1, True) 
+        {
+            Length(commands := U6502FindOperators(analysis, "ORG")) =? 1;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program starts at 0200h in memory", 1, True) 
+        {
+            commands[1][4] =? "0200";
+        }    
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program uses a loop", 1, True) 
+        {
+            Count(transpose[3], "BCC") >? 0 |?
+            Count(transpose[3], "BCS") >? 0 |?
+            Count(transpose[3], "BEQ") >? 0 |?
+            Count(transpose[3], "BNE") >? 0 |?
+            Count(transpose[3], "BMI") >? 0 |?
+            Count(transpose[3], "BPL") >? 0 |?
+            Count(transpose[3], "BVC") >? 0 |?
+            Count(transpose[3], "BVS") >? 0;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The correct result is placed into address 0500h", 1, True) 
+        {
+            uart := JavaCall("org.mathpiper.ide.u6502.EMU6551","getInstance");
+            
+            U6502Reset();
+            
+            JavaCall(uart, "send","L" + UnicodeToString(13));
+            
+            JavaCall(uart, "send", ToString(s19));
+            
+            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);
+            
+            JavaCall(uart, "send", "g 0200" + UnicodeToString(13));
+            
+            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);
+            
+            U6502Dump("500"hex) =? "1"hex;
+        }
+    }
+}
+
+%/uasm65_grade
+
+    %output,parent="Problem 3",mpversion=".269",preserve="false"
+      Result: True
+      
+      Side Effects:
+        PASS: MathPiper version >= .251. (1/1)
+        PASS: The code contains no syntax errors. (1/1)
+        PASS: The program contains one ORG command. (1/1)
+        PASS: The program starts at 0200h in memory. (1/1)
+        PASS: The program uses a loop. (1/1)
+        PASS: The correct result is placed into address 0500h. (1/1)
+      
+        6/6 passes
+.   %/output
+
+%/group
+

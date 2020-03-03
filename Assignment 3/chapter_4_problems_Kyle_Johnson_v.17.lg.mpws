@@ -1,0 +1,774 @@
+v.17
+
+chapter_4_problems.mpws
+
+Complete all of the exercises in this worksheet by placing
+the code you write for each exercise into the empty fold
+which is provided in each exercise section.
+
+Save the worksheet before running any tests.
+
+
+
+%group,name="Problem 0",description="Programmer's information."
+========================================================================================================
+Problem 0
+
+In the following fold, replace "xxx" with your
+first name, replace "yyy" with your last name, and
+replace "000000" with your SSU ID number:
+
+%mathpiper,name="Problem 0",subtype="problem",unassign_all="true",truncate="6000",timeout="5000"
+
+[
+["firstName", "Kyle"],
+["lastName", "Johnson"],
+["ssuIDNumber", "264694"],
+];
+
+%/mathpiper
+
+    %output,parent="Problem 0",mpversion=".267",preserve="false"
+      Result: [["firstName","Kyle"],["lastName","Johnson"],["ssuIDNumber","264694"]]
+.   %/output
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 0"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .259", 1, True)
+    {
+        StringToNumber(Version()) >=? .259;
+    }
+    
+    //-----------------------------------------------------------------------------------------    
+    
+
+    FoldGrade("The code does not produce side effect output", 1, False)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        
+        !? Contains?(procedureNames,"Echo") &? !? Contains?(procedureNames,"Write") &? !? Contains?(procedureNames,"TableForm");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'firstName' a string that is not 'xxx'", 1, True)
+    {
+        String?(foldResult["firstName"]) &? foldResult["firstName"] !=? "xxx";
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'lastName' is a string that is not 'yyy'", 1, True)
+    {
+        String?(foldResult["lastName"]) &? foldResult["lastName"] !=? "yyy";
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'ssuIDNumber' is not '000000'", 1, True)
+    {
+        foldResult["ssuIDNumber"] !=? "000000" &? foldResult["ssuIDNumber"] !=? 0;
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 0",mpversion=".267",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        [["firstName","Kyle"],["lastName","Johnson"],["ssuIDNumber","264694"]];
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: The code does not throw an exception when evaluated. (1/1)
+        PASS: MathPiper version >= .259. (1/1)
+        PASS: The code does not produce side effect output. (1/1)
+        PASS: The variable 'firstName' a string that is not 'xxx'. (1/1)
+        PASS: The variable 'lastName' is a string that is not 'yyy'. (1/1)
+        PASS: The variable 'ssuIDNumber' is not '000000'. (1/1)
+      
+        13/13 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+%group,name="Problem 1",description="Add series of numbers."
+========================================================================================================
+Problem 1
+
+Write an assembly language program that adds the
+numbers 1,2,3,4,5, and 6 together and places the
+sum into location 0350h. Have the program start at
+0200h in memory. Assemble the program, load it
+into the emulator, run it, and verify that it
+works correctly.
+
+Press <shift><enter> inside the fold. A s19 fold
+will then be created. Press <shift><enter> inside
+of the s19 fold to load the program into
+MathPiperIDe. Unassemble 0200h to make sure the
+program loaded correctly. Trace the program to
+make sure it runs correctly.
+
+
+%mathpiper,name="Problem 1",subtype="hint"
+Hint("CiAgICAgb3JnIDAyMDBoCiAgICAgCiAgICAgbGRhICMxZAogICAgIGFkYyAjMmQKICAgICBhZGMgIzNkCiAgICAgYWRjICM0ZAogICAgIGFkYyAjNWQKICAgICBhZGMgIzZkCiAgICAgc3RhIDAzNTBoCiAgICAgYnJrCiAgICAgCiAgICAgZW5kCiAgICAgCg==");
+%/mathpiper
+
+
+%uasm65,name="Problem 1",subtype="problem"
+
+ org 0200h
+ 
+ lda #1d
+ adc #2d
+ adc #3d
+ adc #4d
+ adc #5d
+ adc #6d
+ sta 0350h
+ brk
+ 
+ end
+ 
+%/uasm65
+
+    %output,parent="Problem 1",mpversion=".267",preserve="false"
+      *** Executable Code ***
+      
+      %s19,description="Execute this fold to send program to U6502 monitor.",preserve="false"
+      	S00700005541534DC2
+      	S1130200A901690269036904690569068D5003003F
+      	S9030000FC
+      %/s19
+       
+      *** List File ***
+      
+                      000001 |
+      0200            000002 | org 0200h
+                      000003 | 
+      0200 A9 01      000004 | lda #1d
+      0202 69 02      000005 | adc #2d
+      0204 69 03      000006 | adc #3d
+      0206 69 04      000007 | adc #4d
+      0208 69 05      000008 | adc #5d
+      020A 69 06      000009 | adc #6d
+      020C 8D 50 03   000010 | sta 0350h
+      020F 00         000011 | brk
+                      000012 | 
+                      000013 | end
+      
+      *** Symbol Table ***
+      {=0}
+.   %/output
+ 
+
+
+
+
+%uasm65_grade,name="Problem 1",target_fold_type="uasm65"
+
+{
+    Local(result, uart, s19, lst, symbolTable);
+    
+    U6502Reset();
+    U6502Fill("200"hex, "400"hex,  0);
+    
+    result := U6502Assemble(?foldCode);
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .259", 1, True)
+    {
+        StringToNumber(Version()) >=? .259;
+    }    
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The code contains no syntax errors", 1, True) 
+    {
+        Length(result) >? 1;
+    }
+    
+    // --------------------------------------------------------
+    
+    If(Length(result) >? 1)
+    {
+        U6502Reset();
+        
+        U6502Fill("200"hex, "400"hex,  0);
+        
+        s19 := result[2];
+        
+        analysis := U6502ConvertJavaList(result[4]);
+        
+        transpose := Transpose(analysis);
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains one ORG command", 1, True) 
+        {
+            Length(commands := U6502FindOperators(analysis, "ORG")) =? 1;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program starts at 0200h in memory", 1, True) 
+        {
+            commands[1][4] =? "0200";
+        }  
+    
+        // --------------------------------------------------------
+        
+        FoldGrade("The correct result is placed in address 350h", 1, True) 
+        {
+            [lst, s19, symbolTable] := U6502Assemble(?foldCode);
+            uart := JavaCall("org.mathpiper.ide.u6502.EMU6551","getInstance");
+            U6502Reset();
+            JavaCall(uart, "send","L" + UnicodeToString(13));
+            
+            JavaCall(uart, "send", ToString(s19));
+            
+            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);
+            
+            JavaCall(uart, "send", "g 0200" + UnicodeToString(13));
+            
+            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);
+            
+            U6502Dump("350"hex) =? "15"hex; 
+        }
+    }
+}
+
+%/uasm65_grade
+
+    %output,parent="Problem 1",mpversion=".267",preserve="false"
+      Result: True
+      
+      Side Effects:
+        PASS: MathPiper version >= .259. (1/1)
+        PASS: The code contains no syntax errors. (1/1)
+        PASS: The program contains one ORG command. (1/1)
+        PASS: The program starts at 0200h in memory. (1/1)
+        PASS: The correct result is placed in address 350h. (1/1)
+      
+        5/5 passes
+.   %/output
+
+%/group
+
+
+
+
+%group,name="Problem 2",description="Reverse the sequence of a table of numbers."
+========================================================================================================
+Problem 2
+
+Write an assembly language program that does the
+following: a) Store the numbers 1,2,3,4,5, and 6
+into consecutive memory locations starting at
+location 0350h. b) Reverse the order of these
+numbers in memory by copying the numbers to
+different memory locations. When the program
+finishes, the monitor command "d 0350" should
+produce the following output:
+
+0350 06 05 04 03 02 01 00 00 - 00 00 00 00 00 00 00 00
+................
+
+Hint #1: You can use memory locations 400h - 420h to
+temporarily store values in if you need to.
+
+
+%mathpiper,name="Problem 2",subtype="hint"
+Hint("CiAgICBvcmcgMDIwMGgKICAgCjsgU3RvcmUgdGhlIG51bWJlcnMgMSB0aG9yZ2ggNiBpbiBtZW1vcnkgc3RhcnRpbmcgYXQgYWRkcmVzcyAwMzUwaAogICAgbGRhICMxZAogICAgc3RhIDAzNTBoCiAgIAogICAgbGRhICMyZAogICAgc3RhIDAzNTFoCiAgICAKICAgIGxkYSAjM2QKICAgIHN0YSAwMzUyaAogICAgCiAgICBsZGEgIzRkCiAgICBzdGEgMDM1M2gKICAgIAogICAgbGRhICM1ZAogICAgc3RhIDAzNTRoCiAgICAKICAgIGxkYSAjNmQKICAgIHN0YSAwMzU1aAogICAKOyBSZXZlcnNlIHRoZSBudW1iZXJzIGluIG1lbW9yeSBieSBjb3B5aW5nIHRoZW0uIE1lbW9yeQo7IGxvY2F0aW9uIDA0MDBoIGlzIHVzZWQgZm9yIHRlbXBvcmFyeSBzdG9yYWdlLgoKOyBFeGNoYW5nZSAzNTBoIGFuZCAzNTVoLgogICAgbGRhIDAzNTBoCiAgICBzdGEgMDQwMGgKICAgCiAgICBsZGEgMDM1NWgKICAgIHN0YSAwMzUwaAogICAKICAgIGxkYSAwNDAwaAogICAgc3RhIDAzNTVoCiAgICAKOyBFeGNoYW5nZSAzNTFoIGFuZCAzNTRoLgogICAgbGRhIDAzNTFoCiAgICBzdGEgMDQwMGgKICAgCiAgICBsZGEgMDM1NGgKICAgIHN0YSAwMzUxaAogICAKICAgIGxkYSAwNDAwaAogICAgc3RhIDAzNTRoCiAgICAKOyBFeGNoYW5nZSAzNTJoIGFuZCAzNTRoLgogICAgbGRhIDAzNTJoCiAgICBzdGEgMDQwMGgKICAgCiAgICBsZGEgMDM1M2gKICAgIHN0YSAwMzUyaAogICAKICAgIGxkYSAwNDAwaAogICAgc3RhIDAzNTNoCiAgIAogICAgYnJrCiAgIAogICAgZW5kCiAgICAgCg==");
+%/mathpiper
+
+    %output,parent="Problem 2",mpversion=".267",preserve="false"
+      Result: True
+.   %/output
+
+
+%uasm65,name="Problem 2",subtype="problem"
+
+ org 0200h
+ lda #1d
+ sta 0350h
+ lda #2d
+ sta 0351h
+ lda #3d
+ sta 0352h
+ lda #4d
+ sta 0353h
+ lda #5d
+ sta 0354h
+ lda #6d
+ sta 0355h
+ 
+ lda 0350h
+ sta 0401h
+ 
+ lda 0351h
+ sta 0402h
+ 
+ lda 0352h
+ sta 0403h
+ 
+ lda 0353h
+ sta 0404h
+ 
+ lda 0354h
+ sta 0405h
+ 
+ lda 0355h
+ sta 0406h
+ 
+ 
+ lda 0406h
+ sta 0350h
+
+ lda 0405h
+ sta 0351h
+
+ lda 0404h
+ sta 0352h
+
+ lda 0403h
+ sta 0353h
+
+ lda 0402h
+ sta 0354h
+
+ lda 0401h
+ sta 0355h
+
+ 
+ brk
+ 
+ end
+ 
+ 
+%/uasm65
+
+    %output,parent="Problem 2",mpversion=".267",preserve="false"
+      *** Executable Code ***
+      
+      %s19,description="Execute this fold to send program to U6502 monitor.",preserve="false"
+      	S00700005541534DC2
+      	S1170200A9018D5003A9028D5103A9038D5203A9048D5303B2
+      	S1170214A9058D5403A9068D5503AD50038D0104AD51038D8C
+      	S11702280204AD52038D0304AD53038D0404AD54038D0504F0
+      	S117023CAD55038D0604AD06048D5003AD05048D5103AD042F
+      	S1170250048D5203AD03048D5303AD02048D5403AD01048D43
+      	S10602645503003B
+      	S9030000FC
+      %/s19
+            
+      *** List File ***
+      
+                      000001 |
+      0200            000002 | org 0200h
+      0200 A9 01      000003 | lda #1d
+      0202 8D 50 03   000004 | sta 0350h
+      0205 A9 02      000005 | lda #2d
+      0207 8D 51 03   000006 | sta 0351h
+      020A A9 03      000007 | lda #3d
+      020C 8D 52 03   000008 | sta 0352h
+      020F A9 04      000009 | lda #4d
+      0211 8D 53 03   000010 | sta 0353h
+      0214 A9 05      000011 | lda #5d
+      0216 8D 54 03   000012 | sta 0354h
+      0219 A9 06      000013 | lda #6d
+      021B 8D 55 03   000014 | sta 0355h
+                      000015 | 
+      021E AD 50 03   000016 | lda 0350h
+      0221 8D 01 04   000017 | sta 0401h
+                      000018 | 
+      0224 AD 51 03   000019 | lda 0351h
+      0227 8D 02 04   000020 | sta 0402h
+                      000021 | 
+      022A AD 52 03   000022 | lda 0352h
+      022D 8D 03 04   000023 | sta 0403h
+                      000024 | 
+      0230 AD 53 03   000025 | lda 0353h
+      0233 8D 04 04   000026 | sta 0404h
+                      000027 | 
+      0236 AD 54 03   000028 | lda 0354h
+      0239 8D 05 04   000029 | sta 0405h
+                      000030 | 
+      023C AD 55 03   000031 | lda 0355h
+      023F 8D 06 04   000032 | sta 0406h
+                      000033 | 
+                      000034 | 
+      0242 AD 06 04   000035 | lda 0406h
+      0245 8D 50 03   000036 | sta 0350h
+                      000037 |
+      0248 AD 05 04   000038 | lda 0405h
+      024B 8D 51 03   000039 | sta 0351h
+                      000040 |
+      024E AD 04 04   000041 | lda 0404h
+      0251 8D 52 03   000042 | sta 0352h
+                      000043 |
+      0254 AD 03 04   000044 | lda 0403h
+      0257 8D 53 03   000045 | sta 0353h
+                      000046 |
+      025A AD 02 04   000047 | lda 0402h
+      025D 8D 54 03   000048 | sta 0354h
+                      000049 |
+      0260 AD 01 04   000050 | lda 0401h
+      0263 8D 55 03   000051 | sta 0355h
+                      000052 |
+                      000053 | 
+      0266 00         000054 | brk
+                      000055 | 
+                      000056 | end
+      
+      *** Symbol Table ***
+      {=0}
+.   %/output
+
+
+
+
+
+%uasm65_grade,name="Problem 2",target_fold_type="uasm65"
+
+{
+    Local(uart, s19, lst, symbolTable);
+    
+    U6502Reset();
+    U6502Fill("200"hex, "400"hex,  0);
+    
+    result := U6502Assemble(?foldCode);
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .259", 1, True)
+    {
+        StringToNumber(Version()) >=? .259;
+    }    
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The code contains no syntax errors", 1, True) 
+    {
+        Length(result) >? 1;
+    }
+    
+    // --------------------------------------------------------
+    
+    If(Length(result) >? 1)
+    {
+        U6502Reset();
+        
+        U6502Fill("200"hex, "400"hex,  0);
+        
+        s19 := result[2];
+        
+        analysis := U6502ConvertJavaList(result[4]);
+        
+        transpose := Transpose(analysis);
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains one ORG command", 1, True) 
+        {
+            Length(commands := U6502FindOperators(analysis, "ORG")) =? 1;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program starts at 0200h in memory", 1, True) 
+        {
+            commands[1][4] =? "0200";
+        }   
+        
+        // --------------------------------------------------------
+    
+        FoldGrade("The correct result is placed in addresses 350h-355h", 1, True) 
+        {
+            [lst, s19, symbolTable] := U6502Assemble(?foldCode);
+            uart := JavaCall("org.mathpiper.ide.u6502.EMU6551","getInstance");
+            U6502Reset();
+            JavaCall(uart, "send","L" + UnicodeToString(13));
+            
+            JavaCall(uart, "send", ToString(s19));
+            
+            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);
+            
+            JavaCall(uart, "send", "g 0200" + UnicodeToString(13));
+            
+            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);
+            
+            U6502Dump("350"hex, "355"hex, ) =? [6,5,4,3,2,1]; 
+        }
+    }
+}
+
+%/uasm65_grade
+
+    %output,parent="Problem 2",mpversion=".267",preserve="false"
+      Result: True
+      
+      Side Effects:
+        PASS: MathPiper version >= .259. (1/1)
+        PASS: The code contains no syntax errors. (1/1)
+        PASS: The program contains one ORG command. (1/1)
+        PASS: The program starts at 0200h in memory. (1/1)
+        PASS: The correct result is placed in addresses 350h-355h. (1/1)
+      
+        5/5 passes
+.   %/output
+
+%/group
+
+
+
+
+
+%group,name="Problem 3",description="Add 5 to each element of a table of numbers."
+========================================================================================================
+Problem 3
+
+Write an assembly language program that does the
+following: a) Place the numbers 1,2,3,4,5, and 6
+into memory starting at location 0350h. b)
+Increase the value of each of these numbers in
+memory by 5 using a loop. After your program is
+finished running, the memory locations starting at
+address 0350h should contain the hex values
+06,07,08,09,0A,0B.
+
+
+%mathpiper,name="Problem 3",subtype="hint"
+Hint("CiAgICBvcmcgMDIwMGgKICAgIAo7IFN0b3JlIHRoZSBudW1iZXJzIDEgdGhvcmdoIDYgaW4gbWVtb3J5IHN0YXJ0aW5nIGF0IGFkZHJlc3MgMDM1MGgKICAgIGxkYSAjMWQKICAgIHN0YSAwMzUwaAogICAKICAgIGxkYSAjMmQKICAgIHN0YSAwMzUxaAogICAgCiAgICBsZGEgIzNkCiAgICBzdGEgMDM1MmgKICAgIAogICAgbGRhICM0ZAogICAgc3RhIDAzNTNoCiAgICAKICAgIGxkYSAjNWQKICAgIHN0YSAwMzU0aAogICAgCiAgICBsZGEgIzZkCiAgICBzdGEgMDM1NWgKICAgIAogICAKICAgIGxkeCAjMGQKbG9vcDoKICAgIGNsYwogICAgbGRhIDAzNTBoLHgKICAgIGFkYyAjNWQKICAgIHN0YSAwMzUwaCx4CiAgICBpbngKICAgIGNweCAjNmQKICAgIGJuZSBsb29wCiAgIAogICAgYnJrCiAgIAogICAgZW5kCiAgICAgCg==");
+%/mathpiper
+
+    %output,parent="Problem 3",mpversion=".267",preserve="false"
+      Result: True
+.   %/output
+
+
+%uasm65,name="Problem 3",subtype="problem"
+
+ org 0200h
+ 
+ lda #1d
+ sta 0350h
+ lda #2d
+ sta 0351h
+ lda #3d
+ sta 0352h
+ lda #4d
+ sta 0353h
+ lda #5d
+ sta 0354h
+ lda #6d
+ sta 0355h
+
+ ldx #0d
+
+loop:
+ clc 
+ lda 0350h,x
+ adc #5d
+ sta 0350h,x
+ inx
+ cpx #6d
+ bne loop
+ 
+ brk
+ 
+ end
+ 
+%/uasm65
+
+    %output,parent="Problem 3",mpversion=".267",preserve="false"
+      *** Executable Code ***
+      
+      %s19,description="Execute this fold to send program to U6502 monitor.",preserve="false"
+      	S00700005541534DC2
+      	S1170200A9018D5003A9028D5103A9038D5203A9048D5303B2
+      	S1170214A9058D5403A9068D5503A20018BD500369059D5087
+      	S10A022803E8E006D0F20038
+      	S9030000FC
+      %/s19
+       
+      *** List File ***
+      
+                      000001 |
+      0200            000002 | org 0200h
+                      000003 | 
+      0200 A9 01      000004 | lda #1d
+      0202 8D 50 03   000005 | sta 0350h
+      0205 A9 02      000006 | lda #2d
+      0207 8D 51 03   000007 | sta 0351h
+      020A A9 03      000008 | lda #3d
+      020C 8D 52 03   000009 | sta 0352h
+      020F A9 04      000010 | lda #4d
+      0211 8D 53 03   000011 | sta 0353h
+      0214 A9 05      000012 | lda #5d
+      0216 8D 54 03   000013 | sta 0354h
+      0219 A9 06      000014 | lda #6d
+      021B 8D 55 03   000015 | sta 0355h
+                      000016 |
+      021E A2 00      000017 | ldx #0d
+                      000018 |
+      0220            000019 |loop:
+      0220 18         000020 | clc 
+      0221 BD 50 03   000021 | lda 0350h,x
+      0224 69 05      000022 | adc #5d
+      0226 9D 50 03   000023 | sta 0350h,x
+      0229 E8         000024 | inx
+      022A E0 06      000025 | cpx #6d
+      022C D0 F2      000026 | bne loop
+                      000027 | 
+      022E 00         000028 | brk
+                      000029 | 
+                      000030 | end
+      
+      *** Symbol Table ***
+      {LOOP=544, =0}
+.   %/output
+
+
+
+
+
+%uasm65_grade,name="Problem 3",target_fold_type="uasm65"
+
+{
+    Local(result, analysis, s19, uart, transpose, commands);
+    
+    result := U6502Assemble(?foldCode);
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .259", 1, True)
+    {
+        StringToNumber(Version()) >=? .259;
+    }    
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The code contains no syntax errors", 1, True) 
+    {
+        Length(result) >? 1;
+    }
+    
+    // --------------------------------------------------------
+    
+    If(Length(result) >? 1)
+    {
+        U6502Reset();
+        
+        U6502Fill("200"hex, "400"hex,  0);
+        
+        s19 := result[2];
+        
+        analysis := U6502ConvertJavaList(result[4]);
+        
+        transpose := Transpose(analysis);
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains one ORG command", 1, True) 
+        {
+            Length(commands := U6502FindOperators(analysis, "ORG")) =? 1;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program starts at 0200h in memory", 1, True) 
+        {
+            commands[1][4] =? "0200";
+        }        
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program uses a loop", 1, True) 
+        {
+            Count(transpose[3], "BCC") >? 0 |?
+            Count(transpose[3], "BCS") >? 0 |?
+            Count(transpose[3], "BEQ") >? 0 |?
+            Count(transpose[3], "BNE") >? 0 |?
+            Count(transpose[3], "BMI") >? 0 |?
+            Count(transpose[3], "BPL") >? 0 |?
+            Count(transpose[3], "BVC") >? 0 |?
+            Count(transpose[3], "BVS") >? 0;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The correct result is placed in addresses 350h-355h", 1, True) 
+        {
+            uart := JavaCall("org.mathpiper.ide.u6502.EMU6551","getInstance");
+            
+            U6502Reset();
+            
+            JavaCall(uart, "send","L" + UnicodeToString(13));
+            
+            JavaCall(uart, "send", ToString(s19));
+            
+            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);
+            
+            JavaCall(uart, "send", "g 0200" + UnicodeToString(13));
+            
+            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);
+            
+            U6502Dump("350"hex, "355"hex) =? ["06"hex, "07"hex, "08"hex, "09"hex, "0A"hex, "0B"hex]; 
+        }
+    }
+}
+
+%/uasm65_grade
+
+    %output,parent="Problem 3",mpversion=".267",preserve="false"
+      Result: True
+      
+      Side Effects:
+        PASS: MathPiper version >= .259. (1/1)
+        PASS: The code contains no syntax errors. (1/1)
+        PASS: The program contains one ORG command. (1/1)
+        PASS: The program starts at 0200h in memory. (1/1)
+        PASS: The program uses a loop. (1/1)
+        PASS: The correct result is placed in addresses 350h-355h. (1/1)
+      
+        6/6 passes
+.   %/output
+
+%/group
+
+

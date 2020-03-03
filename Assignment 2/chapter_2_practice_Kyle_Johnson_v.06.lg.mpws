@@ -1,0 +1,594 @@
+v.06
+
+chapter_2_practice.mpws
+
+INSTRUCTIONS
+
+1) Evaluate each of the following folds once. Each
+fold will launch a GUI-based application that will
+have you practice a concept.
+
+2) Do not delete ANY of the output folds that are
+created during the evaluation of these folds.
+
+3) Note: practice folds do not have grading folds.
+
+
+
+
+%group,name="Problem 0",description="Programmer's information."
+========================================================================================================
+Problem 0
+
+In the following fold, replace "xxx" with your
+first name, replace "yyy" with your last name, and
+replace "000000" with your SSU ID number:
+
+%mathpiper,name="Problem 0",subtype="problem",unassign_all="true",unassign_all="true",truncate="6000",timeout="5000"
+
+[
+["firstName", "Kyle"],
+["lastName", "Johnson"],
+["ssuIDNumber", "264694"],
+];
+
+%/mathpiper
+
+    %output,parent="Problem 0",mpversion=".267",preserve="false"
+      Result: [["firstName","Kyle"],["lastName","Johnson"],["ssuIDNumber","264694"]]
+.   %/output
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 0"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .259", 1, True)
+    {
+        StringToNumber(Version()) >=? .259;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable \"firstName\" is a string that is not \"xxx\"", 1, True)
+    {
+        String?(foldResult["firstName"]) &? foldResult["firstName"] !=? "xxx";
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable \"lastName\" is a string that is not \"yyy\"", 1, True)
+    {
+        String?(foldResult["lastName"]) &? foldResult["lastName"] !=? "yyy";
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable \"ssuIDNumber\" is not \"000000\"", 1, True)
+    {
+        foldResult["ssuIDNumber"] !=? "000000" &? foldResult["ssuIDNumber"] !=? 0;
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 0",mpversion=".267",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        [["firstName","Kyle"],["lastName","Johnson"],["ssuIDNumber","264694"]];
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The program uses variable names that are longer than a single character. (1/1)
+        PASS: The program uses variable names that start with a lower case letter. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: MathPiper version >= .259. (1/1)
+        PASS: The code does not throw an exception when evaluated. (1/1)
+        PASS: The variable "firstName" is a string that is not "xxx". (1/1)
+        PASS: The variable "lastName" is a string that is not "yyy". (1/1)
+        PASS: The variable "ssuIDNumber" is not "000000". (1/1)
+      
+        12/12 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+=========================================================
+Practice 1
+
+Convert the binary number that is shown into hexadecimal.
+
+Note: Do not use leading zeros.
+
+%mathpiper,name="practice1",preserve_output="true"
+
+generator := [];
+
+generator["Question"] :=
+"
+Convert the binary number that is assigned
+to the variable into hexadecimal.
+
+";
+
+generator["Before"] := Lambda([], 
+{
+    Local(value);
+    
+    value := ToBase(2, RandomInteger(2^16));
+    
+    generator["After"] := ToBase(16, FromBase(2, value));
+    
+    "\"" + value + "\""; 
+});
+
+Practice(NumberOfVariables:1,
+        NumberOfReassignments:0,
+        CorrectInARow:3,
+        Hint?:False,
+        VariableRange: 1 .. 1,
+        ExpressionGenerator:generator,
+        Question:generator["Question"],
+        Cancelable?:False);
+
+%/mathpiper
+
+    %output,parent="practice1",mpversion=".267",preserve="true"
+      Result: [["Canceled",False],["HintCount",0],["WrongCount",0],["TotalTime",667.266371400],["CorrectInARow",3],["GeneratedCode","a := "1101101010000001";"],["CorrectInARowNeeded",3],["VariablesRange",[1,2,3,4,5,6,7,8,9]],["NumberOfReassignments",0],["NumberOfVariables",1],["Assessments",[]]]
+      
+      Side Effects:
+      [
+      "a := "1111110001110100";",[["a",fc74,fc74],413.553013300],
+      "a := "11001011100010";",[["a",32e2,32e2],168.112631200],
+      "a := "1101101010000001";",[["a",da81,da81],80.380115200],
+      ]
+      Number Of Variables: 1 
+      Number Of Reassignments: 0 
+      Variables Range: 1 2 3 4 5 6 7 8 9 
+      Correct In A Row: 3 
+      Correct In A Row Needed: 3 
+      Total Time: 667.266371400 
+      Wrong Count: 0 
+      Hint Count: 0 
+      Canceled: False 
+      
+.   %/output
+
+
+
+
+
+
+
+
+=========================================================
+Practice 2
+
+Convert the binary number that is shown into hexadecimal.
+
+Note: Do not use leading zeros.
+
+%mathpiper,name="practice2",preserve_output="true"
+
+generator := [];
+
+generator["Question"] :=
+"
+Convert the binary number that is assigned
+to the variable into hexadecimal.
+
+";
+
+generator["Before"] := Lambda([], 
+{
+    Local(value);
+    
+    value := ToBase(2, RandomInteger(2^20));
+    
+    generator["After"] := ToBase(16, FromBase(2, value));
+    
+    "\"" + value + "\""; 
+});
+
+Practice(NumberOfVariables:1,
+        NumberOfReassignments:0,
+        CorrectInARow:3,
+        Hint?:False,
+        VariableRange: 1 .. 1,
+        ExpressionGenerator:generator,
+        Question:generator["Question"],
+        Cancelable?:False);
+        
+%/mathpiper
+
+    %output,parent="practice2",mpversion=".267",preserve="true"
+      Result: [["Canceled",False],["HintCount",0],["WrongCount",2],["TotalTime",273.864633700],["CorrectInARow",3],["GeneratedCode","a := "10010010100010110100";"],["CorrectInARowNeeded",3],["VariablesRange",[1,2,3,4,5,6,7,8,9]],["NumberOfReassignments",0],["NumberOfVariables",1],["Assessments",[]]]
+      
+      Side Effects:
+      [
+      "a := "1110000110101000100";",[["a",70d44,70d44],50.909425600],
+      "a := "10100000000000001100";",[["a",a000c,1000012],["a",a000c,10000c],["a",a000c,a000c],62.882188200],
+      "a := "111011000101100011";",[["a",3b163,3b163],63.783726000],
+      "a := "10010010100010110100";",[["a",928b4,928b4],91.439568100],
+      ]
+      Number Of Variables: 1 
+      Number Of Reassignments: 0 
+      Variables Range: 1 2 3 4 5 6 7 8 9 
+      Correct In A Row: 3 
+      Correct In A Row Needed: 3 
+      Total Time: 273.864633700 
+      Wrong Count: 2 
+      Hint Count: 0 
+      Canceled: False 
+      
+.   %/output
+
+
+
+
+
+
+
+
+========================================================================================================
+Practice 3
+
+Convert the hexadecimal number that is shown into binary. 
+
+Note: Do not use leading zeros.
+
+%mathpiper,name="practice3",preserve_output="true"
+
+generator := [];
+
+generator["Question"] :=
+"
+Convert the hexadecimal number that is assigned
+to the variable into binary.
+
+";
+
+generator["Before"] := Lambda([], 
+{
+    Local(value);
+    
+    value := ToBase(16, RandomInteger(2^16));
+    
+    generator["After"] := ToBase(2, FromBase(16, value));
+    
+    "\"" + value + "\""; 
+});
+
+Practice(NumberOfVariables:1,
+        NumberOfReassignments:0,
+        CorrectInARow:3,
+        Hint?:False,
+        VariableRange: 1 .. 1,
+        ExpressionGenerator:generator,
+        Question:generator["Question"],
+        Cancelable?:True);
+
+%/mathpiper
+
+    %output,parent="practice3",mpversion=".267",preserve="true"
+      Result: [["Canceled",False],["HintCount",0],["WrongCount",0],["TotalTime",331.503867400],["CorrectInARow",3],["GeneratedCode","a := "d938";"],["CorrectInARowNeeded",3],["VariablesRange",[1,2,3,4,5,6,7,8,9]],["NumberOfReassignments",0],["NumberOfVariables",1],["Assessments",[]]]
+      
+      Side Effects:
+      [
+      "a := "47c7";",[["a",100011111000111,0100011111000111],294.058475100],
+      "a := "91b5";",[["a",1001000110110101,1001000110110101],18.512169100],
+      "a := "d938";",[["a",1101100100111000,1101100100111000],15.898442100],
+      ]
+      Number Of Variables: 1 
+      Number Of Reassignments: 0 
+      Variables Range: 1 2 3 4 5 6 7 8 9 
+      Correct In A Row: 3 
+      Correct In A Row Needed: 3 
+      Total Time: 331.503867400 
+      Wrong Count: 0 
+      Hint Count: 0 
+      Canceled: False 
+      
+.   %/output
+
+
+
+
+
+
+
+
+========================================================================================================
+Practice 4
+
+Convert the hexadecimal number that is shown within double
+quotes into binary. 
+
+Note: Place your answer within double quotes.
+
+Note: Do not use leading zeros.
+
+%mathpiper,name="practice4",preserve_output="true"
+
+generator := [];
+
+generator["Question"] :=
+"
+Convert the hexadecimal number that is assigned
+to the variable into binary.
+
+";
+
+generator["Before"] := Lambda([], 
+{
+    Local(value);
+    
+    value := ToBase(16, RandomInteger(2^20));
+    
+    generator["After"] := ToBase(2, FromBase(16, value));
+    
+    "\"" + value + "\""; 
+});
+
+Practice(NumberOfVariables:1,
+        NumberOfReassignments:0,
+        CorrectInARow:3,
+        Hint?:False,
+        VariableRange: 1 .. 1,
+        ExpressionGenerator:generator,
+        Question:generator["Question"],
+        Cancelable?:False);
+
+%/mathpiper
+
+    %output,parent="practice4",mpversion=".267",preserve="true"
+      Result: [["Canceled",False],["HintCount",0],["WrongCount",0],["TotalTime",67.631431700],["CorrectInARow",3],["GeneratedCode","a := "12a66";"],["CorrectInARowNeeded",3],["VariablesRange",[1,2,3,4,5,6,7,8,9]],["NumberOfReassignments",0],["NumberOfVariables",1],["Assessments",[]]]
+      
+      Side Effects:
+      [
+      "a := "efcfa";",[["a",11101111110011111010,11101111110011111010],22.541959800],
+      "a := "6e1ac";",[["a",1101110000110101100,01101110000110101100],29.576500500],
+      "a := "12a66";",[["a",10010101001100110,00010010101001100110],12.480060700],
+      ]
+      Number Of Variables: 1 
+      Number Of Reassignments: 0 
+      Variables Range: 1 2 3 4 5 6 7 8 9 
+      Correct In A Row: 3 
+      Correct In A Row Needed: 3 
+      Total Time: 67.631431700 
+      Wrong Count: 0 
+      Hint Count: 0 
+      Canceled: False 
+      
+.   %/output
+
+
+
+
+
+
+
+
+========================================================================================================
+Practice 5
+
+Caclulate the number of bit patterns that can be
+generated from the number of bits indicated by the
+number that is assigned to the variable.
+
+%mathpiper,name="practice5",preserve_output="true"
+
+generator := [];
+
+generator["Question"] :=
+"
+How many bit patterns can be generated
+by the indicated number of bits? For
+example 3 bits can generate 8 (2^3) patterns.
+
+";
+
+generator["Before"] := Lambda([], 
+{
+    Local(value);
+    
+    value := RandomInteger(20);
+    
+    generator["After"] := 2^value;
+    
+    value; 
+});
+
+Practice(NumberOfVariables:1,
+        NumberOfReassignments:0,
+        CorrectInARow:3,
+        Hint?:False,
+        VariableRange: 1 .. 1,
+        ExpressionGenerator:generator,
+        Question:generator["Question"],
+        Cancelable?:False);
+
+%/mathpiper
+
+    %output,parent="practice5",mpversion=".267",preserve="true"
+      Result: [["Canceled",False],["HintCount",0],["WrongCount",0],["TotalTime",56.762797300],["CorrectInARow",3],["GeneratedCode","a := 14;"],["CorrectInARowNeeded",3],["VariablesRange",[1,2,3,4,5,6,7,8,9]],["NumberOfReassignments",0],["NumberOfVariables",1],["Assessments",[]]]
+      
+      Side Effects:
+      [
+      "a := 19;",[["a",524288,524288],35.514128700],
+      "a := 7;",[["a",128,128],8.553251700],
+      "a := 14;",[["a",16384,16384],9.256041000],
+      ]
+      Number Of Variables: 1 
+      Number Of Reassignments: 0 
+      Variables Range: 1 2 3 4 5 6 7 8 9 
+      Correct In A Row: 3 
+      Correct In A Row Needed: 3 
+      Total Time: 56.762797300 
+      Wrong Count: 0 
+      Hint Count: 0 
+      Canceled: False 
+      
+.   %/output
+
+
+
+
+
+
+
+
+========================================================================================================
+Practice 6
+
+Add 1 to the binary number that is shown.
+
+Note: Do not use leading zeros.
+
+%mathpiper,name="practice6",preserve_output="true"
+
+generator := [];
+
+generator["Question"] :=
+"
+Add 1 to the binary number that is shown.
+
+";
+
+generator["Before"] := Lambda([], 
+{
+    Local(value);
+    
+    value := ToBase(2, RandomInteger(2^8));
+    
+    generator["After"] := ToBase(2, AddN(FromBase(2, value),1));
+    
+    "\"" + value + "\"";
+});
+
+Practice(NumberOfVariables:1,
+        NumberOfReassignments:0,
+        CorrectInARow:3,
+        Hint?:False,
+        VariableRange: 1 .. 1,
+        ExpressionGenerator:generator,
+        Question:generator["Question"],
+        Cancelable?:False);
+
+%/mathpiper
+
+    %output,parent="practice6",mpversion=".267",preserve="true"
+      Result: [["Canceled",False],["HintCount",0],["WrongCount",0],["TotalTime",30.304483100],["CorrectInARow",3],["GeneratedCode","a := "100000";"],["CorrectInARowNeeded",3],["VariablesRange",[1,2,3,4,5,6,7,8,9]],["NumberOfReassignments",0],["NumberOfVariables",1],["Assessments",[]]]
+      
+      Side Effects:
+      [
+      "a := "11100011";",[["a",11100100,11100100],13.181331800],
+      "a := "11001000";",[["a",11001001,11001001],7.246006200],
+      "a := "100000";",[["a",100001,100001],7.146392200],
+      ]
+      Number Of Variables: 1 
+      Number Of Reassignments: 0 
+      Variables Range: 1 2 3 4 5 6 7 8 9 
+      Correct In A Row: 3 
+      Correct In A Row Needed: 3 
+      Total Time: 30.304483100 
+      Wrong Count: 0 
+      Hint Count: 0 
+      Canceled: False 
+      
+.   %/output
+
+
+
+
+
+
+
+
+========================================================================================================
+Practice 7
+
+Add 1 to the hexadecimal number that is shown. 
+
+Note: Do not use leading zeros.
+
+
+%mathpiper,name="practice7",preserve_output="true"
+
+generator := [];
+
+generator["Question"] :=
+"
+Add 1 to the hexadecimal number that is shown.
+
+";
+
+generator["Before"] := Lambda([], 
+{
+    Local(value);
+    
+    value := ToBase(16, RandomInteger(2^8));
+    
+    generator["After"] := ToBase(16, AddN(FromBase(16, value),1));
+    
+    "\"" + value + "\"";
+});
+
+Practice(NumberOfVariables:1,
+        NumberOfReassignments:0,
+        CorrectInARow:3,
+        Hint?:False,
+        VariableRange: 1 .. 1,
+        ExpressionGenerator:generator,
+        Question:generator["Question"],
+        Cancelable?:False);
+
+%/mathpiper
+
+    %output,parent="practice7",mpversion=".267",preserve="true"
+      Result: [["Canceled",False],["HintCount",0],["WrongCount",0],["TotalTime",80.501319200],["CorrectInARow",3],["GeneratedCode","a := "86";"],["CorrectInARowNeeded",3],["VariablesRange",[1,2,3,4,5,6,7,8,9]],["NumberOfReassignments",0],["NumberOfVariables",1],["Assessments",[]]]
+      
+      Side Effects:
+      [
+      "a := "aa";",[["a",ab,ab],68.111308200],
+      "a := "bd";",[["a",be,be],4.026192700],
+      "a := "86";",[["a",87,87],5.031948200],
+      ]
+      Number Of Variables: 1 
+      Number Of Reassignments: 0 
+      Variables Range: 1 2 3 4 5 6 7 8 9 
+      Correct In A Row: 3 
+      Correct In A Row Needed: 3 
+      Total Time: 80.501319200 
+      Wrong Count: 0 
+      Hint Count: 0 
+      Canceled: False 
+      
+.   %/output
+

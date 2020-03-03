@@ -1,0 +1,39 @@
+Kyle Johnson
+Prof. Kosan
+1/29/19
+5:30 PM
+
+1.) 
+
+A) E000  4C 1B E0  JMP E01Bh. JMP is the assembly language instruction at E000.
+B) E05D  38        SEC .      SEC is the assembly language instruction at E05D.
+
+2.)
+
+0200  A9 01     LDA #01h
+0202  69 02     ADC #02h
+0204  69 03     ADC #03h
+0206  69 04     ADC #04h
+0208  69 05     ADC #05h
+020A  69 06     ADC #06h
+020C  8D 75 02  STA 0275h
+020F  00        BRK 
+0210  00        BRK 
+0211  00        BRK 
+0212  00        BRK 
+0213  00        BRK 
+0214  00        BRK 
+-g 0275
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0275         00         00        00        FF       00010100
+-g  0200
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   020F         15         00        00        FF       00010100
+-d 0275
+
+0275  15 00 00 00 00 00 00 00 - 00 00 00 00 00 00 00 00  ................ 
+-

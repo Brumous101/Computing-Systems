@@ -1,0 +1,2079 @@
+v.03
+
+chapter_7_problems.mpws
+
+Complete all of the exercises in this worksheet by placing
+the code you write for each exercise into the empty fold
+which is provided in each exercise section.
+
+Save the worksheet before running any tests.
+
+Use the following delay subroutine in all of the programs
+you write in this worksheet:
+
+;**************************************
+;Delay subroutine.
+;
+;The purpose of this subroutine is to generate
+; a delay so that the rate of the blinking
+; can be controlled.
+;
+;Change the number that is being loaded into
+; the 'A' register to change the delay time.
+;**************************************
+Delay:
+;Save registers on the stack.
+	pha
+	txa
+	pha
+	tya
+	pha
+	
+;Change the number that is being loaded into the
+; 'A' register in order to change the delay time.
+	lda #01h
+	
+OutLoop:
+	ldx #030h
+	
+InLoop1:
+	ldy #0ffh
+	
+InLoop2:
+	dey
+	bne InLoop2
+	
+	dex
+	bne InLoop1
+	
+	sec
+	sbc #1d
+	bne OutLoop
+	
+;Restore registers from the stack.
+	pla
+	tay
+	pla
+	tax
+	pla
+
+	rts
+
+
+
+%group,name="Problem 0",description="Programmer's information."
+========================================================================================================
+Problem 0
+
+In the following fold, replace "xxx" with your
+first name, replace "yyy" with your last name, and
+replace "000000" with your SSU ID number:
+
+%mathpiper,name="Problem 0",subtype="problem",unassign_all="true",truncate="6000",timeout="5000"
+
+[
+["firstName", "Kyle"],
+["lastName", "Johnson"],
+["ssuIDNumber", "264694"],
+];
+
+%/mathpiper
+
+    %output,parent="Problem 0",mpversion=".271",preserve="false"
+      Result: [["firstName","Kyle"],["lastName","Johnson"],["ssuIDNumber","264694"]]
+.   %/output
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 0"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .255", 1, True)
+    {
+        StringToNumber(Version()) >=? .255;
+    }
+    
+    //-----------------------------------------------------------------------------------------    
+    
+
+    FoldGrade("The code does not produce side effect output", 1, False)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        
+        !? Contains?(procedureNames,"Echo") &? !? Contains?(procedureNames,"Write") &? !? Contains?(procedureNames,"TableForm");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'firstName' a string that is not 'xxx'", 1, True)
+    {
+        String?(foldResult["firstName"]) &? foldResult["firstName"] !=? "xxx";
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'lastName' is a string that is not 'yyy'", 1, True)
+    {
+        String?(foldResult["lastName"]) &? foldResult["lastName"] !=? "yyy";
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'ssuIDNumber' is not '000000'", 1, True)
+    {
+        foldResult["ssuIDNumber"] !=? "000000" &? foldResult["ssuIDNumber"] !=? 0;
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 0",mpversion=".271",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        [["firstName","Kyle"],["lastName","Johnson"],["ssuIDNumber","264694"]];
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: The code does not throw an exception when evaluated. (1/1)
+        PASS: MathPiper version >= .255. (1/1)
+        PASS: The code does not produce side effect output. (1/1)
+        PASS: The variable 'firstName' a string that is not 'xxx'. (1/1)
+        PASS: The variable 'lastName' is a string that is not 'yyy'. (1/1)
+        PASS: The variable 'ssuIDNumber' is not '000000'. (1/1)
+      
+        11/11 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 1",description="Exchange nibbles."
+========================================================================================================
+Problem 1
+
+Write a program that will do the following to the
+LEDs at address A200h 5 times:
+
+Turn LEDs 0 1 2 3 on while turning LEDs 4 5 6 7
+off, then turn LEDs 0 1 2 3 off and LEDs 4 5 6 7
+on.
+
+Do not use any 'stx' or 'sty' commands. Do not use
+more than two 'sta' commands.
+
+
+%mathpiper,name="Problem 1",subtype="hint"
+Hint("CiAgICBvcmcgMDIwMGgKICAgIAogICAgbGR4ICM1ZAoKTWFpbjoKICAgIGxkYSAjMDAwMDExMTFiCiAgICAKICAgIHN0YSAwYTIwMGgKICAgIAogICAganNyIERlbGF5CiAgICAKICAgIGxkYSAjMTExMTAwMDBiCiAgICAKICAgIHN0YSAwYTIwMGgKICAgIAogICAganNyIERlbGF5CiAgICAKICAgIGRleAogICAgCiAgICBibmUgTWFpbgogICAgCiAgICBicmsKICAgIAogICAgCjsqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKgo7ICAgICAgICBTdWJyb3V0aW5lcyBhcmVhLgo7KioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioKCjsqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKgo7RGVsYXkgc3Vicm91dGluZS4KOwo7VGhlIHB1cnBvc2Ugb2YgdGhpcyBzdWJyb3V0aW5lIGlzIHRvIGdlbmVyYXRlCjsgYSBkZWxheSBzbyB0aGF0IHRoZSByYXRlIG9mIHRoZSBibGlua2luZwo7IGNhbiBiZSBjb250cm9sbGVkLgo7CjtDaGFuZ2UgdGhlIG51bWJlciB0aGF0IGlzIGJlaW5nIGxvYWRlZCBpbnRvCjsgdGhlICdBJyByZWdpc3RlciB0byBjaGFuZ2UgdGhlIGRlbGF5IHRpbWUuCjsqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKgpEZWxheToKO1NhdmUgcmVnaXN0ZXJzIG9uIHRoZSBzdGFjay4KCXBoYQoJdHhhCglwaGEKCXR5YQoJcGhhCgkKO0NoYW5nZSB0aGUgbnVtYmVyIHRoYXQgaXMgYmVpbmcgbG9hZGVkIGludG8gdGhlCjsgJ0EnIHJlZ2lzdGVyIGluIG9yZGVyIHRvIGNoYW5nZSB0aGUgZGVsYXkgdGltZS4KCWxkYSAjMDFoCgkKT3V0TG9vcDoKCWxkeCAjMDMwaAoJCkluTG9vcDE6CglsZHkgIzBmZmgKCQpJbkxvb3AyOgoJZGV5CglibmUgSW5Mb29wMgoJCglkZXgKCWJuZSBJbkxvb3AxCgkKCXNlYwoJc2JjICMxZAoJYm5lIE91dExvb3AKCQo7UmVzdG9yZSByZWdpc3RlcnMgZnJvbSB0aGUgc3RhY2suCglwbGEKCXRheQoJcGxhCgl0YXgKCXBsYQoKCXJ0cwoKOyoqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqCjsgICAgICAgIFZhcmlhYmxlcyBhcmVhLgo7KioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioKCiAgICBlbmQKICAgICAK");
+%/mathpiper
+
+    %output,parent="Problem 1",mpversion=".271",preserve="false"
+      Result: True
+.   %/output
+
+
+%uasm65,name="Problem 1",subtype="problem"
+
+ org 0200h
+ 
+ ldx #5d
+ 
+Main:
+ lda #00001111b ;turns the 4 right lights on and the 4 left lights off 
+ sta 0a200h 
+ jsr Delay 
+ lda #11110000b ;turns the 4 left lights on and the 4 right lights off 
+ sta 0a200h
+ jsr Delay 
+ dex
+ bne Main
+ brk
+ 
+Delay:
+ pha ;push a 
+ txa ;transfer x register to a 
+ pha
+ tya ;transfer y register to a 
+ pha
+ 
+ lda #01h
+ 
+OutLoop:
+ ldx #030h
+ 
+InLoop1:
+ ldy #0ffh
+ 
+InLoop2:
+ dey
+ bne InLoop2
+ 
+ dex
+ bne InLoop1
+ 
+ sec
+ sbc #1d
+ bne OutLoop
+ 
+;Restoring registers from the stack.
+ pla
+ tay ;Since we pushed y last we have to pull y first
+ pla
+ tax ;Since we pushed x first we have to pull x last
+ pla
+ 
+ rts
+ 
+ end
+ 
+;g 0200h to see them flicker
+
+%/uasm65
+
+    %output,parent="Problem 1",mpversion=".271",preserve="false"
+      *** Executable Code ***
+      
+      %s19,description="Execute this fold to send program to U6502 monitor.",preserve="false"
+      	S00700005541534DC2
+      	S1170200A205A90F8D00A2201602A9F08D00A2201602CAD086
+      	S1170214ED00488A489848A901A230A0FF88D0FDCAD0F838B1
+      	S10D0228E901D0F168A868AA686033
+      	S9030000FC
+      %/s19
+       
+      *** List File ***
+      
+                      000001 |
+      0200            000002 | org 0200h
+                      000003 | 
+      0200 A2 05      000004 | ldx #5d
+                      000005 | 
+      0202            000006 |Main:
+      0202 A9 0F      000007 | lda #00001111b ;turns the 4 right lights on and the 4 left lights off 
+      0204 8D 00 A2   000008 | sta 0a200h 
+      0207 20 16 02   000009 | jsr Delay 
+      020A A9 F0      000010 | lda #11110000b ;turns the 4 left lights on and the 4 right lights off 
+      020C 8D 00 A2   000011 | sta 0a200h
+      020F 20 16 02   000012 | jsr Delay 
+      0212 CA         000013 | dex
+      0213 D0 ED      000014 | bne Main
+      0215 00         000015 | brk
+                      000016 | 
+      0216            000017 |Delay:
+      0216 48         000018 | pha ;push a 
+      0217 8A         000019 | txa ;transfer x register to a 
+      0218 48         000020 | pha
+      0219 98         000021 | tya ;transfer y register to a 
+      021A 48         000022 | pha
+                      000023 | 
+      021B A9 01      000024 | lda #01h
+                      000025 | 
+      021D            000026 |OutLoop:
+      021D A2 30      000027 | ldx #030h
+                      000028 | 
+      021F            000029 |InLoop1:
+      021F A0 FF      000030 | ldy #0ffh
+                      000031 | 
+      0221            000032 |InLoop2:
+      0221 88         000033 | dey
+      0222 D0 FD      000034 | bne InLoop2
+                      000035 | 
+      0224 CA         000036 | dex
+      0225 D0 F8      000037 | bne InLoop1
+                      000038 | 
+      0227 38         000039 | sec
+      0228 E9 01      000040 | sbc #1d
+      022A D0 F1      000041 | bne OutLoop
+                      000042 | 
+                      000043 |;Restoring registers from the stack.
+      022C 68         000044 | pla
+      022D A8         000045 | tay ;Since we pushed y last we have to pull y first
+      022E 68         000046 | pla
+      022F AA         000047 | tax ;Since we pushed x first we have to pull x last
+      0230 68         000048 | pla
+                      000049 | 
+      0231 60         000050 | rts
+                      000051 | 
+                      000052 | end
+      
+      *** Symbol Table ***
+      {INLOOP1=543, OUTLOOP=541, DELAY=534, MAIN=514, INLOOP2=545, =0}
+.   %/output
+
+
+
+
+
+
+
+%uasm65_grade,name="Problem 1",target_fold_type="uasm65"
+
+{
+    Local(result, analysis, s19, uart, transpose, objectCodeString, testCode, testS19, commands);
+    
+    result := U6502Assemble(?foldCode);
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .255", 1, True)
+    {
+        StringToNumber(Version()) >=? .255;
+    }    
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The code contains no syntax errors", 1, True) 
+    {
+        Length(result) >? 1;
+    }
+    
+    // --------------------------------------------------------
+    
+    If(Length(result) >? 1)
+    {
+        U6502Reset();
+        
+        U6502Fill("200"hex, "1000"hex,  0);
+        
+        s19 := result[2];
+        
+        analysis := U6502ConvertJavaList(result[4]);
+        
+        transpose := Transpose(analysis);
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains one ORG command", 1, True) 
+        {
+            Length(commands := U6502FindOperators(analysis, "ORG")) =? 1;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program starts at 0200h in memory", 1, True) 
+        {
+            commands[1][4] =? "0200";
+        }    
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains at least one call to subroutine 'Delay'", 1, True) 
+        {
+            Length(Select(
+                   Select(analysis, 
+                       Lambda([i], i[3] =? "JSR" )), 
+                   Lambda([i], i[4] =? "DELAY" ))) >=? 1;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains no more than two 'STA' commands", 1, True) 
+        {
+            Count(transpose[3], "STA") =? 2;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains no 'STX' commands", 1, True) 
+        {
+            Count(transpose[3], "STX") =? 0;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains no 'STY' commands", 1, True) 
+        {
+            Count(transpose[3], "STY") =? 0;
+        }
+
+        // --------------------------------------------------------
+        
+        FoldGrade("The program produces the desired effect", 1, True) 
+        {
+            Local(modifiedCode, io, output);
+            
+            modifiedCode := StringReplaceAll(StringLowerCase(?foldCode), "jsr\\s+delay", "");
+          
+            [lst, s19, symbolTable] := U6502Assemble(modifiedCode);
+            
+            uart := JavaCall("org.mathpiper.ide.u6502.EMU6551","getInstance");
+            
+            U6502Reset();
+
+            io := JavaCall(uart, "getIO");
+            
+            output := JavaCall("java.lang.reflect.Array", "get", io, 1);
+            
+            JavaCall(output, "setIsLogging", True);
+            
+            JavaCall(output, "setIsLogOnce", False);
+            
+            JavaCall(output, "clearLogs");
+            
+            JavaCall(uart, "send","L" + UnicodeToString(13));
+            
+            JavaCall(uart, "send", ToString(s19));
+            
+            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);
+            
+            JavaCall(uart, "send", "g 0200" + UnicodeToString(13));
+            
+            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);
+
+            (JavaAccess(output, "getReadList")) =? [15,240,15,240,15,240,15,240,15,240];
+        }
+    }
+}
+
+%/uasm65_grade
+
+    %output,parent="Problem 1",mpversion=".271",preserve="false"
+      Result: True
+      
+      Side Effects:
+        PASS: MathPiper version >= .255. (1/1)
+        PASS: The code contains no syntax errors. (1/1)
+        PASS: The program contains one ORG command. (1/1)
+        PASS: The program starts at 0200h in memory. (1/1)
+        PASS: The program contains at least one call to subroutine 'Delay'. (1/1)
+        PASS: The program contains no more than two 'STA' commands. (1/1)
+        PASS: The program contains no 'STX' commands. (1/1)
+        PASS: The program contains no 'STY' commands. (1/1)
+        PASS: The program produces the desired effect. (1/1)
+      
+        9/9 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+%group,name="Problem 2",description="Even odd."
+========================================================================================================
+Problem 2
+
+Write a program that will do the following to the
+LEDs at address A200h 5 times:
+
+Turn all even LEDs on and all odd LEDs off, then
+turn all even LEDs off and all odd LEDs on.
+
+Do not use any 'stx' or 'sty' commands. Do not use
+more than two 'sta' commands.
+
+
+%mathpiper,name="Problem 2",subtype="hint"
+Hint("CiAgICBvcmcgMDIwMGgKICAgIAogICAgbGR4ICM1ZAogICAgCk1haW46CiAgICBsZGEgIzAxMDEwMTAxYgogICAgCiAgICBzdGEgMGEyMDBoCiAgICAKICAgIGpzciBEZWxheQogICAgCiAgICBsZGEgIzEwMTAxMDEwYgogICAgCiAgICBzdGEgMGEyMDBoCiAgICAKICAgIGpzciBEZWxheQogICAgCiAgICBkZXgKICAgIAogICAgYm5lIE1haW4KICAgIAogICAgYnJrCiAgICAKICAgIAo7KioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioKOyAgICAgICAgU3Vicm91dGluZXMgYXJlYS4KOyoqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqCgo7KioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioKO0RlbGF5IHN1YnJvdXRpbmUuCjsKO1RoZSBwdXJwb3NlIG9mIHRoaXMgc3Vicm91dGluZSBpcyB0byBnZW5lcmF0ZQo7IGEgZGVsYXkgc28gdGhhdCB0aGUgcmF0ZSBvZiB0aGUgYmxpbmtpbmcKOyBjYW4gYmUgY29udHJvbGxlZC4KOwo7Q2hhbmdlIHRoZSBudW1iZXIgdGhhdCBpcyBiZWluZyBsb2FkZWQgaW50bwo7IHRoZSAnQScgcmVnaXN0ZXIgdG8gY2hhbmdlIHRoZSBkZWxheSB0aW1lLgo7KioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioKRGVsYXk6CjtTYXZlIHJlZ2lzdGVycyBvbiB0aGUgc3RhY2suCglwaGEKCXR4YQoJcGhhCgl0eWEKCXBoYQoJCjtDaGFuZ2UgdGhlIG51bWJlciB0aGF0IGlzIGJlaW5nIGxvYWRlZCBpbnRvIHRoZQo7ICdBJyByZWdpc3RlciBpbiBvcmRlciB0byBjaGFuZ2UgdGhlIGRlbGF5IHRpbWUuCglsZGEgIzAxaAoJCk91dExvb3A6CglsZHggIzAzMGgKCQpJbkxvb3AxOgoJbGR5ICMwZmZoCgkKSW5Mb29wMjoKCWRleQoJYm5lIEluTG9vcDIKCQoJZGV4CglibmUgSW5Mb29wMQoJCglzZWMKCXNiYyAjMWQKCWJuZSBPdXRMb29wCgkKO1Jlc3RvcmUgcmVnaXN0ZXJzIGZyb20gdGhlIHN0YWNrLgoJcGxhCgl0YXkKCXBsYQoJdGF4CglwbGEKCglydHMKCjsqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKgo7ICAgICAgICBWYXJpYWJsZXMgYXJlYS4KOyoqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqCgogICAgZW5kCiAgICAgCg==");
+%/mathpiper
+
+    %output,parent="Problem 2",mpversion=".271",preserve="false"
+      Result: True
+.   %/output
+
+
+%uasm65,name="Problem 2",subtype="problem"
+
+ org 0200h
+ 
+ ldx #5d
+ 
+Main:
+ lda #01010101b 
+ sta 0a200h
+ jsr Delay
+ lda #10101010b
+ sta 0a200h
+ jsr Delay
+ dex
+ bne Main
+ brk
+ 
+Delay:
+ pha ;push a 
+ txa ;transfer x register to a 
+ pha
+ tya ;transfer y register to a 
+ pha
+ 
+ lda #01h
+ 
+OutLoop:
+ ldx #030h
+ 
+InLoop1:
+ ldy #0ffh
+ 
+InLoop2:
+ dey
+ bne InLoop2
+ 
+ dex
+ bne InLoop1
+ 
+ sec
+ sbc #1d
+ bne OutLoop
+ 
+;Restoring registers from the stack.
+ pla
+ tay ;Since we pushed y last we have to pull y first
+ pla
+ tax ;Since we pushed x first we have to pull x last
+ pla
+ 
+ rts
+ 
+ end
+;-g 0200h to see them flicker
+%/uasm65
+
+    %output,parent="Problem 2",mpversion=".271",preserve="false"
+      *** Executable Code ***
+      
+      %s19,description="Execute this fold to send program to U6502 monitor.",preserve="false"
+      	S00700005541534DC2
+      	S1170200A205A9558D00A2201602A9AA8D00A2201602CAD086
+      	S1170214ED00488A489848A901A230A0FF88D0FDCAD0F838B1
+      	S10D0228E901D0F168A868AA686033
+      	S9030000FC
+      %/s19
+       
+      *** List File ***
+      
+                      000001 |
+      0200            000002 | org 0200h
+                      000003 | 
+      0200 A2 05      000004 | ldx #5d
+                      000005 | 
+      0202            000006 |Main:
+      0202 A9 55      000007 | lda #01010101b 
+      0204 8D 00 A2   000008 | sta 0a200h
+      0207 20 16 02   000009 | jsr Delay
+      020A A9 AA      000010 | lda #10101010b
+      020C 8D 00 A2   000011 | sta 0a200h
+      020F 20 16 02   000012 | jsr Delay
+      0212 CA         000013 | dex
+      0213 D0 ED      000014 | bne Main
+      0215 00         000015 | brk
+                      000016 | 
+      0216            000017 |Delay:
+      0216 48         000018 | pha ;push a 
+      0217 8A         000019 | txa ;transfer x register to a 
+      0218 48         000020 | pha
+      0219 98         000021 | tya ;transfer y register to a 
+      021A 48         000022 | pha
+                      000023 | 
+      021B A9 01      000024 | lda #01h
+                      000025 | 
+      021D            000026 |OutLoop:
+      021D A2 30      000027 | ldx #030h
+                      000028 | 
+      021F            000029 |InLoop1:
+      021F A0 FF      000030 | ldy #0ffh
+                      000031 | 
+      0221            000032 |InLoop2:
+      0221 88         000033 | dey
+      0222 D0 FD      000034 | bne InLoop2
+                      000035 | 
+      0224 CA         000036 | dex
+      0225 D0 F8      000037 | bne InLoop1
+                      000038 | 
+      0227 38         000039 | sec
+      0228 E9 01      000040 | sbc #1d
+      022A D0 F1      000041 | bne OutLoop
+                      000042 | 
+                      000043 |;Restoring registers from the stack.
+      022C 68         000044 | pla
+      022D A8         000045 | tay ;Since we pushed y last we have to pull y first
+      022E 68         000046 | pla
+      022F AA         000047 | tax ;Since we pushed x first we have to pull x last
+      0230 68         000048 | pla
+                      000049 | 
+      0231 60         000050 | rts
+                      000051 | 
+                      000052 | end
+      
+      *** Symbol Table ***
+      {INLOOP1=543, OUTLOOP=541, DELAY=534, MAIN=514, INLOOP2=545, =0}
+.   %/output
+
+
+
+
+
+
+
+%uasm65_grade,name="Problem 2",target_fold_type="uasm65"
+
+{
+    Local(result, analysis, s19, uart, transpose, objectCodeString, testCode, testS19, commands);
+    
+    result := U6502Assemble(?foldCode);
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .255", 1, True)
+    {
+        StringToNumber(Version()) >=? .255;
+    }    
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The code contains no syntax errors", 1, True) 
+    {
+        Length(result) >? 1;
+    }
+    
+    // --------------------------------------------------------
+    
+    If(Length(result) >? 1)
+    {
+        U6502Reset();
+        
+        U6502Fill("200"hex, "1000"hex,  0);
+        
+        s19 := result[2];
+        
+        analysis := U6502ConvertJavaList(result[4]);
+        
+        transpose := Transpose(analysis);
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains one ORG command", 1, True) 
+        {
+            Length(commands := U6502FindOperators(analysis, "ORG")) =? 1;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program starts at 0200h in memory", 1, True) 
+        {
+            commands[1][4] =? "0200";
+        }    
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains at least one call to subroutine 'Delay'", 1, True) 
+        {
+            Length(Select(
+                   Select(analysis, 
+                       Lambda([i], i[3] =? "JSR" )), 
+                   Lambda([i], i[4] =? "DELAY" ))) >=? 1;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains no more than two 'STA' commands", 1, True) 
+        {
+            Count(transpose[3], "STA") =? 2;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains no 'STX' commands", 1, True) 
+        {
+            Count(transpose[3], "STX") =? 0;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains no 'STY' commands", 1, True) 
+        {
+            Count(transpose[3], "STY") =? 0;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program produces the desired effect", 1, True) 
+        {
+            Local(modifiedCode, io, output);
+            
+            modifiedCode := StringReplaceAll(StringLowerCase(?foldCode), "jsr\\s+delay", "");
+          
+            [lst, s19, symbolTable] := U6502Assemble(modifiedCode);
+            
+            uart := JavaCall("org.mathpiper.ide.u6502.EMU6551","getInstance");
+            
+            U6502Reset();
+
+            io := JavaCall(uart, "getIO");
+            
+            output := JavaCall("java.lang.reflect.Array", "get", io, 1);
+            
+            JavaCall(output, "setIsLogging", True);
+            
+            JavaCall(output, "setIsLogOnce", False);
+            
+            JavaCall(output, "clearLogs");
+            
+            JavaCall(uart, "send","L" + UnicodeToString(13));
+            
+            JavaCall(uart, "send", ToString(s19));
+            
+            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);
+            
+            JavaCall(uart, "send", "g 0200" + UnicodeToString(13));
+            
+            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);
+
+            (JavaAccess(output, "getReadList")) =? [85,170,85,170,85,170,85,170,85,170];
+        }
+    }
+}
+
+%/uasm65_grade
+
+    %output,parent="Problem 2",mpversion=".271",preserve="false"
+      Result: True
+      
+      Side Effects:
+        PASS: MathPiper version >= .255. (1/1)
+        PASS: The code contains no syntax errors. (1/1)
+        PASS: The program contains one ORG command. (1/1)
+        PASS: The program starts at 0200h in memory. (1/1)
+        PASS: The program contains at least one call to subroutine 'Delay'. (1/1)
+        PASS: The program contains no more than two 'STA' commands. (1/1)
+        PASS: The program contains no 'STX' commands. (1/1)
+        PASS: The program contains no 'STY' commands. (1/1)
+        PASS: The program produces the desired effect. (1/1)
+      
+        9/9 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 3",description="Across and back."
+========================================================================================================
+Problem 3
+
+Write a program that will do the following to
+the LEDs at address A200h 1 time:
+
+Turn LED 0 of your output port on then send this
+light across the LEDs to LED 7 then back across
+the lights to LED 0.
+
+Do not use more than one 'sta', 'stx', or 'sty' command.
+Use one 'asl' command, and one 'lsr' command. Use the
+'asl' and 'lsr' commands directly on memory location
+0a200h like this:
+
+    asl 0a200h
+    
+    lsr 0a200h
+
+
+%mathpiper,name="Problem 3",subtype="hint"
+Hint("CiAgICBvcmcgMDIwMGgKICAgIAogICAgbGR4ICM3ZAogICAgCiAgICBsZGEgIzAwMDAwMDAxYgogICAgCiAgICBzdGEgMGEyMDBoCiAgICAKICAgIGpzciBEZWxheQogICAgClNoaWZ0TGVmdDoKICAgIAogICAgYXNsIDBhMjAwaAogICAgCiAgICBqc3IgRGVsYXkKICAgIAogICAgZGV4CiAgICAKICAgIGJuZSBTaGlmdExlZnQKICAgIAogICAgbGR4ICM3ZAoKU2hpZnRSaWdodDoKCiAgICBsc3IgMGEyMDBoCiAgICAKICAgIGpzciBEZWxheQogICAgCiAgICBkZXgKICAgIAogICAgYm5lIFNoaWZ0UmlnaHQKICAgIAogICAgYnJrCiAgICAKICAgIAo7KioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioKOyAgICAgICAgU3Vicm91dGluZXMgYXJlYS4KOyoqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqCgo7KioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioKO0RlbGF5IHN1YnJvdXRpbmUuCjsKO1RoZSBwdXJwb3NlIG9mIHRoaXMgc3Vicm91dGluZSBpcyB0byBnZW5lcmF0ZQo7IGEgZGVsYXkgc28gdGhhdCB0aGUgcmF0ZSBvZiB0aGUgYmxpbmtpbmcKOyBjYW4gYmUgY29udHJvbGxlZC4KOwo7Q2hhbmdlIHRoZSBudW1iZXIgdGhhdCBpcyBiZWluZyBsb2FkZWQgaW50bwo7IHRoZSAnQScgcmVnaXN0ZXIgdG8gY2hhbmdlIHRoZSBkZWxheSB0aW1lLgo7KioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioKRGVsYXk6CjtTYXZlIHJlZ2lzdGVycyBvbiB0aGUgc3RhY2suCglwaGEKCXR4YQoJcGhhCgl0eWEKCXBoYQoJCjtDaGFuZ2UgdGhlIG51bWJlciB0aGF0IGlzIGJlaW5nIGxvYWRlZCBpbnRvIHRoZQo7ICdBJyByZWdpc3RlciBpbiBvcmRlciB0byBjaGFuZ2UgdGhlIGRlbGF5IHRpbWUuCglsZGEgIzAxaAoJCk91dExvb3A6CglsZHggIzAzMGgKCQpJbkxvb3AxOgoJbGR5ICMwZmZoCgkKSW5Mb29wMjoKCWRleQoJYm5lIEluTG9vcDIKCQoJZGV4CglibmUgSW5Mb29wMQoJCglzZWMKCXNiYyAjMWQKCWJuZSBPdXRMb29wCgkKO1Jlc3RvcmUgcmVnaXN0ZXJzIGZyb20gdGhlIHN0YWNrLgoJcGxhCgl0YXkKCXBsYQoJdGF4CglwbGEKCglydHMKCjsqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKgo7ICAgICAgICBWYXJpYWJsZXMgYXJlYS4KOyoqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqCgogICAgZW5kCiAgICAgCg==");
+%/mathpiper
+
+    %output,parent="Problem 3",mpversion=".271",preserve="false"
+      Result: True
+.   %/output
+
+
+%uasm65,name="Problem 3",subtype="problem"
+
+ org 0200h
+ ldx #7d
+ lda #00000001b
+ sta 0a200h
+ jsr Delay
+ 
+ShiftLeft:
+ asl 0a200h
+ jsr Delay
+ dex
+ bne ShiftLeft
+ ldx #7d
+ 
+ShiftRight:
+ lsr 0a200h
+ jsr Delay
+ dex
+ bne ShiftRight
+ brk
+
+Delay:
+ pha ;push a 
+ txa ;transfer x register to a 
+ pha
+ tya ;transfer y register to a 
+ pha
+ 
+ lda #01h
+ 
+OutLoop:
+ ldx #030h
+ 
+InLoop1:
+ ldy #0ffh
+ 
+InLoop2:
+ dey
+ bne InLoop2
+ 
+ dex
+ bne InLoop1
+ 
+ sec
+ sbc #1d
+ bne OutLoop
+ 
+;Restoring registers from the stack.
+ pla
+ tay ;Since we pushed y last we have to pull y first
+ pla
+ tax ;Since we pushed x first we have to pull x last
+ pla
+ 
+ rts
+ 
+ end
+;-g 0200h to see them flicker
+%/uasm65
+
+    %output,parent="Problem 3",mpversion=".271",preserve="false"
+      *** Executable Code ***
+      
+      %s19,description="Execute this fold to send program to U6502 monitor.",preserve="false"
+      	S00700005541534DC2
+      	S1170200A207A9018D00A2201F020E00A2201F02CAD0F7A2FF
+      	S1170214074E00A2201F02CAD0F700488A489848A901A23093
+      	S1170228A0FF88D0FDCAD0F838E901D0F168A868AA6860006B
+      	S9030000FC
+      %/s19
+       
+      *** List File ***
+      
+                      000001 |
+      0200            000002 | org 0200h
+      0200 A2 07      000003 | ldx #7d
+      0202 A9 01      000004 | lda #00000001b
+      0204 8D 00 A2   000005 | sta 0a200h
+      0207 20 1F 02   000006 | jsr Delay
+                      000007 | 
+      020A            000008 |ShiftLeft:
+      020A 0E 00 A2   000009 | asl 0a200h
+      020D 20 1F 02   000010 | jsr Delay
+      0210 CA         000011 | dex
+      0211 D0 F7      000012 | bne ShiftLeft
+      0213 A2 07      000013 | ldx #7d
+                      000014 | 
+      0215            000015 |ShiftRight:
+      0215 4E 00 A2   000016 | lsr 0a200h
+      0218 20 1F 02   000017 | jsr Delay
+      021B CA         000018 | dex
+      021C D0 F7      000019 | bne ShiftRight
+      021E 00         000020 | brk
+                      000021 |
+      021F            000022 |Delay:
+      021F 48         000023 | pha ;push a 
+      0220 8A         000024 | txa ;transfer x register to a 
+      0221 48         000025 | pha
+      0222 98         000026 | tya ;transfer y register to a 
+      0223 48         000027 | pha
+                      000028 | 
+      0224 A9 01      000029 | lda #01h
+                      000030 | 
+      0226            000031 |OutLoop:
+      0226 A2 30      000032 | ldx #030h
+                      000033 | 
+      0228            000034 |InLoop1:
+      0228 A0 FF      000035 | ldy #0ffh
+                      000036 | 
+      022A            000037 |InLoop2:
+      022A 88         000038 | dey
+      022B D0 FD      000039 | bne InLoop2
+                      000040 | 
+      022D CA         000041 | dex
+      022E D0 F8      000042 | bne InLoop1
+                      000043 | 
+      0230 38         000044 | sec
+      0231 E9 01      000045 | sbc #1d
+      0233 D0 F1      000046 | bne OutLoop
+                      000047 | 
+                      000048 |;Restoring registers from the stack.
+      0235 68         000049 | pla
+      0236 A8         000050 | tay ;Since we pushed y last we have to pull y first
+      0237 68         000051 | pla
+      0238 AA         000052 | tax ;Since we pushed x first we have to pull x last
+      0239 68         000053 | pla
+                      000054 | 
+      023A 60         000055 | rts
+                      000056 | 
+                      000057 | end
+                      000058 |;-g 0200h to see them flicker
+      
+      *** Symbol Table ***
+      {INLOOP1=552, OUTLOOP=550, SHIFTRIGHT=533, DELAY=543, SHIFTLEFT=522, INLOOP2=554, =0}
+.   %/output
+
+
+
+
+
+
+
+%uasm65_grade,name="Problem 3",target_fold_type="uasm65"
+
+{
+    Local(result, analysis, s19, uart, transpose, objectCodeString, testCode, testS19, commands);
+    
+    result := U6502Assemble(?foldCode);
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .255", 1, True)
+    {
+        StringToNumber(Version()) >=? .255;
+    }    
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The code contains no syntax errors", 1, True) 
+    {
+        Length(result) >? 1;
+    }
+            
+    // --------------------------------------------------------
+    
+    If(Length(result) >? 1)
+    {
+        U6502Reset();
+        
+        U6502Fill("200"hex, "1000"hex,  0);
+        
+        s19 := result[2];
+        
+        analysis := U6502ConvertJavaList(result[4]);
+        
+        transpose := Transpose(analysis);
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains one ORG command", 1, True) 
+        {
+            Length(commands := U6502FindOperators(analysis, "ORG")) =? 1;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program starts at 0200h in memory", 1, True) 
+        {
+            commands[1][4] =? "0200";
+        }    
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains at least one call to subroutine 'Delay'", 1, True) 
+        {
+            Length(Select(
+                   Select(analysis, 
+                       Lambda([i], i[3] =? "JSR" )), 
+                   Lambda([i], i[4] =? "DELAY" ))) >=? 1;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains no more than one 'STA' command", 1, True) 
+        {
+            Count(transpose[3], "STA") <=? 1;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains no more than one 'STX' command", 1, True) 
+        {
+            Count(transpose[3], "STX") <=? 1;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains no more than one 'STY' command", 1, True) 
+        {
+            Count(transpose[3], "STY") <=? 1;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains one 'ASL' command", 1, True) 
+        {
+            Count(transpose[3], "ASL") =? 1;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains one 'LSR' command", 1, True) 
+        {
+            Count(transpose[3], "LSR") =? 1;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program produces the desired effect", 1, True) 
+        {
+            Local(modifiedCode, io, output);
+            
+            modifiedCode := StringReplaceAll(StringLowerCase(?foldCode), "jsr\\s+delay", "");
+          
+            [lst, s19, symbolTable] := U6502Assemble(modifiedCode);
+            
+            uart := JavaCall("org.mathpiper.ide.u6502.EMU6551","getInstance");
+            
+            U6502Reset();
+
+            io := JavaCall(uart, "getIO");
+            
+            output := JavaCall("java.lang.reflect.Array", "get", io, 1);
+            
+            JavaCall(output, "setIsLogging", True);
+            
+            JavaCall(output, "setIsLogOnce", False);
+            
+            JavaCall(output, "clearLogs");
+            
+            JavaCall(uart, "send","L" + UnicodeToString(13));
+            
+            JavaCall(uart, "send", ToString(s19));
+            
+            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);
+            
+            JavaCall(uart, "send", "g 0200" + UnicodeToString(13));
+            
+            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);
+
+            (JavaAccess(output, "getReadList")) =? [1,2,4,8,16,32,64,128,64,32,16,8,4,2,1];
+        }
+    }
+}
+
+%/uasm65_grade
+
+    %output,parent="Problem 3",mpversion=".271",preserve="false"
+      Result: True
+      
+      Side Effects:
+        PASS: MathPiper version >= .255. (1/1)
+        PASS: The code contains no syntax errors. (1/1)
+        PASS: The program contains one ORG command. (1/1)
+        PASS: The program starts at 0200h in memory. (1/1)
+        PASS: The program contains at least one call to subroutine 'Delay'. (1/1)
+        PASS: The program contains no more than one 'STA' command. (1/1)
+        PASS: The program contains no more than one 'STX' command. (1/1)
+        PASS: The program contains no more than one 'STY' command. (1/1)
+        PASS: The program contains one 'ASL' command. (1/1)
+        PASS: The program contains one 'LSR' command. (1/1)
+        PASS: The program produces the desired effect. (1/1)
+      
+        11/11 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 4",description="In and out."
+========================================================================================================
+Problem 4
+
+Write a program that will do the following to
+the LEDs at address A200h 1 time:
+
+Turn LEDs 0 and 7 on, move these lights in to LEDs
+3 and 4 then back out again to LEDs 0 and 7. Only
+2 LEDs should be on at a time. The following is
+the pattern that should be produced:
+
+10000001
+01000010
+00100100
+00011000
+00100100
+01000010
+10000001
+
+Use the asl and lsr commands to shift the bits.
+
+Hint 1: Use a variable to hold the upper nibble,
+and another variable to hold the lower nibble.
+Use the asl and lsr commands on the variables
+to shift the bits.
+
+Hint 2: The 'ora' command can be used to combine
+the nibbles that are in the two variables into
+the 8-bit value that will be stored into memory
+location 0a200h.
+
+
+%mathpiper,name="Problem 4",subtype="hint"
+Hint("CiAgICBvcmcgMDIwMGgKICAgIAogICAgbGR4ICMzZAogICAgCiAgICBsZGEgIzEwMDAwMDAwYgogICAgCiAgICBzdGEgVXBwZXJOaWJibGUKICAgIAogICAgbGRhICMwMDAwMDAwMWIKICAgIAogICAgc3RhIExvd2VyTmliYmxlCiAgICAKICAgIG9yYSBVcHBlck5pYmJsZQogICAgCiAgICBzdGEgMGEyMDBoCiAgICAKICAgIGpzciBEZWxheQogICAgCkxvb3AxOgogICAgCiAgICBsc3IgVXBwZXJOaWJibGUKICAgIAogICAgYXNsIExvd2VyTmliYmxlCgogICAgbGRhIExvd2VyTmliYmxlCiAgICAKICAgIG9yYSBVcHBlck5pYmJsZQogICAgCiAgICBzdGEgMGEyMDBoCiAgICAKICAgIGpzciBEZWxheQogICAgCiAgICBkZXgKICAgIAogICAgYm5lIExvb3AxCiAgICAKICAgIGxkeCAjM2QKICAgIApMb29wMjoKICAgIAogICAgYXNsIFVwcGVyTmliYmxlCiAgICAKICAgIGxzciBMb3dlck5pYmJsZQoKICAgIGxkYSBMb3dlck5pYmJsZQogICAgCiAgICBvcmEgVXBwZXJOaWJibGUKICAgIAogICAgc3RhIDBhMjAwaAogICAgCiAgICBqc3IgRGVsYXkKICAgIAogICAgZGV4CiAgICAKICAgIGJuZSBMb29wMgogICAgCiAgICBicmsKICAgIAogICAgCjsqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKgo7ICAgICAgICBTdWJyb3V0aW5lcyBhcmVhLgo7KioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioKCjsqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKgo7RGVsYXkgc3Vicm91dGluZS4KOwo7VGhlIHB1cnBvc2Ugb2YgdGhpcyBzdWJyb3V0aW5lIGlzIHRvIGdlbmVyYXRlCjsgYSBkZWxheSBzbyB0aGF0IHRoZSByYXRlIG9mIHRoZSBibGlua2luZwo7IGNhbiBiZSBjb250cm9sbGVkLgo7CjtDaGFuZ2UgdGhlIG51bWJlciB0aGF0IGlzIGJlaW5nIGxvYWRlZCBpbnRvCjsgdGhlICdBJyByZWdpc3RlciB0byBjaGFuZ2UgdGhlIGRlbGF5IHRpbWUuCjsqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKgpEZWxheToKO1NhdmUgcmVnaXN0ZXJzIG9uIHRoZSBzdGFjay4KCXBoYQoJdHhhCglwaGEKCXR5YQoJcGhhCgkKO0NoYW5nZSB0aGUgbnVtYmVyIHRoYXQgaXMgYmVpbmcgbG9hZGVkIGludG8gdGhlCjsgJ0EnIHJlZ2lzdGVyIGluIG9yZGVyIHRvIGNoYW5nZSB0aGUgZGVsYXkgdGltZS4KCWxkYSAjMDFoCgkKT3V0TG9vcDoKCWxkeCAjMDMwaAoJCkluTG9vcDE6CglsZHkgIzBmZmgKCQpJbkxvb3AyOgoJZGV5CglibmUgSW5Mb29wMgoJCglkZXgKCWJuZSBJbkxvb3AxCgkKCXNlYwoJc2JjICMxZAoJYm5lIE91dExvb3AKCQo7UmVzdG9yZSByZWdpc3RlcnMgZnJvbSB0aGUgc3RhY2suCglwbGEKCXRheQoJcGxhCgl0YXgKCXBsYQoKCXJ0cwoKOyoqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqCjsgICAgICAgIFZhcmlhYmxlcyBhcmVhLgo7KioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioKClVwcGVyTmliYmxlOgogICAgZGJ0ID8KICAgIApMb3dlck5pYmJsZToKICAgIGRidCA/CiAgICAKICAgIGVuZAogICAgIAo=");
+%/mathpiper
+
+    %output,parent="Problem 4",mpversion=".271",preserve="false"
+      Result: True
+.   %/output
+
+
+%uasm65,name="Problem 4",subtype="problem"
+
+ org 0200h
+ ldx #3d
+ lda #10000000b
+ sta UpperNibble
+ lda #00000001b
+ sta LowerNibble
+ ora UpperNibble
+ sta 0a200h
+ jsr Delay
+ 
+Loop1:
+ lsr UpperNibble
+ asl LowerNibble
+ lda LowerNibble
+ ora UpperNibble
+ sta 0a200h
+ jsr Delay
+ dex
+ bne Loop1
+ ldx #3d
+ 
+Loop2:
+ asl UpperNibble
+ lsr LowerNibble
+ lda LowerNibble
+ ora UpperNibble
+ sta 0a200h
+ jsr Delay
+ dex
+ bne Loop2
+ brk
+ 
+Delay:
+ pha ;push a 
+ txa ;transfer x register to a 
+ pha
+ tya ;transfer y register to a 
+ pha
+ 
+ lda #01h
+ 
+OutLoop:
+ ldx #030h
+ 
+InLoop1:
+ ldy #0ffh
+ 
+InLoop2:
+ dey
+ bne InLoop2
+ 
+ dex
+ bne InLoop1
+ 
+ sec
+ sbc #1d
+ bne OutLoop
+ 
+;Restoring registers from the stack.
+ pla
+ tay ;Since we pushed y last we have to pull y first
+ pla
+ tax ;Since we pushed x first we have to pull x last
+ pla
+ 
+ rts
+ 
+UpperNibble:
+ dbt ?
+LowerNibble:
+ dbt ?
+ end
+ 
+%/uasm65
+
+    %output,parent="Problem 4",mpversion=".271",preserve="false"
+      *** Executable Code ***
+      
+      %s19,description="Execute this fold to send program to U6502 monitor.",preserve="false"
+      	S00700005541534DC2
+      	S1170200A203A9808D5E02A9018D5F020D5E028D00A2204295
+      	S1170214024E5E020E5F02AD5F020D5E028D00A2204202CADB
+      	S1170228D0EBA2030E5E024E5F02AD5F020D5E028D00A22077
+      	S117023C4202CAD0EB00488A489848A901A230A0FF88D0FD77
+      	S1130250CAD0F838E901D0F168A868AA686000003B
+      	S9030000FC
+      %/s19
+       
+      *** List File ***
+      
+                      000001 |
+      0200            000002 | org 0200h
+      0200 A2 03      000003 | ldx #3d
+      0202 A9 80      000004 | lda #10000000b
+      0204 8D 5E 02   000005 | sta UpperNibble
+      0207 A9 01      000006 | lda #00000001b
+      0209 8D 5F 02   000007 | sta LowerNibble
+      020C 0D 5E 02   000008 | ora UpperNibble
+      020F 8D 00 A2   000009 | sta 0a200h
+      0212 20 42 02   000010 | jsr Delay
+                      000011 | 
+      0215            000012 |Loop1:
+      0215 4E 5E 02   000013 | lsr UpperNibble
+      0218 0E 5F 02   000014 | asl LowerNibble
+      021B AD 5F 02   000015 | lda LowerNibble
+      021E 0D 5E 02   000016 | ora UpperNibble
+      0221 8D 00 A2   000017 | sta 0a200h
+      0224 20 42 02   000018 | jsr Delay
+      0227 CA         000019 | dex
+      0228 D0 EB      000020 | bne Loop1
+      022A A2 03      000021 | ldx #3d
+                      000022 | 
+      022C            000023 |Loop2:
+      022C 0E 5E 02   000024 | asl UpperNibble
+      022F 4E 5F 02   000025 | lsr LowerNibble
+      0232 AD 5F 02   000026 | lda LowerNibble
+      0235 0D 5E 02   000027 | ora UpperNibble
+      0238 8D 00 A2   000028 | sta 0a200h
+      023B 20 42 02   000029 | jsr Delay
+      023E CA         000030 | dex
+      023F D0 EB      000031 | bne Loop2
+      0241 00         000032 | brk
+                      000033 | 
+      0242            000034 |Delay:
+      0242 48         000035 | pha ;push a 
+      0243 8A         000036 | txa ;transfer x register to a 
+      0244 48         000037 | pha
+      0245 98         000038 | tya ;transfer y register to a 
+      0246 48         000039 | pha
+                      000040 | 
+      0247 A9 01      000041 | lda #01h
+                      000042 | 
+      0249            000043 |OutLoop:
+      0249 A2 30      000044 | ldx #030h
+                      000045 | 
+      024B            000046 |InLoop1:
+      024B A0 FF      000047 | ldy #0ffh
+                      000048 | 
+      024D            000049 |InLoop2:
+      024D 88         000050 | dey
+      024E D0 FD      000051 | bne InLoop2
+                      000052 | 
+      0250 CA         000053 | dex
+      0251 D0 F8      000054 | bne InLoop1
+                      000055 | 
+      0253 38         000056 | sec
+      0254 E9 01      000057 | sbc #1d
+      0256 D0 F1      000058 | bne OutLoop
+                      000059 | 
+                      000060 |;Restoring registers from the stack.
+      0258 68         000061 | pla
+      0259 A8         000062 | tay ;Since we pushed y last we have to pull y first
+      025A 68         000063 | pla
+      025B AA         000064 | tax ;Since we pushed x first we have to pull x last
+      025C 68         000065 | pla
+                      000066 | 
+      025D 60         000067 | rts
+                      000068 | 
+      025E            000069 |UpperNibble:
+      025E 00         000070 | dbt ?
+      025F            000071 |LowerNibble:
+      025F 00         000072 | dbt ?
+                      000073 | end
+      
+      *** Symbol Table ***
+      {DELAY=578, LOWERNIBBLE=607, INLOOP2=589, INLOOP1=587, UPPERNIBBLE=606, OUTLOOP=585, LOOP2=556, =0, LOOP1=533}
+.   %/output
+
+
+
+
+
+
+
+%uasm65_grade,name="Problem 4",target_fold_type="uasm65"
+
+{
+    Local(result, analysis, s19, uart, transpose, objectCodeString, testCode, testS19, commands);
+    
+    result := U6502Assemble(?foldCode);
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .255", 1, True)
+    {
+        StringToNumber(Version()) >=? .255;
+    }    
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The code contains no syntax errors", 1, True) 
+    {
+        Length(result) >? 1;
+    }
+            
+    // --------------------------------------------------------
+    
+    If(Length(result) >? 1)
+    {
+        U6502Reset();
+        
+        U6502Fill("200"hex, "1000"hex,  0);
+        
+        s19 := result[2];
+        
+        analysis := U6502ConvertJavaList(result[4]);
+        
+        transpose := Transpose(analysis);
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains one ORG command", 1, True) 
+        {
+            Length(commands := U6502FindOperators(analysis, "ORG")) =? 1;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program starts at 0200h in memory", 1, True) 
+        {
+            commands[1][4] =? "0200";
+        }    
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains at least one call to subroutine 'Delay'", 1, True) 
+        {
+            Length(Select(
+                   Select(analysis, 
+                       Lambda([i], i[3] =? "JSR" )), 
+                   Lambda([i], i[4] =? "DELAY" ))) >=? 1;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains no more than 5 'STA' commands", 1, True) 
+        {
+            Count(transpose[3], "STA") <=? 5;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains no 'STX' commands", 1, True) 
+        {
+            Count(transpose[3], "STX") =? 0;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains no 'STY' commands", 1, True) 
+        {
+            Count(transpose[3], "STY") =? 0;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains no more than two 'ASL' commands", 1, True) 
+        {
+            Count(transpose[3], "ASL") <=? 2;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains no more than two 'LSR' commands", 1, True) 
+        {
+            Count(transpose[3], "LSR") <=? 2;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program produces the desired effect", 1, True) 
+        {
+            Local(modifiedCode, io, output);
+            
+            modifiedCode := StringReplaceAll(StringLowerCase(?foldCode), "jsr\\s+delay", "");
+          
+            [lst, s19, symbolTable] := U6502Assemble(modifiedCode);
+            
+            uart := JavaCall("org.mathpiper.ide.u6502.EMU6551","getInstance");
+            
+            U6502Reset();
+
+            io := JavaCall(uart, "getIO");
+            
+            output := JavaCall("java.lang.reflect.Array", "get", io, 1);
+            
+            JavaCall(output, "setIsLogging", True);
+            
+            JavaCall(output, "setIsLogOnce", False);
+            
+            JavaCall(output, "clearLogs");
+            
+            JavaCall(uart, "send","L" + UnicodeToString(13));
+            
+            JavaCall(uart, "send", ToString(s19));
+            
+            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);
+            
+            JavaCall(uart, "send", "g 0200" + UnicodeToString(13));
+            
+            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);
+
+            (JavaAccess(output, "getReadList")) =? [129,66,36,24,36,66,129];
+        }
+    }
+}
+
+%/uasm65_grade
+
+    %output,parent="Problem 4",mpversion=".271",preserve="false"
+      Result: True
+      
+      Side Effects:
+        PASS: MathPiper version >= .255. (1/1)
+        PASS: The code contains no syntax errors. (1/1)
+        PASS: The program contains one ORG command. (1/1)
+        PASS: The program starts at 0200h in memory. (1/1)
+        PASS: The program contains at least one call to subroutine 'Delay'. (1/1)
+        PASS: The program contains no more than 5 'STA' commands. (1/1)
+        PASS: The program contains no 'STX' commands. (1/1)
+        PASS: The program contains no 'STY' commands. (1/1)
+        PASS: The program contains no more than two 'ASL' commands. (1/1)
+        PASS: The program contains no more than two 'LSR' commands. (1/1)
+        PASS: The program produces the desired effect. (1/1)
+      
+        11/11 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+%group,name="Problem 5",description="Count to 0Fh."
+========================================================================================================
+Problem 5
+
+Write a program that will make the LEDs in memory
+location 0a200h count from 0h to 0Fh.
+
+Do not use any 'sta' or 'sty' commands. Use one stx
+command, and use only one inc command.
+
+
+%mathpiper,name="Problem 5",subtype="hint"
+Hint("CiAgICBvcmcgMDIwMGgKICAgIAogICAgbGR4ICMwZAogICAgCiAgICBzdHggMGEyMDBoCiAgICAKTG9vcDoKICAgIAogICAgaW5jIDBhMjAwaAogICAgCiAgICBqc3IgRGVsYXkKICAgIAogICAgbGR4IDBhMjAwaAogICAgCiAgICBjcHggIzBmaAogICAgCiAgICBibmUgbG9vcAogICAgCiAgICBicmsKICAgIAogICAgCjsqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKgo7ICAgICAgICBTdWJyb3V0aW5lcyBhcmVhLgo7KioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioKCjsqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKgo7RGVsYXkgc3Vicm91dGluZS4KOwo7VGhlIHB1cnBvc2Ugb2YgdGhpcyBzdWJyb3V0aW5lIGlzIHRvIGdlbmVyYXRlCjsgYSBkZWxheSBzbyB0aGF0IHRoZSByYXRlIG9mIHRoZSBibGlua2luZwo7IGNhbiBiZSBjb250cm9sbGVkLgo7CjtDaGFuZ2UgdGhlIG51bWJlciB0aGF0IGlzIGJlaW5nIGxvYWRlZCBpbnRvCjsgdGhlICdBJyByZWdpc3RlciB0byBjaGFuZ2UgdGhlIGRlbGF5IHRpbWUuCjsqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKgpEZWxheToKO1NhdmUgcmVnaXN0ZXJzIG9uIHRoZSBzdGFjay4KCXBoYQoJdHhhCglwaGEKCXR5YQoJcGhhCgkKO0NoYW5nZSB0aGUgbnVtYmVyIHRoYXQgaXMgYmVpbmcgbG9hZGVkIGludG8gdGhlCjsgJ0EnIHJlZ2lzdGVyIGluIG9yZGVyIHRvIGNoYW5nZSB0aGUgZGVsYXkgdGltZS4KCWxkYSAjMDFoCgkKT3V0TG9vcDoKCWxkeCAjMDMwaAoJCkluTG9vcDE6CglsZHkgIzBmZmgKCQpJbkxvb3AyOgoJZGV5CglibmUgSW5Mb29wMgoJCglkZXgKCWJuZSBJbkxvb3AxCgkKCXNlYwoJc2JjICMxZAoJYm5lIE91dExvb3AKCQo7UmVzdG9yZSByZWdpc3RlcnMgZnJvbSB0aGUgc3RhY2suCglwbGEKCXRheQoJcGxhCgl0YXgKCXBsYQoKCXJ0cwoKOyoqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqCjsgICAgICAgIFZhcmlhYmxlcyBhcmVhLgo7KioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioKClVwcGVyTmliYmxlOgogICAgZGJ0ID8KICAgIApMb3dlck5pYmJsZToKICAgIGRidCA/CiAgICAKICAgIGVuZAogICAgIAo=");
+%/mathpiper
+
+    %output,parent="Problem 5",mpversion=".271",preserve="false"
+      Result: True
+.   %/output
+
+
+%uasm65,name="Problem 5",subtype="problem"
+
+ org 0200h
+ ldx #0d
+ stx 0a200h
+Loop:
+ inc 0a200h
+ jsr Delay
+ ldx 0a200h
+ cpx #0fh
+ bne loop
+ brk
+ 
+Delay:
+ pha ;push a 
+ txa ;transfer x register to a 
+ pha
+ tya ;transfer y register to a 
+ pha
+ 
+ lda #01h
+ 
+OutLoop:
+ ldx #030h
+ 
+InLoop1:
+ ldy #0ffh
+ 
+InLoop2:
+ dey
+ bne InLoop2
+ 
+ dex
+ bne InLoop1
+ 
+ sec
+ sbc #1d
+ bne OutLoop
+ 
+;Restoring registers from the stack.
+ pla
+ tay ;Since we pushed y last we have to pull y first
+ pla
+ tax ;Since we pushed x first we have to pull x last
+ pla
+ 
+ rts
+ 
+ end
+%/uasm65
+
+    %output,parent="Problem 5",mpversion=".271",preserve="false"
+      *** Executable Code ***
+      
+      %s19,description="Execute this fold to send program to U6502 monitor.",preserve="false"
+      	S00700005541534DC2
+      	S1170200A2008E00A2EE00A2201302AE00A2E00FD0F3004805
+      	S11702148A489848A901A230A0FF88D0FDCAD0F838E901D02C
+      	S10A0228F168A868AA6860F0
+      	S9030000FC
+      %/s19
+       
+      *** List File ***
+      
+                      000001 |
+      0200            000002 | org 0200h
+      0200 A2 00      000003 | ldx #0d
+      0202 8E 00 A2   000004 | stx 0a200h
+      0205            000005 |Loop:
+      0205 EE 00 A2   000006 | inc 0a200h
+      0208 20 13 02   000007 | jsr Delay
+      020B AE 00 A2   000008 | ldx 0a200h
+      020E E0 0F      000009 | cpx #0fh
+      0210 D0 F3      000010 | bne loop
+      0212 00         000011 | brk
+                      000012 | 
+      0213            000013 |Delay:
+      0213 48         000014 | pha ;push a 
+      0214 8A         000015 | txa ;transfer x register to a 
+      0215 48         000016 | pha
+      0216 98         000017 | tya ;transfer y register to a 
+      0217 48         000018 | pha
+                      000019 | 
+      0218 A9 01      000020 | lda #01h
+                      000021 | 
+      021A            000022 |OutLoop:
+      021A A2 30      000023 | ldx #030h
+                      000024 | 
+      021C            000025 |InLoop1:
+      021C A0 FF      000026 | ldy #0ffh
+                      000027 | 
+      021E            000028 |InLoop2:
+      021E 88         000029 | dey
+      021F D0 FD      000030 | bne InLoop2
+                      000031 | 
+      0221 CA         000032 | dex
+      0222 D0 F8      000033 | bne InLoop1
+                      000034 | 
+      0224 38         000035 | sec
+      0225 E9 01      000036 | sbc #1d
+      0227 D0 F1      000037 | bne OutLoop
+                      000038 | 
+                      000039 |;Restoring registers from the stack.
+      0229 68         000040 | pla
+      022A A8         000041 | tay ;Since we pushed y last we have to pull y first
+      022B 68         000042 | pla
+      022C AA         000043 | tax ;Since we pushed x first we have to pull x last
+      022D 68         000044 | pla
+                      000045 | 
+      022E 60         000046 | rts
+                      000047 | 
+                      000048 | 
+                      000049 | end
+      
+      *** Symbol Table ***
+      {INLOOP1=540, OUTLOOP=538, DELAY=531, LOOP=517, INLOOP2=542, =0}
+.   %/output
+
+
+
+
+
+
+
+%uasm65_grade,name="Problem 5",target_fold_type="uasm65"
+
+{
+    Local(result, analysis, s19, uart, transpose, objectCodeString, testCode, testS19, commands);
+    
+    result := U6502Assemble(?foldCode);
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .255", 1, True)
+    {
+        StringToNumber(Version()) >=? .255;
+    }    
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The code contains no syntax errors", 1, True) 
+    {
+        Length(result) >? 1;
+    }
+            
+    // --------------------------------------------------------
+    
+    If(Length(result) >? 1)
+    {
+        U6502Reset();
+        
+        U6502Fill("200"hex, "1000"hex,  0);
+        
+        s19 := result[2];
+        
+        analysis := U6502ConvertJavaList(result[4]);
+        
+        transpose := Transpose(analysis);
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains one ORG command", 1, True) 
+        {
+            Length(commands := U6502FindOperators(analysis, "ORG")) =? 1;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program starts at 0200h in memory", 1, True) 
+        {
+            commands[1][4] =? "0200";
+        }    
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains at least one call to subroutine 'Delay'", 1, True) 
+        {
+            Length(Select(
+                   Select(analysis, 
+                       Lambda([i], i[3] =? "JSR" )), 
+                   Lambda([i], i[4] =? "DELAY" ))) >=? 1;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains no 'STA' commands", 1, True) 
+        {
+            Count(transpose[3], "STA") =? 0;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains one 'STX' command", 1, True) 
+        {
+            Count(transpose[3], "STX") =? 1;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains no 'STY' commands", 1, True) 
+        {
+            Count(transpose[3], "STY") =? 0;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains one 'INC' command", 1, True) 
+        {
+            Count(transpose[3], "INC") =? 1;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program produces the desired effect", 1, True) 
+        {
+            Local(modifiedCode, io, output);
+            
+            modifiedCode := StringReplaceAll(StringLowerCase(?foldCode), "jsr\\s+delay", "");
+          
+            [lst, s19, symbolTable] := U6502Assemble(modifiedCode);
+            
+            uart := JavaCall("org.mathpiper.ide.u6502.EMU6551","getInstance");
+            
+            U6502Reset();
+
+            io := JavaCall(uart, "getIO");
+            
+            output := JavaCall("java.lang.reflect.Array", "get", io, 1);
+            
+            JavaCall(output, "setIsLogging", True);
+            
+            JavaCall(output, "setIsLogOnce", False);
+            
+            JavaCall(output, "clearLogs");
+            
+            JavaCall(uart, "send","L" + UnicodeToString(13));
+            
+            JavaCall(uart, "send", ToString(s19));
+            
+            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);
+            
+            JavaCall(uart, "send", "g 0200" + UnicodeToString(13));
+            
+            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);
+
+            (JavaAccess(output, "getReadList")) =? [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+        }
+    }
+}
+
+%/uasm65_grade
+
+    %output,parent="Problem 5",mpversion=".271",preserve="false"
+      Result: True
+      
+      Side Effects:
+        PASS: MathPiper version >= .255. (1/1)
+        PASS: The code contains no syntax errors. (1/1)
+        PASS: The program contains one ORG command. (1/1)
+        PASS: The program starts at 0200h in memory. (1/1)
+        PASS: The program contains at least one call to subroutine 'Delay'. (1/1)
+        PASS: The program contains no 'STA' commands. (1/1)
+        PASS: The program contains one 'STX' command. (1/1)
+        PASS: The program contains no 'STY' commands. (1/1)
+        PASS: The program contains one 'INC' command. (1/1)
+        PASS: The program produces the desired effect. (1/1)
+      
+        10/10 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+%group,name="Problem 6",description="Count to 0Fh."
+========================================================================================================
+Problem 6
+
+Write a program that dumps the contents of memory
+locations 0E000h - 0E010h to the LEDs port that is
+at memory location 0a200h. Use absolute x addressing
+mode to obtain the values from memory like this:
+
+    lda 0e000h,x
+
+
+%mathpiper,name="Problem 6",subtype="hint"
+Hint("CiAgICBvcmcgMDIwMGgKICAgIAogICAgbGR4ICMwZAogICAgCkxvb3A6CgogICAgbGRhIDBlMDAwaCx4CiAgICAKICAgIHN0YSAwYTIwMGgKICAgIAogICAganNyIERlbGF5CiAgICAKICAgIGlueAogICAgCiAgICBjcHggIzAxMWgKICAgIAogICAgYm5lIGxvb3AKICAgIAogICAgYnJrCiAgICAKICAgIAo7KioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioKOyAgICAgICAgU3Vicm91dGluZXMgYXJlYS4KOyoqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqCgo7KioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioKO0RlbGF5IHN1YnJvdXRpbmUuCjsKO1RoZSBwdXJwb3NlIG9mIHRoaXMgc3Vicm91dGluZSBpcyB0byBnZW5lcmF0ZQo7IGEgZGVsYXkgc28gdGhhdCB0aGUgcmF0ZSBvZiB0aGUgYmxpbmtpbmcKOyBjYW4gYmUgY29udHJvbGxlZC4KOwo7Q2hhbmdlIHRoZSBudW1iZXIgdGhhdCBpcyBiZWluZyBsb2FkZWQgaW50bwo7IHRoZSAnQScgcmVnaXN0ZXIgdG8gY2hhbmdlIHRoZSBkZWxheSB0aW1lLgo7KioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioKRGVsYXk6CjtTYXZlIHJlZ2lzdGVycyBvbiB0aGUgc3RhY2suCglwaGEKCXR4YQoJcGhhCgl0eWEKCXBoYQoJCjtDaGFuZ2UgdGhlIG51bWJlciB0aGF0IGlzIGJlaW5nIGxvYWRlZCBpbnRvIHRoZQo7ICdBJyByZWdpc3RlciBpbiBvcmRlciB0byBjaGFuZ2UgdGhlIGRlbGF5IHRpbWUuCglsZGEgIzAxaAoJCk91dExvb3A6CglsZHggIzAzMGgKCQpJbkxvb3AxOgoJbGR5ICMwZmZoCgkKSW5Mb29wMjoKCWRleQoJYm5lIEluTG9vcDIKCQoJZGV4CglibmUgSW5Mb29wMQoJCglzZWMKCXNiYyAjMWQKCWJuZSBPdXRMb29wCgkKO1Jlc3RvcmUgcmVnaXN0ZXJzIGZyb20gdGhlIHN0YWNrLgoJcGxhCgl0YXkKCXBsYQoJdGF4CglwbGEKCglydHMKCjsqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKgo7ICAgICAgICBWYXJpYWJsZXMgYXJlYS4KOyoqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqCgogICAgCiAgICBlbmQKICAgICAK");
+%/mathpiper
+
+    %output,parent="Problem 6",mpversion=".271",preserve="false"
+      Result: True
+.   %/output
+
+
+%uasm65,name="Problem 6",subtype="problem"
+
+ org 0200h
+ ldx #0d
+ 
+Loop:
+ lda 0e000h,x
+ sta 0a200h
+ jsr Delay
+ inx
+ cpx #011h
+ bne loop
+ brk
+ 
+Delay:
+ pha ;push a 
+ txa ;transfer x register to a 
+ pha
+ tya ;transfer y register to a 
+ pha
+ 
+ lda #01h
+ 
+OutLoop:
+ ldx #030h
+ 
+InLoop1:
+ ldy #0ffh
+ 
+InLoop2:
+ dey
+ bne InLoop2
+ 
+ dex
+ bne InLoop1
+ 
+ sec
+ sbc #1d
+ bne OutLoop
+ 
+;Restoring registers from the stack.
+ pla
+ tay ;Since we pushed y last we have to pull y first
+ pla
+ tax ;Since we pushed x first we have to pull x last
+ pla
+ 
+ rts
+ 
+ end
+ 
+%/uasm65
+
+    %output,parent="Problem 6",mpversion=".271",preserve="false"
+      *** Executable Code ***
+      
+      %s19,description="Execute this fold to send program to U6502 monitor.",preserve="false"
+      	S00700005541534DC2
+      	S1170200A200BD00E08D00A2201102E8E011D0F200488A4890
+      	S11702149848A901A230A0FF88D0FDCAD0F838E901D0F168A5
+      	S1080228A868AA68604B
+      	S9030000FC
+      %/s19
+       
+      *** List File ***
+      
+                      000001 |
+      0200            000002 | org 0200h
+      0200 A2 00      000003 | ldx #0d
+                      000004 | 
+      0202            000005 |Loop:
+      0202 BD 00 E0   000006 | lda 0e000h,x
+      0205 8D 00 A2   000007 | sta 0a200h
+      0208 20 11 02   000008 | jsr Delay
+      020B E8         000009 | inx
+      020C E0 11      000010 | cpx #011h
+      020E D0 F2      000011 | bne loop
+      0210 00         000012 | brk
+                      000013 | 
+      0211            000014 |Delay:
+      0211 48         000015 | pha ;push a 
+      0212 8A         000016 | txa ;transfer x register to a 
+      0213 48         000017 | pha
+      0214 98         000018 | tya ;transfer y register to a 
+      0215 48         000019 | pha
+                      000020 | 
+      0216 A9 01      000021 | lda #01h
+                      000022 | 
+      0218            000023 |OutLoop:
+      0218 A2 30      000024 | ldx #030h
+                      000025 | 
+      021A            000026 |InLoop1:
+      021A A0 FF      000027 | ldy #0ffh
+                      000028 | 
+      021C            000029 |InLoop2:
+      021C 88         000030 | dey
+      021D D0 FD      000031 | bne InLoop2
+                      000032 | 
+      021F CA         000033 | dex
+      0220 D0 F8      000034 | bne InLoop1
+                      000035 | 
+      0222 38         000036 | sec
+      0223 E9 01      000037 | sbc #1d
+      0225 D0 F1      000038 | bne OutLoop
+                      000039 | 
+                      000040 |;Restoring registers from the stack.
+      0227 68         000041 | pla
+      0228 A8         000042 | tay ;Since we pushed y last we have to pull y first
+      0229 68         000043 | pla
+      022A AA         000044 | tax ;Since we pushed x first we have to pull x last
+      022B 68         000045 | pla
+                      000046 | 
+      022C 60         000047 | rts
+                      000048 | 
+                      000049 | end
+      
+      *** Symbol Table ***
+      {INLOOP1=538, OUTLOOP=536, DELAY=529, LOOP=514, INLOOP2=540, =0}
+.   %/output
+
+
+
+
+
+
+
+%uasm65_grade,name="Problem 6",target_fold_type="uasm65"
+
+{
+    Local(result, analysis, s19, uart, transpose, objectCodeString, testCode, testS19, commands);
+    
+    result := U6502Assemble(?foldCode);
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .255", 1, True)
+    {
+        StringToNumber(Version()) >=? .255;
+    }    
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The code contains no syntax errors", 1, True) 
+    {
+        Length(result) >? 1;
+    }
+            
+    // --------------------------------------------------------
+    
+    If(Length(result) >? 1)
+    {
+        U6502Reset();
+        
+        U6502Fill("200"hex, "1000"hex,  0);
+        
+        s19 := result[2];
+        
+        analysis := U6502ConvertJavaList(result[4]);
+        
+        transpose := Transpose(analysis);
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains one ORG command", 1, True) 
+        {
+            Length(commands := U6502FindOperators(analysis, "ORG")) =? 1;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program starts at 0200h in memory", 1, True) 
+        {
+            commands[1][4] =? "0200";
+        }    
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains at least one call to subroutine 'Delay'", 1, True) 
+        {
+            Length(Select(
+                   Select(analysis, 
+                       Lambda([i], i[3] =? "JSR" )), 
+                   Lambda([i], i[4] =? "DELAY" ))) >=? 1;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains only one 'STA' command", 1, True) 
+        {
+            Count(transpose[3], "STA") =? 1;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains no 'STX' commands", 1, True) 
+        {
+            Count(transpose[3], "STX") =? 0;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains no 'STY' commands", 1, True) 
+        {
+            Count(transpose[3], "STY") =? 0;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program produces the desired effect", 1, True) 
+        {
+            Local(modifiedCode, io, output);
+            
+            modifiedCode := StringReplaceAll(StringLowerCase(?foldCode), "jsr\\s+delay", "");
+          
+            [lst, s19, symbolTable] := U6502Assemble(modifiedCode);
+            
+            uart := JavaCall("org.mathpiper.ide.u6502.EMU6551","getInstance");
+            
+            U6502Reset();
+
+            io := JavaCall(uart, "getIO");
+            
+            output := JavaCall("java.lang.reflect.Array", "get", io, 1);
+            
+            JavaCall(output, "setIsLogging", True);
+            
+            JavaCall(output, "setIsLogOnce", False);
+            
+            JavaCall(output, "clearLogs");
+            
+            JavaCall(uart, "send","L" + UnicodeToString(13));
+            
+            JavaCall(uart, "send", ToString(s19));
+            
+            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);
+            
+            JavaCall(uart, "send", "g 0200" + UnicodeToString(13));
+            
+            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);
+
+            (?foo := JavaAccess(output, "getReadList")) =? [76,27,224,76,56,244,76,244,243,76,23,244,76,199,243,76,23];
+        }
+    }
+}
+
+%/uasm65_grade
+
+    %output,parent="Problem 6",mpversion=".271",preserve="false"
+      Result: True
+      
+      Side Effects:
+        PASS: MathPiper version >= .255. (1/1)
+        PASS: The code contains no syntax errors. (1/1)
+        PASS: The program contains one ORG command. (1/1)
+        PASS: The program starts at 0200h in memory. (1/1)
+        PASS: The program contains at least one call to subroutine 'Delay'. (1/1)
+        PASS: The program contains only one 'STA' command. (1/1)
+        PASS: The program contains no 'STX' commands. (1/1)
+        PASS: The program contains no 'STY' commands. (1/1)
+        PASS: The program produces the desired effect. (1/1)
+      
+        9/9 passes
+.   %/output
+
+%/group
+
+

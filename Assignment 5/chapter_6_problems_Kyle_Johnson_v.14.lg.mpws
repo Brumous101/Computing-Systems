@@ -1,0 +1,1308 @@
+v.14
+
+chapter_6_problems.mpws
+
+Complete all of the exercises in this worksheet by placing
+the code you write for each exercise into the empty fold
+which is provided in each exercise section.
+
+Save the worksheet before running any tests.
+
+
+
+%group,name="Problem 0",description="Programmer's information."
+========================================================================================================
+Problem 0
+
+In the following fold, replace "xxx" with your
+first name, replace "yyy" with your last name, and
+replace "000000" with your SSU ID number:
+
+%mathpiper,name="Problem 0",subtype="problem",unassign_all="true",truncate="6000",timeout="5000"
+
+[
+["firstName", "Kyle"],
+["lastName", "Johnson"],
+["ssuIDNumber", "264694"],
+];
+
+%/mathpiper
+
+    %output,parent="Problem 0",mpversion=".271",preserve="false"
+      Result: [["firstName","Kyle"],["lastName","Johnson"],["ssuIDNumber","264694"]]
+.   %/output
+
+
+
+
+
+
+
+%mathpiper_grade,name="Problem 0"
+
+LocalSymbols(foldResult)
+{
+    // --------------------------------------------------------
+    
+    FoldGrade("The code does not throw an exception when evaluated", 1, True)
+    {
+        ExceptionCatch(foldResult := Eval(?foldCode[1]), "", 'Exception) !=? 'Exception;
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .253", 1, True)
+    {
+        StringToNumber(Version()) >=? .253;
+    }
+    
+    //-----------------------------------------------------------------------------------------    
+    
+
+    FoldGrade("The code does not produce side effect output", 1, False)
+    LocalSymbols(procedureNames)
+    {
+        procedureNames := ProcedureList(?foldCode);
+        
+        !? Contains?(procedureNames,"Echo") &? !? Contains?(procedureNames,"Write") &? !? Contains?(procedureNames,"TableForm");
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'firstName' a string that is not 'xxx'", 1, True)
+    {
+        String?(foldResult["firstName"]) &? foldResult["firstName"] !=? "xxx";
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'lastName' is a string that is not 'yyy'", 1, True)
+    {
+        String?(foldResult["lastName"]) &? foldResult["lastName"] !=? "yyy";
+    }
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The variable 'ssuIDNumber' is not '000000'", 1, True)
+    {
+        foldResult["ssuIDNumber"] !=? "000000" &? foldResult["ssuIDNumber"] !=? 0;
+    }
+}
+
+%/mathpiper_grade
+
+    %output,parent="Problem 0",mpversion=".271",preserve="false"
+      Result: True
+      
+      Side Effects:
+      YOUR CODE SHOULD BE FORMATTED LIKE THE FOLLOWING CODE: 
+      
+        [["firstName","Kyle"],["lastName","Johnson"],["ssuIDNumber","264694"]];
+      
+        PASS: The code does not throw an exception when parsed. (1/1)
+        PASS: The fold is not empty. (1/1)
+        PASS: The ':' operator is not used. (1/1)
+        PASS: The results of all arithmetic operations are assigned to a variable. For example 'count := (count + 1) is okay, but (count + 1) by itself not okay. (1/1)
+        PASS: The version of "Append" that does not end with a '!' is not used. (1/1)
+        ------------------------------------------
+        PASS: The code does not throw an exception when evaluated. (1/1)
+        PASS: MathPiper version >= .253. (1/1)
+        PASS: The code does not produce side effect output. (1/1)
+        PASS: The variable 'firstName' a string that is not 'xxx'. (1/1)
+        PASS: The variable 'lastName' is a string that is not 'yyy'. (1/1)
+        PASS: The variable 'ssuIDNumber' is not '000000'. (1/1)
+      
+        11/11 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+%group,name="Problem 1",description="Add one subroutine."
+========================================================================================================
+Problem 1
+
+Create a program that contains a subroutine named
+"AddOneToTheARegister"that adds 1 to the contents
+of the A register when it is called. Have the main
+program call the subroutine 3 times with different
+values in A. Have the program start at address
+200h. No variables should be used in the
+subroutine.
+
+
+%mathpiper,name="Problem 1",subtype="hint"
+Hint("CiAgICBvcmcgMDIwMGgKICAgIAogICAgbGRhICMxZAogICAganNyIEFkZE9uZVRvVGhlQVJlZ2lzdGVyCiAgICAKICAgIGxkYSAjMmQKICAgIGpzciBBZGRPbmVUb1RoZUFSZWdpc3RlcgoKICAgIGxkYSAjM2QKICAgIGpzciBBZGRPbmVUb1RoZUFSZWdpc3RlciAKICAgIAogICAgYnJrCiAgICAKQWRkT25lVG9UaGVBUmVnaXN0ZXI6CiAgICBjbGMKICAgIGFkYyAjMWQKICAgIHJ0cwoKICAgIGVuZAogICAgIAo=");
+%/mathpiper
+
+    %output,parent="Problem 1",mpversion=".271",preserve="false"
+      Result: True
+.   %/output
+
+
+%uasm65,name="Problem 1",subtype="problem"
+
+ org 0200h
+ 
+ lda #1d
+ jsr AddOneToTheARegister
+ 
+ lda #2d
+ jsr AddOneToTheARegister
+ 
+ lda #3d
+ jsr AddOneToTheARegister
+ 
+ brk
+ 
+AddOneToTheARegister:
+ clc
+ adc #1d
+ rts
+ 
+ end
+ 
+%/uasm65
+
+    %output,parent="Problem 1",mpversion=".271",preserve="false"
+      *** Executable Code ***
+      
+      %s19,description="Execute this fold to send program to U6502 monitor.",preserve="false"
+      	S00700005541534DC2
+      	S1170200A901201002A902201002A90320100200186901606D
+      	S1030214E6
+      	S9030000FC
+      %/s19
+      
+      *** List File ***
+      
+                      000001 |
+      0200            000002 | org 0200h
+                      000003 | 
+      0200 A9 01      000004 | lda #1d
+      0202 20 10 02   000005 | jsr AddOneToTheARegister
+                      000006 | 
+      0205 A9 02      000007 | lda #2d
+      0207 20 10 02   000008 | jsr AddOneToTheARegister
+                      000009 | 
+      020A A9 03      000010 | lda #3d
+      020C 20 10 02   000011 | jsr AddOneToTheARegister
+                      000012 | 
+      020F 00         000013 | brk
+                      000014 | 
+      0210            000015 |AddOneToTheARegister:
+      0210 18         000016 | clc
+      0211 69 01      000017 | adc #1d
+      0213 60         000018 | rts
+                      000019 | 
+                      000020 | end
+      
+      *** Symbol Table ***
+      {ADDONETOTHEAREGISTER=528, =0}
+.   %/output
+ 
+
+
+
+
+%uasm65_grade,name="Problem 1",target_fold_type="uasm65"
+
+{
+    Local(result, analysis, s19, uart, transpose, objectCodeString, testCode, testS19, commands);
+    
+    result := U6502Assemble(?foldCode);
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .253", 1, True)
+    {
+        StringToNumber(Version()) >=? .253;
+    }    
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The code contains no syntax errors", 1, True) 
+    {
+        Length(result) >? 1;
+    }
+    
+    // --------------------------------------------------------
+    
+    If(Length(result) >? 1)
+    {
+        U6502Reset();
+        
+        U6502Fill("200"hex, "1000"hex,  0);
+        
+        s19 := result[2];
+        
+        analysis := U6502ConvertJavaList(result[4]);
+        
+        transpose := Transpose(analysis);
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains one ORG command", 1, True) 
+        {
+            Length(commands := U6502FindOperators(analysis, "ORG")) =? 1;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program starts at 0200h in memory", 1, True) 
+        {
+            commands[1][4] =? "0200";
+        }    
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains three calls to subroutine 'AddOneToTheARegister'", 1, True) 
+        {
+            Length(Select(
+                   Select(analysis, 
+                       Lambda([i], i[3] =? "JSR" )), 
+                   Lambda([i], i[4] =? "ADDONETOTHEAREGISTER" ))) =? 3;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains one 'RTS' command", 1, True) 
+        {
+            Count(transpose[3], "RTS") >? 0;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains at least one 'BRK' command", 1, True) 
+        {
+            Count(transpose[3], "BRK") >? 0;
+        }
+        
+        // --------------------------------------------------------
+    
+        FoldGrade("The subroutine 'ADDONETOTHEAREGISTER' returns a correct result", 1, True) 
+        {
+            objectCodeString := First(Select(Select(analysis, Lambda([i], i[3] =? "JSR" )), Lambda([i], i[4] =? "ADDONETOTHEAREGISTER" )))[6];
+
+            testCode :=
+"   org 800h
+    lda #0d" +
+"  
+    jsr 0" + objectCodeString[7] + objectCodeString[8] + objectCodeString[4] + objectCodeString[5] + "h" +
+"
+    sta 850h
+    brk
+    end
+";
+            testS19 := U6502Assemble(testCode)[2];
+
+            uart := JavaCall("org.mathpiper.ide.u6502.EMU6551","getInstance");
+            
+            U6502Reset();
+            
+            JavaCall(uart, "send","L" + UnicodeToString(13));
+            
+            JavaCall(uart, "send", ToString(s19));
+            
+            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);
+            
+            JavaCall(uart, "send","L" + UnicodeToString(13));
+            
+            JavaCall(uart, "send", ToString(testS19));
+            
+            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);
+            
+            JavaCall(uart, "send", "g 0800" + UnicodeToString(13));
+            
+            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);
+            
+            U6502Dump("850"hex) =? "1"hex;
+        }
+    }
+}
+ 
+%/uasm65_grade
+
+    %output,parent="Problem 1",mpversion=".271",preserve="false"
+      Result: True
+      
+      Side Effects:
+        PASS: MathPiper version >= .253. (1/1)
+        PASS: The code contains no syntax errors. (1/1)
+        PASS: The program contains one ORG command. (1/1)
+        PASS: The program starts at 0200h in memory. (1/1)
+        PASS: The program contains three calls to subroutine 'AddOneToTheARegister'. (1/1)
+        PASS: The program contains one 'RTS' command. (1/1)
+        PASS: The program contains at least one 'BRK' command. (1/1)
+        PASS: The subroutine 'ADDONETOTHEAREGISTER' returns a correct result. (1/1)
+      
+        8/8 passes
+.   %/output
+
+%/group
+
+
+
+
+
+
+
+%group,name="Problem 2",description="Enter digits."
+========================================================================================================
+Problem 2
+
+Create a program that prints "You entered a one."
+if the user enters a 1, "You entered a two." if
+the user enters a 2, and "You entered a three." if
+the user enters a 3. The program should loop until
+the user enters a 4, then it should exit. If
+<Enter> is pressed, the program should do nothing
+or it should reprint the instructions.
+
+
+%mathpiper,name="Problem 2",subtype="hint"
+Hint("CjsqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioKOyAgICAgICAgICAgICAgTW9uaXRvciBVdGlsaXR5IFN1YnJvdXRpbmUgSnVtcCBUYWJsZS4KOyoqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKgpPdXRDaGFyOiAgZXF1IEUwMDNoIDtPdXRwdXQgYnl0ZSBpbiByZWcgQSB0byB0aGUgdXNlci4KCkdldENoYXI6ICBlcXUgRTAwNmggO0dldCBhIGJ5dGUgZnJvbSB0aGUgc2VyaWFsIHBvcnQuCgpHZXRDaGFyVzogZXF1IEUwMDloIDtXYWl0IGFuZCBnZXQgYSBieXRlIGZyb20gdGhlIHVzZXIuCgpQcm50TWVzczogZXF1IEUwMENoIDtQcmludCBhIG1lc3NhZ2UgdG8gdGhlIHVzZXIuCgpPdXRTcGFjZTogZXF1IEUwMEZoIDtPdXRwdXQgc3BhY2VzIHRvIHRoZSBzZXJpYWwgcG9ydC4KCk91dEhleDogICBlcXUgRTAxMmggO091dHB1dCBhIEhFWCBudW1iZXIgdG8gdGhlIHVzZXIuCgpEZ3RUb0JpbjogZXF1IEUwMTVoIDtDb252ZXJ0IGFuIEFTQ0lJIGRpZ2l0IHRvIGJpbmFyeS4KCkdldExpbmU6ICBlcXUgRTAxOGggO0lucHV0IGEgbGluZSBmcm9tIHRoZSBzZXJpYWwgcG9ydC4KCgo7KioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioKOyAgICAgIFByb2dyYW0gZW50cnkgcG9pbnQuCjsqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKgogICAgb3JnIDAyMDBoCgpNYWluOgogICAgbGR4ICNJbk1lc3MxPAogICAgbGR5ICNJbk1lc3MxPgogICAganNyIFBybnRNZXNzCgogICAganNyIEdldENoYXJXCiAgICBqc3IgRGd0VG9CaW4KICAgIApDaGVja09uZToKICAgIGNtcCAjMWQKICAgIGJuZSBDaGVja1R3bwogICAgCiAgICBsZHggI09uZU1lc3M8CiAgICBsZHkgI09uZU1lc3M+CiAgICBqc3IgUHJudE1lc3MKICAgIGptcCBNYWluCiAgICAKQ2hlY2tUd286CiAgICBjbXAgIzJkCiAgICBibmUgQ2hlY2tUaHJlZQogICAgCiAgICBsZHggI1R3b01lc3M8CiAgICBsZHkgI1R3b01lc3M+CiAgICBqc3IgUHJudE1lc3MKICAgIGptcCBNYWluCiAgICAKQ2hlY2tUaHJlZToKICAgIGNtcCAjM2QKICAgIGJuZSBDaGVja0ZvdXIKICAgIAogICAgbGR4ICNUaHJlZU1lc3M8CiAgICBsZHkgI1RocmVlTWVzcz4KICAgIGpzciBQcm50TWVzcwogICAgam1wIE1haW4KICAgIApDaGVja0ZvdXI6CiAgICBjbXAgIzRkCiAgICBibmUgTWFpbgogICAgCiAgICBicmsKCgo7KioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioKOyAgICAgICAgVmFyaWFibGVzIGFyZWEuCjsqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKgpJbk1lc3MxOiAgCiAgICBkYnQgMGFoLDBkaAogICAgZGJ0ICJFbnRlciAxLTQ6ICIKICAgIGRidCAwZAogICAgCk9uZU1lc3M6ICAKICAgIGRidCAwYWgsMGRoCiAgICBkYnQgIllvdSBlbnRlcmVkIGEgb25lLiIKICAgIGRidCAwZAogICAgClR3b01lc3M6ICAKICAgIGRidCAwYWgsMGRoCiAgICBkYnQgIllvdSBlbnRlcmVkIGEgdHdvLiIKICAgIGRidCAwZAogICAgClRocmVlTWVzczogIAogICAgZGJ0IDBhaCwwZGgKICAgIGRidCAiWW91IGVudGVyZWQgYSB0aHJlZS4iCiAgICBkYnQgMGQKCiAgICBlbmQKICAgICAK");
+%/mathpiper
+
+    %output,parent="Problem 2",mpversion=".271",preserve="false"
+      Result: True
+.   %/output
+
+
+%uasm65,name="Problem 2",subtype="problem"
+
+OutChar: equ E003h
+
+GetChar: equ E006h
+
+GetCharW: equ E009h
+
+PrntMess: equ E00Ch
+
+OutSpace: equ E00Fh
+
+OutHex: equ E012h
+
+DgtToBin: equ E015h
+
+GetLine: equ E018h
+
+ org 0200h
+ 
+Main:
+ ldx #InMess1<
+ ldy #InMess1>
+ jsr PrntMess
+ 
+ jsr GetCharW
+ jsr DgtToBin
+ 
+CheckOne:
+ cmp #1d
+ bne CheckTwo
+ 
+ ldx #OneMess<
+ ldy #OneMess>
+ jsr PrntMess
+ jmp Main
+ 
+CheckTwo:
+ cmp #2d
+ bne CheckThree
+ 
+ ldx #TwoMess<
+ ldy #TwoMess>
+ jsr PrntMess
+ jmp Main
+
+CheckThree:
+ cmp #3d
+ bne CheckFour
+ 
+ ldx #ThreeMess<
+ ldy #ThreeMess>
+ jsr PrntMess
+ jmp Main
+ 
+CheckFour:
+ cmp #4d
+ bne Main
+ 
+ brk
+ 
+InMess1:
+ dbt 0ah, 0dh
+ dbt "Enter 1-4: "
+ dbt 0d
+
+OneMess:
+ dbt 0ah, 0dh
+ dbt "You entered a one."
+ dbt 0d
+ 
+TwoMess:
+ dbt 0ah, 0dh
+ dbt "You entered a two."
+ dbt 0d
+ 
+ThreeMess:
+ dbt 0ah, 0dh
+ dbt "You entered a three."
+ dbt 0d
+ 
+ end
+ 
+%/uasm65
+
+    %output,parent="Problem 2",mpversion=".271",preserve="false"
+      *** Executable Code ***
+      
+      %s19,description="Execute this fold to send program to U6502 monitor.",preserve="false"
+      	S00700005541534DC2
+      	S1170200A23CA002200CE02009E02015E0C901D00AA24AA00C
+      	S117021402200CE04C0002C902D00AA25FA002200CE04C00D6
+      	S117022802C903D00AA274A002200CE04C0002C904D0C500A2
+      	S117023C0A0D456E74657220312D343A20000A0D596F752015
+      	S1170250656E74657265642061206F6E652E000A0D596F754A
+      	S117026420656E746572656420612074776F2E000A0D596F73
+      	S11702787520656E746572656420612074687265652E00000B
+      	S9030000FC
+      %/s19
+       
+      *** List File ***
+      
+                      000001 |
+      0000            000002 |OutChar: equ E003h
+                      000003 |
+      0000            000004 |GetChar: equ E006h
+                      000005 |
+      0000            000006 |GetCharW: equ E009h
+                      000007 |
+      0000            000008 |PrntMess: equ E00Ch
+                      000009 |
+      0000            000010 |OutSpace: equ E00Fh
+                      000011 |
+      0000            000012 |OutHex: equ E012h
+                      000013 |
+      0000            000014 |DgtToBin: equ E015h
+                      000015 |
+      0000            000016 |GetLine: equ E018h
+                      000017 |
+      0200            000018 | org 0200h
+      0200            000019 |Main:
+      0200 A2 3C      000020 | ldx #InMess1<
+      0202 A0 02      000021 | ldy #InMess1>
+      0204 20 0C E0   000022 | jsr PrntMess
+                      000023 | 
+      0207 20 09 E0   000024 | jsr GetCharW
+      020A 20 15 E0   000025 | jsr DgtToBin
+                      000026 | 
+      020D            000027 |CheckOne:
+      020D C9 01      000028 | cmp #1d
+      020F D0 0A      000029 | bne CheckTwo
+                      000030 | 
+      0211 A2 4A      000031 | ldx #OneMess<
+      0213 A0 02      000032 | ldy #OneMess>
+      0215 20 0C E0   000033 | jsr PrntMess
+      0218 4C 00 02   000034 | jmp Main
+                      000035 | 
+      021B            000036 |CheckTwo:
+      021B C9 02      000037 | cmp #2d
+      021D D0 0A      000038 | bne CheckThree
+                      000039 | 
+      021F A2 5F      000040 | ldx #TwoMess<
+      0221 A0 02      000041 | ldy #TwoMess>
+      0223 20 0C E0   000042 | jsr PrntMess
+      0226 4C 00 02   000043 | jmp Main
+                      000044 |
+      0229            000045 |CheckThree:
+      0229 C9 03      000046 | cmp #3d
+      022B D0 0A      000047 | bne CheckFour
+                      000048 | 
+      022D A2 74      000049 | ldx #ThreeMess<
+      022F A0 02      000050 | ldy #ThreeMess>
+      0231 20 0C E0   000051 | jsr PrntMess
+      0234 4C 00 02   000052 | jmp Main
+                      000053 | 
+      0237            000054 |CheckFour:
+      0237 C9 04      000055 | cmp #4d
+      0239 D0 C5      000056 | bne Main
+                      000057 | 
+      023B 00         000058 | brk
+                      000059 | 
+      023C            000060 |InMess1:
+      023C 0A         000061 | dbt 0ah,0dh
+      023D 0D               
+      023E 45         000062 | dbt "Enter 1-4: "
+      023F 6E 74 65         
+      0242 72 20 31         
+      0245 2D 34 3A         
+      0248 20               
+      0249 00         000063 | dbt 0d
+                      000064 |
+      024A            000065 |OneMess:
+      024A 0A         000066 | dbt 0ah,0dh
+      024B 0D               
+      024C 59         000067 | dbt "You entered a one."
+      024D 6F 75 20         
+      0250 65 6E 74         
+      0253 65 72 65         
+      0256 64 20 61         
+      0259 20 6F 6E         
+      025C 65 2E            
+      025E 00         000068 | dbt 0d
+                      000069 | 
+      025F            000070 |TwoMess:
+      025F 0A         000071 | dbt 0ah,0dh
+      0260 0D               
+      0261 59         000072 | dbt "You entered a two."
+      0262 6F 75 20         
+      0265 65 6E 74         
+      0268 65 72 65         
+      026B 64 20 61         
+      026E 20 74 77         
+      0271 6F 2E            
+      0273 00         000073 | dbt 0d
+                      000074 | 
+      0274            000075 |ThreeMess:
+      0274 0A         000076 | dbt 0ah,0dh
+      0275 0D               
+      0276 59         000077 | dbt "You entered a three."
+      0277 6F 75 20         
+      027A 65 6E 74         
+      027D 65 72 65         
+      0280 64 20 61         
+      0283 20 74 68         
+      0286 72 65 65         
+      0289 2E               
+      028A 00         000078 | dbt 0d
+                      000079 | 
+                      000080 | end
+      
+      *** Symbol Table ***
+      {TWOMESS=607, ONEMESS=586, PRNTMESS=57356, GETCHAR=57350, OUTCHAR=57347, CHECKTWO=539, THREEMESS=628, OUTSPACE=57359, INMESS1=572, MAIN=512, CHECKTHREE=553, GETCHARW=57353, GETLINE=57368, CHECKFOUR=567, CHECKONE=525, DGTTOBIN=57365, OUTHEX=57362, =0}
+.   %/output
+
+
+
+
+
+
+
+%uasm65_grade,name="Problem 2",target_fold_type="uasm65"
+
+{
+    Local(result, analysis, s19, uart, transpose, correctAnswer?, commands);
+    
+    result := U6502Assemble(?foldCode);
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .253", 1, True)
+    {
+        StringToNumber(Version()) >=? .253;
+    }    
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The code contains no syntax errors", 1, True) 
+    {
+        Length(result) >? 1;
+    }
+    
+    // --------------------------------------------------------
+    
+    If(Length(result) >? 1)
+    {
+        U6502Reset();
+        
+        U6502Fill("200"hex, "600"hex,  0);
+        
+        s19 := result[2];
+        
+        analysis := U6502ConvertJavaList(result[4]);
+        
+        transpose := Transpose(analysis);
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains one ORG command", 1, True) 
+        {
+            Length(commands := U6502FindOperators(analysis, "ORG")) =? 1;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program starts at 0200h in memory", 1, True) 
+        {
+            commands[1][4] =? "0200";
+        }        
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains at least one 'BRK' command", 1, True) 
+        {
+            Count(transpose[3], "BRK") >? 0;
+        }    
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("Correct answers are returned for inputs of 1-3", 1, True) 
+        {
+            uart := JavaCall("org.mathpiper.ide.u6502.EMU6551","getInstance");
+            
+            U6502Reset();
+            
+            JavaCall(uart, "send","L" + UnicodeToString(13));
+            
+            JavaCall(uart, "send", ToString(s19));
+            
+            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);
+            
+            JavaCall(uart, "send", "g 0200" + UnicodeToString(13));
+            
+            correctAnswer? := True;
+
+            JavaCall(uart, "textAreaClear");
+            U6502SetPrinting();
+            JavaCall(uart, "send", "1" + UnicodeToString(13));
+            While(U6502Printing?()) Delay(100);
+Delay(1000);
+            correctAnswer? := correctAnswer? &? StringContains?(JavaAccess(uart, "textAreaContentGet"), "You entered a one.");
+
+            JavaCall(uart, "textAreaClear");
+            U6502SetPrinting();
+            JavaCall(uart, "send", "2" + UnicodeToString(13));
+            While(U6502Printing?()) Delay(100);
+Delay(1000);
+            correctAnswer? := correctAnswer? &? StringContains?(JavaAccess(uart, "textAreaContentGet"), "You entered a two.");
+            
+            JavaCall(uart, "textAreaClear");
+            U6502SetPrinting();
+            JavaCall(uart, "send", "3" + UnicodeToString(13));
+            While(U6502Printing?()) Delay(100);
+            
+Delay(1000);
+            correctAnswer? := correctAnswer? &? StringContains?(JavaAccess(uart, "textAreaContentGet"), "You entered a three.");
+        }
+    }
+}
+
+%/uasm65_grade
+
+    %output,parent="Problem 2",mpversion=".271",preserve="false"
+      Result: True
+      
+      Side Effects:
+        PASS: MathPiper version >= .253. (1/1)
+        PASS: The code contains no syntax errors. (1/1)
+        PASS: The program contains one ORG command. (1/1)
+        PASS: The program starts at 0200h in memory. (1/1)
+        PASS: The program contains at least one 'BRK' command. (1/1)
+        PASS: Correct answers are returned for inputs of 1-3. (1/1)
+      
+        6/6 passes
+.   %/output
+
+%/group
+
+
+
+
+
+%group,name="Problem 3",description="Single digit calculator."
+========================================================================================================
+Problem 3 (20 points)
+
+Create a program that implements a simple single
+digit positive integer calculator. The program
+must obtain its input from the user, and it must
+support the +, -, and * operators.
+
+Input should be processed immediately without
+neededing to wait for the <enter> key to be pressed.
+
+The code that handles each operator must be placed
+in a separate subroutine. Run the program in a
+loop until the user enters a 'Q' or a 'q'.
+
+A typical session should look similar to the
+following session:
+
+-g 0200
+
+Enter the first digit (or 'q' to quit): 2
+Enter the operator: +
+Enter the second digit: 3
+The result is: 05
+
+Enter the first digit (or 'q' to quit): 3
+Enter the operator: -
+Enter the second digit: 2
+The result is: 01
+
+Enter the first digit (or 'q' to quit): 3
+Enter the operator: *
+Enter the second digit: 4
+The result is: 0C
+
+Enter the first digit (or 'q' to quit): q
+
+
+%mathpiper,name="Problem 3",subtype="hint"
+Hint("CjsqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioKOyAgICAgICAgICAgICAgTW9uaXRvciBVdGlsaXR5IFN1YnJvdXRpbmUgSnVtcCBUYWJsZS4KOyoqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKgpPdXRDaGFyOiAgZXF1IEUwMDNoIDtPdXRwdXQgYnl0ZSBpbiByZWcgQSB0byB0aGUgdXNlci4KCkdldENoYXI6ICBlcXUgRTAwNmggO0dldCBhIGJ5dGUgZnJvbSB0aGUgc2VyaWFsIHBvcnQuCgpHZXRDaGFyVzogZXF1IEUwMDloIDtXYWl0IGFuZCBnZXQgYSBieXRlIGZyb20gdGhlIHVzZXIuCgpQcm50TWVzczogZXF1IEUwMENoIDtQcmludCBhIG1lc3NhZ2UgdG8gdGhlIHVzZXIuCgpPdXRTcGFjZTogZXF1IEUwMEZoIDtPdXRwdXQgc3BhY2VzIHRvIHRoZSBzZXJpYWwgcG9ydC4KCk91dEhleDogICBlcXUgRTAxMmggO091dHB1dCBhIEhFWCBudW1iZXIgdG8gdGhlIHVzZXIuCgpEZ3RUb0JpbjogZXF1IEUwMTVoIDtDb252ZXJ0IGFuIEFTQ0lJIGRpZ2l0IHRvIGJpbmFyeS4KCkdldExpbmU6ICBlcXUgRTAxOGggO0lucHV0IGEgbGluZSBmcm9tIHRoZSBzZXJpYWwgcG9ydC4KCgo7KioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioKOyAgICAgIFByb2dyYW0gZW50cnkgcG9pbnQuCjsqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKgogICAgb3JnIDAyMDBoCgpNYWluOgoKO09idGFpbiB0aGUgZmlyc3QgbnVtYmVyLgogICAgbGR4ICNGaXJzdE51bWJlck1lc3NhZ2U8CiAgICBsZHkgI0ZpcnN0TnVtYmVyTWVzc2FnZT4KICAgIGpzciBQcm50TWVzcwogICAganNyIEdldENoYXJXCiAgICBjbXAgIydxJwogICAgYmVxIEV4aXRQcm9ncmFtCiAgICBjbXAgIydRJwogICAgYmVxIEV4aXRQcm9ncmFtCiAgICBqc3IgRGd0VG9CaW4KICAgIHN0YSBudW0xCgo7T2J0YWluIHRoZSBvcGVyYXRvci4KICAgIGxkeCAjT3BlcmF0b3JNZXNzYWdlPAogICAgbGR5ICNPcGVyYXRvck1lc3NhZ2U+CiAgICBqc3IgUHJudE1lc3MKICAgIGpzciBHZXRDaGFyVwogICAgc3RhIG9wZXJhdG9yCiAgICAKO09idGFpbiB0aGUgc2Vjb25kIG51bWJlci4KICAgIGxkeCAjU2Vjb25kTnVtYmVyTWVzc2FnZTwKICAgIGxkeSAjU2Vjb25kTnVtYmVyTWVzc2FnZT4KICAgIGpzciBQcm50TWVzcwogICAganNyIEdldENoYXJXCiAgICBqc3IgRGd0VG9CaW4KICAgIHN0YSBudW0yCiAgICAKO0RldGVybWluZSB3aGljaCBvcGVyYXRvciB3YXMgY2hvc2VuCjthbmQgY2FsbCBpdHMgc3Vicm91dGluZS4KICAgIGxkYSBvcGVyYXRvcgogICAgY21wICMnKycKICAgIGJuZSBDaGVja1N1YnRyYWN0aW9uCiAgICBqc3IgQWRkaXRpb24KICAgIGptcCBEb25lCkNoZWNrU3VidHJhY3Rpb246CiAgICBjbXAgIyctJwogICAgYm5lIENoZWNrTXVsdGlwbGljYXRpb24KICAgIGpzciBTdWJ0cmFjdGlvbgogICAgam1wIERvbmUKQ2hlY2tNdWx0aXBsaWNhdGlvbjoKICAgIGNtcCAjJyonCiAgICBibmUgRXhpdFByb2dyYW0KICAgIGpzciBNdWx0aXBsaWNhdGlvbgogICAgam1wIERvbmUKICAgIApEb25lOgogICAgbGR4ICNSZXN1bHRNZXNzYWdlPAogICAgbGR5ICNSZXN1bHRNZXNzYWdlPgogICAganNyIFBybnRNZXNzCiAgICBsZGEgcmVzdWx0CiAgICBqc3IgT3V0SGV4CiAgICBsZGEgIzBhaAogICAganNyIE91dENoYXIKICAgIGxkYSAjMGRoCiAgICBqc3IgT3V0Q2hhcgogICAgCiAgICBqbXAgTWFpbgogICAgCkV4aXRQcm9ncmFtOgogICAgYnJrCiAKCjtTdWJyb3V0aW5lcy4gIApBZGRpdGlvbjoKICAgIHBoYQogICAgbGRhIG51bTEKICAgIGNsYwogICAgYWRjIG51bTIKICAgIHN0YSByZXN1bHQKICAgIHBsYQogICAgcnRzCiAgICAKU3VidHJhY3Rpb246CiAgICBwaGEKICAgIGxkYSBudW0xCiAgICBzZWMKICAgIHNiYyBudW0yCiAgICBzdGEgcmVzdWx0CiAgICBwbGEKICAgIHJ0cwogICAgCk11bHRpcGxpY2F0aW9uOgogICAgcGhhCiAgICBsZGEgbnVtMQogICAgY21wICMwZAogICAgYm5lIE51bTFOb3RaZXJvCiAgICBsZGEgIzBkCiAgICBzdGEgcmVzdWx0CiAgICBqbXAgRXhpdE11bHRpcGxpY2F0aW9uCk51bTFOb3RaZXJvOgogICAgbGRhIG51bTIKICAgIGNtcCAjMGQKICAgIGJuZSBOdW0yTm90WmVybwogICAgbGRhICMwZAogICAgc3RhIHJlc3VsdAogICAgam1wIEV4aXRNdWx0aXBsaWNhdGlvbgpOdW0yTm90WmVybzoKICAgIGxkYSBudW0xCiAgICBzdGEgcmVzdWx0CiAgICBkZWMgbnVtMgogICAgYmVxIEV4aXRNdWx0aXBsaWNhdGlvbgpMb29wOgogICAgY2xjCiAgICBhZGMgbnVtMQogICAgZGVjIG51bTIKICAgIGJuZSBMb29wCiAgICBzdGEgcmVzdWx0CiAgICAKRXhpdE11bHRpcGxpY2F0aW9uOgogICAgcGxhCiAgICBydHMKICAgIAogICAgYnJrCgoKOyoqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqCjsgICAgICAgIFZhcmlhYmxlcyBhcmVhLgo7KioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioKRmlyc3ROdW1iZXJNZXNzYWdlOiAgCiAgICBkYnQgMGFoLDBkaAogICAgZGJ0ICJFbnRlciB0aGUgZmlyc3QgZGlnaXQgKG9yICdxJyB0byBxdWl0KTogIgogICAgZGJ0IDBkCiAgICAKT3BlcmF0b3JNZXNzYWdlOiAgCiAgICBkYnQgMGFoLDBkaAogICAgZGJ0ICJFbnRlciB0aGUgb3BlcmF0b3I6ICIKICAgIGRidCAwZAogICAgClNlY29uZE51bWJlck1lc3NhZ2U6ICAKICAgIGRidCAwYWgsMGRoCiAgICBkYnQgIkVudGVyIHRoZSBzZWNvbmQgZGlnaXQ6ICIKICAgIGRidCAwZAogICAgClJlc3VsdE1lc3NhZ2U6ICAKICAgIGRidCAwYWgsMGRoCiAgICBkYnQgIlRoZSByZXN1bHQgaXM6ICIKICAgIGRidCAwZAoKbnVtMTogICBkYnQgPwpvcGVyYXRvcjogZGJ0ID8KbnVtMjogICBkYnQgPwpyZXN1bHQ6IGRidCA/CgogICAgZW5kCiAgICAgCg==");
+%/mathpiper
+
+    %output,parent="Problem 3",mpversion=".271",preserve="false"
+      Result: True
+.   %/output
+
+
+%uasm65,name="Problem 3",subtype="problem"
+
+OutChar: equ E003h
+
+GetChar: equ E006h
+
+GetCharW: equ E009h
+
+PrntMess: equ E00Ch
+
+OutSpace: equ E00Fh
+
+OutHex: equ E012h
+
+DgtToBin: equ E015h
+
+GetLine: equ E018h
+
+ org 0200h
+
+Main:
+ ldx #FirstNumberMessage<
+ ldy #FirstNumberMessage>
+ jsr PrntMess
+ jsr GetCharW
+ cmp #'q'
+ beq ExitProgram
+ cmp #'Q'
+ beq ExitProgram
+ jsr DgtToBin
+ sta num1
+ 
+ ldx #OperatorMessage<
+ ldy #OperatorMessage>
+ jsr PrntMess
+ jsr GetCharW
+ sta operator
+ 
+ ldx #SecondNumberMessage<
+ ldy #SecondNumberMessage>
+ jsr PrntMess
+ jsr GetCharW
+ jsr DgtToBin
+ sta num2
+ 
+ lda operator
+ cmp #'+'
+ bne CheckSubtraction
+ jsr Addition
+ jmp Done
+
+CheckSubtraction:
+ cmp #'-'
+ bne CheckMultiplication
+ jsr Subtraction
+ jmp Done
+
+CheckMultiplication:
+ cmp #'*'
+ bne ExitProgram
+ jsr Multiplication
+ jmp Done
+ 
+Done:
+ ldx #ResultMessage<
+ ldy #ResultMessage>
+ jsr PrntMess
+ lda result
+ jsr OutHex
+ lda #0ah
+ jsr OutChar
+ lda #0dh
+ jsr OutChar
+ 
+ jmp Main
+
+ExitProgram:
+ brk
+ 
+Addition:
+ pha
+ lda num1
+ clc
+ adc num2
+ sta result
+ pla
+ rts
+ 
+Subtraction:
+ pha
+ lda num1
+ sec
+ sbc num2
+ sta result
+ pla
+ rts
+ 
+Multiplication:
+ pha
+ lda num1
+ cmp #0d
+ bne Num1NotZero
+ lda #0d
+ sta result
+ jmp ExitMultiplication
+ 
+Num1NotZero:
+ lda num2
+ cmp #0d
+ bne Num2NotZero
+ lda #0d
+ sta result
+ jmp ExitMultiplication
+
+Num2NotZero:
+ lda num1
+ sta result
+ dec num2
+ beq ExitMultiplication
+ 
+Loop:
+ clc
+ adc num1
+ dec num2
+ bne Loop
+ sta result
+ 
+ExitMultiplication:
+ pla
+ rts
+ brk
+ 
+FirstNumberMessage:
+ dbt 0ah,0dh
+ dbt "Enter the first digit (or 'q' to quit): "
+ dbt 0dd
+ 
+OperatorMessage:
+ dbt 0ah,0dh
+ dbt "Enter the operator: "
+ dbt 0d
+ 
+SecondNumberMessage:
+ dbt 0ah,0dh
+ dbt "Enter the second digit: "
+ dbt 0d
+ 
+ResultMessage:
+ dbt 0ah,0dh
+ dbt "The result is: "
+ dbt 0d
+ 
+num1: dbt ?
+operator: dbt ?
+num2: dbt ?
+result: dbt ?
+
+ end
+ 
+ 
+ 
+%/uasm65
+
+    %output,parent="Problem 3",mpversion=".271",preserve="false"
+      *** Executable Code ***
+      
+      %s19,description="Execute this fold to send program to U6502 monitor.",preserve="false"
+      	S00700005541534DC2
+      	S1170200A2C4A002200CE02009E0C971F062C951F05E2015A0
+      	S1170214E08D3303A2EFA002200CE02009E08D3403A206A0DB
+      	S117022803200CE02009E02015E08D3503AD3403C92BD0061E
+      	S117023C2071024C5602C92DD006207E024C5602C92AD02080
+      	S1170250208B024C5602A221A003200CE0AD36032012E0A932
+      	S11702640A2003E0A90D2003E04C00020048AD3303186D3589
+      	S1170278038D3603686048AD330338ED35038D36036860487F
+      	S117028CAD3303C900D008A9008D36034CC102AD3503C900AA
+      	S11702A0D008A9008D36034CC102AD33038D3603CE3503F051
+      	S11702B40C186D3303CE3503D0F78D36036860000A0D456E46
+      	S11702C87465722074686520666972737420646967697420D9
+      	S11702DC286F722027712720746F2071756974293A200A0DA2
+      	S11702F0456E74657220746865206F70657261746F723A20B1
+      	S1170304000A0D456E74657220746865207365636F6E6420AF
+      	S117031864696769743A20000A0D54686520726573756C746B
+      	S10D032C2069733A2000000000006D
+      	S9030000FC
+      %/s19
+        
+      *** List File ***
+      
+                      000001 |
+      0000            000002 |OutChar: equ E003h
+                      000003 |
+      0000            000004 |GetChar: equ E006h
+                      000005 |
+      0000            000006 |GetCharW: equ E009h
+                      000007 |
+      0000            000008 |PrntMess: equ E00Ch
+                      000009 |
+      0000            000010 |OutSpace: equ E00Fh
+                      000011 |
+      0000            000012 |OutHex: equ E012h
+                      000013 |
+      0000            000014 |DgtToBin: equ E015h
+                      000015 |
+      0000            000016 |GetLine: equ E018h
+                      000017 |
+      0200            000018 | org 0200h
+                      000019 |
+      0200            000020 |Main:
+      0200 A2 C4      000021 | ldx #FirstNumberMessage<
+      0202 A0 02      000022 | ldy #FirstNumberMessage>
+      0204 20 0C E0   000023 | jsr PrntMess
+      0207 20 09 E0   000024 | jsr GetCharW
+      020A C9 71      000025 | cmp #'q'
+      020C F0 62      000026 | beq ExitProgram
+      020E C9 51      000027 | cmp #'Q'
+      0210 F0 5E      000028 | beq ExitProgram
+      0212 20 15 E0   000029 | jsr DgtToBin
+      0215 8D 33 03   000030 | sta num1
+                      000031 | 
+      0218 A2 EF      000032 | ldx #OperatorMessage<
+      021A A0 02      000033 | ldy #OperatorMessage>
+      021C 20 0C E0   000034 | jsr PrntMess
+      021F 20 09 E0   000035 | jsr GetCharW
+      0222 8D 34 03   000036 | sta operator
+                      000037 | 
+      0225 A2 06      000038 | ldx #SecondNumberMessage<
+      0227 A0 03      000039 | ldy #SecondNumberMessage>
+      0229 20 0C E0   000040 | jsr PrntMess
+      022C 20 09 E0   000041 | jsr GetCharW
+      022F 20 15 E0   000042 | jsr DgtToBin
+      0232 8D 35 03   000043 | sta num2
+                      000044 | 
+      0235 AD 34 03   000045 | lda operator
+      0238 C9 2B      000046 | cmp #'+'
+      023A D0 06      000047 | bne CheckSubtraction
+      023C 20 71 02   000048 | jsr Addition
+      023F 4C 56 02   000049 | jmp Done
+                      000050 |
+      0242            000051 |CheckSubtraction:
+      0242 C9 2D      000052 | cmp #'-'
+      0244 D0 06      000053 | bne CheckMultiplication
+      0246 20 7E 02   000054 | jsr Subtraction
+      0249 4C 56 02   000055 | jmp Done
+                      000056 |
+      024C            000057 |CheckMultiplication:
+      024C C9 2A      000058 | cmp #'*'
+      024E D0 20      000059 | bne ExitProgram
+      0250 20 8B 02   000060 | jsr Multiplication
+      0253 4C 56 02   000061 | jmp Done
+                      000062 | 
+      0256            000063 |Done:
+      0256 A2 21      000064 | ldx #ResultMessage<
+      0258 A0 03      000065 | ldy #ResultMessage>
+      025A 20 0C E0   000066 | jsr PrntMess
+      025D AD 36 03   000067 | lda result
+      0260 20 12 E0   000068 | jsr OutHex
+      0263 A9 0A      000069 | lda #0ah
+      0265 20 03 E0   000070 | jsr OutChar
+      0268 A9 0D      000071 | lda #0dh
+      026A 20 03 E0   000072 | jsr OutChar
+                      000073 | 
+      026D 4C 00 02   000074 | jmp Main
+                      000075 |
+      0270            000076 |ExitProgram:
+      0270 00         000077 | brk
+                      000078 | 
+      0271            000079 |Addition:
+      0271 48         000080 | pha
+      0272 AD 33 03   000081 | lda num1
+      0275 18         000082 | clc
+      0276 6D 35 03   000083 | adc num2
+      0279 8D 36 03   000084 | sta result
+      027C 68         000085 | pla
+      027D 60         000086 | rts
+                      000087 | 
+      027E            000088 |Subtraction:
+      027E 48         000089 | pha
+      027F AD 33 03   000090 | lda num1
+      0282 38         000091 | sec
+      0283 ED 35 03   000092 | sbc num2
+      0286 8D 36 03   000093 | sta result
+      0289 68         000094 | pla
+      028A 60         000095 | rts
+                      000096 | 
+      028B            000097 |Multiplication:
+      028B 48         000098 | pha
+      028C AD 33 03   000099 | lda num1
+      028F C9 00      000100 | cmp #0d
+      0291 D0 08      000101 | bne Num1NotZero
+      0293 A9 00      000102 | lda #0d
+      0295 8D 36 03   000103 | sta result
+      0298 4C C1 02   000104 | jmp ExitMultiplication
+                      000105 | 
+      029B            000106 |Num1NotZero:
+      029B AD 35 03   000107 | lda num2
+      029E C9 00      000108 | cmp #0d
+      02A0 D0 08      000109 | bne Num2NotZero
+      02A2 A9 00      000110 | lda #0d
+      02A4 8D 36 03   000111 | sta result
+      02A7 4C C1 02   000112 | jmp ExitMultiplication
+                      000113 |
+      02AA            000114 |Num2NotZero:
+      02AA AD 33 03   000115 | lda num1
+      02AD 8D 36 03   000116 | sta result
+      02B0 CE 35 03   000117 | dec num2
+      02B3 F0 0C      000118 | beq ExitMultiplication
+                      000119 | 
+      02B5            000120 |Loop:
+      02B5 18         000121 | clc
+      02B6 6D 33 03   000122 | adc num1
+      02B9 CE 35 03   000123 | dec num2
+      02BC D0 F7      000124 | bne Loop
+      02BE 8D 36 03   000125 | sta result
+                      000126 | 
+      02C1            000127 |ExitMultiplication:
+      02C1 68         000128 | pla
+      02C2 60         000129 | rts
+      02C3 00         000130 | brk
+                      000131 | 
+      02C4            000132 |FirstNumberMessage:
+      02C4 0A         000133 | dbt 0ah,0dh
+      02C5 0D               
+      02C6 45         000134 | dbt "Enter the first digit (or 'q' to quit): "
+      02C7 6E 74 65         
+      02CA 72 20 74         
+      02CD 68 65 20         
+      02D0 66 69 72         
+      02D3 73 74 20         
+      02D6 64 69 67         
+      02D9 69 74 20         
+      02DC 28 6F 72         
+      02DF 20 27 71         
+      02E2 27 20 74         
+      02E5 6F 20 71         
+      02E8 75 69 74         
+      02EB 29 3A 20         
+                      000136 | 
+      02EE            000137 |OperatorMessage:
+      02EE 0A         000138 | dbt 0ah,0dh
+      02EF 0D               
+      02F0 45         000139 | dbt "Enter the operator: "
+      02F1 6E 74 65         
+      02F4 72 20 74         
+      02F7 68 65 20         
+      02FA 6F 70 65         
+      02FD 72 61 74         
+      0300 6F 72 3A         
+      0303 20               
+      0304 00         000140 | dbt 0d
+                      000141 | 
+      0305            000142 |SecondNumberMessage:
+      0305 0A         000143 | dbt 0ah,0dh
+      0306 0D               
+      0307 45         000144 | dbt "Enter the second digit: "
+      0308 6E 74 65         
+      030B 72 20 74         
+      030E 68 65 20         
+      0311 73 65 63         
+      0314 6F 6E 64         
+      0317 20 64 69         
+      031A 67 69 74         
+      031D 3A 20            
+      031F 00         000145 | dbt 0d
+                      000146 | 
+      0320            000147 |ResultMessage:
+      0320 0A         000148 | dbt 0ah,0dh
+      0321 0D               
+      0322 54         000149 | dbt "The result is: "
+      0323 68 65 20         
+      0326 72 65 73         
+      0329 75 6C 74         
+      032C 20 69 73         
+      032F 3A 20            
+      0331 00         000150 | dbt 0d
+                      000151 | 
+      0332 00         000152 |num1: dbt ?
+      0333 00         000153 |operator: dbt ?
+      0334 00         000154 |num2: dbt ?
+      0335 00         000155 |result: dbt ?
+                      000156 |
+                      000157 | end
+      
+      *** Symbol Table ***
+      {FIRSTNUMBERMESSAGE=708, PRNTMESS=57356, RESULTMESSAGE=801, NUM2NOTZERO=682, CHECKSUBTRACTION=578, LOOP=693, GETCHAR=57350, OUTCHAR=57347, OPERATOR=820, OPERATORMESSAGE=751, SECONDNUMBERMESSAGE=774, OUTSPACE=57359, SUBTRACTION=638, EXITPROGRAM=624, CHECKMULTIPLICATION=588, MULTIPLICATION=651, MAIN=512, NUM1NOTZERO=667, GETCHARW=57353, NUM2=821, NUM1=819, GETLINE=57368, DGTTOBIN=57365, EXITMULTIPLICATION=705, ADDITION=625, DONE=598, OUTHEX=57362, RESULT=822, =0}
+.   %/output
+
+
+
+
+
+
+
+%uasm65_grade,name="Problem 3",target_fold_type="uasm65"
+
+{
+    Local(result, analysis, s19, uart, transpose, correctAnswer?, commands);
+    
+    result := U6502Assemble(?foldCode);
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("MathPiper version >= .253", 1, True)
+    {
+        StringToNumber(Version()) >=? .253;
+    }    
+    
+    // --------------------------------------------------------
+    
+    FoldGrade("The code contains no syntax errors", 1, True) 
+    {
+        Length(result) >? 1;
+    }
+    
+    // --------------------------------------------------------
+    
+    If(Length(result) >? 1)
+    {
+        U6502Reset();
+        
+        U6502Fill("200"hex, "600"hex,  0);
+        
+        s19 := result[2];
+        
+        analysis := U6502ConvertJavaList(result[4]);
+        
+        transpose := Transpose(analysis);
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains one ORG command", 1, True) 
+        {
+            Length(commands := U6502FindOperators(analysis, "ORG")) =? 1;
+        }
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program starts at 0200h in memory", 1, True) 
+        {
+            commands[1][4] =? "0200";
+        }        
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("The program contains at least one 'BRK' command", 1, True) 
+        {
+            Count(transpose[3], "BRK") >? 0;
+        }    
+        
+        // --------------------------------------------------------
+        
+        FoldGrade("Correct answers are returned for +, -, and *", 1, True) 
+        {
+            uart := JavaCall("org.mathpiper.ide.u6502.EMU6551","getInstance");
+            
+            U6502Reset();
+            
+            JavaCall(uart, "send","L" + UnicodeToString(13));
+            
+            JavaCall(uart, "send", ToString(s19));
+            
+            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);
+            
+            JavaCall(uart, "send", "g 0200" + UnicodeToString(13));
+            
+            JavaCall(uart, "textAreaClear");
+            
+            U6502SetPrinting();
+            While(U6502Printing?()) Delay(100);
+            
+            correctAnswer? := True;
+
+
+            // ====================================================================
+            
+            U6502SetPrinting();
+            JavaCall(uart, "send", "1");
+            While(U6502Printing?()) Delay(100);
+
+            U6502SetPrinting();
+            JavaCall(uart, "send", "+");
+            While(U6502Printing?()) Delay(100);
+
+            U6502SetPrinting();
+            JavaCall(uart, "send", "2");
+            While(U6502Printing?()) Delay(100);
+Delay(1000);            
+            correctAnswer? := correctAnswer? &? StringContains?(JavaAccess(uart, "textAreaContentGet"), "The result is: 03");
+            
+            // ====================================================================
+            
+            U6502SetPrinting();
+            JavaCall(uart, "send", "5");
+            While(U6502Printing?()) Delay(100);
+
+            U6502SetPrinting();
+            JavaCall(uart, "send", "-");
+            While(U6502Printing?()) Delay(100);
+
+            U6502SetPrinting();
+            JavaCall(uart, "send", "2");
+            While(U6502Printing?()) Delay(100);
+Delay(1000);            
+            correctAnswer? := correctAnswer? &? StringContains?(JavaAccess(uart, "textAreaContentGet"), "The result is: 03");
+            
+            // ====================================================================
+            JavaCall(uart, "textAreaClear");
+            
+            U6502SetPrinting();
+            JavaCall(uart, "send", "5");
+            While(U6502Printing?()) Delay(100);
+
+            U6502SetPrinting();
+            JavaCall(uart, "send", "*");
+            While(U6502Printing?()) Delay(100);
+
+            U6502SetPrinting();
+            JavaCall(uart, "send", "8");
+            While(U6502Printing?()) Delay(100);
+Delay(1000);             
+            correctAnswer? := correctAnswer? &? StringContains?(JavaAccess(uart, "textAreaContentGet"), "The result is: 28");
+        }
+    }
+}
+
+%/uasm65_grade
+
+    %output,parent="Problem 3",mpversion=".271",preserve="false"
+      Result: True
+      
+      Side Effects:
+        PASS: MathPiper version >= .253. (1/1)
+        PASS: The code contains no syntax errors. (1/1)
+        PASS: The program contains one ORG command. (1/1)
+        PASS: The program starts at 0200h in memory. (1/1)
+        PASS: The program contains at least one 'BRK' command. (1/1)
+        PASS: Correct answers are returned for +, -, and *. (1/1)
+      
+        6/6 passes
+.   %/output
+
+%/group
+
+

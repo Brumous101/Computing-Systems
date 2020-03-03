@@ -1,0 +1,400 @@
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 0",sequence="1",timestamp="2019-02-06 16:05:24.378",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+¶[¶["firstName", "Kyle"],¶["lastName", "Johnson"],¶["ssuIDNumber", "264694"],¶];
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 0",sequence="2",timestamp="2019-02-06 16:05:28.187",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 1",sequence="3",timestamp="2019-02-06 16:06:36.221",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+Hint("CiAgICBvcmcgMDIwMGgKICAgIAogICAgbGR4ICMwZAogICAgc3R4IDA1MDBoCkxvb3A6CiAgICBsZGEgMGUwMDBoLHgKCiAgICBjbXAgIzBkCiAgICBibmUgTm90WmVybwogICAgCiAgICA7Q291bnQgYSAwLgogICAgaW5jIDA1MDBoCiAgICAKTm90WmVybzoKICAgIDtDaGVjayB0byBzZWUgaWYgdGhlIFggcmVnaXN0ZXIKICAgIDtoYXMgcmVhY2hlZCAwRkZoCiAgICBpbngKICAgIGNweCAjMGZmaAogICAgCiAgICBibmUgTG9vcAogICAgCiAgICBicmsKCiAgICBlbmQKICAgICAK");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 1",sequence="4",timestamp="2019-02-06 16:38:40.843",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+Hint("CiAgICBvcmcgMDIwMGgKICAgIAogICAgbGR4ICMwZAogICAgc3R4IDA1MDBoCkxvb3A6CiAgICBsZGEgMGUwMDBoLHgKCiAgICBjbXAgIzBkCiAgICBibmUgTm90WmVybwogICAgCiAgICA7Q291bnQgYSAwLgogICAgaW5jIDA1MDBoCiAgICAKTm90WmVybzoKICAgIDtDaGVjayB0byBzZWUgaWYgdGhlIFggcmVnaXN0ZXIKICAgIDtoYXMgcmVhY2hlZCAwRkZoCiAgICBpbngKICAgIGNweCAjMGZmaAogICAgCiAgICBibmUgTG9vcAogICAgCiAgICBicmsKCiAgICBlbmQKICAgICAK");
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="5",timestamp="2019-02-06 16:38:45.966",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+¶ org 0200h¶ ldx #0d¶ stx 0500h¶Loop:¶ lda 0e000h,x¶ ¶ cmp #0d¶ bne NotZero¶ ¶ inc 0500h¶ ¶ inx¶ cpx #0ffh¶ ¶ bne Loop¶ ¶ brk¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-06 16:38:46.219",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+¶    %error,parent="Problem 1",mpversion=".269",preserve="false"¶      Error on line 156 : Invalid operand.¶.   %/error¶
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="6",timestamp="2019-02-06 16:39:00.39",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+¶ org 0200h¶ ldx #0d¶ stx 0500h¶Loop:¶ lda 0e000h,x¶ ¶ cmp #0d¶ bne NotZero¶ ¶ inc 0500h¶NotZero¶ inx¶ cpx #0ffh¶ ¶ bne Loop¶ ¶ brk¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-06 16:39:00.581",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+    %error,parent="Problem 1",mpversion=".269",preserve="false"¶      Error on line 159 : Labels must end with a colon.¶.   %/error
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="7",timestamp="2019-02-06 16:39:04.137",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+¶ org 0200h¶ ldx #0d¶ stx 0500h¶Loop:¶ lda 0e000h,x¶ ¶ cmp #0d¶ bne NotZero¶ ¶ inc 0500h¶NotZero:¶ inx¶ cpx #0ffh¶ ¶ bne Loop¶ ¶ brk¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="8",timestamp="2019-02-06 16:39:06.512",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+      	S00700005541534DC2¶      	S1170200A2008E0005BD00E0C900D003EE0005E8E0FFD0F1FD¶      	S104021400E5¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="9",timestamp="2019-02-06 16:43:42.239",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+¶ org 0200h¶ ldx #0d¶ stx 0500h¶Loop:¶ lda 0e000h,x¶ ¶ cmp #0d¶ bne NotZero¶ ¶ inc 0500h¶NotZero:¶ inx¶ cpx #0ffh¶ ¶ bne Loop¶ ¶ brk¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="10",timestamp="2019-02-06 16:43:46.229",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+      	S00700005541534DC2¶      	S1170200A2008E0005BD00E0C900D003EE0005E8E0FFD0F1FD¶      	S104021400E5¶      	S9030000FC
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-06 23:44:06.536",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+    %error,parent="Problem 1",mpversion=".269",preserve="false"¶      Error on line 153 : Invalid operand.¶.   %/error
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="11",timestamp="2019-02-06 23:44:06.333",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+¶ org 0200h¶ ldx #0d¶ stx 0500h¶Loop:¶ lda e000h,x¶ ¶ cmp #0d¶ bne NotZero¶ ¶ inc 0500h¶NotZero:¶ inx¶ cpx #0ffh¶ ¶ bne Loop¶ ¶ brk¶ end
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="12",timestamp="2019-02-06 23:44:20.421",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+¶ org 0200h¶ ldx #0d¶ stx 0500h¶Loop:¶ lda 0e000h,x ¶ cmp #0d¶ bne NotZero¶ ¶ inc 0500h¶NotZero:¶ inx¶ cpx #0ffh¶ ¶ bne Loop¶ ¶ brk¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="13",timestamp="2019-02-06 23:44:22.053",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+      	S00700005541534DC2¶      	S1170200A2008E0005BD00E0C900D003EE0005E8E0FFD0F1FD¶      	S104021400E5¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="14",timestamp="2019-02-06 23:45:04.182",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+¶ org 0200h¶ ¶ ¶ ldx #0d¶ ¶ stx 0500h¶ ¶Loop:¶ lda 0e000h,x ¶ ¶ cmp #0d¶ ¶ bne NotZero ¶ ¶ inc 0500h ¶NotZero:¶ inx¶ ¶ cpx #0ffh¶ ¶ bne Loop¶ ¶ brk¶ ¶ ¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="15",timestamp="2019-02-06 23:45:05.734",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+      	S00700005541534DC2¶      	S1170200A2008E0005BD00E0C900D003EE0005E8E0FFD0F1FD¶      	S104021400E5¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65_grade",parent="Problem 1",sequence="16",timestamp="2019-02-06 23:45:29.991",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+¶{¶    Local(result, analysis, s19, uart, transpose, commands);¶    ¶    result := U6502Assemble(?foldCode);¶    ¶    // --------------------------------------------------------¶    ¶    FoldGrade("MathPiper version >= .251", 1, True)¶    {¶        StringToNumber(Version()) >=? .251;¶    }    ¶    ¶    // --------------------------------------------------------¶    ¶    FoldGrade("The code contains no syntax errors", 1, True) ¶    {¶        Length(result) >? 1;¶    }¶    ¶    // --------------------------------------------------------¶    ¶    If(Length(result) >? 1)¶    {¶        U6502Reset();¶        ¶        U6502Fill("200"hex, "600"hex,  0);¶        ¶        s19 := result[2];¶        ¶        analysis := U6502ConvertJavaList(result[4]);¶        ¶        transpose := Transpose(analysis);¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The program contains one ORG command", 1, True) ¶        {¶            Length(commands := U6502FindOperators(analysis, "ORG")) =? 1;¶        }¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The program starts at 0200h in memory", 1, True) ¶        {¶            commands[1][4] =? "0200";¶        }¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The program uses a loop", 1, True) ¶        {¶            Count(transpose[3], "BCC") >? 0 |?¶            Count(transpose[3], "BCS") >? 0 |?¶            Count(transpose[3], "BEQ") >? 0 |?¶            Count(transpose[3], "BNE") >? 0 |?¶            Count(transpose[3], "BMI") >? 0 |?¶            Count(transpose[3], "BPL") >? 0 |?¶            Count(transpose[3], "BVC") >? 0 |?¶            Count(transpose[3], "BVS") >? 0;¶        }¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The correct result is placed into address 0500h", 1, True) ¶        {¶            uart := JavaCall("org.mathpiper.ide.u6502.EMU6551","getInstance");¶            ¶            U6502Reset();¶            ¶            JavaCall(uart, "send","L" + UnicodeToString(13));¶            ¶            JavaCall(uart, "send", ToString(s19));¶            ¶            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);¶            ¶            JavaCall(uart, "send", "g 0200" + UnicodeToString(13));¶            ¶            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);¶            ¶            U6502Dump("500"hex) =? "1E"hex;¶        }¶    }¶}
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 2",sequence="17",timestamp="2019-02-06 23:49:10.686",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+Hint("CiAgICBvcmcgMDIwMGgKICAgIAogICAgbGR4ICMwZAogICAgc3R4IDA1MDBoCiAgICAKTG9vcDoKICAgIGxkYSAwRjQ1NGgseAogICAgY21wICMnYScKICAgIGJuZSBOb3RBCiAgICAKICAgIGluYyAwNTAwaAogICAgCk5vdEE6CiAgICBpbngKICAgIAogICAgY3B4ICMxNzZkCiAgICBibmUgTG9vcAogICAgCgogICAgYnJrCgogICAgZW5kCiAgICAgCg==");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 2",sequence="18",timestamp="2019-02-06 23:55:38.583",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+Hint("CiAgICBvcmcgMDIwMGgKICAgIAogICAgbGR4ICMwZAogICAgc3R4IDA1MDBoCiAgICAKTG9vcDoKICAgIGxkYSAwRjQ1NGgseAogICAgY21wICMnYScKICAgIGJuZSBOb3RBCiAgICAKICAgIGluYyAwNTAwaAogICAgCk5vdEE6CiAgICBpbngKICAgIAogICAgY3B4ICMxNzZkCiAgICBibmUgTG9vcAogICAgCgogICAgYnJrCgogICAgZW5kCiAgICAgCg==");
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-06 23:56:27.731",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+        
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-06 23:56:36.079",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+org 0200h¶¶¶ldx #0d¶¶stx 0500h¶¶oop:¶lda 0e000h,¶¶cmp #0d¶¶bne NotZero¶¶inc 0500h ¶otZero:¶inx¶¶cpx #0ffh¶¶bne Loop¶¶brk¶¶¶end        
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-06 23:58:27.297",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+F454h
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 2",sequence="19",timestamp="2019-02-06 23:58:58.092",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+¶ org 0200h¶¶ ¶ ldx #0d¶¶ stx 0500h¶¶Loop:¶ lda 0F454h,x¶¶ cmp #'a'¶¶ bne NotA¶¶ inc 0500h ¶NotA:¶ inx¶¶ cpx #176d¶¶ bne Loop¶¶¶ brk¶ ¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="20",timestamp="2019-02-06 23:59:02.381",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+      	S00700005541534DC2¶      	S1170200A2008E0005BD54F4C961D003EE0005E8E0B0D0F183¶      	S104021400E5¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65_grade",parent="Problem 2",sequence="21",timestamp="2019-02-07 00:00:13.011",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+¶{¶    Local(result, analysis, s19, uart, transpose, commands);¶    ¶    result := U6502Assemble(?foldCode);¶    ¶    // --------------------------------------------------------¶    ¶    FoldGrade("MathPiper version >= .251", 1, True)¶    {¶        StringToNumber(Version()) >=? .251;¶    }    ¶    ¶    // --------------------------------------------------------¶    ¶    FoldGrade("The code contains no syntax errors", 1, True) ¶    {¶        Length(result) >? 1;¶    }¶    ¶    // --------------------------------------------------------¶    ¶    If(Length(result) >? 1)¶    {¶        U6502Reset();¶        ¶        U6502Fill("200"hex, "600"hex,  0);¶        ¶        s19 := result[2];¶        ¶        analysis := U6502ConvertJavaList(result[4]);¶        ¶        transpose := Transpose(analysis);¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The program contains one ORG command", 1, True) ¶        {¶            Length(commands := U6502FindOperators(analysis, "ORG")) =? 1;¶        }¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The program starts at 0200h in memory", 1, True) ¶        {¶            commands[1][4] =? "0200";¶        }    ¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The program uses a loop", 1, True) ¶        {¶            Count(transpose[3], "BCC") >? 0 |?¶            Count(transpose[3], "BCS") >? 0 |?¶            Count(transpose[3], "BEQ") >? 0 |?¶            Count(transpose[3], "BNE") >? 0 |?¶            Count(transpose[3], "BMI") >? 0 |?¶            Count(transpose[3], "BPL") >? 0 |?¶            Count(transpose[3], "BVC") >? 0 |?¶            Count(transpose[3], "BVS") >? 0;¶        }¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The correct result is placed  into address 0500h", 1, True) ¶        {¶            uart := JavaCall("org.mathpiper.ide.u6502.EMU6551","getInstance");¶            ¶            U6502Reset();¶            ¶            JavaCall(uart, "send","L" + UnicodeToString(13));¶            ¶            JavaCall(uart, "send", ToString(s19));¶            ¶            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);¶            ¶            JavaCall(uart, "send", "g 0200" + UnicodeToString(13));¶            ¶            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);¶            ¶            U6502Dump("500"hex) =? "4"hex;¶        }¶    }¶}
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-07 00:05:37.692",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+ org 0200h¶¶ ¶ ldx #0d¶¶ stx 0500h¶¶Loop:¶ lda 0F454h,x¶¶ cmp #'a'¶¶ bne NotA¶¶ inc 0500h ¶NotA:¶ inx¶¶ cpx #176d¶¶ bne Loop¶¶¶ brk¶ ¶ end    
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 3",sequence="22",timestamp="2019-02-07 00:07:23.041",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+Hint("CiAgICBvcmcgMDIwMGgKICAgIAogICAgbGR4ICMwZAogICAgc3R4IDA1MDBoCiAgICAKO0ZpcnN0ICJzIi4KczFfYToKICAgIGxkYSAwZjQ1NGgseApzMV9iOgogICAgY21wICM3M2gKICAgIGJlcSBlMQoKICAgIGlueAogICAgY3B4ICMwQjFoCiAgICBibmUgczFfYQogICAgam1wIGRvbmUKICAgIAo7Rmlyc3QgImUiLgplMToKICAgIGlueAogICAgY3B4ICMwQjFoCiAgICBiZXEgRG9uZQogICAgbGRhIDBmNDU0aCx4CiAgICBjbXAgIzY1aAogICAgYm5lIHMxX2IKICAgIAo7InIiLgogICAgaW54CiAgICBjcHggIzBCMWgKICAgIGJlcSBEb25lCiAgICBsZGEgMGY0NTRoLHgKICAgIGNtcCAjNzJoCiAgICBibmUgczFfYgogICAgCjsiaSIuCiAgICBpbngKICAgIGNweCAjMEIxaAogICAgYmVxIERvbmUKICAgIGxkYSAwZjQ1NGgseAogICAgY21wICM2OWgKICAgIGJuZSBzMV9iCiAgICAKO1NlY29uZCAiZSIKICAgIGlueAogICAgY3B4ICMwQjFoCiAgICBiZXEgRG9uZQogICAgbGRhIDBmNDU0aCx4CiAgICBjbXAgIzY1aAogICAgYm5lIHMxX2IKICAgIAo7U2Vjb25kICJzIgogICAgaW54CiAgICBjcHggIzBCMWgKICAgIGJlcSBEb25lCiAgICBsZGEgMGY0NTRoLHgKICAgIGNtcCAjNzNoCiAgICBibmUgczFfYgogICAgCjtUaGUgd29yZCAic2VyaWVzIiB3YXMgZm91bmQuCiAgICBsZHkgIzFkCiAgICBzdHkgMDUwMGgKICAgIApEb25lOgogICAgYnJrCgogICAgZW5kCiAgICAgCg==");
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-07 00:36:33.572",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+;cpx #0b1h is the same number as #176d
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-07 00:36:41.521",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+;looking for the first e
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-07 00:36:48.446",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+;looking for the first e
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-07 00:36:49.495",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+;looking for the first e
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-07 00:36:52.852",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+;looking for the first e
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-07 00:37:07.847",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp#'e'¶ bne searchLetter
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-07 00:38:15.3",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp#'e'¶ bne searchLetter
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-07 00:38:23.309",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp#'e'¶ bne searchLetter
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-07 00:38:57.715",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp#'e'¶ bne searchLetter
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-07 00:39:31.043",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+StartS
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-07 00:39:32.615",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+StartS
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-07 00:39:35.799",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+StartS
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-07 00:39:37.589",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+StartS
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-07 00:39:39.051",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+StartS
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 3",sequence="23",timestamp="2019-02-07 00:39:43.473",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+Hint("CiAgICBvcmcgMDIwMGgKICAgIAogICAgbGR4ICMwZAogICAgc3R4IDA1MDBoCiAgICAKO0ZpcnN0ICJzIi4KczFfYToKICAgIGxkYSAwZjQ1NGgseApzMV9iOgogICAgY21wICM3M2gKICAgIGJlcSBlMQoKICAgIGlueAogICAgY3B4ICMwQjFoCiAgICBibmUgczFfYQogICAgam1wIGRvbmUKICAgIAo7Rmlyc3QgImUiLgplMToKICAgIGlueAogICAgY3B4ICMwQjFoCiAgICBiZXEgRG9uZQogICAgbGRhIDBmNDU0aCx4CiAgICBjbXAgIzY1aAogICAgYm5lIHMxX2IKICAgIAo7InIiLgogICAgaW54CiAgICBjcHggIzBCMWgKICAgIGJlcSBEb25lCiAgICBsZGEgMGY0NTRoLHgKICAgIGNtcCAjNzJoCiAgICBibmUgczFfYgogICAgCjsiaSIuCiAgICBpbngKICAgIGNweCAjMEIxaAogICAgYmVxIERvbmUKICAgIGxkYSAwZjQ1NGgseAogICAgY21wICM2OWgKICAgIGJuZSBzMV9iCiAgICAKO1NlY29uZCAiZSIKICAgIGlueAogICAgY3B4ICMwQjFoCiAgICBiZXEgRG9uZQogICAgbGRhIDBmNDU0aCx4CiAgICBjbXAgIzY1aAogICAgYm5lIHMxX2IKICAgIAo7U2Vjb25kICJzIgogICAgaW54CiAgICBjcHggIzBCMWgKICAgIGJlcSBEb25lCiAgICBsZGEgMGY0NTRoLHgKICAgIGNtcCAjNzNoCiAgICBibmUgczFfYgogICAgCjtUaGUgd29yZCAic2VyaWVzIiB3YXMgZm91bmQuCiAgICBsZHkgIzFkCiAgICBzdHkgMDUwMGgKICAgIApEb25lOgogICAgYnJrCgogICAgZW5kCiAgICAgCg==");
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-07 00:41:12.36",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+¶    %error,parent="Problem 3",mpversion=".269",preserve="false"¶      Error on line 627 : Invalid character in operator.¶.   %/error¶
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 3",sequence="24",timestamp="2019-02-07 00:41:12.144",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+¶ org 0200h¶¶ ¶ ldx #0d¶¶ stx 0500h¶¶; the ,x below means add x!¶load:¶ lda 0F454h,x¶¶searchStartS:¶ cmp #'s'¶ beq el¶ inx¶ cpx #0B1h¶ bne load¶ jmp Done¶¶searchWord:¶;cpx #0b1h is the same number as #176d¶;looking for the first e¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp#'e'¶ bne searchStartS¶ ¶;looking for the first r¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp#'r'¶ bne searchStartS¶¶;looking for the first i¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp#'i'¶ bne searchStartS¶¶;looking for the second e¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp#'e'¶ bne searchStartS¶¶;looking for the second s¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp#'s'¶ bne searchStartS¶ ¶;The word "series" is found!¶ ldy #1d¶ sty 0500h¶¶Done:¶ brk¶ ¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-07 00:42:17.224",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+'e'
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 3",sequence="25",timestamp="2019-02-07 00:42:34.449",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+¶ org 0200h¶¶ ¶ ldx #0d¶¶ stx 0500h¶¶; the ,x below means add x!¶load:¶ lda 0F454h,x¶¶searchStartS:¶ cmp #'s'¶ beq el¶ inx¶ cpx #0B1h¶ bne load¶ jmp Done¶¶searchWord:¶;cpx #0b1h is the same number as #176d¶;looking for the first e¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp #'e'¶ bne searchStartS¶ ¶;looking for the first r¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp #'r'¶ bne searchStartS¶¶;looking for the first i¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp #'i'¶ bne searchStartS¶¶;looking for the second e¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp #'e'¶ bne searchStartS¶¶;looking for the second s¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp #'s'¶ bne searchStartS¶ ¶;The word "series" is found!¶ ldy #1d¶ sty 0500h¶¶Done:¶ brk¶ ¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-07 00:42:34.658",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+    %error,parent="Problem 3",mpversion=".269",preserve="false"¶      Error on line 626 : Invalid operand.¶.   %/error
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 3",sequence="26",timestamp="2019-02-07 00:42:38.803",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+¶ org 0200h¶¶ ¶ ldx #0d¶¶ stx 0500h¶¶; the ,x below means add x!¶load:¶ lda 0F454h,x¶¶searchStartS:¶ cmp #'s'¶ beq el¶ inx¶ cpx #0B1h¶ bne load¶ jmp Done¶¶searchWord:¶;cpx #0b1h is the same number as #176d¶;looking for the first e¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp #'e'¶ bne searchStartS¶ ¶;looking for the first r¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp #'r'¶ bne searchStartS¶¶;looking for the first i¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp #'i'¶ bne searchStartS¶¶;looking for the second e¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp #'e'¶ bne searchStartS¶¶;looking for the second s¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp #'s'¶ bne searchStartS¶ ¶;The word "series" is found!¶ ldy #1d¶ sty 0500h¶¶Done:¶ brk¶ ¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-07 00:42:39.01",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+    %error,parent="Problem 3",mpversion=".269",preserve="false"¶      Error on line 626 : Invalid operand.¶.   %/error
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 3",sequence="27",timestamp="2019-02-07 00:42:57.52",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+¶ org 0200h¶¶ ¶ ldx #0d¶¶ stx 0500h¶¶; the ,x below means add x!¶load:¶ lda 0F454h,x¶¶searchStartS:¶ cmp #'s'¶ beq searchWord¶ inx¶ cpx #0B1h¶ bne load¶ jmp Done¶¶searchWord:¶;cpx #0b1h is the same number as #176d¶;looking for the first e¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp #'e'¶ bne searchStartS¶ ¶;looking for the first r¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp #'r'¶ bne searchStartS¶¶;looking for the first i¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp #'i'¶ bne searchStartS¶¶;looking for the second e¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp #'e'¶ bne searchStartS¶¶;looking for the second s¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp #'s'¶ bne searchStartS¶ ¶;The word "series" is found!¶ ldy #1d¶ sty 0500h¶¶Done:¶ brk¶ ¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-07 00:42:57.747",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+    %error,parent="Problem 3",mpversion=".269",preserve="false"¶      Error on line 626 : Invalid operand.¶.   %/error
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-07 00:43:12.062",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+#65h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-07 00:43:18.255",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+#65h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-07 00:44:47.748",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+;refer to ascii table for the letter beside cmp
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-07 00:44:49.378",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+;refer to ascii table for the letter beside cmp
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-07 00:44:51.408",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+;refer to ascii table for the letter beside cmp
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-07 00:44:52.93",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+;refer to ascii table for the letter beside cmp
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-07 00:45:21.483",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+#65h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-07 00:46:44.457",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+#73h
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 3",sequence="28",timestamp="2019-02-07 00:46:46.802",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+¶ org 0200h¶¶ ¶ ldx #0d¶¶ stx 0500h¶¶; the ,x below means add x!¶load:¶ lda 0F454h,x¶¶searchStartS:¶;#73h is s in Ascii¶ cmp #73h¶ beq searchWord¶ inx¶ cpx #0B1h¶ bne load¶ jmp Done¶¶searchWord:¶;cpx #0b1h is the same number as #176d¶;looking for the first e¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp #65h¶ bne searchStartS¶ ¶;looking for the first r¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp #72h¶ bne searchStartS¶¶;looking for the first i¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp #69h¶ bne searchStartS¶¶;looking for the second e¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp #65h¶ bne searchStartS¶¶;looking for the second s¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp #73h¶ bne searchStartS¶ ¶;The word "series" is found!¶ ldy #1d¶ sty 0500h¶¶Done:¶ brk¶ ¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-07 00:46:47.007",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+    %error,parent="Problem 3",mpversion=".269",preserve="false"¶      Error on line 632 : Invalid operand.¶.   %/error
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 3",sequence="29",timestamp="2019-02-07 00:48:03.922",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+¶ org 0200h¶¶ ¶ ldx #0d¶¶ stx 0500h¶¶; the ,x below means add x!¶load:¶ lda 0f454h,x¶¶searchStartS:¶;#73h is s in Ascii¶ cmp #73h¶ beq searchWord¶ inx¶ cpx #0B1h¶ bne load¶ jmp Done¶¶searchWord:¶;cpx #0b1h is the same number as #176d¶;looking for the first e¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp #65h¶ bne searchStartS¶ ¶;looking for the first r¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp #72h¶ bne searchStartS¶¶;looking for the first i¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp #69h¶ bne searchStartS¶¶;looking for the second e¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp #65h¶ bne searchStartS¶¶;looking for the second s¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp #73h¶ bne searchStartS¶ ¶;The word "series" is found!¶ ldy #1d¶ sty 0500h¶¶Done:¶ brk¶ ¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-07 00:48:04.162",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+    %error,parent="Problem 3",mpversion=".269",preserve="false"¶      Error on line 632 : Invalid operand.¶.   %/error
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 3",sequence="30",timestamp="2019-02-07 00:48:09.154",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+¶ org 0200h¶¶ ¶ ldx #0d¶¶ stx 0500h¶¶; the ,x below means add x!¶load:¶ lda 0f454h,x¶¶searchStartS:¶;#73h is s in Ascii¶ cmp #73h¶ beq searchWord¶ inx¶ cpx #0B1h¶ bne load¶ jmp Done¶¶searchWord:¶;cpx #0b1h is the same number as #176d¶;looking for the first e¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ bne Done¶ lda 0f454h,x¶ cmp #65h¶ bne searchStartS¶ ¶;looking for the first r¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp #72h¶ bne searchStartS¶¶;looking for the first i¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp #69h¶ bne searchStartS¶¶;looking for the second e¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp #65h¶ bne searchStartS¶¶;looking for the second s¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ bne Done¶ lda f454h,x¶ cmp #73h¶ bne searchStartS¶ ¶;The word "series" is found!¶ ldy #1d¶ sty 0500h¶¶Done:¶ brk¶ ¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-07 00:48:09.39",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".269"
+    %error,parent="Problem 3",mpversion=".269",preserve="false"¶      Error on line 632 : Invalid operand.¶.   %/error
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 3",sequence="31",timestamp="2019-02-07 00:48:18.231",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+¶ org 0200h¶¶ ¶ ldx #0d¶¶ stx 0500h¶¶; the ,x below means add x!¶load:¶ lda 0f454h,x¶¶searchStartS:¶;#73h is s in Ascii¶ cmp #73h¶ beq searchWord¶ inx¶ cpx #0B1h¶ bne load¶ jmp Done¶¶searchWord:¶;cpx #0b1h is the same number as #176d¶;looking for the first e¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ bne Done¶ lda 0f454h,x¶ cmp #65h¶ bne searchStartS¶ ¶;looking for the first r¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ bne Done¶ lda 0f454h,x¶ cmp #72h¶ bne searchStartS¶¶;looking for the first i¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ bne Done¶ lda 0f454h,x¶ cmp #69h¶ bne searchStartS¶¶;looking for the second e¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ bne Done¶ lda 0f454h,x¶ cmp #65h¶ bne searchStartS¶¶;looking for the second s¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ bne Done¶ lda 0f454h,x¶ cmp #73h¶ bne searchStartS¶ ¶;The word "series" is found!¶ ldy #1d¶ sty 0500h¶¶Done:¶ brk¶ ¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="32",timestamp="2019-02-07 00:48:20.279",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+      	S00700005541534DC2¶      	S1170200A2008E0005BD54F4C973F008E8E0B1D0F44C550298¶      	S1170214E8E0B1D03CBD54F4C965D0E8E8E0B1D030BD54F4E4¶      	S1170228C972D0DCE8E0B1D024BD54F4C969D0D0E8E0B1D04A¶      	S117023C18BD54F4C965D0C4E8E0B1D00CBD54F4C973D0B8AD¶      	S1090250A0018C00050072¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65_grade",parent="Problem 3",sequence="33",timestamp="2019-02-07 00:49:27.865",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+¶{¶    Local(result, analysis, s19, uart, transpose, commands);¶    ¶    result := U6502Assemble(?foldCode);¶    ¶    // --------------------------------------------------------¶    ¶    FoldGrade("MathPiper version >= .251", 1, True)¶    {¶        StringToNumber(Version()) >=? .251;¶    }    ¶    ¶    // --------------------------------------------------------¶    ¶    FoldGrade("The code contains no syntax errors", 1, True) ¶    {¶        Length(result) >? 1;¶    }¶    ¶    // --------------------------------------------------------¶    ¶    If(Length(result) >? 1)¶    {¶        U6502Reset();¶        ¶        U6502Fill("200"hex, "600"hex,  0);¶        ¶        s19 := result[2];¶        ¶        analysis := U6502ConvertJavaList(result[4]);¶        ¶        transpose := Transpose(analysis);¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The program contains one ORG command", 1, True) ¶        {¶            Length(commands := U6502FindOperators(analysis, "ORG")) =? 1;¶        }¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The program starts at 0200h in memory", 1, True) ¶        {¶            commands[1][4] =? "0200";¶        }    ¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The program uses a loop", 1, True) ¶        {¶            Count(transpose[3], "BCC") >? 0 |?¶            Count(transpose[3], "BCS") >? 0 |?¶            Count(transpose[3], "BEQ") >? 0 |?¶            Count(transpose[3], "BNE") >? 0 |?¶            Count(transpose[3], "BMI") >? 0 |?¶            Count(transpose[3], "BPL") >? 0 |?¶            Count(transpose[3], "BVC") >? 0 |?¶            Count(transpose[3], "BVS") >? 0;¶        }¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The correct result is placed into address 0500h", 1, True) ¶        {¶            uart := JavaCall("org.mathpiper.ide.u6502.EMU6551","getInstance");¶            ¶            U6502Reset();¶            ¶            JavaCall(uart, "send","L" + UnicodeToString(13));¶            ¶            JavaCall(uart, "send", ToString(s19));¶            ¶            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);¶            ¶            JavaCall(uart, "send", "g 0200" + UnicodeToString(13));¶            ¶            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);¶            ¶            U6502Dump("500"hex) =? "1"hex;¶        }¶    }¶}
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 3",sequence="34",timestamp="2019-02-07 00:50:50.41",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+Hint("CiAgICBvcmcgMDIwMGgKICAgIAogICAgbGR4ICMwZAogICAgc3R4IDA1MDBoCiAgICAKO0ZpcnN0ICJzIi4KczFfYToKICAgIGxkYSAwZjQ1NGgseApzMV9iOgogICAgY21wICM3M2gKICAgIGJlcSBlMQoKICAgIGlueAogICAgY3B4ICMwQjFoCiAgICBibmUgczFfYQogICAgam1wIGRvbmUKICAgIAo7Rmlyc3QgImUiLgplMToKICAgIGlueAogICAgY3B4ICMwQjFoCiAgICBiZXEgRG9uZQogICAgbGRhIDBmNDU0aCx4CiAgICBjbXAgIzY1aAogICAgYm5lIHMxX2IKICAgIAo7InIiLgogICAgaW54CiAgICBjcHggIzBCMWgKICAgIGJlcSBEb25lCiAgICBsZGEgMGY0NTRoLHgKICAgIGNtcCAjNzJoCiAgICBibmUgczFfYgogICAgCjsiaSIuCiAgICBpbngKICAgIGNweCAjMEIxaAogICAgYmVxIERvbmUKICAgIGxkYSAwZjQ1NGgseAogICAgY21wICM2OWgKICAgIGJuZSBzMV9iCiAgICAKO1NlY29uZCAiZSIKICAgIGlueAogICAgY3B4ICMwQjFoCiAgICBiZXEgRG9uZQogICAgbGRhIDBmNDU0aCx4CiAgICBjbXAgIzY1aAogICAgYm5lIHMxX2IKICAgIAo7U2Vjb25kICJzIgogICAgaW54CiAgICBjcHggIzBCMWgKICAgIGJlcSBEb25lCiAgICBsZGEgMGY0NTRoLHgKICAgIGNtcCAjNzNoCiAgICBibmUgczFfYgogICAgCjtUaGUgd29yZCAic2VyaWVzIiB3YXMgZm91bmQuCiAgICBsZHkgIzFkCiAgICBzdHkgMDUwMGgKICAgIApEb25lOgogICAgYnJrCgogICAgZW5kCiAgICAgCg==");
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 3",sequence="35",timestamp="2019-02-07 00:59:14.399",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+Hint("CiAgICBvcmcgMDIwMGgKICAgIAogICAgbGR4ICMwZAogICAgc3R4IDA1MDBoCiAgICAKO0ZpcnN0ICJzIi4KczFfYToKICAgIGxkYSAwZjQ1NGgseApzMV9iOgogICAgY21wICM3M2gKICAgIGJlcSBlMQoKICAgIGlueAogICAgY3B4ICMwQjFoCiAgICBibmUgczFfYQogICAgam1wIGRvbmUKICAgIAo7Rmlyc3QgImUiLgplMToKICAgIGlueAogICAgY3B4ICMwQjFoCiAgICBiZXEgRG9uZQogICAgbGRhIDBmNDU0aCx4CiAgICBjbXAgIzY1aAogICAgYm5lIHMxX2IKICAgIAo7InIiLgogICAgaW54CiAgICBjcHggIzBCMWgKICAgIGJlcSBEb25lCiAgICBsZGEgMGY0NTRoLHgKICAgIGNtcCAjNzJoCiAgICBibmUgczFfYgogICAgCjsiaSIuCiAgICBpbngKICAgIGNweCAjMEIxaAogICAgYmVxIERvbmUKICAgIGxkYSAwZjQ1NGgseAogICAgY21wICM2OWgKICAgIGJuZSBzMV9iCiAgICAKO1NlY29uZCAiZSIKICAgIGlueAogICAgY3B4ICMwQjFoCiAgICBiZXEgRG9uZQogICAgbGRhIDBmNDU0aCx4CiAgICBjbXAgIzY1aAogICAgYm5lIHMxX2IKICAgIAo7U2Vjb25kICJzIgogICAgaW54CiAgICBjcHggIzBCMWgKICAgIGJlcSBEb25lCiAgICBsZGEgMGY0NTRoLHgKICAgIGNtcCAjNzNoCiAgICBibmUgczFfYgogICAgCjtUaGUgd29yZCAic2VyaWVzIiB3YXMgZm91bmQuCiAgICBsZHkgIzFkCiAgICBzdHkgMDUwMGgKICAgIApEb25lOgogICAgYnJrCgogICAgZW5kCiAgICAgCg==");
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 3",sequence="36",timestamp="2019-02-07 00:59:26.413",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+¶ org 0200h¶¶ ¶ ldx #0d¶¶ stx 0500h¶¶; the ,x below means add x!¶load:¶ lda 0f454h,x¶¶searchStartS:¶;#73h is s in Ascii¶ cmp #73h¶ beq searchWord¶ ¶ inx¶ cpx #0B1h¶ bne load¶ jmp Done¶¶searchWord:¶;cpx #0b1h is the same number as #176d¶;looking for the first e¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ bne Done¶ lda 0f454h,x¶ cmp #65h¶ bne searchStartS¶ ¶;looking for the first r¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ bne Done¶ lda 0f454h,x¶ cmp #72h¶ bne searchStartS¶¶;looking for the first i¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ bne Done¶ lda 0f454h,x¶ cmp #69h¶ bne searchStartS¶¶;looking for the second e¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ bne Done¶ lda 0f454h,x¶ cmp #65h¶ bne searchStartS¶¶;looking for the second s¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ bne Done¶ lda 0f454h,x¶ cmp #73h¶ bne searchStartS¶ ¶;The word "series" is found!¶ ldy #1d¶ sty 0500h¶¶Done:¶ brk¶ ¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="37",timestamp="2019-02-07 00:59:29.186",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+      	S00700005541534DC2¶      	S1170200A2008E0005BD54F4C973F008E8E0B1D0F44C550298¶      	S1170214E8E0B1D03CBD54F4C965D0E8E8E0B1D030BD54F4E4¶      	S1170228C972D0DCE8E0B1D024BD54F4C969D0D0E8E0B1D04A¶      	S117023C18BD54F4C965D0C4E8E0B1D00CBD54F4C973D0B8AD¶      	S1090250A0018C00050072¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65_grade",parent="Problem 3",sequence="38",timestamp="2019-02-07 00:59:39.433",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+¶{¶    Local(result, analysis, s19, uart, transpose, commands);¶    ¶    result := U6502Assemble(?foldCode);¶    ¶    // --------------------------------------------------------¶    ¶    FoldGrade("MathPiper version >= .251", 1, True)¶    {¶        StringToNumber(Version()) >=? .251;¶    }    ¶    ¶    // --------------------------------------------------------¶    ¶    FoldGrade("The code contains no syntax errors", 1, True) ¶    {¶        Length(result) >? 1;¶    }¶    ¶    // --------------------------------------------------------¶    ¶    If(Length(result) >? 1)¶    {¶        U6502Reset();¶        ¶        U6502Fill("200"hex, "600"hex,  0);¶        ¶        s19 := result[2];¶        ¶        analysis := U6502ConvertJavaList(result[4]);¶        ¶        transpose := Transpose(analysis);¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The program contains one ORG command", 1, True) ¶        {¶            Length(commands := U6502FindOperators(analysis, "ORG")) =? 1;¶        }¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The program starts at 0200h in memory", 1, True) ¶        {¶            commands[1][4] =? "0200";¶        }    ¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The program uses a loop", 1, True) ¶        {¶            Count(transpose[3], "BCC") >? 0 |?¶            Count(transpose[3], "BCS") >? 0 |?¶            Count(transpose[3], "BEQ") >? 0 |?¶            Count(transpose[3], "BNE") >? 0 |?¶            Count(transpose[3], "BMI") >? 0 |?¶            Count(transpose[3], "BPL") >? 0 |?¶            Count(transpose[3], "BVC") >? 0 |?¶            Count(transpose[3], "BVS") >? 0;¶        }¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The correct result is placed into address 0500h", 1, True) ¶        {¶            uart := JavaCall("org.mathpiper.ide.u6502.EMU6551","getInstance");¶            ¶            U6502Reset();¶            ¶            JavaCall(uart, "send","L" + UnicodeToString(13));¶            ¶            JavaCall(uart, "send", ToString(s19));¶            ¶            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);¶            ¶            JavaCall(uart, "send", "g 0200" + UnicodeToString(13));¶            ¶            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);¶            ¶            U6502Dump("500"hex) =? "1"hex;¶        }¶    }¶}
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 3",sequence="39",timestamp="2019-02-07 01:04:06.33",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+¶ org 0200h¶¶ ¶ ldx #0d¶¶ stx 0500h¶¶; the ,x below means add x!¶load:¶ lda 0f454h,x¶¶searchStartS:¶;#73h is s in Ascii¶ cmp #73h¶ beq searchWord¶ ¶ inx¶ cpx #0B1h¶ bne load¶ jmp Done¶¶searchWord:¶;cpx #0b1h is the same number as #176d¶;looking for the first e¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ beq Done¶ lda 0f454h,x¶ cmp #65h¶ bne searchStartS¶ ¶;looking for the first r¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ beq Done¶ lda 0f454h,x¶ cmp #72h¶ bne searchStartS¶¶;looking for the first i¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ beq Done¶ lda 0f454h,x¶ cmp #69h¶ bne searchStartS¶¶;looking for the second e¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ beq Done¶ lda 0f454h,x¶ cmp #65h¶ bne searchStartS¶¶;looking for the second s¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ beq Done¶ lda 0f454h,x¶ cmp #73h¶ bne searchStartS¶ ¶;The word "series" is found!¶ ldy #1d¶ sty 0500h¶¶Done:¶ brk¶ ¶ end
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 3",sequence="40",timestamp="2019-02-07 01:04:44.331",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+¶ org 0200h¶¶ ¶ ldx #0d¶¶ stx 0500h¶¶; the ,x below means add x!¶load:¶ lda 0f454h,x¶¶searchStartS:¶;#73h is s in Ascii¶ cmp #73h¶ beq searchWord¶ ¶ inx¶ cpx #0B1h¶ bne load¶ jmp Done¶¶searchWord:¶;cpx #0b1h is the same number as #176d¶;looking for the first e¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ beq Done¶ lda 0f454h,x¶ cmp #65h¶ bne searchStartS¶ ¶;looking for the first r¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ beq Done¶ lda 0f454h,x¶ cmp #72h¶ bne searchStartS¶¶;looking for the first i¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ beq Done¶ lda 0f454h,x¶ cmp #69h¶ bne searchStartS¶¶;looking for the second e¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ beq Done¶ lda 0f454h,x¶ cmp #65h¶ bne searchStartS¶¶;looking for the second s¶;refer to ascii table for the letter beside cmp¶ inx¶ cpx #0B1h¶ beq Done¶ lda 0f454h,x¶ cmp #73h¶ bne searchStartS¶ ¶;The word "series" is found!¶ ldy #1d¶ sty 0500h¶¶Done:¶ brk¶ ¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="41",timestamp="2019-02-07 01:04:50.79",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+      	S00700005541534DC2¶      	S1170200A2008E0005BD54F4C973F008E8E0B1D0F44C550298¶      	S1170214E8E0B1F03CBD54F4C965D0E8E8E0B1F030BD54F4A4¶      	S1170228C972D0DCE8E0B1F024BD54F4C969D0D0E8E0B1F00A¶      	S117023C18BD54F4C965D0C4E8E0B1F00CBD54F4C973D0B88D¶      	S1090250A0018C00050072¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="output",sequence="42",timestamp="2019-02-07 01:06:26.671",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+      *** Executable Code ***¶      ¶      %s19,description="Execute this fold to send program to U6502 monitor.",preserve="false"¶      	S00700005541534DC2¶      	S1170200A2008E0005BD54F4C973F008E8E0B1D0F44C550298¶      	S1170214E8E0B1F03CBD54F4C965D0E8E8E0B1F030BD54F4A4¶      	S1170228C972D0DCE8E0B1F024BD54F4C969D0D0E8E0B1F00A¶      	S117023C18BD54F4C965D0C4E8E0B1F00CBD54F4C973D0B88D¶      	S1090250A0018C00050072¶      	S9030000FC¶      %/s19¶       ¶      *** List File ***¶      ¶                      000001 |¶      0200            000002 | org 0200h¶                      000003 |¶                      000004 | ¶      0200 A2 00      000005 | ldx #0d¶                      000006 |¶      0202 8E 00 05   000007 | stx 0500h¶                      000008 |¶                      000009 |; the ,x below means add x!¶      0205            000010 |load:¶      0205 BD 54 F4   000011 | lda 0f454h,x¶                      000012 |¶      0208            000013 |searchStartS:¶                      000014 |;#73h is s in Ascii¶      0208 C9 73      000015 | cmp #73h¶      020A F0 08      000016 | beq searchWord¶                      000017 | ¶      020C E8         000018 | inx¶      020D E0 B1      000019 | cpx #0B1h¶      020F D0 F4      000020 | bne load¶      0211 4C 55 02   000021 | jmp Done¶                      000022 |¶      0214            000023 |searchWord:¶                      000024 |;cpx #0b1h is the same number as #176d¶                      000025 |;looking for the first e¶                      000026 |;refer to ascii table for the letter beside cmp¶      0214 E8         000027 | inx¶      0215 E0 B1      000028 | cpx #0B1h¶      0217 F0 3C      000029 | beq Done¶      0219 BD 54 F4   000030 | lda 0f454h,x¶      021C C9 65      000031 | cmp #65h¶      021E D0 E8      000032 | bne searchStartS¶                      000033 | ¶                      000034 |;looking for the first r¶                      000035 |;refer to ascii table for the letter beside cmp¶      0220 E8         000036 | inx¶      0221 E0 B1      000037 | cpx #0B1h¶      0223 F0 30      000038 | beq Done¶      0225 BD 54 F4   000039 | lda 0f454h,x¶      0228 C9 72      000040 | cmp #72h¶      022A D0 DC      000041 | bne searchStartS¶                      000042 |¶                      000043 |;looking for the first i¶                      000044 |;refer to ascii table for the letter beside cmp¶      022C E8         000045 | inx¶      022D E0 B1      000046 | cpx #0B1h¶      022F F0 24      000047 | beq Done¶      0231 BD 54 F4   000048 | lda 0f454h,x¶      0234 C9 69      000049 | cmp #69h¶      0236 D0 D0      000050 | bne searchStartS¶                      000051 |¶                      000052 |;looking for the second e¶                      000053 |;refer to ascii table for the letter beside cmp¶      0238 E8         000054 | inx¶      0239 E0 B1      000055 | cpx #0B1h¶      023B F0 18      000056 | beq Done¶      023D BD 54 F4   000057 | lda 0f454h,x¶      0240 C9 65      000058 | cmp #65h¶      0242 D0 C4      000059 | bne searchStartS¶                      000060 |¶                      000061 |;looking for the second s¶                      000062 |;refer to ascii table for the letter beside cmp¶      0244 E8         000063 | inx¶      0245 E0 B1      000064 | cpx #0B1h¶      0247 F0 0C      000065 | beq Done¶      0249 BD 54 F4   000066 | lda 0f454h,x¶      024C C9 73      000067 | cmp #73h¶      024E D0 B8      000068 | bne searchStartS¶                      000069 | ¶                      000070 |;The word "series" is found!¶      0250 A0 01      000071 | ldy #1d¶      0252 8C 00 05   000072 | sty 0500h¶                      000073 |¶      0255            000074 |Done:¶      0255 00         000075 | brk¶                      000076 | ¶                      000077 | end¶      ¶      *** Symbol Table ***¶      {SEARCHWORD=532, LOAD=517, SEARCHSTARTS=520, DONE=597, =0}
+
+%/info
+
+%info,parentFoldType="uasm65_grade",parent="Problem 3",sequence="43",timestamp="2019-02-07 01:06:32.75",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".269"
+¶{¶    Local(result, analysis, s19, uart, transpose, commands);¶    ¶    result := U6502Assemble(?foldCode);¶    ¶    // --------------------------------------------------------¶    ¶    FoldGrade("MathPiper version >= .251", 1, True)¶    {¶        StringToNumber(Version()) >=? .251;¶    }    ¶    ¶    // --------------------------------------------------------¶    ¶    FoldGrade("The code contains no syntax errors", 1, True) ¶    {¶        Length(result) >? 1;¶    }¶    ¶    // --------------------------------------------------------¶    ¶    If(Length(result) >? 1)¶    {¶        U6502Reset();¶        ¶        U6502Fill("200"hex, "600"hex,  0);¶        ¶        s19 := result[2];¶        ¶        analysis := U6502ConvertJavaList(result[4]);¶        ¶        transpose := Transpose(analysis);¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The program contains one ORG command", 1, True) ¶        {¶            Length(commands := U6502FindOperators(analysis, "ORG")) =? 1;¶        }¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The program starts at 0200h in memory", 1, True) ¶        {¶            commands[1][4] =? "0200";¶        }    ¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The program uses a loop", 1, True) ¶        {¶            Count(transpose[3], "BCC") >? 0 |?¶            Count(transpose[3], "BCS") >? 0 |?¶            Count(transpose[3], "BEQ") >? 0 |?¶            Count(transpose[3], "BNE") >? 0 |?¶            Count(transpose[3], "BMI") >? 0 |?¶            Count(transpose[3], "BPL") >? 0 |?¶            Count(transpose[3], "BVC") >? 0 |?¶            Count(transpose[3], "BVS") >? 0;¶        }¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The correct result is placed into address 0500h", 1, True) ¶        {¶            uart := JavaCall("org.mathpiper.ide.u6502.EMU6551","getInstance");¶            ¶            U6502Reset();¶            ¶            JavaCall(uart, "send","L" + UnicodeToString(13));¶            ¶            JavaCall(uart, "send", ToString(s19));¶            ¶            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);¶            ¶            JavaCall(uart, "send", "g 0200" + UnicodeToString(13));¶            ¶            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);¶            ¶            U6502Dump("500"hex) =? "1"hex;¶        }¶    }¶}
+
+%/info
+

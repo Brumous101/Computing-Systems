@@ -1,0 +1,50 @@
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 0",sequence="1",timestamp="2019-01-23 20:09:31.749",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+¶[¶["firstName", "Kyle"],¶["lastName", "Johnson"],¶["ssuIDNumber", "264694"],¶];
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 0",sequence="2",timestamp="2019-01-23 20:09:35.014",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+Not logged.
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="practice1",sequence="3",timestamp="2019-01-23 20:09:45.65",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+¶generator := [];¶¶generator["Question"] :=¶"¶Convert the binary number that is assigned¶to the variable into hexadecimal.¶¶";¶¶generator["Before"] := Lambda([], ¶{¶    Local(value);¶    ¶    value := ToBase(2, RandomInteger(2^16));¶    ¶    generator["After"] := ToBase(16, FromBase(2, value));¶    ¶    "\"" + value + "\""; ¶});¶¶Practice(NumberOfVariables:1,¶        NumberOfReassignments:0,¶        CorrectInARow:3,¶        Hint?:False,¶        VariableRange: 1 .. 1,¶        ExpressionGenerator:generator,¶        Question:generator["Question"],¶        Cancelable?:False);
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="practice2",sequence="4",timestamp="2019-01-23 20:21:13.481",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+¶generator := [];¶¶generator["Question"] :=¶"¶Convert the binary number that is assigned¶to the variable into hexadecimal.¶¶";¶¶generator["Before"] := Lambda([], ¶{¶    Local(value);¶    ¶    value := ToBase(2, RandomInteger(2^20));¶    ¶    generator["After"] := ToBase(16, FromBase(2, value));¶    ¶    "\"" + value + "\""; ¶});¶¶Practice(NumberOfVariables:1,¶        NumberOfReassignments:0,¶        CorrectInARow:3,¶        Hint?:False,¶        VariableRange: 1 .. 1,¶        ExpressionGenerator:generator,¶        Question:generator["Question"],¶        Cancelable?:False);
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="practice3",sequence="5",timestamp="2019-01-23 20:26:12.715",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+¶generator := [];¶¶generator["Question"] :=¶"¶Convert the hexadecimal number that is assigned¶to the variable into binary.¶¶";¶¶generator["Before"] := Lambda([], ¶{¶    Local(value);¶    ¶    value := ToBase(16, RandomInteger(2^16));¶    ¶    generator["After"] := ToBase(2, FromBase(16, value));¶    ¶    "\"" + value + "\""; ¶});¶¶Practice(NumberOfVariables:1,¶        NumberOfReassignments:0,¶        CorrectInARow:3,¶        Hint?:False,¶        VariableRange: 1 .. 1,¶        ExpressionGenerator:generator,¶        Question:generator["Question"],¶        Cancelable?:True);
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="practice4",sequence="6",timestamp="2019-01-23 20:31:53.03",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+¶generator := [];¶¶generator["Question"] :=¶"¶Convert the hexadecimal number that is assigned¶to the variable into binary.¶¶";¶¶generator["Before"] := Lambda([], ¶{¶    Local(value);¶    ¶    value := ToBase(16, RandomInteger(2^20));¶    ¶    generator["After"] := ToBase(2, FromBase(16, value));¶    ¶    "\"" + value + "\""; ¶});¶¶Practice(NumberOfVariables:1,¶        NumberOfReassignments:0,¶        CorrectInARow:3,¶        Hint?:False,¶        VariableRange: 1 .. 1,¶        ExpressionGenerator:generator,¶        Question:generator["Question"],¶        Cancelable?:False);
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="practice5",sequence="7",timestamp="2019-01-23 20:33:04.821",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+¶generator := [];¶¶generator["Question"] :=¶"¶How many bit patterns can be generated¶by the indicated number of bits? For¶example 3 bits can generate 8 (2^3) patterns.¶¶";¶¶generator["Before"] := Lambda([], ¶{¶    Local(value);¶    ¶    value := RandomInteger(20);¶    ¶    generator["After"] := 2^value;¶    ¶    value; ¶});¶¶Practice(NumberOfVariables:1,¶        NumberOfReassignments:0,¶        CorrectInARow:3,¶        Hint?:False,¶        VariableRange: 1 .. 1,¶        ExpressionGenerator:generator,¶        Question:generator["Question"],¶        Cancelable?:False);
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="practice6",sequence="8",timestamp="2019-01-23 20:34:05.755",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+¶generator := [];¶¶generator["Question"] :=¶"¶Add 1 to the binary number that is shown.¶¶";¶¶generator["Before"] := Lambda([], ¶{¶    Local(value);¶    ¶    value := ToBase(2, RandomInteger(2^8));¶    ¶    generator["After"] := ToBase(2, AddN(FromBase(2, value),1));¶    ¶    "\"" + value + "\"";¶});¶¶Practice(NumberOfVariables:1,¶        NumberOfReassignments:0,¶        CorrectInARow:3,¶        Hint?:False,¶        VariableRange: 1 .. 1,¶        ExpressionGenerator:generator,¶        Question:generator["Question"],¶        Cancelable?:False);
+
+%/info
+
+%info,parentFoldType="mathpiper",parent="practice7",sequence="9",timestamp="2019-01-23 20:34:40.606",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+¶generator := [];¶¶generator["Question"] :=¶"¶Add 1 to the hexadecimal number that is shown.¶¶";¶¶generator["Before"] := Lambda([], ¶{¶    Local(value);¶    ¶    value := ToBase(16, RandomInteger(2^8));¶    ¶    generator["After"] := ToBase(16, AddN(FromBase(16, value),1));¶    ¶    "\"" + value + "\"";¶});¶¶Practice(NumberOfVariables:1,¶        NumberOfReassignments:0,¶        CorrectInARow:3,¶        Hint?:False,¶        VariableRange: 1 .. 1,¶        ExpressionGenerator:generator,¶        Question:generator["Question"],¶        Cancelable?:False);
+
+%/info
+
+%info,parentFoldType="output",sequence="10",timestamp="2019-01-23 20:36:25.384",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+      Result: [["Canceled",False],["HintCount",0],["WrongCount",0],["TotalTime",80.501319200],["CorrectInARow",3],["GeneratedCode","a := "86";"],["CorrectInARowNeeded",3],["VariablesRange",[1,2,3,4,5,6,7,8,9]],["NumberOfReassignments",0],["NumberOfVariables",1],["Assessments",[]]]¶      ¶      Side Effects:¶      [¶      "a := "aa";",[["a",ab,ab],68.111308200],¶      "a := "bd";",[["a",be,be],4.026192700],¶      "a := "86";",[["a",87,87],5.031948200],¶      ]¶      Number Of Variables: 1 ¶      Number Of Reassignments: 0 ¶      Variables Range: 1 2 3 4 5 6 7 8 9 ¶      Correct In A Row: 3 ¶      Correct In A Row Needed: 3 ¶      Total Time: 80.501319200 ¶      Wrong Count: 0 ¶      Hint Count: 0 ¶      Canceled: False
+
+%/info
+

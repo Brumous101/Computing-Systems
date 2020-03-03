@@ -1,0 +1,1005 @@
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 0",sequence="1",timestamp="2019-02-26 17:55:07.622",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶[¶["firstName", "Kyle"],¶["lastName", "Johnson"],¶["ssuIDNumber", "264694"],¶];
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 0",sequence="2",timestamp="2019-02-26 17:55:17.823",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+Not logged.
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 17:55:45.152",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+      org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 17:55:51.703",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+    
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="3",timestamp="2019-02-26 18:11:36.478",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶ org 0500h¶ ldx 0501h,x¶ ¶ dec,x¶ ¶ stx 0500h,x¶ ¶ brk¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 18:11:37.416",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+¶    %error,parent="Problem 1",mpversion=".276",preserve="false"¶      Error on line 112 : Invalid addressing mode for operator.¶.   %/error¶
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="4",timestamp="2019-02-26 18:12:06.839",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶ ldx 0501h,x¶ ¶ dex¶ ¶ stx 0500h,x¶ ¶ brk¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 18:12:07.417",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+    %error,parent="Problem 1",mpversion=".276",preserve="false"¶      Error on line 111 : Invalid addressing mode for operator.¶.   %/error
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="5",timestamp="2019-02-26 18:12:13.887",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶ ldx 0500h,x¶ ¶ dex¶ ¶ stx 0500h,x¶ ¶ brk¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 18:12:14.387",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+    %error,parent="Problem 1",mpversion=".276",preserve="false"¶      Error on line 111 : Invalid addressing mode for operator.¶.   %/error
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 18:16:24.714",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+ ldx #1d
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="6",timestamp="2019-02-26 18:16:40.687",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶subtract:¶ ldx #1d¶ lda 0500h,x¶ dec¶ stx 0500h,x¶ ¶ brk¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 18:16:41.241",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+    %error,parent="Problem 1",mpversion=".276",preserve="false"¶      Error on line 111 : Invalid addressing mode for operator.¶.   %/error
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="7",timestamp="2019-02-26 18:21:59.39",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶subtract:¶ ldx 0500h¶ dex¶ stx 0550h,x¶ ¶ brk¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 18:21:59.913",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+    %error,parent="Problem 1",mpversion=".276",preserve="false"¶      Error on line 110 : Invalid addressing mode for operator.¶.   %/error
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="8",timestamp="2019-02-26 18:22:14.227",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶subtract:¶ ldx 0500h,x¶ dex¶ stx 0550h,x¶ ¶ brk¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 18:22:14.711",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+    %error,parent="Problem 1",mpversion=".276",preserve="false"¶      Error on line 110 : Invalid addressing mode for operator.¶.   %/error
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="9",timestamp="2019-02-26 18:22:41.132",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶subtract:¶ ldx 0500h¶ dex¶ stx 0550h,x¶ ¶ brk¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 18:22:41.601",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+    %error,parent="Problem 1",mpversion=".276",preserve="false"¶      Error on line 110 : Invalid addressing mode for operator.¶.   %/error
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="10",timestamp="2019-02-26 18:26:21.917",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶subtract:¶ ldx #0d¶ ¶ lda list,x¶¶ ¶ dex¶ stx 0550h,x¶ ¶ brk¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 18:26:22.37",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+    %error,parent="Problem 1",mpversion=".276",preserve="false"¶      Error on line 114 : Invalid addressing mode for operator.¶.   %/error
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="11",timestamp="2019-02-26 18:27:48.555",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶subtract:¶ ldx 0500h¶¶ ¶ lda list,x¶¶ ¶ dex¶ stx 0550h,x¶ ¶ brk¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 18:27:49.024",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+    %error,parent="Problem 1",mpversion=".276",preserve="false"¶      Error on line 115 : Invalid addressing mode for operator.¶.   %/error
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="12",timestamp="2019-02-26 18:29:31.089",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶subtract:¶ ldx 0500h¶ dec¶¶¶ ¶ dex¶ stx 0550h,x¶ ¶ brk¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 18:29:31.546",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+    %error,parent="Problem 1",mpversion=".276",preserve="false"¶      Error on line 114 : Invalid addressing mode for operator.¶.   %/error
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="13",timestamp="2019-02-26 18:29:41.799",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶subtract:¶ ldx 0500h¶ dec x¶¶¶ ¶ dex¶ stx 0550h,x¶ ¶ brk¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 18:29:42.252",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+    %error,parent="Problem 1",mpversion=".276",preserve="false"¶      Error on line 114 : Invalid addressing mode for operator.¶.   %/error
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="14",timestamp="2019-02-26 18:29:54.502",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶subtract:¶ ldx 0500h¶ dec x¶ ¶ stx¶¶ stx 0550h¶ ¶ brk¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 18:29:54.955",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+    %error,parent="Problem 1",mpversion=".276",preserve="false"¶      Error on line 111 : Invalid addressing mode for operator.¶.   %/error
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="15",timestamp="2019-02-26 18:30:02.14",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶subtract:¶ ldx 0500h¶ dec x¶ stx 0550h¶ ¶ brk¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 18:30:02.609",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+    %error,parent="Problem 1",mpversion=".276",preserve="false"¶      Error on line 109 : Invalid operand.¶.   %/error
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="16",timestamp="2019-02-26 18:30:18.79",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶subtract:¶ ldx 0500h¶ dec 0500h,x¶ stx 0550h¶ ¶ brk¶ end
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="17",timestamp="2019-02-26 18:31:05.821",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶subtract:¶ ldx 0500h¶ dec 0500h,x¶ stx 0550h,x¶ ¶ brk¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 18:31:06.544",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+    %error,parent="Problem 1",mpversion=".276",preserve="false"¶      Error on line 110 : Invalid addressing mode for operator.¶.   %/error
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="18",timestamp="2019-02-26 18:33:24.32",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶subtract:¶ lda 0500h¶ dec 0500h¶ sta 0550h¶ ¶ brk¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="19",timestamp="2019-02-26 18:33:32.942",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+      	S00700005541534DC2¶      	S11705005D71E610CCC692C3AB0DAD0005CE00058D50050019¶      	S1030514E3¶      	S9030000FC
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 18:34:54.997",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+    
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="20",timestamp="2019-02-26 18:35:19.835",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶subtract:¶ ldx #1d¶ lda 0500h,x¶ dec 0500h¶ sta 0550h,x¶ ¶ brk¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="21",timestamp="2019-02-26 18:35:36.145",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+      	S00700005541534DC2¶      	S11705005D71E610CCC692C3AB0DA201BD0005CE00059D505B¶      	S10505140500DC¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="22",timestamp="2019-02-26 18:42:33.994",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶subtract:¶ ldx #1d¶ lda 0500h,x¶ dec 0500h¶ sta 0550h,x¶ inx¶ ¶ brk¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="23",timestamp="2019-02-26 18:42:39.441",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+      	S00700005541534DC2¶      	S11705005D71E610CCC692C3AB0DA201BD0005CE00059D505B¶      	S106051405E800F3¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="24",timestamp="2019-02-26 18:48:52.318",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶subtract:¶ ldx #1d¶ ¶ lda 0500h,x¶ dec ¶ ¶ sta 0550h,x¶ inx¶ ¶ cpx #10d¶ ¶ bne subtract¶ ¶ brk¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 18:48:53.052",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+    %error,parent="Problem 1",mpversion=".276",preserve="false"¶      Error on line 111 : Operand expected.¶.   %/error
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="25",timestamp="2019-02-26 18:49:03.582",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶subtract:¶ ldx #1d¶ ¶ lda 0500h,x¶ dec¶ ¶ sta 0550h,x¶ inx¶ ¶ cpx #10d¶ ¶ bne subtract¶ ¶ brk¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 18:49:04.082",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+    %error,parent="Problem 1",mpversion=".276",preserve="false"¶      Error on line 111 : Invalid addressing mode for operator.¶.   %/error
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="26",timestamp="2019-02-26 18:49:32.968",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶subtract:¶ ldx data¶ ¶ lda 0500h,x¶ dec¶ ¶ sta 0550h,x¶ inx¶ ¶ cpx #10d¶ ¶ bne subtract¶ ¶ brk¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 18:49:33.515",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+    %error,parent="Problem 1",mpversion=".276",preserve="false"¶      Error on line 111 : Invalid addressing mode for operator.¶.   %/error
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="27",timestamp="2019-02-26 18:49:50.385",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶subtract:¶ ldx data¶ ¶ lda 0500h,x¶ dec data¶ ¶ sta 0550h,x¶ inx¶ ¶ cpx #10d¶ ¶ bne subtract¶ ¶ brk¶ end
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="28",timestamp="2019-02-26 18:49:57.426",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶subtract:¶ ldx data¶ ¶ lda 0500h,x¶ dec data¶ ¶ sta 0550h,x¶ inx¶ ¶ cpx #10d¶ ¶ bne subtract¶ ¶ brk¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="29",timestamp="2019-02-26 18:50:01.004",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+      	S00700005541534DC2¶      	S11705005D71E610CCC692C3AB0DAE0005BD0005CE00059D9B¶      	S10B05145005E8E00AD0EF00F5¶      	S9030000FC
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 18:50:51.887",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+0500h,x
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="30",timestamp="2019-02-26 18:50:53.649",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶subtract:¶ ldx 0500h,x¶ ¶ lda 0500h,x¶ dec 0500h,x¶ ¶ sta 0550h,x¶ inx¶ ¶ cpx #10d¶ ¶ bne subtract¶ ¶ brk¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 18:50:54.242",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+    %error,parent="Problem 1",mpversion=".276",preserve="false"¶      Error on line 108 : Invalid addressing mode for operator.¶.   %/error
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="31",timestamp="2019-02-26 18:51:06.822",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶subtract:¶ ldx 0500h¶ ¶ lda 0500h,x¶ dec 0500h,x¶ ¶ sta 0550h,x¶ inx¶ ¶ cpx #10d¶ ¶ bne subtract¶ ¶ brk¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="32",timestamp="2019-02-26 18:51:14.838",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+      	S00700005541534DC2¶      	S11705005D71E610CCC692C3AB0DAE0005BD0005DE00059D8B¶      	S10B05145005E8E00AD0EF00F5¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="33",timestamp="2019-02-26 18:53:32.16",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶subtract:¶ ldx #0d¶ lda 0500h,x¶ dec 0500h,x¶ ¶ sta 0550h,x¶ inx¶ ¶ cpx #10d¶ ¶ bne subtract¶ ¶ brk¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="34",timestamp="2019-02-26 18:53:38.735",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+      	S00700005541534DC2¶      	S11705005D71E610CCC692C3AB0DA200BD0005DE00059D504C¶      	S10A051405E8E00AD0F00045¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="35",timestamp="2019-02-26 19:06:41.358",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶subtract:¶ ldx #0d¶ lda 0500h,x¶ dec 0500h,x¶ ¶ sta 0550h,x¶ inx¶ ¶ cpx #10d¶ ¶ bne subtract¶ ¶ brk¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:07:44.796",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶subtract:¶ ldx #0d¶ lda 0500h,x¶ dec 0500h,x¶ ¶ sta 0550h,x¶ inx¶ ¶ cpx #10d¶ ¶ bne subtract¶ ¶ brk¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:08:35.87",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+inc 0500h,x
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:08:36.402",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+inc 0500h,x
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 2",sequence="36",timestamp="2019-02-26 19:08:38.513",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶subtract:¶ ldx #0d¶ lda 0500h,x¶ inc 0500h,x¶ inc 0500h,x¶ inc 0500h,x¶ ¶ sta 0550h,x¶ inx¶ ¶ cpx #10d¶ ¶ bne subtract¶ ¶ brk¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="37",timestamp="2019-02-26 19:08:48.84",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+      	S00700005541534DC2¶      	S11705005D71E610CCC692C3AB0DA200BD0005FE0005FE001B¶      	S110051405FE00059D5005E8E00AD0EA0050¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65_grade",parent="Problem 1",sequence="38",timestamp="2019-02-26 19:10:01.051",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶CnsKICAgIExvY2FsKHJlc3VsdCwgYW5hbHlzaXMsIHMxOSwgdWFydCwgdHJhbnNwb3NlLCBjb21tYW5kcyk7CiAgICAKICAgIHJlc3VsdCA6PSBVNjUwMkFzc2VtYmxlKD9mb2xkQ29kZSk7CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiTWF0aFBpcGVyIHZlcnNpb24gPj0gLjI3NiIsIDEsIFRydWUpCiAgICB7CiAgICAgICAgU3RyaW5nVG9OdW1iZXIoVmVyc2lvbigpKSA+PT8gLjI3NjsKICAgIH0gICAgCiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiVGhlIGNvZGUgY29udGFpbnMgbm8gc3ludGF4IGVycm9ycyIsIDEsIFRydWUpIAogICAgewogICAgICAgIExlbmd0aChyZXN1bHQpID4/IDE7CiAgICB9CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIElmKExlbmd0aChyZXN1bHQpID4/IDEpCiAgICB7CiAgICAgICAgdWFydCA6PSBKYXZhQ2FsbCgib3JnLm1hdGhwaXBlci5pZGUudTY1MDIuRU1VNjU1MSIsImdldEluc3RhbmNlIik7CiAgICAgICAgCiAgICAgICAgSmF2YUNhbGwodWFydCwgInRleHRBcmVhQ2xlYXIiKTsKICAgICAgICAKICAgICAgICBVNjUwMlJlc2V0KCk7CiAgICAgICAgCiAgICAgICAgVTY1MDJGaWxsKCIyMDAiaGV4LCAiNjAwImhleCwgIDApOwogICAgICAgIAogICAgICAgIHMxOSA6PSByZXN1bHRbMl07CiAgICAgICAgCiAgICAgICAgYW5hbHlzaXMgOj0gVTY1MDJDb252ZXJ0SmF2YUxpc3QocmVzdWx0WzRdKTsKICAgICAgICAKICAgICAgICB0cmFuc3Bvc2UgOj0gVHJhbnNwb3NlKGFuYWx5c2lzKTsKICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgdHdvIE9SRyBjb21tYW5kcyIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgTGVuZ3RoKGNvbW1hbmRzIDo9IFU2NTAyRmluZE9wZXJhdG9ycyhhbmFseXNpcywgIk9SRyIpKSA9PyAyOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gc3RhcnRzIGF0IDAyMDBoIGluIG1lbW9yeSIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgY29tbWFuZHNbMV1bNF0gPT8gIjAyMDAiOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHRhYmxlIHN0YXJ0cyBhdCAwNTAwaCBpbiBtZW1vcnkiLCAxLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIGNvbW1hbmRzWzJdWzRdID0/ICIwNTAwIjsKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAKICAgICAgICBGb2xkR3JhZGUoIlRoZSByZXN1bHQgdGFibGUgaXMgbm90IGxvYWRlZCBpbnRvIG1lbW9yeSB3aGVuIHRoZSBwcm9ncmFtIGlzIGxvYWRlZCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgVTY1MDJEdW1wKCI1MDAiaGV4LCAiNTA5ImhleCwgKSAhPT8gWzkyLDExMiwyMjksMTUsMjAzLDE5NywxNDUsMTk0LDE3MCwxMl07CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgcHJvZ3JhbSB1c2VzIGEgbG9vcCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQkNDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCQ1MiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJFUSIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQk5FIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCTUkiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJQTCIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQlZDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCVlMiKSA+PyAwOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gZG9lcyBub3QgdXNlIGFueSBTQkMgaW5zdHJ1Y3Rpb25zIiwgMSwgVHJ1ZSkgCiAgICAgICAgewogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJTQkMiKSA9PyAwOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgb25lIERFQyBjb21tYW5kIHRoYXQgdXNlcyBBYnNvbHV0ZSxYIGFkZHJlc3NpbmcgbW9kZSIsIDMsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgTG9jYWwocmVzdWx0KTsKICAgICAgICAgICAgCiAgICAgICAgICAgIHJlc3VsdCA6PSBGYWxzZTsKICAgIAogICAgICAgICAgICBjb21tYW5kcyA6PSBVNjUwMkZpbmRPcGVyYXRvcnMoYW5hbHlzaXMsICJERUMiKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIElmKExlbmd0aChjb21tYW5kcykgPj8gMCkKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgRm9yRWFjaChjb21tYW5kLCBjb21tYW5kcykKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICBJZihTdHJpbmdTdGFydHNXaXRoPyhjb21tYW5kWzZdLCAiREUiKSkKICAgICAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgICAgIHJlc3VsdCA6PSBUcnVlOwogICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgcmVzdWx0OwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIGNvcnJlY3QgcmVzdWx0IGlzIHBsYWNlZCBpbnRvIGFkZHJlc3MgMDUwMGgiLCA1LCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIHVhcnQgOj0gSmF2YUNhbGwoIm9yZy5tYXRocGlwZXIuaWRlLnU2NTAyLkVNVTY1NTEiLCJnZXRJbnN0YW5jZSIpOwogICAgICAgICAgICAKICAgICAgICAgICAgVTY1MDJSZXNldCgpOwogICAgICAgICAgICAKICAgICAgICAgICAgSmF2YUNhbGwodWFydCwgInNlbmQiLCJMIiArIFVuaWNvZGVUb1N0cmluZygxMykpOwogICAgICAgICAgICAKICAgICAgICAgICAgSmF2YUNhbGwodWFydCwgInNlbmQiLCBUb1N0cmluZyhzMTkpKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIFU2NTAyU2V0TW9uaXRvck5vdFJlYWR5KCk7IFdoaWxlKCE/IFU2NTAyTW9uaXRvclJlYWR5PygpKSBEZWxheSgxMDApOwogICAgICAgICAgICAKICAgICAgICAgICAgSmF2YUNhbGwodWFydCwgInNlbmQiLCAiZyAwMjAwIiArIFVuaWNvZGVUb1N0cmluZygxMykpOwogICAgICAgICAgICAKICAgICAgICAgICAgVTY1MDJTZXRNb25pdG9yTm90UmVhZHkoKTsgV2hpbGUoIT8gVTY1MDJNb25pdG9yUmVhZHk/KCkpIERlbGF5KDEwMCk7CiAgICAgICAgICAgIAogICAgICAgICAgICBVNjUwMkR1bXAoIjUwMCJoZXgsICI1MDkiaGV4LCApID0/IFs5MiwxMTIsMjI5LDE1LDIwMywxOTcsMTQ1LDE5NCwxNzAsMTJdOwogICAgICAgIH0KICAgIH0KfQogCg==
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="39",timestamp="2019-02-26 19:11:12.885",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶subtract:¶ ldx #0d¶ lda 0500h,x¶ dec 0500h,x¶ ¶ sta 0550h,x¶ inx¶ ¶ cpx #10d¶ ¶ bne subtract¶ ¶ brk¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="40",timestamp="2019-02-26 19:11:15.747",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+      	S00700005541534DC2¶      	S11705005D71E610CCC692C3AB0DA200BD0005DE00059D504C¶      	S10A051405E8E00AD0F00045¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="41",timestamp="2019-02-26 19:11:29.153",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶subtract:¶ ldx #0d¶ lda 0500h,x¶ dec 0500h,x¶ ¶ sta 0550h,x¶ inx¶ ¶ cpx #10d¶ ¶ bne subtract¶ ¶ brk¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="42",timestamp="2019-02-26 19:11:31.675",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+      	S00700005541534DC2¶      	S11705005D71E610CCC692C3AB0DA200BD0005DE00059D504C¶      	S10A051405E8E00AD0F00045¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="43",timestamp="2019-02-26 19:12:01.973",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶subtract:¶ ldx #0d¶ lda 0500h,x¶ dec 0500h,x¶ ¶ sta 0500h,x¶ inx¶ ¶ cpx #10d¶ ¶ bne subtract¶ ¶ brk¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="44",timestamp="2019-02-26 19:12:06.932",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+      	S00700005541534DC2¶      	S11705005D71E610CCC692C3AB0DA200BD0005DE00059D009C¶      	S10A051405E8E00AD0F00045¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="45",timestamp="2019-02-26 19:13:23.219",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶subtract:¶ ldx #0d¶ lda 0500h,x¶ dec 0500h,x¶ ¶ sta 0500h,x¶ inx¶ ¶ cpx #10d¶ ¶ bne subtract¶ ¶ brk¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:14:46.271",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+ lda 0550h¶ sta 0500h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:14:47.401",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+ lda 0550h¶ sta 0500h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:15:04.415",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+lda 0552h¶ sta 0502h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:15:06.228",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+lda 0552h¶ sta 0502h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:15:07.111",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+lda 0552h¶ sta 0502h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:15:07.97",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+lda 0552h¶ sta 0502h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:15:08.829",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+lda 0552h¶ sta 0502h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:15:09.626",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+lda 0552h¶ sta 0502h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:15:10.376",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+lda 0552h¶ sta 0502h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:15:11.633",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+lda 0552h¶ sta 0502h
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="46",timestamp="2019-02-26 19:15:44.901",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ ¶subtract:¶ ldx #0d¶ lda 0500h,x¶ dec 0500h,x¶ ¶ sta 0550h,x¶ inx¶ ¶ cpx #10d¶ ¶ bne subtract¶ ¶ lda 0550h¶ sta 0500h ¶ lda 0551h¶ sta 0501h¶ lda 0552h¶ sta 0502h¶ lda 0553h¶ sta 0503h¶ lda 0554h¶ sta 0504h¶ lda 0555h¶ sta 0505h¶ lda 0556h¶ sta 0506h¶ lda 0557h¶ sta 0507h¶ lda 0558h¶ sta 0508h¶ lda 0559h¶ sta 0509h¶ lda 055Ah¶ sta 050Ah¶ ¶ brk¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="47",timestamp="2019-02-26 19:16:00.22",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+      	S00700005541534DC2¶      	S11705005D71E610CCC692C3AB0DA200BD0005DE00059D504C¶      	S117051405E8E00AD0F0AD50058D0005AD51058D0105AD520F¶      	S1170528058D0205AD53058D0305AD54058D0405AD55058D58¶      	S117053C0505AD56058D0605AD57058D0705AD58058D0805B7¶      	S1100550AD59058D0905AD5A058D0A05004C¶      	S9030000FC
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:19:30.135",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶ 
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:19:49.148",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+ brk
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:20:00.752",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+  
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:20:00.89",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+  
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="48",timestamp="2019-02-26 19:22:11.288",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶¶subtract:¶ ldx #0500h¶¶ dec ¶¶ inx¶ cpx #10d¶ bne subtract¶ brk¶  ¶  ¶  org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:22:11.919",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+    %error,parent="Problem 1",mpversion=".276",preserve="false"¶      Error on line 108 : Operand expected.¶.   %/error
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="49",timestamp="2019-02-26 19:22:19.78",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶¶subtract:¶ ldx #0500h¶¶ dec x¶¶ inx¶ cpx #10d¶ bne subtract¶ brk¶  ¶  ¶  org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:22:20.42",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+    %error,parent="Problem 1",mpversion=".276",preserve="false"¶      Error on line 108 : Invalid operand.¶.   %/error
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="50",timestamp="2019-02-26 19:22:26.215",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶¶subtract:¶ ldx #0500h¶¶ dex ¶¶ inx¶ cpx #10d¶ bne subtract¶ brk¶  ¶  ¶  org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:22:26.837",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+    %error,parent="Problem 1",mpversion=".276",preserve="false"¶      Error on line 106 : Invalid operand.¶.   %/error
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:23:06.017",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+    %error,parent="Problem 1",mpversion=".276",preserve="false"¶      Error on line 108 : Invalid operand.¶.   %/error
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:23:07.343",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+    %error,parent="Problem 1",mpversion=".276",preserve="false"¶      Error on line 108 : Operand expected.¶.   %/error
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="51",timestamp="2019-02-26 19:23:17.805",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶¶subtract:¶ ldx #0¶ ¶ dea¶¶ inx¶ cpx #10d¶ bne subtract¶ brk¶  ¶  ¶  org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:23:18.601",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+    %error,parent="Problem 1",mpversion=".276",preserve="false"¶      Error on line 108 : Invalid operator.¶.   %/error
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="52",timestamp="2019-02-26 19:23:30.97",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶¶subtract:¶ ldx #0¶ lda #0500h¶ dea¶¶ inx¶ cpx #10d¶ bne subtract¶ brk¶  ¶  ¶  org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:23:31.75",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+    %error,parent="Problem 1",mpversion=".276",preserve="false"¶      Error on line 108 : Invalid operator.¶.   %/error
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:25:07.149",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+    %error,parent="Problem 1",mpversion=".276",preserve="false"¶      Error on line 108 : Invalid operator.¶.   %/error
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:25:07.453",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+ 0500h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:25:08.221",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+c 
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:25:09.274",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+0d
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:25:09.533",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+0500h,x
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:25:10.514",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+¶ 
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:25:12.149",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+¶ ¶ lda 0550h¶ sta 0500h ¶ lda 0551h¶ sta 0501h¶ lda 0552h¶ sta 0502h¶ lda 0553h¶ sta 0503h¶ lda 0554h¶ sta 0504h¶ lda 0555h¶ sta 0505h¶ lda 0556h¶ sta 0506h¶ lda 0557h¶ sta 0507h¶ lda 0558h¶ sta 0508h¶ lda 0559h¶ sta 0509h¶ lda 055Ah¶ sta 050Ah
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:27:26.89",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+  ¶ org 0500h 
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:27:53.4",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+org 0500h 
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="53",timestamp="2019-02-26 19:28:08.538",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+ org 0500h ¶ end¶subtract:¶ ldx #0d¶ dec 0500h,x¶ inx¶ cpx #10d¶ bne subtract¶ brk¶  ¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="54",timestamp="2019-02-26 19:28:16.325",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+      	S00700005541534DC2¶      	S10E0500A200DE0005E8E00AD0F600CF¶      	S10D05005D71E610CCC692C3AB0D8A¶      	S9030000FC
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:28:49.141",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+ldx #0d
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="55",timestamp="2019-02-26 19:28:53.973",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+ org 0500h ¶ end¶subtract:¶ dec 0500h,x¶ ldx #0d¶ inx¶ cpx #10d¶ bne subtract¶ brk¶  ¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="56",timestamp="2019-02-26 19:28:59.502",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+      	S00700005541534DC2¶      	S10E0500DE0005A200E8E00AD0F600CF¶      	S10D05005D71E610CCC692C3AB0D8A¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="57",timestamp="2019-02-26 19:29:47.171",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+ org 0500h ¶subtract:¶ dec 0500h,x¶ ldx #0d¶ inx¶ cpx #10d¶ bne subtract¶ brk¶  ¶ end¶ ¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="58",timestamp="2019-02-26 19:30:10.624",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+      	S00700005541534DC2¶      	S10E0500DE0005A200E8E00AD0F600CF¶      	S10D05005D71E610CCC692C3AB0D8A¶      	S9030000FC
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:30:54.266",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+ldx #0d
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="59",timestamp="2019-02-26 19:31:44.975",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+ org 0500h ¶subtract:¶ ldx #0d¶ dec 0500h,x¶ inx¶ cpx #10d¶ bne subtract¶ brk¶  ¶ end¶ ¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="60",timestamp="2019-02-26 19:31:47.627",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+      	S00700005541534DC2¶      	S10E0500A200DE0005E8E00AD0F600CF¶      	S10D05005D71E610CCC692C3AB0D8A¶      	S9030000FC
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:32:10.72",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+ldx #0d
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="61",timestamp="2019-02-26 19:32:13.396",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+ org 0500h ¶ ¶ ldx #0d¶subtract:¶ dec 0500h,x¶ inx¶ cpx #10d¶ bne subtract¶ brk¶  ¶ end¶ ¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="62",timestamp="2019-02-26 19:32:16.119",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+      	S00700005541534DC2¶      	S10E0500A200DE0005E8E00AD0F800CD¶      	S10D05005D71E610CCC692C3AB0D8A¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="63",timestamp="2019-02-26 19:34:56.257",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+ org 0550h ¶ ¶ ldx #0d¶ ¶subtract:¶ dec 0500h,x¶ inx¶ cpx #10d¶ bne subtract¶ brk¶  ¶ end¶ ¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="64",timestamp="2019-02-26 19:35:08.847",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+      	S00700005541534DC2¶      	S10E0550A200DE0005E8E00AD0F8007D¶      	S10D05005D71E610CCC692C3AB0D8A¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="65",timestamp="2019-02-26 19:37:10.45",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+ org 0200h ¶ ¶ ldx #0d¶ ¶subtract:¶ dec 0500h,x¶ inx¶ cpx #10d¶ bne subtract¶ brk¶  ¶ end¶ ¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="66",timestamp="2019-02-26 19:37:16.555",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+      	S00700005541534DC2¶      	S10E0200A200DE0005E8E00AD0F800D0¶      	S10D05005D71E610CCC692C3AB0D8A¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="67",timestamp="2019-02-26 19:40:16.133",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+ org 0200h ¶ ¶ ldx #0d¶ ¶subtract:¶ dec 0500h,x¶ inx¶ cpx #10d¶ bne subtract¶ brk¶  ¶ end¶ ¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="68",timestamp="2019-02-26 19:40:21.005",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+      	S00700005541534DC2¶      	S10E0200A200DE0005E8E00AD0F800D0¶      	S10D05005D71E610CCC692C3AB0D8A¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65_grade",parent="Problem 1",sequence="69",timestamp="2019-02-26 19:46:30.352",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶CnsKICAgIExvY2FsKHJlc3VsdCwgYW5hbHlzaXMsIHMxOSwgdWFydCwgdHJhbnNwb3NlLCBjb21tYW5kcyk7CiAgICAKICAgIHJlc3VsdCA6PSBVNjUwMkFzc2VtYmxlKD9mb2xkQ29kZSk7CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiTWF0aFBpcGVyIHZlcnNpb24gPj0gLjI3NiIsIDEsIFRydWUpCiAgICB7CiAgICAgICAgU3RyaW5nVG9OdW1iZXIoVmVyc2lvbigpKSA+PT8gLjI3NjsKICAgIH0gICAgCiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiVGhlIGNvZGUgY29udGFpbnMgbm8gc3ludGF4IGVycm9ycyIsIDEsIFRydWUpIAogICAgewogICAgICAgIExlbmd0aChyZXN1bHQpID4/IDE7CiAgICB9CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIElmKExlbmd0aChyZXN1bHQpID4/IDEpCiAgICB7CiAgICAgICAgdWFydCA6PSBKYXZhQ2FsbCgib3JnLm1hdGhwaXBlci5pZGUudTY1MDIuRU1VNjU1MSIsImdldEluc3RhbmNlIik7CiAgICAgICAgCiAgICAgICAgSmF2YUNhbGwodWFydCwgInRleHRBcmVhQ2xlYXIiKTsKICAgICAgICAKICAgICAgICBVNjUwMlJlc2V0KCk7CiAgICAgICAgCiAgICAgICAgVTY1MDJGaWxsKCIyMDAiaGV4LCAiNjAwImhleCwgIDApOwogICAgICAgIAogICAgICAgIHMxOSA6PSByZXN1bHRbMl07CiAgICAgICAgCiAgICAgICAgYW5hbHlzaXMgOj0gVTY1MDJDb252ZXJ0SmF2YUxpc3QocmVzdWx0WzRdKTsKICAgICAgICAKICAgICAgICB0cmFuc3Bvc2UgOj0gVHJhbnNwb3NlKGFuYWx5c2lzKTsKICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgdHdvIE9SRyBjb21tYW5kcyIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgTGVuZ3RoKGNvbW1hbmRzIDo9IFU2NTAyRmluZE9wZXJhdG9ycyhhbmFseXNpcywgIk9SRyIpKSA9PyAyOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gc3RhcnRzIGF0IDAyMDBoIGluIG1lbW9yeSIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgY29tbWFuZHNbMV1bNF0gPT8gIjAyMDAiOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHRhYmxlIHN0YXJ0cyBhdCAwNTAwaCBpbiBtZW1vcnkiLCAxLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIGNvbW1hbmRzWzJdWzRdID0/ICIwNTAwIjsKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAKICAgICAgICBGb2xkR3JhZGUoIlRoZSByZXN1bHQgdGFibGUgaXMgbm90IGxvYWRlZCBpbnRvIG1lbW9yeSB3aGVuIHRoZSBwcm9ncmFtIGlzIGxvYWRlZCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgVTY1MDJEdW1wKCI1MDAiaGV4LCAiNTA5ImhleCwgKSAhPT8gWzkyLDExMiwyMjksMTUsMjAzLDE5NywxNDUsMTk0LDE3MCwxMl07CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgcHJvZ3JhbSB1c2VzIGEgbG9vcCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQkNDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCQ1MiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJFUSIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQk5FIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCTUkiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJQTCIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQlZDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCVlMiKSA+PyAwOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gZG9lcyBub3QgdXNlIGFueSBTQkMgaW5zdHJ1Y3Rpb25zIiwgMSwgVHJ1ZSkgCiAgICAgICAgewogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJTQkMiKSA9PyAwOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgb25lIERFQyBjb21tYW5kIHRoYXQgdXNlcyBBYnNvbHV0ZSxYIGFkZHJlc3NpbmcgbW9kZSIsIDMsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgTG9jYWwocmVzdWx0KTsKICAgICAgICAgICAgCiAgICAgICAgICAgIHJlc3VsdCA6PSBGYWxzZTsKICAgIAogICAgICAgICAgICBjb21tYW5kcyA6PSBVNjUwMkZpbmRPcGVyYXRvcnMoYW5hbHlzaXMsICJERUMiKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIElmKExlbmd0aChjb21tYW5kcykgPj8gMCkKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgRm9yRWFjaChjb21tYW5kLCBjb21tYW5kcykKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICBJZihTdHJpbmdTdGFydHNXaXRoPyhjb21tYW5kWzZdLCAiREUiKSkKICAgICAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgICAgIHJlc3VsdCA6PSBUcnVlOwogICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgcmVzdWx0OwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIGNvcnJlY3QgcmVzdWx0IGlzIHBsYWNlZCBpbnRvIGFkZHJlc3MgMDUwMGgiLCA1LCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIHVhcnQgOj0gSmF2YUNhbGwoIm9yZy5tYXRocGlwZXIuaWRlLnU2NTAyLkVNVTY1NTEiLCJnZXRJbnN0YW5jZSIpOwogICAgICAgICAgICAKICAgICAgICAgICAgVTY1MDJSZXNldCgpOwogICAgICAgICAgICAKICAgICAgICAgICAgSmF2YUNhbGwodWFydCwgInNlbmQiLCJMIiArIFVuaWNvZGVUb1N0cmluZygxMykpOwogICAgICAgICAgICAKICAgICAgICAgICAgSmF2YUNhbGwodWFydCwgInNlbmQiLCBUb1N0cmluZyhzMTkpKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIFU2NTAyU2V0TW9uaXRvck5vdFJlYWR5KCk7IFdoaWxlKCE/IFU2NTAyTW9uaXRvclJlYWR5PygpKSBEZWxheSgxMDApOwogICAgICAgICAgICAKICAgICAgICAgICAgSmF2YUNhbGwodWFydCwgInNlbmQiLCAiZyAwMjAwIiArIFVuaWNvZGVUb1N0cmluZygxMykpOwogICAgICAgICAgICAKICAgICAgICAgICAgVTY1MDJTZXRNb25pdG9yTm90UmVhZHkoKTsgV2hpbGUoIT8gVTY1MDJNb25pdG9yUmVhZHk/KCkpIERlbGF5KDEwMCk7CiAgICAgICAgICAgIAogICAgICAgICAgICBVNjUwMkR1bXAoIjUwMCJoZXgsICI1MDkiaGV4LCApID0/IFs5MiwxMTIsMjI5LDE1LDIwMywxOTcsMTQ1LDE5NCwxNzAsMTJdOwogICAgICAgIH0KICAgIH0KfQogCg==
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:46:44.456",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+org 0200h ¶ ¶ ldx #0d¶ ¶subtract:¶ dec 0500h,x¶ inx¶ cpx #10d¶ bne subtract¶ brk¶  ¶ end¶ ¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:46:55.459",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+inc 0500h,x
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:46:55.988",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+inc 0500h,x
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 2",sequence="70",timestamp="2019-02-26 19:47:18.21",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0200h ¶ ¶ ldx #0d¶ ¶add3:¶ inc 0500h,x¶ inc 0500h,x¶ inc 0500h,x¶ inx¶ cpx #10d¶ bne add3¶ brk¶  ¶ end¶ ¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="71",timestamp="2019-02-26 19:47:21.524",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+      	S00700005541534DC2¶      	S1140200A200FE0005FE0005FE0005E8E00AD0F200AA¶      	S10D05005D71E610CCC692C3AB0D8A¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65_grade",parent="Problem 2",sequence="72",timestamp="2019-02-26 19:47:29.022",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶CnsKICAgIExvY2FsKHJlc3VsdCwgYW5hbHlzaXMsIHMxOSwgdWFydCwgdHJhbnNwb3NlLCBjb21tYW5kcyk7CiAgICAKICAgIHJlc3VsdCA6PSBVNjUwMkFzc2VtYmxlKD9mb2xkQ29kZSk7CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiTWF0aFBpcGVyIHZlcnNpb24gPj0gLjI3NiIsIDEsIFRydWUpCiAgICB7CiAgICAgICAgU3RyaW5nVG9OdW1iZXIoVmVyc2lvbigpKSA+PT8gLjI3NjsKICAgIH0gICAgCiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiVGhlIGNvZGUgY29udGFpbnMgbm8gc3ludGF4IGVycm9ycyIsIDEsIFRydWUpIAogICAgewogICAgICAgIExlbmd0aChyZXN1bHQpID4/IDE7CiAgICB9CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIElmKExlbmd0aChyZXN1bHQpID4/IDEpCiAgICB7CiAgICAgICAgdWFydCA6PSBKYXZhQ2FsbCgib3JnLm1hdGhwaXBlci5pZGUudTY1MDIuRU1VNjU1MSIsImdldEluc3RhbmNlIik7CiAgICAgICAgSmF2YUNhbGwodWFydCwgInRleHRBcmVhQ2xlYXIiKTsKICAgICAgICAKICAgICAgICBVNjUwMlJlc2V0KCk7CiAgICAgICAgCiAgICAgICAgVTY1MDJGaWxsKCIyMDAiaGV4LCAiNjAwImhleCwgIDApOwogICAgICAgIAogICAgICAgIHMxOSA6PSByZXN1bHRbMl07CiAgICAgICAgCiAgICAgICAgYW5hbHlzaXMgOj0gVTY1MDJDb252ZXJ0SmF2YUxpc3QocmVzdWx0WzRdKTsKICAgICAgICAKICAgICAgICB0cmFuc3Bvc2UgOj0gVHJhbnNwb3NlKGFuYWx5c2lzKTsKICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgdHdvIE9SRyBjb21tYW5kcyIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgTGVuZ3RoKGNvbW1hbmRzIDo9IFU2NTAyRmluZE9wZXJhdG9ycyhhbmFseXNpcywgIk9SRyIpKSA9PyAyOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gc3RhcnRzIGF0IDAyMDBoIGluIG1lbW9yeSIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgY29tbWFuZHNbMV1bNF0gPT8gIjAyMDAiOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHRhYmxlIHN0YXJ0cyBhdCAwNTAwaCBpbiBtZW1vcnkiLCAxLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIGNvbW1hbmRzWzJdWzRdID0/ICIwNTAwIjsKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAKICAgICAgICBGb2xkR3JhZGUoIlRoZSByZXN1bHQgdGFibGUgaXMgbm90IGxvYWRlZCBpbnRvIG1lbW9yeSB3aGVuIHRoZSBwcm9ncmFtIGlzIGxvYWRlZCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgVTY1MDJEdW1wKCI1MDAiaGV4LCAiNTA5ImhleCwgKSAhPT8gWzk2LDExNiwyMzMsMTksMjA3LDIwMSwxNDksMTk4LDE3NCwxNl07CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgcHJvZ3JhbSB1c2VzIGEgbG9vcCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQkNDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCQ1MiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJFUSIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQk5FIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCTUkiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJQTCIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQlZDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCVlMiKSA+PyAwOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gZG9lcyBub3QgdXNlIGFueSBBREMgaW5zdHJ1Y3Rpb25zIiwgMSwgVHJ1ZSkgCiAgICAgICAgewogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJBREMiKSA9PyAwOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgdGhyZWUgSU5DIGNvbW1hbmQgdGhhdCB1c2VzIEFic29sdXRlLFggYWRkcmVzc2luZyBtb2RlIiwgMywgVHJ1ZSkgCiAgICAgICAgewogICAgICAgICAgICBMb2NhbChyZXN1bHQpOwogICAgICAgICAgICAKICAgICAgICAgICAgcmVzdWx0IDo9IEZhbHNlOwogICAgCiAgICAgICAgICAgIGNvbW1hbmRzIDo9IFU2NTAyRmluZE9wZXJhdG9ycyhhbmFseXNpcywgIklOQyIpOwogICAgICAgICAgICAKICAgICAgICAgICAgSWYoTGVuZ3RoKGNvbW1hbmRzKSA+PyAwKQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBGb3JFYWNoKGNvbW1hbmQsIGNvbW1hbmRzKQogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgIElmKFN0cmluZ1N0YXJ0c1dpdGg/KGNvbW1hbmRbNl0sICJGRSIpKQogICAgICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAgICAgcmVzdWx0IDo9IFRydWU7CiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICByZXN1bHQ7CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgY29ycmVjdCByZXN1bHQgaXMgcGxhY2VkIGludG8gYWRkcmVzcyAwNTAwaCIsIDUsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgdWFydCA6PSBKYXZhQ2FsbCgib3JnLm1hdGhwaXBlci5pZGUudTY1MDIuRU1VNjU1MSIsImdldEluc3RhbmNlIik7CiAgICAgICAgICAgIAogICAgICAgICAgICBVNjUwMlJlc2V0KCk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsIkwiICsgVW5pY29kZVRvU3RyaW5nKDEzKSk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsIFRvU3RyaW5nKHMxOSkpOwogICAgICAgICAgICAKICAgICAgICAgICAgVTY1MDJTZXRNb25pdG9yTm90UmVhZHkoKTsgV2hpbGUoIT8gVTY1MDJNb25pdG9yUmVhZHk/KCkpIERlbGF5KDEwMCk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsICJnIDAyMDAiICsgVW5pY29kZVRvU3RyaW5nKDEzKSk7CiAgICAgICAgICAgIAogICAgICAgICAgICBVNjUwMlNldE1vbml0b3JOb3RSZWFkeSgpOyBXaGlsZSghPyBVNjUwMk1vbml0b3JSZWFkeT8oKSkgRGVsYXkoMTAwKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIFU2NTAyRHVtcCgiNTAwImhleCwgIjUwOSJoZXgsICkgPT8gWzk2LDExNiwyMzMsMTksMjA3LDIwMSwxNDksMTk4LDE3NCwxNl07CiAgICAgICAgfQogICAgfQp9CiAK
+
+%/info
+
+%info,parentFoldType="uasm65_grade",parent="Problem 2",sequence="73",timestamp="2019-02-26 19:48:32.984",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶CnsKICAgIExvY2FsKHJlc3VsdCwgYW5hbHlzaXMsIHMxOSwgdWFydCwgdHJhbnNwb3NlLCBjb21tYW5kcyk7CiAgICAKICAgIHJlc3VsdCA6PSBVNjUwMkFzc2VtYmxlKD9mb2xkQ29kZSk7CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiTWF0aFBpcGVyIHZlcnNpb24gPj0gLjI3NiIsIDEsIFRydWUpCiAgICB7CiAgICAgICAgU3RyaW5nVG9OdW1iZXIoVmVyc2lvbigpKSA+PT8gLjI3NjsKICAgIH0gICAgCiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiVGhlIGNvZGUgY29udGFpbnMgbm8gc3ludGF4IGVycm9ycyIsIDEsIFRydWUpIAogICAgewogICAgICAgIExlbmd0aChyZXN1bHQpID4/IDE7CiAgICB9CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIElmKExlbmd0aChyZXN1bHQpID4/IDEpCiAgICB7CiAgICAgICAgdWFydCA6PSBKYXZhQ2FsbCgib3JnLm1hdGhwaXBlci5pZGUudTY1MDIuRU1VNjU1MSIsImdldEluc3RhbmNlIik7CiAgICAgICAgSmF2YUNhbGwodWFydCwgInRleHRBcmVhQ2xlYXIiKTsKICAgICAgICAKICAgICAgICBVNjUwMlJlc2V0KCk7CiAgICAgICAgCiAgICAgICAgVTY1MDJGaWxsKCIyMDAiaGV4LCAiNjAwImhleCwgIDApOwogICAgICAgIAogICAgICAgIHMxOSA6PSByZXN1bHRbMl07CiAgICAgICAgCiAgICAgICAgYW5hbHlzaXMgOj0gVTY1MDJDb252ZXJ0SmF2YUxpc3QocmVzdWx0WzRdKTsKICAgICAgICAKICAgICAgICB0cmFuc3Bvc2UgOj0gVHJhbnNwb3NlKGFuYWx5c2lzKTsKICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgdHdvIE9SRyBjb21tYW5kcyIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgTGVuZ3RoKGNvbW1hbmRzIDo9IFU2NTAyRmluZE9wZXJhdG9ycyhhbmFseXNpcywgIk9SRyIpKSA9PyAyOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gc3RhcnRzIGF0IDAyMDBoIGluIG1lbW9yeSIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgY29tbWFuZHNbMV1bNF0gPT8gIjAyMDAiOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHRhYmxlIHN0YXJ0cyBhdCAwNTAwaCBpbiBtZW1vcnkiLCAxLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIGNvbW1hbmRzWzJdWzRdID0/ICIwNTAwIjsKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAKICAgICAgICBGb2xkR3JhZGUoIlRoZSByZXN1bHQgdGFibGUgaXMgbm90IGxvYWRlZCBpbnRvIG1lbW9yeSB3aGVuIHRoZSBwcm9ncmFtIGlzIGxvYWRlZCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgVTY1MDJEdW1wKCI1MDAiaGV4LCAiNTA5ImhleCwgKSAhPT8gWzk2LDExNiwyMzMsMTksMjA3LDIwMSwxNDksMTk4LDE3NCwxNl07CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgcHJvZ3JhbSB1c2VzIGEgbG9vcCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQkNDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCQ1MiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJFUSIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQk5FIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCTUkiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJQTCIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQlZDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCVlMiKSA+PyAwOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gZG9lcyBub3QgdXNlIGFueSBBREMgaW5zdHJ1Y3Rpb25zIiwgMSwgVHJ1ZSkgCiAgICAgICAgewogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJBREMiKSA9PyAwOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgdGhyZWUgSU5DIGNvbW1hbmQgdGhhdCB1c2VzIEFic29sdXRlLFggYWRkcmVzc2luZyBtb2RlIiwgMywgVHJ1ZSkgCiAgICAgICAgewogICAgICAgICAgICBMb2NhbChyZXN1bHQpOwogICAgICAgICAgICAKICAgICAgICAgICAgcmVzdWx0IDo9IEZhbHNlOwogICAgCiAgICAgICAgICAgIGNvbW1hbmRzIDo9IFU2NTAyRmluZE9wZXJhdG9ycyhhbmFseXNpcywgIklOQyIpOwogICAgICAgICAgICAKICAgICAgICAgICAgSWYoTGVuZ3RoKGNvbW1hbmRzKSA+PyAwKQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBGb3JFYWNoKGNvbW1hbmQsIGNvbW1hbmRzKQogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgIElmKFN0cmluZ1N0YXJ0c1dpdGg/KGNvbW1hbmRbNl0sICJGRSIpKQogICAgICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAgICAgcmVzdWx0IDo9IFRydWU7CiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICByZXN1bHQ7CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgY29ycmVjdCByZXN1bHQgaXMgcGxhY2VkIGludG8gYWRkcmVzcyAwNTAwaCIsIDUsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgdWFydCA6PSBKYXZhQ2FsbCgib3JnLm1hdGhwaXBlci5pZGUudTY1MDIuRU1VNjU1MSIsImdldEluc3RhbmNlIik7CiAgICAgICAgICAgIAogICAgICAgICAgICBVNjUwMlJlc2V0KCk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsIkwiICsgVW5pY29kZVRvU3RyaW5nKDEzKSk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsIFRvU3RyaW5nKHMxOSkpOwogICAgICAgICAgICAKICAgICAgICAgICAgVTY1MDJTZXRNb25pdG9yTm90UmVhZHkoKTsgV2hpbGUoIT8gVTY1MDJNb25pdG9yUmVhZHk/KCkpIERlbGF5KDEwMCk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsICJnIDAyMDAiICsgVW5pY29kZVRvU3RyaW5nKDEzKSk7CiAgICAgICAgICAgIAogICAgICAgICAgICBVNjUwMlNldE1vbml0b3JOb3RSZWFkeSgpOyBXaGlsZSghPyBVNjUwMk1vbml0b3JSZWFkeT8oKSkgRGVsYXkoMTAwKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIFU2NTAyRHVtcCgiNTAwImhleCwgIjUwOSJoZXgsICkgPT8gWzk2LDExNiwyMzMsMTksMjA3LDIwMSwxNDksMTk4LDE3NCwxNl07CiAgICAgICAgfQogICAgfQp9CiAK
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 19:49:04.209",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+org 0200h ¶ ¶ ldx #0d¶ ¶add3:¶ inc 0500h,x¶ inc 0500h,x¶ inc 0500h,x¶ inx¶ cpx #10d¶ bne add3¶ brk¶  ¶ end¶ ¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶¶ end
+
+%/info
+
+%info,parentFoldType="uasm65_grade",parent="Problem 3",sequence="74",timestamp="2019-02-26 19:53:47.141",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶CnsKICAgIExvY2FsKHJlc3VsdCwgYW5hbHlzaXMsIHMxOSwgdWFydCwgdHJhbnNwb3NlLCBjb21tYW5kcyk7CiAgICAKICAgIHJlc3VsdCA6PSBVNjUwMkFzc2VtYmxlKD9mb2xkQ29kZSk7CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiTWF0aFBpcGVyIHZlcnNpb24gPj0gLjI3NiIsIDEsIFRydWUpCiAgICB7CiAgICAgICAgU3RyaW5nVG9OdW1iZXIoVmVyc2lvbigpKSA+PT8gLjI3NjsKICAgIH0gICAgCiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiVGhlIGNvZGUgY29udGFpbnMgbm8gc3ludGF4IGVycm9ycyIsIDEsIFRydWUpIAogICAgewogICAgICAgIExlbmd0aChyZXN1bHQpID4/IDE7CiAgICB9CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIElmKExlbmd0aChyZXN1bHQpID4/IDEpCiAgICB7CiAgICAgICAgdWFydCA6PSBKYXZhQ2FsbCgib3JnLm1hdGhwaXBlci5pZGUudTY1MDIuRU1VNjU1MSIsImdldEluc3RhbmNlIik7CiAgICAgICAgSmF2YUNhbGwodWFydCwgInRleHRBcmVhQ2xlYXIiKTsKICAgICAgICAKICAgICAgICBVNjUwMlJlc2V0KCk7CiAgICAgICAgCiAgICAgICAgVTY1MDJGaWxsKCIyMDAiaGV4LCAiNjAwImhleCwgIDApOwogICAgICAgIAogICAgICAgIHMxOSA6PSByZXN1bHRbMl07CiAgICAgICAgCiAgICAgICAgYW5hbHlzaXMgOj0gVTY1MDJDb252ZXJ0SmF2YUxpc3QocmVzdWx0WzRdKTsKICAgICAgICAKICAgICAgICB0cmFuc3Bvc2UgOj0gVHJhbnNwb3NlKGFuYWx5c2lzKTsKICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgdHdvIE9SRyBjb21tYW5kcyIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgTGVuZ3RoKGNvbW1hbmRzIDo9IFU2NTAyRmluZE9wZXJhdG9ycyhhbmFseXNpcywgIk9SRyIpKSA9PyAyOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gc3RhcnRzIGF0IDAyMDBoIGluIG1lbW9yeSIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgY29tbWFuZHNbMV1bNF0gPT8gIjAyMDAiOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHRhYmxlIHN0YXJ0cyBhdCAwNTAwaCBpbiBtZW1vcnkiLCAxLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIGNvbW1hbmRzWzJdWzRdID0/ICIwNTAwIjsKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAKICAgICAgICBGb2xkR3JhZGUoIlRoZSByZXN1bHQgdGFibGUgaXMgbm90IGxvYWRlZCBpbnRvIG1lbW9yeSB3aGVuIHRoZSBwcm9ncmFtIGlzIGxvYWRlZCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgVTY1MDJEdW1wKCI1MDAiaGV4LCAiNTA5ImhleCwgKSAhPT8gWzExMyw5MywxNiwyMzAsMTk4LDIwNCwxOTUsMTQ2LDEzLDE3MV07CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgcHJvZ3JhbSB1c2VzIGEgbG9vcCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQkNDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCQ1MiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJFUSIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQk5FIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCTUkiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJQTCIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQlZDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCVlMiKSA+PyAwOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgYXQgbGVhc3QgdHdvIGluc3RydWN0aW9ucyB0aGF0IHVzZSBBYnNvbHV0ZSxYIGFkZHJlc3NpbmcgbW9kZSIsIDMsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgTG9jYWwoYWJzb2x1dGVYQ291bnQpOwogICAgICAgICAgICAKICAgICAgICAgICAgYWJzb2x1dGVYQ291bnQgOj0gMDsKICAgIAogICAgICAgICAgICBGb3JFYWNoKGNvbW1hbmQsIGFuYWx5c2lzKQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBJZihjb21tYW5kWzNdICE9PyAiREJUIiAmPyBMZW5ndGgoY29tbWFuZFs2XSkgPj8gMSkKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICBJZihCaXRBbmQoU3RyaW5nU3Vic3RyaW5nKGNvbW1hbmRbNl0sIDEsIDIpIGhleCwgIjFDIiBoZXgpID0/ICIxQyIgaGV4KQogICAgICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAgICAgYWJzb2x1dGVYQ291bnQrKzsKICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGFic29sdXRlWENvdW50ID4/IDE7CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgY29ycmVjdCByZXN1bHQgaXMgcGxhY2VkIGludG8gYWRkcmVzcyAwNTAwaCIsIDUsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgdWFydCA6PSBKYXZhQ2FsbCgib3JnLm1hdGhwaXBlci5pZGUudTY1MDIuRU1VNjU1MSIsImdldEluc3RhbmNlIik7CiAgICAgICAgICAgIAogICAgICAgICAgICBVNjUwMlJlc2V0KCk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsIkwiICsgVW5pY29kZVRvU3RyaW5nKDEzKSk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsIFRvU3RyaW5nKHMxOSkpOwogICAgICAgICAgICAKICAgICAgICAgICAgVTY1MDJTZXRNb25pdG9yTm90UmVhZHkoKTsgV2hpbGUoIT8gVTY1MDJNb25pdG9yUmVhZHk/KCkpIERlbGF5KDEwMCk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsICJnIDAyMDAiICsgVW5pY29kZVRvU3RyaW5nKDEzKSk7CiAgICAgICAgICAgIAogICAgICAgICAgICBVNjUwMlNldE1vbml0b3JOb3RSZWFkeSgpOyBXaGlsZSghPyBVNjUwMk1vbml0b3JSZWFkeT8oKSkgRGVsYXkoMTAwKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIFU2NTAyRHVtcCgiNTAwImhleCwgIjUwOSJoZXgsICkgPT8gWzExMyw5MywxNiwyMzAsMTk4LDIwNCwxOTUsMTQ2LDEzLDE3MV07CiAgICAgICAgfQogICAgfQp9CiAK
+
+%/info
+
+%info,parentFoldType="uasm65_grade",parent="Problem 4",sequence="75",timestamp="2019-02-26 19:53:52.73",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶CnsKICAgIExvY2FsKHJlc3VsdCwgYW5hbHlzaXMsIHMxOSwgdWFydCwgdHJhbnNwb3NlLCBjb21tYW5kcywgdG9vTG9uZ1RpbWUpOwogICAgCiAgICByZXN1bHQgOj0gVTY1MDJBc3NlbWJsZSg/Zm9sZENvZGUpOwogICAgCiAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgCiAgICBGb2xkR3JhZGUoIk1hdGhQaXBlciB2ZXJzaW9uID49IC4yNzYiLCAxLCBUcnVlKQogICAgewogICAgICAgIFN0cmluZ1RvTnVtYmVyKFZlcnNpb24oKSkgPj0/IC4yNzY7CiAgICB9ICAgIAogICAgCiAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgCiAgICBGb2xkR3JhZGUoIlRoZSBjb2RlIGNvbnRhaW5zIG5vIHN5bnRheCBlcnJvcnMiLCAxLCBUcnVlKSAKICAgIHsKICAgICAgICBMZW5ndGgocmVzdWx0KSA+PyAxOwogICAgfQogICAgCiAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgCiAgICBJZihMZW5ndGgocmVzdWx0KSA+PyAxKQogICAgewogICAgICAgIHVhcnQgOj0gSmF2YUNhbGwoIm9yZy5tYXRocGlwZXIuaWRlLnU2NTAyLkVNVTY1NTEiLCJnZXRJbnN0YW5jZSIpOwogICAgICAgIAogICAgICAgIEphdmFDYWxsKHVhcnQsICJ0ZXh0QXJlYUNsZWFyIik7CiAgICAgICAgCiAgICAgICAgVTY1MDJSZXNldCgpOwogICAgICAgIAogICAgICAgIFU2NTAyRmlsbCgiMjAwImhleCwgIjYwMCJoZXgsICAwKTsKICAgICAgICAKICAgICAgICBzMTkgOj0gcmVzdWx0WzJdOwogICAgICAgIAogICAgICAgIGFuYWx5c2lzIDo9IFU2NTAyQ29udmVydEphdmFMaXN0KHJlc3VsdFs0XSk7CiAgICAgICAgCiAgICAgICAgdHJhbnNwb3NlIDo9IFRyYW5zcG9zZShhbmFseXNpcyk7CiAgICAgICAgCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAKICAgICAgICBGb2xkR3JhZGUoIlRoZSBwcm9ncmFtIGNvbnRhaW5zIHR3byBPUkcgY29tbWFuZHMiLCAxLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIExlbmd0aChjb21tYW5kcyA6PSBVNjUwMkZpbmRPcGVyYXRvcnMoYW5hbHlzaXMsICJPUkciKSkgPT8gMjsKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAKICAgICAgICBGb2xkR3JhZGUoIlRoZSBwcm9ncmFtIHN0YXJ0cyBhdCAwMjAwaCBpbiBtZW1vcnkiLCAxLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIGNvbW1hbmRzWzFdWzRdID0/ICIwMjAwIjsKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAKICAgICAgICBGb2xkR3JhZGUoIlRoZSB0YWJsZSBzdGFydHMgYXQgMDUwMGggaW4gbWVtb3J5IiwgMSwgVHJ1ZSkgCiAgICAgICAgewogICAgICAgICAgICBjb21tYW5kc1syXVs0XSA9PyAiMDUwMCI7CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgcmVzdWx0IHRhYmxlIGlzIG5vdCBsb2FkZWQgaW50byBtZW1vcnkgd2hlbiB0aGUgcHJvZ3JhbSBpcyBsb2FkZWQiLCAxLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIFU2NTAyRHVtcCgiNTAwImhleCwgIjUwOSJoZXgsICkgIT0/IFsxOTUsMTcxLDEzLDkzLDExMywyMzAsMTYsMjA0LDE5OCwxNDZdOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gdXNlcyBhIGxvb3AiLCAxLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJDQyIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQkNTIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCRVEiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJORSIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQk1JIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCUEwiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJWQyIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQlZTIikgPj8gMDsKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAKICAgICAgICBGb2xkR3JhZGUoIlRoZSBwcm9ncmFtIGNvbnRhaW5zIGF0IGxlYXN0IHR3byBpbnN0cnVjdGlvbnMgdGhhdCB1c2UgQWJzb2x1dGUsWCBhZGRyZXNzaW5nIG1vZGUiLCAzLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIExvY2FsKGFic29sdXRlWENvdW50KTsKICAgICAgICAgICAgCiAgICAgICAgICAgIGFic29sdXRlWENvdW50IDo9IDA7CiAgICAKICAgICAgICAgICAgRm9yRWFjaChjb21tYW5kLCBhbmFseXNpcykKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgSWYoY29tbWFuZFszXSAhPT8gIkRCVCIgJj8gTGVuZ3RoKGNvbW1hbmRbNl0pID4/IDEpCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgSWYoQml0QW5kKFN0cmluZ1N1YnN0cmluZyhjb21tYW5kWzZdLCAxLCAyKSBoZXgsICIxQyIgaGV4KSA9PyAiMUMiIGhleCkKICAgICAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgICAgIGFic29sdXRlWENvdW50Kys7CiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CgogICAgICAgICAgICBhYnNvbHV0ZVhDb3VudCA+PyAxOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIGNvcnJlY3QgcmVzdWx0IGlzIHBsYWNlZCBpbnRvIGFkZHJlc3MgMDUwMGgiLCA1LCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIHVhcnQgOj0gSmF2YUNhbGwoIm9yZy5tYXRocGlwZXIuaWRlLnU2NTAyLkVNVTY1NTEiLCJnZXRJbnN0YW5jZSIpOwogICAgICAgICAgICAKICAgICAgICAgICAgVTY1MDJSZXNldCgpOwogICAgICAgICAgICAKICAgICAgICAgICAgSmF2YUNhbGwodWFydCwgInNlbmQiLCJMIiArIFVuaWNvZGVUb1N0cmluZygxMykpOwogICAgICAgICAgICAKICAgICAgICAgICAgSmF2YUNhbGwodWFydCwgInNlbmQiLCBUb1N0cmluZyhzMTkpKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIFU2NTAyU2V0TW9uaXRvck5vdFJlYWR5KCk7IFdoaWxlKCE/IFU2NTAyTW9uaXRvclJlYWR5PygpKSBEZWxheSgxMDApOwogICAgICAgICAgICAKICAgICAgICAgICAgSmF2YUNhbGwodWFydCwgInNlbmQiLCAiZyAwMjAwIiArIFVuaWNvZGVUb1N0cmluZygxMykpOwogICAgICAgICAgICAKICAgICAgICAgICAgVTY1MDJTZXRNb25pdG9yTm90UmVhZHkoKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIHRvb0xvbmdUaW1lIDo9IFN5c3RlbVRpbWVyKCkgKyA1MDAwOwogICAgICAgICAgICAKICAgICAgICAgICAgV2hpbGUoIT8gVTY1MDJNb25pdG9yUmVhZHk/KCkpCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIElmKFN5c3RlbVRpbWVyKCkgPj0/IHRvb0xvbmdUaW1lKQogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgIEV4Y2VwdGlvblRocm93KCJUSU1FT1VUIiwgIlRoZSBwcm9ncmFtIHdhcyB0YWtpbmcgdG9vIGxvbmcgdG8gcnVuLiIpOwogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgRGVsYXkoMTAwKTsKICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgVTY1MDJEdW1wKCI1MDAiaGV4LCAiNTA5ImhleCwgKSA9PyBbMTk1LDE3MSwxMyw5MywxMTMsMjMwLDE2LDIwNCwxOTgsMTQ2XTsKICAgICAgICB9CiAgICB9Cn0KIAo=
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 2",sequence="76",timestamp="2019-02-26 20:12:09.086",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0200h ¶ ¶ ldx #0d¶ ¶Loop:¶ lda 0500h, x¶ sta 0550h, x¶ ¶ lda 0501h, x¶ sta 0500h, x¶ ¶ lda 0550h, x¶ sta 0501h, x¶ ¶ inx¶ cpx #10d¶ bne Loop¶ brk¶  ¶ end¶ ¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="77",timestamp="2019-02-26 20:12:15.057",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+      	S00700005541534DC2¶      	S1170200A200BD00059D5005BD01059D0005BD50059D010576¶      	S1090214E8E00AD0E90055¶      	S10D05005D71E610CCC692C3AB0D8A¶      	S9030000FC
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:12:44.833",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+org 0200h ¶ ¶ ldx #0d¶ ¶Loop:¶ lda 0500h, x¶ sta 0550h, x¶ ¶ lda 0501h, x¶ sta 0500h, x¶ ¶ lda 0550h, x¶ sta 0501h, x¶ ¶ inx¶ cpx #10d¶ bne Loop¶ brk¶  ¶ end¶ ¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:12:46.982",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+org 0200h ¶ ¶ ldx #0d¶ ¶Beginning:¶ lda #0500h,x¶ sta #0550h,x¶ inx¶ cpx #10d¶ bne add3¶ brk¶  ¶ end¶ ¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:12:56.452",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+inx
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:12:56.905",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+inc 0500h,x¶ inc 0500h,x¶ inc 0500h,x
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:12:57.608",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+add3
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:12:57.877",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+add3
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:13:08.83",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+org 0200h ¶ ¶ ldx #0d¶ ¶Loop:¶ lda 0500h, x¶ sta 0550h, x¶ ¶ lda 0501h, x¶ sta 0500h, x¶ ¶ lda 0550h, x¶ sta 0501h, x¶ ¶ inx¶ cpx #10d¶ bne Loop¶ brk¶  ¶ end¶ ¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶¶ end
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 3",sequence="78",timestamp="2019-02-26 20:13:10.768",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0200h ¶ ¶ ldx #0d¶ ¶Loop:¶ lda 0500h, x¶ sta 0550h, x¶ ¶ lda 0501h, x¶ sta 0500h, x¶ ¶ lda 0550h, x¶ sta 0501h, x¶ ¶ inx¶ cpx #10d¶ bne Loop¶ brk¶  ¶ end¶ ¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="79",timestamp="2019-02-26 20:13:13.77",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+      	S00700005541534DC2¶      	S1170200A200BD00059D5005BD01059D0005BD50059D010576¶      	S1090214E8E00AD0E90055¶      	S10D05005D71E610CCC692C3AB0D8A¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65_grade",parent="Problem 3",sequence="80",timestamp="2019-02-26 20:13:18.706",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶CnsKICAgIExvY2FsKHJlc3VsdCwgYW5hbHlzaXMsIHMxOSwgdWFydCwgdHJhbnNwb3NlLCBjb21tYW5kcyk7CiAgICAKICAgIHJlc3VsdCA6PSBVNjUwMkFzc2VtYmxlKD9mb2xkQ29kZSk7CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiTWF0aFBpcGVyIHZlcnNpb24gPj0gLjI3NiIsIDEsIFRydWUpCiAgICB7CiAgICAgICAgU3RyaW5nVG9OdW1iZXIoVmVyc2lvbigpKSA+PT8gLjI3NjsKICAgIH0gICAgCiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiVGhlIGNvZGUgY29udGFpbnMgbm8gc3ludGF4IGVycm9ycyIsIDEsIFRydWUpIAogICAgewogICAgICAgIExlbmd0aChyZXN1bHQpID4/IDE7CiAgICB9CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIElmKExlbmd0aChyZXN1bHQpID4/IDEpCiAgICB7CiAgICAgICAgdWFydCA6PSBKYXZhQ2FsbCgib3JnLm1hdGhwaXBlci5pZGUudTY1MDIuRU1VNjU1MSIsImdldEluc3RhbmNlIik7CiAgICAgICAgSmF2YUNhbGwodWFydCwgInRleHRBcmVhQ2xlYXIiKTsKICAgICAgICAKICAgICAgICBVNjUwMlJlc2V0KCk7CiAgICAgICAgCiAgICAgICAgVTY1MDJGaWxsKCIyMDAiaGV4LCAiNjAwImhleCwgIDApOwogICAgICAgIAogICAgICAgIHMxOSA6PSByZXN1bHRbMl07CiAgICAgICAgCiAgICAgICAgYW5hbHlzaXMgOj0gVTY1MDJDb252ZXJ0SmF2YUxpc3QocmVzdWx0WzRdKTsKICAgICAgICAKICAgICAgICB0cmFuc3Bvc2UgOj0gVHJhbnNwb3NlKGFuYWx5c2lzKTsKICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgdHdvIE9SRyBjb21tYW5kcyIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgTGVuZ3RoKGNvbW1hbmRzIDo9IFU2NTAyRmluZE9wZXJhdG9ycyhhbmFseXNpcywgIk9SRyIpKSA9PyAyOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gc3RhcnRzIGF0IDAyMDBoIGluIG1lbW9yeSIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgY29tbWFuZHNbMV1bNF0gPT8gIjAyMDAiOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHRhYmxlIHN0YXJ0cyBhdCAwNTAwaCBpbiBtZW1vcnkiLCAxLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIGNvbW1hbmRzWzJdWzRdID0/ICIwNTAwIjsKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAKICAgICAgICBGb2xkR3JhZGUoIlRoZSByZXN1bHQgdGFibGUgaXMgbm90IGxvYWRlZCBpbnRvIG1lbW9yeSB3aGVuIHRoZSBwcm9ncmFtIGlzIGxvYWRlZCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgVTY1MDJEdW1wKCI1MDAiaGV4LCAiNTA5ImhleCwgKSAhPT8gWzExMyw5MywxNiwyMzAsMTk4LDIwNCwxOTUsMTQ2LDEzLDE3MV07CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgcHJvZ3JhbSB1c2VzIGEgbG9vcCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQkNDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCQ1MiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJFUSIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQk5FIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCTUkiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJQTCIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQlZDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCVlMiKSA+PyAwOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgYXQgbGVhc3QgdHdvIGluc3RydWN0aW9ucyB0aGF0IHVzZSBBYnNvbHV0ZSxYIGFkZHJlc3NpbmcgbW9kZSIsIDMsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgTG9jYWwoYWJzb2x1dGVYQ291bnQpOwogICAgICAgICAgICAKICAgICAgICAgICAgYWJzb2x1dGVYQ291bnQgOj0gMDsKICAgIAogICAgICAgICAgICBGb3JFYWNoKGNvbW1hbmQsIGFuYWx5c2lzKQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBJZihjb21tYW5kWzNdICE9PyAiREJUIiAmPyBMZW5ndGgoY29tbWFuZFs2XSkgPj8gMSkKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICBJZihCaXRBbmQoU3RyaW5nU3Vic3RyaW5nKGNvbW1hbmRbNl0sIDEsIDIpIGhleCwgIjFDIiBoZXgpID0/ICIxQyIgaGV4KQogICAgICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAgICAgYWJzb2x1dGVYQ291bnQrKzsKICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGFic29sdXRlWENvdW50ID4/IDE7CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgY29ycmVjdCByZXN1bHQgaXMgcGxhY2VkIGludG8gYWRkcmVzcyAwNTAwaCIsIDUsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgdWFydCA6PSBKYXZhQ2FsbCgib3JnLm1hdGhwaXBlci5pZGUudTY1MDIuRU1VNjU1MSIsImdldEluc3RhbmNlIik7CiAgICAgICAgICAgIAogICAgICAgICAgICBVNjUwMlJlc2V0KCk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsIkwiICsgVW5pY29kZVRvU3RyaW5nKDEzKSk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsIFRvU3RyaW5nKHMxOSkpOwogICAgICAgICAgICAKICAgICAgICAgICAgVTY1MDJTZXRNb25pdG9yTm90UmVhZHkoKTsgV2hpbGUoIT8gVTY1MDJNb25pdG9yUmVhZHk/KCkpIERlbGF5KDEwMCk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsICJnIDAyMDAiICsgVW5pY29kZVRvU3RyaW5nKDEzKSk7CiAgICAgICAgICAgIAogICAgICAgICAgICBVNjUwMlNldE1vbml0b3JOb3RSZWFkeSgpOyBXaGlsZSghPyBVNjUwMk1vbml0b3JSZWFkeT8oKSkgRGVsYXkoMTAwKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIFU2NTAyRHVtcCgiNTAwImhleCwgIjUwOSJoZXgsICkgPT8gWzExMyw5MywxNiwyMzAsMTk4LDIwNCwxOTUsMTQ2LDEzLDE3MV07CiAgICAgICAgfQogICAgfQp9CiAK
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 2",sequence="81",timestamp="2019-02-26 20:13:37.34",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0200h ¶ ¶ ldx #0d¶ ¶add3:¶ inc 0500h,x¶ inc 0500h,x¶ inc 0500h,x¶ inx¶ cpx #10d¶ bne add3¶ brk¶  ¶ end¶ ¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="82",timestamp="2019-02-26 20:13:41.654",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+      	S00700005541534DC2¶      	S1140200A200FE0005FE0005FE0005E8E00AD0F200AA¶      	S10D05005D71E610CCC692C3AB0D8A¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65_grade",parent="Problem 2",sequence="83",timestamp="2019-02-26 20:13:47.211",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶CnsKICAgIExvY2FsKHJlc3VsdCwgYW5hbHlzaXMsIHMxOSwgdWFydCwgdHJhbnNwb3NlLCBjb21tYW5kcyk7CiAgICAKICAgIHJlc3VsdCA6PSBVNjUwMkFzc2VtYmxlKD9mb2xkQ29kZSk7CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiTWF0aFBpcGVyIHZlcnNpb24gPj0gLjI3NiIsIDEsIFRydWUpCiAgICB7CiAgICAgICAgU3RyaW5nVG9OdW1iZXIoVmVyc2lvbigpKSA+PT8gLjI3NjsKICAgIH0gICAgCiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiVGhlIGNvZGUgY29udGFpbnMgbm8gc3ludGF4IGVycm9ycyIsIDEsIFRydWUpIAogICAgewogICAgICAgIExlbmd0aChyZXN1bHQpID4/IDE7CiAgICB9CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIElmKExlbmd0aChyZXN1bHQpID4/IDEpCiAgICB7CiAgICAgICAgdWFydCA6PSBKYXZhQ2FsbCgib3JnLm1hdGhwaXBlci5pZGUudTY1MDIuRU1VNjU1MSIsImdldEluc3RhbmNlIik7CiAgICAgICAgSmF2YUNhbGwodWFydCwgInRleHRBcmVhQ2xlYXIiKTsKICAgICAgICAKICAgICAgICBVNjUwMlJlc2V0KCk7CiAgICAgICAgCiAgICAgICAgVTY1MDJGaWxsKCIyMDAiaGV4LCAiNjAwImhleCwgIDApOwogICAgICAgIAogICAgICAgIHMxOSA6PSByZXN1bHRbMl07CiAgICAgICAgCiAgICAgICAgYW5hbHlzaXMgOj0gVTY1MDJDb252ZXJ0SmF2YUxpc3QocmVzdWx0WzRdKTsKICAgICAgICAKICAgICAgICB0cmFuc3Bvc2UgOj0gVHJhbnNwb3NlKGFuYWx5c2lzKTsKICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgdHdvIE9SRyBjb21tYW5kcyIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgTGVuZ3RoKGNvbW1hbmRzIDo9IFU2NTAyRmluZE9wZXJhdG9ycyhhbmFseXNpcywgIk9SRyIpKSA9PyAyOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gc3RhcnRzIGF0IDAyMDBoIGluIG1lbW9yeSIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgY29tbWFuZHNbMV1bNF0gPT8gIjAyMDAiOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHRhYmxlIHN0YXJ0cyBhdCAwNTAwaCBpbiBtZW1vcnkiLCAxLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIGNvbW1hbmRzWzJdWzRdID0/ICIwNTAwIjsKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAKICAgICAgICBGb2xkR3JhZGUoIlRoZSByZXN1bHQgdGFibGUgaXMgbm90IGxvYWRlZCBpbnRvIG1lbW9yeSB3aGVuIHRoZSBwcm9ncmFtIGlzIGxvYWRlZCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgVTY1MDJEdW1wKCI1MDAiaGV4LCAiNTA5ImhleCwgKSAhPT8gWzk2LDExNiwyMzMsMTksMjA3LDIwMSwxNDksMTk4LDE3NCwxNl07CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgcHJvZ3JhbSB1c2VzIGEgbG9vcCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQkNDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCQ1MiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJFUSIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQk5FIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCTUkiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJQTCIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQlZDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCVlMiKSA+PyAwOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gZG9lcyBub3QgdXNlIGFueSBBREMgaW5zdHJ1Y3Rpb25zIiwgMSwgVHJ1ZSkgCiAgICAgICAgewogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJBREMiKSA9PyAwOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgdGhyZWUgSU5DIGNvbW1hbmQgdGhhdCB1c2VzIEFic29sdXRlLFggYWRkcmVzc2luZyBtb2RlIiwgMywgVHJ1ZSkgCiAgICAgICAgewogICAgICAgICAgICBMb2NhbChyZXN1bHQpOwogICAgICAgICAgICAKICAgICAgICAgICAgcmVzdWx0IDo9IEZhbHNlOwogICAgCiAgICAgICAgICAgIGNvbW1hbmRzIDo9IFU2NTAyRmluZE9wZXJhdG9ycyhhbmFseXNpcywgIklOQyIpOwogICAgICAgICAgICAKICAgICAgICAgICAgSWYoTGVuZ3RoKGNvbW1hbmRzKSA+PyAwKQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBGb3JFYWNoKGNvbW1hbmQsIGNvbW1hbmRzKQogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgIElmKFN0cmluZ1N0YXJ0c1dpdGg/KGNvbW1hbmRbNl0sICJGRSIpKQogICAgICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAgICAgcmVzdWx0IDo9IFRydWU7CiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICByZXN1bHQ7CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgY29ycmVjdCByZXN1bHQgaXMgcGxhY2VkIGludG8gYWRkcmVzcyAwNTAwaCIsIDUsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgdWFydCA6PSBKYXZhQ2FsbCgib3JnLm1hdGhwaXBlci5pZGUudTY1MDIuRU1VNjU1MSIsImdldEluc3RhbmNlIik7CiAgICAgICAgICAgIAogICAgICAgICAgICBVNjUwMlJlc2V0KCk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsIkwiICsgVW5pY29kZVRvU3RyaW5nKDEzKSk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsIFRvU3RyaW5nKHMxOSkpOwogICAgICAgICAgICAKICAgICAgICAgICAgVTY1MDJTZXRNb25pdG9yTm90UmVhZHkoKTsgV2hpbGUoIT8gVTY1MDJNb25pdG9yUmVhZHk/KCkpIERlbGF5KDEwMCk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsICJnIDAyMDAiICsgVW5pY29kZVRvU3RyaW5nKDEzKSk7CiAgICAgICAgICAgIAogICAgICAgICAgICBVNjUwMlNldE1vbml0b3JOb3RSZWFkeSgpOyBXaGlsZSghPyBVNjUwMk1vbml0b3JSZWFkeT8oKSkgRGVsYXkoMTAwKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIFU2NTAyRHVtcCgiNTAwImhleCwgIjUwOSJoZXgsICkgPT8gWzk2LDExNiwyMzMsMTksMjA3LDIwMSwxNDksMTk4LDE3NCwxNl07CiAgICAgICAgfQogICAgfQp9CiAK
+
+%/info
+
+%info,parentFoldType="uasm65_grade",parent="Problem 2",sequence="84",timestamp="2019-02-26 20:13:53.756",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶CnsKICAgIExvY2FsKHJlc3VsdCwgYW5hbHlzaXMsIHMxOSwgdWFydCwgdHJhbnNwb3NlLCBjb21tYW5kcyk7CiAgICAKICAgIHJlc3VsdCA6PSBVNjUwMkFzc2VtYmxlKD9mb2xkQ29kZSk7CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiTWF0aFBpcGVyIHZlcnNpb24gPj0gLjI3NiIsIDEsIFRydWUpCiAgICB7CiAgICAgICAgU3RyaW5nVG9OdW1iZXIoVmVyc2lvbigpKSA+PT8gLjI3NjsKICAgIH0gICAgCiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiVGhlIGNvZGUgY29udGFpbnMgbm8gc3ludGF4IGVycm9ycyIsIDEsIFRydWUpIAogICAgewogICAgICAgIExlbmd0aChyZXN1bHQpID4/IDE7CiAgICB9CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIElmKExlbmd0aChyZXN1bHQpID4/IDEpCiAgICB7CiAgICAgICAgdWFydCA6PSBKYXZhQ2FsbCgib3JnLm1hdGhwaXBlci5pZGUudTY1MDIuRU1VNjU1MSIsImdldEluc3RhbmNlIik7CiAgICAgICAgSmF2YUNhbGwodWFydCwgInRleHRBcmVhQ2xlYXIiKTsKICAgICAgICAKICAgICAgICBVNjUwMlJlc2V0KCk7CiAgICAgICAgCiAgICAgICAgVTY1MDJGaWxsKCIyMDAiaGV4LCAiNjAwImhleCwgIDApOwogICAgICAgIAogICAgICAgIHMxOSA6PSByZXN1bHRbMl07CiAgICAgICAgCiAgICAgICAgYW5hbHlzaXMgOj0gVTY1MDJDb252ZXJ0SmF2YUxpc3QocmVzdWx0WzRdKTsKICAgICAgICAKICAgICAgICB0cmFuc3Bvc2UgOj0gVHJhbnNwb3NlKGFuYWx5c2lzKTsKICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgdHdvIE9SRyBjb21tYW5kcyIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgTGVuZ3RoKGNvbW1hbmRzIDo9IFU2NTAyRmluZE9wZXJhdG9ycyhhbmFseXNpcywgIk9SRyIpKSA9PyAyOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gc3RhcnRzIGF0IDAyMDBoIGluIG1lbW9yeSIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgY29tbWFuZHNbMV1bNF0gPT8gIjAyMDAiOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHRhYmxlIHN0YXJ0cyBhdCAwNTAwaCBpbiBtZW1vcnkiLCAxLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIGNvbW1hbmRzWzJdWzRdID0/ICIwNTAwIjsKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAKICAgICAgICBGb2xkR3JhZGUoIlRoZSByZXN1bHQgdGFibGUgaXMgbm90IGxvYWRlZCBpbnRvIG1lbW9yeSB3aGVuIHRoZSBwcm9ncmFtIGlzIGxvYWRlZCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgVTY1MDJEdW1wKCI1MDAiaGV4LCAiNTA5ImhleCwgKSAhPT8gWzk2LDExNiwyMzMsMTksMjA3LDIwMSwxNDksMTk4LDE3NCwxNl07CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgcHJvZ3JhbSB1c2VzIGEgbG9vcCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQkNDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCQ1MiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJFUSIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQk5FIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCTUkiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJQTCIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQlZDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCVlMiKSA+PyAwOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gZG9lcyBub3QgdXNlIGFueSBBREMgaW5zdHJ1Y3Rpb25zIiwgMSwgVHJ1ZSkgCiAgICAgICAgewogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJBREMiKSA9PyAwOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgdGhyZWUgSU5DIGNvbW1hbmQgdGhhdCB1c2VzIEFic29sdXRlLFggYWRkcmVzc2luZyBtb2RlIiwgMywgVHJ1ZSkgCiAgICAgICAgewogICAgICAgICAgICBMb2NhbChyZXN1bHQpOwogICAgICAgICAgICAKICAgICAgICAgICAgcmVzdWx0IDo9IEZhbHNlOwogICAgCiAgICAgICAgICAgIGNvbW1hbmRzIDo9IFU2NTAyRmluZE9wZXJhdG9ycyhhbmFseXNpcywgIklOQyIpOwogICAgICAgICAgICAKICAgICAgICAgICAgSWYoTGVuZ3RoKGNvbW1hbmRzKSA+PyAwKQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBGb3JFYWNoKGNvbW1hbmQsIGNvbW1hbmRzKQogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgIElmKFN0cmluZ1N0YXJ0c1dpdGg/KGNvbW1hbmRbNl0sICJGRSIpKQogICAgICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAgICAgcmVzdWx0IDo9IFRydWU7CiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICByZXN1bHQ7CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgY29ycmVjdCByZXN1bHQgaXMgcGxhY2VkIGludG8gYWRkcmVzcyAwNTAwaCIsIDUsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgdWFydCA6PSBKYXZhQ2FsbCgib3JnLm1hdGhwaXBlci5pZGUudTY1MDIuRU1VNjU1MSIsImdldEluc3RhbmNlIik7CiAgICAgICAgICAgIAogICAgICAgICAgICBVNjUwMlJlc2V0KCk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsIkwiICsgVW5pY29kZVRvU3RyaW5nKDEzKSk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsIFRvU3RyaW5nKHMxOSkpOwogICAgICAgICAgICAKICAgICAgICAgICAgVTY1MDJTZXRNb25pdG9yTm90UmVhZHkoKTsgV2hpbGUoIT8gVTY1MDJNb25pdG9yUmVhZHk/KCkpIERlbGF5KDEwMCk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsICJnIDAyMDAiICsgVW5pY29kZVRvU3RyaW5nKDEzKSk7CiAgICAgICAgICAgIAogICAgICAgICAgICBVNjUwMlNldE1vbml0b3JOb3RSZWFkeSgpOyBXaGlsZSghPyBVNjUwMk1vbml0b3JSZWFkeT8oKSkgRGVsYXkoMTAwKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIFU2NTAyRHVtcCgiNTAwImhleCwgIjUwOSJoZXgsICkgPT8gWzk2LDExNiwyMzMsMTksMjA3LDIwMSwxNDksMTk4LDE3NCwxNl07CiAgICAgICAgfQogICAgfQp9CiAK
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 3",sequence="85",timestamp="2019-02-26 20:14:18.356",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0200h ¶ ¶ ldx #0d¶ ¶Loop:¶ lda 0500h, x¶ sta 0550h, x¶ ¶ lda 0501h, x¶ sta 0500h, x¶ ¶ lda 0550h, x¶ sta 0501h, x¶ ¶ inx¶ cpx #10d¶ bne Loop¶ brk¶  ¶ end¶ ¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="86",timestamp="2019-02-26 20:14:27.101",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+      	S00700005541534DC2¶      	S1170200A200BD00059D5005BD01059D0005BD50059D010576¶      	S1090214E8E00AD0E90055¶      	S10D05005D71E610CCC692C3AB0D8A¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65_grade",parent="Problem 3",sequence="87",timestamp="2019-02-26 20:14:36.838",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶CnsKICAgIExvY2FsKHJlc3VsdCwgYW5hbHlzaXMsIHMxOSwgdWFydCwgdHJhbnNwb3NlLCBjb21tYW5kcyk7CiAgICAKICAgIHJlc3VsdCA6PSBVNjUwMkFzc2VtYmxlKD9mb2xkQ29kZSk7CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiTWF0aFBpcGVyIHZlcnNpb24gPj0gLjI3NiIsIDEsIFRydWUpCiAgICB7CiAgICAgICAgU3RyaW5nVG9OdW1iZXIoVmVyc2lvbigpKSA+PT8gLjI3NjsKICAgIH0gICAgCiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiVGhlIGNvZGUgY29udGFpbnMgbm8gc3ludGF4IGVycm9ycyIsIDEsIFRydWUpIAogICAgewogICAgICAgIExlbmd0aChyZXN1bHQpID4/IDE7CiAgICB9CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIElmKExlbmd0aChyZXN1bHQpID4/IDEpCiAgICB7CiAgICAgICAgdWFydCA6PSBKYXZhQ2FsbCgib3JnLm1hdGhwaXBlci5pZGUudTY1MDIuRU1VNjU1MSIsImdldEluc3RhbmNlIik7CiAgICAgICAgSmF2YUNhbGwodWFydCwgInRleHRBcmVhQ2xlYXIiKTsKICAgICAgICAKICAgICAgICBVNjUwMlJlc2V0KCk7CiAgICAgICAgCiAgICAgICAgVTY1MDJGaWxsKCIyMDAiaGV4LCAiNjAwImhleCwgIDApOwogICAgICAgIAogICAgICAgIHMxOSA6PSByZXN1bHRbMl07CiAgICAgICAgCiAgICAgICAgYW5hbHlzaXMgOj0gVTY1MDJDb252ZXJ0SmF2YUxpc3QocmVzdWx0WzRdKTsKICAgICAgICAKICAgICAgICB0cmFuc3Bvc2UgOj0gVHJhbnNwb3NlKGFuYWx5c2lzKTsKICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgdHdvIE9SRyBjb21tYW5kcyIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgTGVuZ3RoKGNvbW1hbmRzIDo9IFU2NTAyRmluZE9wZXJhdG9ycyhhbmFseXNpcywgIk9SRyIpKSA9PyAyOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gc3RhcnRzIGF0IDAyMDBoIGluIG1lbW9yeSIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgY29tbWFuZHNbMV1bNF0gPT8gIjAyMDAiOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHRhYmxlIHN0YXJ0cyBhdCAwNTAwaCBpbiBtZW1vcnkiLCAxLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIGNvbW1hbmRzWzJdWzRdID0/ICIwNTAwIjsKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAKICAgICAgICBGb2xkR3JhZGUoIlRoZSByZXN1bHQgdGFibGUgaXMgbm90IGxvYWRlZCBpbnRvIG1lbW9yeSB3aGVuIHRoZSBwcm9ncmFtIGlzIGxvYWRlZCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgVTY1MDJEdW1wKCI1MDAiaGV4LCAiNTA5ImhleCwgKSAhPT8gWzExMyw5MywxNiwyMzAsMTk4LDIwNCwxOTUsMTQ2LDEzLDE3MV07CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgcHJvZ3JhbSB1c2VzIGEgbG9vcCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQkNDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCQ1MiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJFUSIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQk5FIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCTUkiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJQTCIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQlZDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCVlMiKSA+PyAwOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgYXQgbGVhc3QgdHdvIGluc3RydWN0aW9ucyB0aGF0IHVzZSBBYnNvbHV0ZSxYIGFkZHJlc3NpbmcgbW9kZSIsIDMsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgTG9jYWwoYWJzb2x1dGVYQ291bnQpOwogICAgICAgICAgICAKICAgICAgICAgICAgYWJzb2x1dGVYQ291bnQgOj0gMDsKICAgIAogICAgICAgICAgICBGb3JFYWNoKGNvbW1hbmQsIGFuYWx5c2lzKQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBJZihjb21tYW5kWzNdICE9PyAiREJUIiAmPyBMZW5ndGgoY29tbWFuZFs2XSkgPj8gMSkKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICBJZihCaXRBbmQoU3RyaW5nU3Vic3RyaW5nKGNvbW1hbmRbNl0sIDEsIDIpIGhleCwgIjFDIiBoZXgpID0/ICIxQyIgaGV4KQogICAgICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAgICAgYWJzb2x1dGVYQ291bnQrKzsKICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGFic29sdXRlWENvdW50ID4/IDE7CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgY29ycmVjdCByZXN1bHQgaXMgcGxhY2VkIGludG8gYWRkcmVzcyAwNTAwaCIsIDUsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgdWFydCA6PSBKYXZhQ2FsbCgib3JnLm1hdGhwaXBlci5pZGUudTY1MDIuRU1VNjU1MSIsImdldEluc3RhbmNlIik7CiAgICAgICAgICAgIAogICAgICAgICAgICBVNjUwMlJlc2V0KCk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsIkwiICsgVW5pY29kZVRvU3RyaW5nKDEzKSk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsIFRvU3RyaW5nKHMxOSkpOwogICAgICAgICAgICAKICAgICAgICAgICAgVTY1MDJTZXRNb25pdG9yTm90UmVhZHkoKTsgV2hpbGUoIT8gVTY1MDJNb25pdG9yUmVhZHk/KCkpIERlbGF5KDEwMCk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsICJnIDAyMDAiICsgVW5pY29kZVRvU3RyaW5nKDEzKSk7CiAgICAgICAgICAgIAogICAgICAgICAgICBVNjUwMlNldE1vbml0b3JOb3RSZWFkeSgpOyBXaGlsZSghPyBVNjUwMk1vbml0b3JSZWFkeT8oKSkgRGVsYXkoMTAwKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIFU2NTAyRHVtcCgiNTAwImhleCwgIjUwOSJoZXgsICkgPT8gWzExMyw5MywxNiwyMzAsMTk4LDIwNCwxOTUsMTQ2LDEzLDE3MV07CiAgICAgICAgfQogICAgfQp9CiAK
+
+%/info
+
+%info,parentFoldType="uasm65_grade",parent="Problem 3",sequence="88",timestamp="2019-02-26 20:15:17.807",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶CnsKICAgIExvY2FsKHJlc3VsdCwgYW5hbHlzaXMsIHMxOSwgdWFydCwgdHJhbnNwb3NlLCBjb21tYW5kcyk7CiAgICAKICAgIHJlc3VsdCA6PSBVNjUwMkFzc2VtYmxlKD9mb2xkQ29kZSk7CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiTWF0aFBpcGVyIHZlcnNpb24gPj0gLjI3NiIsIDEsIFRydWUpCiAgICB7CiAgICAgICAgU3RyaW5nVG9OdW1iZXIoVmVyc2lvbigpKSA+PT8gLjI3NjsKICAgIH0gICAgCiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiVGhlIGNvZGUgY29udGFpbnMgbm8gc3ludGF4IGVycm9ycyIsIDEsIFRydWUpIAogICAgewogICAgICAgIExlbmd0aChyZXN1bHQpID4/IDE7CiAgICB9CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIElmKExlbmd0aChyZXN1bHQpID4/IDEpCiAgICB7CiAgICAgICAgdWFydCA6PSBKYXZhQ2FsbCgib3JnLm1hdGhwaXBlci5pZGUudTY1MDIuRU1VNjU1MSIsImdldEluc3RhbmNlIik7CiAgICAgICAgSmF2YUNhbGwodWFydCwgInRleHRBcmVhQ2xlYXIiKTsKICAgICAgICAKICAgICAgICBVNjUwMlJlc2V0KCk7CiAgICAgICAgCiAgICAgICAgVTY1MDJGaWxsKCIyMDAiaGV4LCAiNjAwImhleCwgIDApOwogICAgICAgIAogICAgICAgIHMxOSA6PSByZXN1bHRbMl07CiAgICAgICAgCiAgICAgICAgYW5hbHlzaXMgOj0gVTY1MDJDb252ZXJ0SmF2YUxpc3QocmVzdWx0WzRdKTsKICAgICAgICAKICAgICAgICB0cmFuc3Bvc2UgOj0gVHJhbnNwb3NlKGFuYWx5c2lzKTsKICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgdHdvIE9SRyBjb21tYW5kcyIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgTGVuZ3RoKGNvbW1hbmRzIDo9IFU2NTAyRmluZE9wZXJhdG9ycyhhbmFseXNpcywgIk9SRyIpKSA9PyAyOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gc3RhcnRzIGF0IDAyMDBoIGluIG1lbW9yeSIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgY29tbWFuZHNbMV1bNF0gPT8gIjAyMDAiOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHRhYmxlIHN0YXJ0cyBhdCAwNTAwaCBpbiBtZW1vcnkiLCAxLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIGNvbW1hbmRzWzJdWzRdID0/ICIwNTAwIjsKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAKICAgICAgICBGb2xkR3JhZGUoIlRoZSByZXN1bHQgdGFibGUgaXMgbm90IGxvYWRlZCBpbnRvIG1lbW9yeSB3aGVuIHRoZSBwcm9ncmFtIGlzIGxvYWRlZCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgVTY1MDJEdW1wKCI1MDAiaGV4LCAiNTA5ImhleCwgKSAhPT8gWzExMyw5MywxNiwyMzAsMTk4LDIwNCwxOTUsMTQ2LDEzLDE3MV07CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgcHJvZ3JhbSB1c2VzIGEgbG9vcCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQkNDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCQ1MiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJFUSIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQk5FIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCTUkiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJQTCIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQlZDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCVlMiKSA+PyAwOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgYXQgbGVhc3QgdHdvIGluc3RydWN0aW9ucyB0aGF0IHVzZSBBYnNvbHV0ZSxYIGFkZHJlc3NpbmcgbW9kZSIsIDMsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgTG9jYWwoYWJzb2x1dGVYQ291bnQpOwogICAgICAgICAgICAKICAgICAgICAgICAgYWJzb2x1dGVYQ291bnQgOj0gMDsKICAgIAogICAgICAgICAgICBGb3JFYWNoKGNvbW1hbmQsIGFuYWx5c2lzKQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBJZihjb21tYW5kWzNdICE9PyAiREJUIiAmPyBMZW5ndGgoY29tbWFuZFs2XSkgPj8gMSkKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICBJZihCaXRBbmQoU3RyaW5nU3Vic3RyaW5nKGNvbW1hbmRbNl0sIDEsIDIpIGhleCwgIjFDIiBoZXgpID0/ICIxQyIgaGV4KQogICAgICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAgICAgYWJzb2x1dGVYQ291bnQrKzsKICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGFic29sdXRlWENvdW50ID4/IDE7CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgY29ycmVjdCByZXN1bHQgaXMgcGxhY2VkIGludG8gYWRkcmVzcyAwNTAwaCIsIDUsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgdWFydCA6PSBKYXZhQ2FsbCgib3JnLm1hdGhwaXBlci5pZGUudTY1MDIuRU1VNjU1MSIsImdldEluc3RhbmNlIik7CiAgICAgICAgICAgIAogICAgICAgICAgICBVNjUwMlJlc2V0KCk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsIkwiICsgVW5pY29kZVRvU3RyaW5nKDEzKSk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsIFRvU3RyaW5nKHMxOSkpOwogICAgICAgICAgICAKICAgICAgICAgICAgVTY1MDJTZXRNb25pdG9yTm90UmVhZHkoKTsgV2hpbGUoIT8gVTY1MDJNb25pdG9yUmVhZHk/KCkpIERlbGF5KDEwMCk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsICJnIDAyMDAiICsgVW5pY29kZVRvU3RyaW5nKDEzKSk7CiAgICAgICAgICAgIAogICAgICAgICAgICBVNjUwMlNldE1vbml0b3JOb3RSZWFkeSgpOyBXaGlsZSghPyBVNjUwMk1vbml0b3JSZWFkeT8oKSkgRGVsYXkoMTAwKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIFU2NTAyRHVtcCgiNTAwImhleCwgIjUwOSJoZXgsICkgPT8gWzExMyw5MywxNiwyMzAsMTk4LDIwNCwxOTUsMTQ2LDEzLDE3MV07CiAgICAgICAgfQogICAgfQp9CiAK
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 3",sequence="89",timestamp="2019-02-26 20:16:47.052",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0200h ¶ ¶ ldx #0d¶ ¶Loop:¶ lda 0200h, x¶ sta 0550h, x¶ ¶ lda 0201h, x¶ sta 0200h, x¶ ¶ lda 0550h, x¶ sta 0201h, x¶ ¶ inx¶ cpx #10d¶ bne Loop¶ brk¶  ¶ end¶ ¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="90",timestamp="2019-02-26 20:16:51.604",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+      	S00700005541534DC2¶      	S1170200A200BD00029D5005BD01029D0002BD50059D010282¶      	S1090214E8E00AD0E90055¶      	S10D05005D71E610CCC692C3AB0D8A¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 3",sequence="91",timestamp="2019-02-26 20:17:18.809",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0200h ¶ ¶ ldx #0d¶ ¶Loop:¶ lda 0200h, x¶ sta 0550h, x¶ ¶ lda 0201h, x¶ sta 0200h, x¶ ¶ lda 0550h, x¶ sta 0201h, x¶ ¶ inx¶ inx¶ cpx #10d¶ bne Loop¶ brk¶  ¶ end¶ ¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="92",timestamp="2019-02-26 20:17:21.891",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+      	S00700005541534DC2¶      	S1170200A200BD00029D5005BD01029D0002BD50059D010282¶      	S10A0214E8E8E00AD0E8006D¶      	S10D05005D71E610CCC692C3AB0D8A¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 3",sequence="93",timestamp="2019-02-26 20:17:48.873",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0200h ¶ ¶ ldx #0d¶ ¶Loop:¶ lda 0500h, x¶ sta 0550h, x¶ ¶ lda 0501h, x¶ sta 0500h, x¶ ¶ lda 0550h, x¶ sta 0501h, x¶ ¶ inx¶ inx¶ cpx #10d¶ bne Loop¶ brk¶  ¶ end¶ ¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶¶ end
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 3",sequence="94",timestamp="2019-02-26 20:18:14.791",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0200h ¶ ¶ ldx #0d¶ ¶Loop:¶ lda 0500h, x¶ sta 0550h, x¶ ¶ lda 0501h, x¶ sta 0500h, x¶ ¶ lda 0550h, x¶ sta 0501h, x¶ ¶ inx¶ inx¶ ¶ cpx #10d¶ bne Loop¶ brk¶  ¶ end¶ ¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="95",timestamp="2019-02-26 20:18:20.774",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+      	S00700005541534DC2¶      	S1170200A200BD00059D5005BD01059D0005BD50059D010576¶      	S10A0214E8E8E00AD0E8006D¶      	S10D05005D71E610CCC692C3AB0D8A¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65_grade",parent="Problem 3",sequence="96",timestamp="2019-02-26 20:18:46.226",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶CnsKICAgIExvY2FsKHJlc3VsdCwgYW5hbHlzaXMsIHMxOSwgdWFydCwgdHJhbnNwb3NlLCBjb21tYW5kcyk7CiAgICAKICAgIHJlc3VsdCA6PSBVNjUwMkFzc2VtYmxlKD9mb2xkQ29kZSk7CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiTWF0aFBpcGVyIHZlcnNpb24gPj0gLjI3NiIsIDEsIFRydWUpCiAgICB7CiAgICAgICAgU3RyaW5nVG9OdW1iZXIoVmVyc2lvbigpKSA+PT8gLjI3NjsKICAgIH0gICAgCiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiVGhlIGNvZGUgY29udGFpbnMgbm8gc3ludGF4IGVycm9ycyIsIDEsIFRydWUpIAogICAgewogICAgICAgIExlbmd0aChyZXN1bHQpID4/IDE7CiAgICB9CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIElmKExlbmd0aChyZXN1bHQpID4/IDEpCiAgICB7CiAgICAgICAgdWFydCA6PSBKYXZhQ2FsbCgib3JnLm1hdGhwaXBlci5pZGUudTY1MDIuRU1VNjU1MSIsImdldEluc3RhbmNlIik7CiAgICAgICAgSmF2YUNhbGwodWFydCwgInRleHRBcmVhQ2xlYXIiKTsKICAgICAgICAKICAgICAgICBVNjUwMlJlc2V0KCk7CiAgICAgICAgCiAgICAgICAgVTY1MDJGaWxsKCIyMDAiaGV4LCAiNjAwImhleCwgIDApOwogICAgICAgIAogICAgICAgIHMxOSA6PSByZXN1bHRbMl07CiAgICAgICAgCiAgICAgICAgYW5hbHlzaXMgOj0gVTY1MDJDb252ZXJ0SmF2YUxpc3QocmVzdWx0WzRdKTsKICAgICAgICAKICAgICAgICB0cmFuc3Bvc2UgOj0gVHJhbnNwb3NlKGFuYWx5c2lzKTsKICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgdHdvIE9SRyBjb21tYW5kcyIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgTGVuZ3RoKGNvbW1hbmRzIDo9IFU2NTAyRmluZE9wZXJhdG9ycyhhbmFseXNpcywgIk9SRyIpKSA9PyAyOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gc3RhcnRzIGF0IDAyMDBoIGluIG1lbW9yeSIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgY29tbWFuZHNbMV1bNF0gPT8gIjAyMDAiOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHRhYmxlIHN0YXJ0cyBhdCAwNTAwaCBpbiBtZW1vcnkiLCAxLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIGNvbW1hbmRzWzJdWzRdID0/ICIwNTAwIjsKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAKICAgICAgICBGb2xkR3JhZGUoIlRoZSByZXN1bHQgdGFibGUgaXMgbm90IGxvYWRlZCBpbnRvIG1lbW9yeSB3aGVuIHRoZSBwcm9ncmFtIGlzIGxvYWRlZCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgVTY1MDJEdW1wKCI1MDAiaGV4LCAiNTA5ImhleCwgKSAhPT8gWzExMyw5MywxNiwyMzAsMTk4LDIwNCwxOTUsMTQ2LDEzLDE3MV07CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgcHJvZ3JhbSB1c2VzIGEgbG9vcCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQkNDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCQ1MiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJFUSIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQk5FIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCTUkiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJQTCIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQlZDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCVlMiKSA+PyAwOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgYXQgbGVhc3QgdHdvIGluc3RydWN0aW9ucyB0aGF0IHVzZSBBYnNvbHV0ZSxYIGFkZHJlc3NpbmcgbW9kZSIsIDMsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgTG9jYWwoYWJzb2x1dGVYQ291bnQpOwogICAgICAgICAgICAKICAgICAgICAgICAgYWJzb2x1dGVYQ291bnQgOj0gMDsKICAgIAogICAgICAgICAgICBGb3JFYWNoKGNvbW1hbmQsIGFuYWx5c2lzKQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBJZihjb21tYW5kWzNdICE9PyAiREJUIiAmPyBMZW5ndGgoY29tbWFuZFs2XSkgPj8gMSkKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICBJZihCaXRBbmQoU3RyaW5nU3Vic3RyaW5nKGNvbW1hbmRbNl0sIDEsIDIpIGhleCwgIjFDIiBoZXgpID0/ICIxQyIgaGV4KQogICAgICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAgICAgYWJzb2x1dGVYQ291bnQrKzsKICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGFic29sdXRlWENvdW50ID4/IDE7CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgY29ycmVjdCByZXN1bHQgaXMgcGxhY2VkIGludG8gYWRkcmVzcyAwNTAwaCIsIDUsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgdWFydCA6PSBKYXZhQ2FsbCgib3JnLm1hdGhwaXBlci5pZGUudTY1MDIuRU1VNjU1MSIsImdldEluc3RhbmNlIik7CiAgICAgICAgICAgIAogICAgICAgICAgICBVNjUwMlJlc2V0KCk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsIkwiICsgVW5pY29kZVRvU3RyaW5nKDEzKSk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsIFRvU3RyaW5nKHMxOSkpOwogICAgICAgICAgICAKICAgICAgICAgICAgVTY1MDJTZXRNb25pdG9yTm90UmVhZHkoKTsgV2hpbGUoIT8gVTY1MDJNb25pdG9yUmVhZHk/KCkpIERlbGF5KDEwMCk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsICJnIDAyMDAiICsgVW5pY29kZVRvU3RyaW5nKDEzKSk7CiAgICAgICAgICAgIAogICAgICAgICAgICBVNjUwMlNldE1vbml0b3JOb3RSZWFkeSgpOyBXaGlsZSghPyBVNjUwMk1vbml0b3JSZWFkeT8oKSkgRGVsYXkoMTAwKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIFU2NTAyRHVtcCgiNTAwImhleCwgIjUwOSJoZXgsICkgPT8gWzExMyw5MywxNiwyMzAsMTk4LDIwNCwxOTUsMTQ2LDEzLDE3MV07CiAgICAgICAgfQogICAgfQp9CiAK
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:20:08.24",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+org 0200h ¶ ¶ ldx #0d¶ ¶Loop:¶ lda 0500h, x¶ sta 0550h, x¶ ¶ lda 0501h, x¶ sta 0500h, x¶ ¶ lda 0550h, x¶ sta 0501h, x¶ ¶ inx¶ inx¶ ¶ cpx #10d¶ bne Loop¶ brk¶  ¶ end¶ ¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶¶ end
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:22:52.653",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+195d,171d,13d,93d,113d,230d,16d,204d,198d,146d
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:24:04.803",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+ lda 0500h, x¶ sta 0550h, x¶ ¶ lda 0501h, x¶ sta 0500h, x
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:24:13.155",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+ lda 0500h, x¶ sta 0550h, x¶ ¶ lda 0501h, x¶ sta 0500h, x
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:24:39.292",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+50
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:24:44.603",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+50
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:26:05.846",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+lda 0506h, x
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:26:24.167",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+lda 0506h, x
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:26:26.308",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+lda 0506h, x
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:26:26.863",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+lda 0506h, x
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:27:09.754",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+sta 0500h, x
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:27:15.116",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+sta 0500h, x
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:28:00.706",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+sta 0500h, x
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:30:12.671",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+sta 0550h, x
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:30:16.41",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+sta 0550h, x
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:30:17.302",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+sta 0550h, x
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:30:19.027",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+sta 0550h, x
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:30:20.382",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+sta 0550h, x
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:30:20.898",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+sta 0550h, x
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:30:27.938",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+sta 0550h, x
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:32:19.817",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+sta 0502h, x
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:32:24.969",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+sta 0503h, x
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:32:30.386",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+sta 0503h, x
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:32:35.026",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+sta 0503h, x
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:32:38.489",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+sta 0503h, x
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:32:43.008",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+sta 0503h, x
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-26 20:32:47.369",username="Brumo",hostname="DESKTOP-UQTPVC7",mpversion=".276"
+sta 0503h, x
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 4",sequence="97",timestamp="2019-02-26 20:33:32.362",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶ org 0200h ¶ ¶ ldx #0d¶ ¶Loop:¶;Storing the first 7 somewhere else¶ lda 0500h, x¶ sta 0550h, x¶ lda 0501h, x¶ sta 0551h, x¶ lda 0502h, x¶ sta 0552h, x¶ lda 0503h, x¶ sta 0553h, x¶ lda 0504h, x¶ sta 0554h, x¶ lda 0505h, x¶ sta 0555h, x¶ lda 0506h, x¶ sta 0556h, x¶ ¶;Moving the ones on the right to the left¶ lda 0507h, x¶ sta 0500h, x¶ lda 0508h, x¶ sta 0501h, x¶ lda 0509h, x¶ sta 0502h, x¶ ¶;Bringing back the ones that were on the left to the back¶;of the ones on the right now¶ lda 0550h, x¶ sta 0503h, x¶ lda 0551h, x¶ sta 0504h, x¶ lda 0552h, x¶ sta 0505h, x¶ lda 0553h, x¶ sta 0506h, x¶ lda 0554h, x¶ sta 0507h, x¶ lda 0555h, x¶ sta 0508h, x¶ lda 0556h, x¶ sta 0509h, x¶¶ inx¶ ¶ cpx #1d¶ bne Loop¶ brk¶  ¶ end¶ ¶;195d,171d,13d,93d,113d,230d,16d,204d,198d,146d¶¶ org 0500h ¶data: dbt 93d,113d,230d,16d,204d,198d,146d,195d,171d,13d¶¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="98",timestamp="2019-02-26 20:33:39.536",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+      	S00700005541534DC2¶      	S1170200A200BD00059D5005BD01059D5105BD02059D520522¶      	S1170214BD03059D5305BD04059D5405BD05059D5505BD06DB¶      	S1170228059D5605BD07059D0005BD08059D0105BD09059D81¶      	S117023C0205BD50059D0305BD51059D0405BD52059D050578¶      	S1170250BD53059D0605BD54059D0705BD55059D0805BD5646¶      	S10D0264059D0905E8E001D09500AE¶      	S10D05005D71E610CCC692C3AB0D8A¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65_grade",parent="Problem 4",sequence="99",timestamp="2019-02-26 20:34:24.065",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶CnsKICAgIExvY2FsKHJlc3VsdCwgYW5hbHlzaXMsIHMxOSwgdWFydCwgdHJhbnNwb3NlLCBjb21tYW5kcywgdG9vTG9uZ1RpbWUpOwogICAgCiAgICByZXN1bHQgOj0gVTY1MDJBc3NlbWJsZSg/Zm9sZENvZGUpOwogICAgCiAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgCiAgICBGb2xkR3JhZGUoIk1hdGhQaXBlciB2ZXJzaW9uID49IC4yNzYiLCAxLCBUcnVlKQogICAgewogICAgICAgIFN0cmluZ1RvTnVtYmVyKFZlcnNpb24oKSkgPj0/IC4yNzY7CiAgICB9ICAgIAogICAgCiAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgCiAgICBGb2xkR3JhZGUoIlRoZSBjb2RlIGNvbnRhaW5zIG5vIHN5bnRheCBlcnJvcnMiLCAxLCBUcnVlKSAKICAgIHsKICAgICAgICBMZW5ndGgocmVzdWx0KSA+PyAxOwogICAgfQogICAgCiAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgCiAgICBJZihMZW5ndGgocmVzdWx0KSA+PyAxKQogICAgewogICAgICAgIHVhcnQgOj0gSmF2YUNhbGwoIm9yZy5tYXRocGlwZXIuaWRlLnU2NTAyLkVNVTY1NTEiLCJnZXRJbnN0YW5jZSIpOwogICAgICAgIAogICAgICAgIEphdmFDYWxsKHVhcnQsICJ0ZXh0QXJlYUNsZWFyIik7CiAgICAgICAgCiAgICAgICAgVTY1MDJSZXNldCgpOwogICAgICAgIAogICAgICAgIFU2NTAyRmlsbCgiMjAwImhleCwgIjYwMCJoZXgsICAwKTsKICAgICAgICAKICAgICAgICBzMTkgOj0gcmVzdWx0WzJdOwogICAgICAgIAogICAgICAgIGFuYWx5c2lzIDo9IFU2NTAyQ29udmVydEphdmFMaXN0KHJlc3VsdFs0XSk7CiAgICAgICAgCiAgICAgICAgdHJhbnNwb3NlIDo9IFRyYW5zcG9zZShhbmFseXNpcyk7CiAgICAgICAgCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAKICAgICAgICBGb2xkR3JhZGUoIlRoZSBwcm9ncmFtIGNvbnRhaW5zIHR3byBPUkcgY29tbWFuZHMiLCAxLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIExlbmd0aChjb21tYW5kcyA6PSBVNjUwMkZpbmRPcGVyYXRvcnMoYW5hbHlzaXMsICJPUkciKSkgPT8gMjsKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAKICAgICAgICBGb2xkR3JhZGUoIlRoZSBwcm9ncmFtIHN0YXJ0cyBhdCAwMjAwaCBpbiBtZW1vcnkiLCAxLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIGNvbW1hbmRzWzFdWzRdID0/ICIwMjAwIjsKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAKICAgICAgICBGb2xkR3JhZGUoIlRoZSB0YWJsZSBzdGFydHMgYXQgMDUwMGggaW4gbWVtb3J5IiwgMSwgVHJ1ZSkgCiAgICAgICAgewogICAgICAgICAgICBjb21tYW5kc1syXVs0XSA9PyAiMDUwMCI7CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgcmVzdWx0IHRhYmxlIGlzIG5vdCBsb2FkZWQgaW50byBtZW1vcnkgd2hlbiB0aGUgcHJvZ3JhbSBpcyBsb2FkZWQiLCAxLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIFU2NTAyRHVtcCgiNTAwImhleCwgIjUwOSJoZXgsICkgIT0/IFsxOTUsMTcxLDEzLDkzLDExMywyMzAsMTYsMjA0LDE5OCwxNDZdOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gdXNlcyBhIGxvb3AiLCAxLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJDQyIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQkNTIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCRVEiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJORSIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQk1JIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCUEwiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJWQyIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQlZTIikgPj8gMDsKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAKICAgICAgICBGb2xkR3JhZGUoIlRoZSBwcm9ncmFtIGNvbnRhaW5zIGF0IGxlYXN0IHR3byBpbnN0cnVjdGlvbnMgdGhhdCB1c2UgQWJzb2x1dGUsWCBhZGRyZXNzaW5nIG1vZGUiLCAzLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIExvY2FsKGFic29sdXRlWENvdW50KTsKICAgICAgICAgICAgCiAgICAgICAgICAgIGFic29sdXRlWENvdW50IDo9IDA7CiAgICAKICAgICAgICAgICAgRm9yRWFjaChjb21tYW5kLCBhbmFseXNpcykKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgSWYoY29tbWFuZFszXSAhPT8gIkRCVCIgJj8gTGVuZ3RoKGNvbW1hbmRbNl0pID4/IDEpCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgSWYoQml0QW5kKFN0cmluZ1N1YnN0cmluZyhjb21tYW5kWzZdLCAxLCAyKSBoZXgsICIxQyIgaGV4KSA9PyAiMUMiIGhleCkKICAgICAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgICAgIGFic29sdXRlWENvdW50Kys7CiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CgogICAgICAgICAgICBhYnNvbHV0ZVhDb3VudCA+PyAxOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIGNvcnJlY3QgcmVzdWx0IGlzIHBsYWNlZCBpbnRvIGFkZHJlc3MgMDUwMGgiLCA1LCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIHVhcnQgOj0gSmF2YUNhbGwoIm9yZy5tYXRocGlwZXIuaWRlLnU2NTAyLkVNVTY1NTEiLCJnZXRJbnN0YW5jZSIpOwogICAgICAgICAgICAKICAgICAgICAgICAgVTY1MDJSZXNldCgpOwogICAgICAgICAgICAKICAgICAgICAgICAgSmF2YUNhbGwodWFydCwgInNlbmQiLCJMIiArIFVuaWNvZGVUb1N0cmluZygxMykpOwogICAgICAgICAgICAKICAgICAgICAgICAgSmF2YUNhbGwodWFydCwgInNlbmQiLCBUb1N0cmluZyhzMTkpKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIFU2NTAyU2V0TW9uaXRvck5vdFJlYWR5KCk7IFdoaWxlKCE/IFU2NTAyTW9uaXRvclJlYWR5PygpKSBEZWxheSgxMDApOwogICAgICAgICAgICAKICAgICAgICAgICAgSmF2YUNhbGwodWFydCwgInNlbmQiLCAiZyAwMjAwIiArIFVuaWNvZGVUb1N0cmluZygxMykpOwogICAgICAgICAgICAKICAgICAgICAgICAgVTY1MDJTZXRNb25pdG9yTm90UmVhZHkoKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIHRvb0xvbmdUaW1lIDo9IFN5c3RlbVRpbWVyKCkgKyA1MDAwOwogICAgICAgICAgICAKICAgICAgICAgICAgV2hpbGUoIT8gVTY1MDJNb25pdG9yUmVhZHk/KCkpCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIElmKFN5c3RlbVRpbWVyKCkgPj0/IHRvb0xvbmdUaW1lKQogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgIEV4Y2VwdGlvblRocm93KCJUSU1FT1VUIiwgIlRoZSBwcm9ncmFtIHdhcyB0YWtpbmcgdG9vIGxvbmcgdG8gcnVuLiIpOwogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgRGVsYXkoMTAwKTsKICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgVTY1MDJEdW1wKCI1MDAiaGV4LCAiNTA5ImhleCwgKSA9PyBbMTk1LDE3MSwxMyw5MywxMTMsMjMwLDE2LDIwNCwxOTgsMTQ2XTsKICAgICAgICB9CiAgICB9Cn0KIAo=
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 0",sequence="100",timestamp="2019-02-26 20:35:46.293",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+Not logged.
+
+%/info
+
+%info,parentFoldType="uasm65_grade",parent="Problem 1",sequence="101",timestamp="2019-02-26 20:35:53.677",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶CnsKICAgIExvY2FsKHJlc3VsdCwgYW5hbHlzaXMsIHMxOSwgdWFydCwgdHJhbnNwb3NlLCBjb21tYW5kcyk7CiAgICAKICAgIHJlc3VsdCA6PSBVNjUwMkFzc2VtYmxlKD9mb2xkQ29kZSk7CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiTWF0aFBpcGVyIHZlcnNpb24gPj0gLjI3NiIsIDEsIFRydWUpCiAgICB7CiAgICAgICAgU3RyaW5nVG9OdW1iZXIoVmVyc2lvbigpKSA+PT8gLjI3NjsKICAgIH0gICAgCiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiVGhlIGNvZGUgY29udGFpbnMgbm8gc3ludGF4IGVycm9ycyIsIDEsIFRydWUpIAogICAgewogICAgICAgIExlbmd0aChyZXN1bHQpID4/IDE7CiAgICB9CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIElmKExlbmd0aChyZXN1bHQpID4/IDEpCiAgICB7CiAgICAgICAgdWFydCA6PSBKYXZhQ2FsbCgib3JnLm1hdGhwaXBlci5pZGUudTY1MDIuRU1VNjU1MSIsImdldEluc3RhbmNlIik7CiAgICAgICAgCiAgICAgICAgSmF2YUNhbGwodWFydCwgInRleHRBcmVhQ2xlYXIiKTsKICAgICAgICAKICAgICAgICBVNjUwMlJlc2V0KCk7CiAgICAgICAgCiAgICAgICAgVTY1MDJGaWxsKCIyMDAiaGV4LCAiNjAwImhleCwgIDApOwogICAgICAgIAogICAgICAgIHMxOSA6PSByZXN1bHRbMl07CiAgICAgICAgCiAgICAgICAgYW5hbHlzaXMgOj0gVTY1MDJDb252ZXJ0SmF2YUxpc3QocmVzdWx0WzRdKTsKICAgICAgICAKICAgICAgICB0cmFuc3Bvc2UgOj0gVHJhbnNwb3NlKGFuYWx5c2lzKTsKICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgdHdvIE9SRyBjb21tYW5kcyIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgTGVuZ3RoKGNvbW1hbmRzIDo9IFU2NTAyRmluZE9wZXJhdG9ycyhhbmFseXNpcywgIk9SRyIpKSA9PyAyOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gc3RhcnRzIGF0IDAyMDBoIGluIG1lbW9yeSIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgY29tbWFuZHNbMV1bNF0gPT8gIjAyMDAiOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHRhYmxlIHN0YXJ0cyBhdCAwNTAwaCBpbiBtZW1vcnkiLCAxLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIGNvbW1hbmRzWzJdWzRdID0/ICIwNTAwIjsKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAKICAgICAgICBGb2xkR3JhZGUoIlRoZSByZXN1bHQgdGFibGUgaXMgbm90IGxvYWRlZCBpbnRvIG1lbW9yeSB3aGVuIHRoZSBwcm9ncmFtIGlzIGxvYWRlZCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgVTY1MDJEdW1wKCI1MDAiaGV4LCAiNTA5ImhleCwgKSAhPT8gWzkyLDExMiwyMjksMTUsMjAzLDE5NywxNDUsMTk0LDE3MCwxMl07CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgcHJvZ3JhbSB1c2VzIGEgbG9vcCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQkNDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCQ1MiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJFUSIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQk5FIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCTUkiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJQTCIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQlZDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCVlMiKSA+PyAwOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gZG9lcyBub3QgdXNlIGFueSBTQkMgaW5zdHJ1Y3Rpb25zIiwgMSwgVHJ1ZSkgCiAgICAgICAgewogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJTQkMiKSA9PyAwOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgb25lIERFQyBjb21tYW5kIHRoYXQgdXNlcyBBYnNvbHV0ZSxYIGFkZHJlc3NpbmcgbW9kZSIsIDMsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgTG9jYWwocmVzdWx0KTsKICAgICAgICAgICAgCiAgICAgICAgICAgIHJlc3VsdCA6PSBGYWxzZTsKICAgIAogICAgICAgICAgICBjb21tYW5kcyA6PSBVNjUwMkZpbmRPcGVyYXRvcnMoYW5hbHlzaXMsICJERUMiKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIElmKExlbmd0aChjb21tYW5kcykgPj8gMCkKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgRm9yRWFjaChjb21tYW5kLCBjb21tYW5kcykKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICBJZihTdHJpbmdTdGFydHNXaXRoPyhjb21tYW5kWzZdLCAiREUiKSkKICAgICAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgICAgIHJlc3VsdCA6PSBUcnVlOwogICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgcmVzdWx0OwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIGNvcnJlY3QgcmVzdWx0IGlzIHBsYWNlZCBpbnRvIGFkZHJlc3MgMDUwMGgiLCA1LCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIHVhcnQgOj0gSmF2YUNhbGwoIm9yZy5tYXRocGlwZXIuaWRlLnU2NTAyLkVNVTY1NTEiLCJnZXRJbnN0YW5jZSIpOwogICAgICAgICAgICAKICAgICAgICAgICAgVTY1MDJSZXNldCgpOwogICAgICAgICAgICAKICAgICAgICAgICAgSmF2YUNhbGwodWFydCwgInNlbmQiLCJMIiArIFVuaWNvZGVUb1N0cmluZygxMykpOwogICAgICAgICAgICAKICAgICAgICAgICAgSmF2YUNhbGwodWFydCwgInNlbmQiLCBUb1N0cmluZyhzMTkpKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIFU2NTAyU2V0TW9uaXRvck5vdFJlYWR5KCk7IFdoaWxlKCE/IFU2NTAyTW9uaXRvclJlYWR5PygpKSBEZWxheSgxMDApOwogICAgICAgICAgICAKICAgICAgICAgICAgSmF2YUNhbGwodWFydCwgInNlbmQiLCAiZyAwMjAwIiArIFVuaWNvZGVUb1N0cmluZygxMykpOwogICAgICAgICAgICAKICAgICAgICAgICAgVTY1MDJTZXRNb25pdG9yTm90UmVhZHkoKTsgV2hpbGUoIT8gVTY1MDJNb25pdG9yUmVhZHk/KCkpIERlbGF5KDEwMCk7CiAgICAgICAgICAgIAogICAgICAgICAgICBVNjUwMkR1bXAoIjUwMCJoZXgsICI1MDkiaGV4LCApID0/IFs5MiwxMTIsMjI5LDE1LDIwMywxOTcsMTQ1LDE5NCwxNzAsMTJdOwogICAgICAgIH0KICAgIH0KfQogCg==
+
+%/info
+
+%info,parentFoldType="uasm65_grade",parent="Problem 2",sequence="102",timestamp="2019-02-26 20:36:02.313",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶CnsKICAgIExvY2FsKHJlc3VsdCwgYW5hbHlzaXMsIHMxOSwgdWFydCwgdHJhbnNwb3NlLCBjb21tYW5kcyk7CiAgICAKICAgIHJlc3VsdCA6PSBVNjUwMkFzc2VtYmxlKD9mb2xkQ29kZSk7CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiTWF0aFBpcGVyIHZlcnNpb24gPj0gLjI3NiIsIDEsIFRydWUpCiAgICB7CiAgICAgICAgU3RyaW5nVG9OdW1iZXIoVmVyc2lvbigpKSA+PT8gLjI3NjsKICAgIH0gICAgCiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiVGhlIGNvZGUgY29udGFpbnMgbm8gc3ludGF4IGVycm9ycyIsIDEsIFRydWUpIAogICAgewogICAgICAgIExlbmd0aChyZXN1bHQpID4/IDE7CiAgICB9CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIElmKExlbmd0aChyZXN1bHQpID4/IDEpCiAgICB7CiAgICAgICAgdWFydCA6PSBKYXZhQ2FsbCgib3JnLm1hdGhwaXBlci5pZGUudTY1MDIuRU1VNjU1MSIsImdldEluc3RhbmNlIik7CiAgICAgICAgSmF2YUNhbGwodWFydCwgInRleHRBcmVhQ2xlYXIiKTsKICAgICAgICAKICAgICAgICBVNjUwMlJlc2V0KCk7CiAgICAgICAgCiAgICAgICAgVTY1MDJGaWxsKCIyMDAiaGV4LCAiNjAwImhleCwgIDApOwogICAgICAgIAogICAgICAgIHMxOSA6PSByZXN1bHRbMl07CiAgICAgICAgCiAgICAgICAgYW5hbHlzaXMgOj0gVTY1MDJDb252ZXJ0SmF2YUxpc3QocmVzdWx0WzRdKTsKICAgICAgICAKICAgICAgICB0cmFuc3Bvc2UgOj0gVHJhbnNwb3NlKGFuYWx5c2lzKTsKICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgdHdvIE9SRyBjb21tYW5kcyIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgTGVuZ3RoKGNvbW1hbmRzIDo9IFU2NTAyRmluZE9wZXJhdG9ycyhhbmFseXNpcywgIk9SRyIpKSA9PyAyOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gc3RhcnRzIGF0IDAyMDBoIGluIG1lbW9yeSIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgY29tbWFuZHNbMV1bNF0gPT8gIjAyMDAiOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHRhYmxlIHN0YXJ0cyBhdCAwNTAwaCBpbiBtZW1vcnkiLCAxLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIGNvbW1hbmRzWzJdWzRdID0/ICIwNTAwIjsKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAKICAgICAgICBGb2xkR3JhZGUoIlRoZSByZXN1bHQgdGFibGUgaXMgbm90IGxvYWRlZCBpbnRvIG1lbW9yeSB3aGVuIHRoZSBwcm9ncmFtIGlzIGxvYWRlZCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgVTY1MDJEdW1wKCI1MDAiaGV4LCAiNTA5ImhleCwgKSAhPT8gWzk2LDExNiwyMzMsMTksMjA3LDIwMSwxNDksMTk4LDE3NCwxNl07CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgcHJvZ3JhbSB1c2VzIGEgbG9vcCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQkNDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCQ1MiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJFUSIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQk5FIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCTUkiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJQTCIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQlZDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCVlMiKSA+PyAwOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gZG9lcyBub3QgdXNlIGFueSBBREMgaW5zdHJ1Y3Rpb25zIiwgMSwgVHJ1ZSkgCiAgICAgICAgewogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJBREMiKSA9PyAwOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgdGhyZWUgSU5DIGNvbW1hbmQgdGhhdCB1c2VzIEFic29sdXRlLFggYWRkcmVzc2luZyBtb2RlIiwgMywgVHJ1ZSkgCiAgICAgICAgewogICAgICAgICAgICBMb2NhbChyZXN1bHQpOwogICAgICAgICAgICAKICAgICAgICAgICAgcmVzdWx0IDo9IEZhbHNlOwogICAgCiAgICAgICAgICAgIGNvbW1hbmRzIDo9IFU2NTAyRmluZE9wZXJhdG9ycyhhbmFseXNpcywgIklOQyIpOwogICAgICAgICAgICAKICAgICAgICAgICAgSWYoTGVuZ3RoKGNvbW1hbmRzKSA+PyAwKQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBGb3JFYWNoKGNvbW1hbmQsIGNvbW1hbmRzKQogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgIElmKFN0cmluZ1N0YXJ0c1dpdGg/KGNvbW1hbmRbNl0sICJGRSIpKQogICAgICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAgICAgcmVzdWx0IDo9IFRydWU7CiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICByZXN1bHQ7CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgY29ycmVjdCByZXN1bHQgaXMgcGxhY2VkIGludG8gYWRkcmVzcyAwNTAwaCIsIDUsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgdWFydCA6PSBKYXZhQ2FsbCgib3JnLm1hdGhwaXBlci5pZGUudTY1MDIuRU1VNjU1MSIsImdldEluc3RhbmNlIik7CiAgICAgICAgICAgIAogICAgICAgICAgICBVNjUwMlJlc2V0KCk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsIkwiICsgVW5pY29kZVRvU3RyaW5nKDEzKSk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsIFRvU3RyaW5nKHMxOSkpOwogICAgICAgICAgICAKICAgICAgICAgICAgVTY1MDJTZXRNb25pdG9yTm90UmVhZHkoKTsgV2hpbGUoIT8gVTY1MDJNb25pdG9yUmVhZHk/KCkpIERlbGF5KDEwMCk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsICJnIDAyMDAiICsgVW5pY29kZVRvU3RyaW5nKDEzKSk7CiAgICAgICAgICAgIAogICAgICAgICAgICBVNjUwMlNldE1vbml0b3JOb3RSZWFkeSgpOyBXaGlsZSghPyBVNjUwMk1vbml0b3JSZWFkeT8oKSkgRGVsYXkoMTAwKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIFU2NTAyRHVtcCgiNTAwImhleCwgIjUwOSJoZXgsICkgPT8gWzk2LDExNiwyMzMsMTksMjA3LDIwMSwxNDksMTk4LDE3NCwxNl07CiAgICAgICAgfQogICAgfQp9CiAK
+
+%/info
+
+%info,parentFoldType="uasm65_grade",parent="Problem 3",sequence="103",timestamp="2019-02-26 20:36:10.043",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶CnsKICAgIExvY2FsKHJlc3VsdCwgYW5hbHlzaXMsIHMxOSwgdWFydCwgdHJhbnNwb3NlLCBjb21tYW5kcyk7CiAgICAKICAgIHJlc3VsdCA6PSBVNjUwMkFzc2VtYmxlKD9mb2xkQ29kZSk7CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiTWF0aFBpcGVyIHZlcnNpb24gPj0gLjI3NiIsIDEsIFRydWUpCiAgICB7CiAgICAgICAgU3RyaW5nVG9OdW1iZXIoVmVyc2lvbigpKSA+PT8gLjI3NjsKICAgIH0gICAgCiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIEZvbGRHcmFkZSgiVGhlIGNvZGUgY29udGFpbnMgbm8gc3ludGF4IGVycm9ycyIsIDEsIFRydWUpIAogICAgewogICAgICAgIExlbmd0aChyZXN1bHQpID4/IDE7CiAgICB9CiAgICAKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAKICAgIElmKExlbmd0aChyZXN1bHQpID4/IDEpCiAgICB7CiAgICAgICAgdWFydCA6PSBKYXZhQ2FsbCgib3JnLm1hdGhwaXBlci5pZGUudTY1MDIuRU1VNjU1MSIsImdldEluc3RhbmNlIik7CiAgICAgICAgSmF2YUNhbGwodWFydCwgInRleHRBcmVhQ2xlYXIiKTsKICAgICAgICAKICAgICAgICBVNjUwMlJlc2V0KCk7CiAgICAgICAgCiAgICAgICAgVTY1MDJGaWxsKCIyMDAiaGV4LCAiNjAwImhleCwgIDApOwogICAgICAgIAogICAgICAgIHMxOSA6PSByZXN1bHRbMl07CiAgICAgICAgCiAgICAgICAgYW5hbHlzaXMgOj0gVTY1MDJDb252ZXJ0SmF2YUxpc3QocmVzdWx0WzRdKTsKICAgICAgICAKICAgICAgICB0cmFuc3Bvc2UgOj0gVHJhbnNwb3NlKGFuYWx5c2lzKTsKICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgdHdvIE9SRyBjb21tYW5kcyIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgTGVuZ3RoKGNvbW1hbmRzIDo9IFU2NTAyRmluZE9wZXJhdG9ycyhhbmFseXNpcywgIk9SRyIpKSA9PyAyOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gc3RhcnRzIGF0IDAyMDBoIGluIG1lbW9yeSIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgY29tbWFuZHNbMV1bNF0gPT8gIjAyMDAiOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHRhYmxlIHN0YXJ0cyBhdCAwNTAwaCBpbiBtZW1vcnkiLCAxLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIGNvbW1hbmRzWzJdWzRdID0/ICIwNTAwIjsKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAKICAgICAgICBGb2xkR3JhZGUoIlRoZSByZXN1bHQgdGFibGUgaXMgbm90IGxvYWRlZCBpbnRvIG1lbW9yeSB3aGVuIHRoZSBwcm9ncmFtIGlzIGxvYWRlZCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgVTY1MDJEdW1wKCI1MDAiaGV4LCAiNTA5ImhleCwgKSAhPT8gWzExMyw5MywxNiwyMzAsMTk4LDIwNCwxOTUsMTQ2LDEzLDE3MV07CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgcHJvZ3JhbSB1c2VzIGEgbG9vcCIsIDEsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQkNDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCQ1MiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJFUSIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQk5FIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCTUkiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJQTCIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQlZDIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCVlMiKSA+PyAwOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gY29udGFpbnMgYXQgbGVhc3QgdHdvIGluc3RydWN0aW9ucyB0aGF0IHVzZSBBYnNvbHV0ZSxYIGFkZHJlc3NpbmcgbW9kZSIsIDMsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgTG9jYWwoYWJzb2x1dGVYQ291bnQpOwogICAgICAgICAgICAKICAgICAgICAgICAgYWJzb2x1dGVYQ291bnQgOj0gMDsKICAgIAogICAgICAgICAgICBGb3JFYWNoKGNvbW1hbmQsIGFuYWx5c2lzKQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBJZihjb21tYW5kWzNdICE9PyAiREJUIiAmPyBMZW5ndGgoY29tbWFuZFs2XSkgPj8gMSkKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICBJZihCaXRBbmQoU3RyaW5nU3Vic3RyaW5nKGNvbW1hbmRbNl0sIDEsIDIpIGhleCwgIjFDIiBoZXgpID0/ICIxQyIgaGV4KQogICAgICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAgICAgYWJzb2x1dGVYQ291bnQrKzsKICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGFic29sdXRlWENvdW50ID4/IDE7CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgY29ycmVjdCByZXN1bHQgaXMgcGxhY2VkIGludG8gYWRkcmVzcyAwNTAwaCIsIDUsIFRydWUpIAogICAgICAgIHsKICAgICAgICAgICAgdWFydCA6PSBKYXZhQ2FsbCgib3JnLm1hdGhwaXBlci5pZGUudTY1MDIuRU1VNjU1MSIsImdldEluc3RhbmNlIik7CiAgICAgICAgICAgIAogICAgICAgICAgICBVNjUwMlJlc2V0KCk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsIkwiICsgVW5pY29kZVRvU3RyaW5nKDEzKSk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsIFRvU3RyaW5nKHMxOSkpOwogICAgICAgICAgICAKICAgICAgICAgICAgVTY1MDJTZXRNb25pdG9yTm90UmVhZHkoKTsgV2hpbGUoIT8gVTY1MDJNb25pdG9yUmVhZHk/KCkpIERlbGF5KDEwMCk7CiAgICAgICAgICAgIAogICAgICAgICAgICBKYXZhQ2FsbCh1YXJ0LCAic2VuZCIsICJnIDAyMDAiICsgVW5pY29kZVRvU3RyaW5nKDEzKSk7CiAgICAgICAgICAgIAogICAgICAgICAgICBVNjUwMlNldE1vbml0b3JOb3RSZWFkeSgpOyBXaGlsZSghPyBVNjUwMk1vbml0b3JSZWFkeT8oKSkgRGVsYXkoMTAwKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIFU2NTAyRHVtcCgiNTAwImhleCwgIjUwOSJoZXgsICkgPT8gWzExMyw5MywxNiwyMzAsMTk4LDIwNCwxOTUsMTQ2LDEzLDE3MV07CiAgICAgICAgfQogICAgfQp9CiAK
+
+%/info
+
+%info,parentFoldType="uasm65_grade",parent="Problem 4",sequence="104",timestamp="2019-02-26 20:36:20.534",username="Brumo",hostname="DESKTOP-UQTPVC7",hostaddresses="146.85.226.132",mpversion=".276"
+¶CnsKICAgIExvY2FsKHJlc3VsdCwgYW5hbHlzaXMsIHMxOSwgdWFydCwgdHJhbnNwb3NlLCBjb21tYW5kcywgdG9vTG9uZ1RpbWUpOwogICAgCiAgICByZXN1bHQgOj0gVTY1MDJBc3NlbWJsZSg/Zm9sZENvZGUpOwogICAgCiAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgCiAgICBGb2xkR3JhZGUoIk1hdGhQaXBlciB2ZXJzaW9uID49IC4yNzYiLCAxLCBUcnVlKQogICAgewogICAgICAgIFN0cmluZ1RvTnVtYmVyKFZlcnNpb24oKSkgPj0/IC4yNzY7CiAgICB9ICAgIAogICAgCiAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgCiAgICBGb2xkR3JhZGUoIlRoZSBjb2RlIGNvbnRhaW5zIG5vIHN5bnRheCBlcnJvcnMiLCAxLCBUcnVlKSAKICAgIHsKICAgICAgICBMZW5ndGgocmVzdWx0KSA+PyAxOwogICAgfQogICAgCiAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgCiAgICBJZihMZW5ndGgocmVzdWx0KSA+PyAxKQogICAgewogICAgICAgIHVhcnQgOj0gSmF2YUNhbGwoIm9yZy5tYXRocGlwZXIuaWRlLnU2NTAyLkVNVTY1NTEiLCJnZXRJbnN0YW5jZSIpOwogICAgICAgIAogICAgICAgIEphdmFDYWxsKHVhcnQsICJ0ZXh0QXJlYUNsZWFyIik7CiAgICAgICAgCiAgICAgICAgVTY1MDJSZXNldCgpOwogICAgICAgIAogICAgICAgIFU2NTAyRmlsbCgiMjAwImhleCwgIjYwMCJoZXgsICAwKTsKICAgICAgICAKICAgICAgICBzMTkgOj0gcmVzdWx0WzJdOwogICAgICAgIAogICAgICAgIGFuYWx5c2lzIDo9IFU2NTAyQ29udmVydEphdmFMaXN0KHJlc3VsdFs0XSk7CiAgICAgICAgCiAgICAgICAgdHJhbnNwb3NlIDo9IFRyYW5zcG9zZShhbmFseXNpcyk7CiAgICAgICAgCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAKICAgICAgICBGb2xkR3JhZGUoIlRoZSBwcm9ncmFtIGNvbnRhaW5zIHR3byBPUkcgY29tbWFuZHMiLCAxLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIExlbmd0aChjb21tYW5kcyA6PSBVNjUwMkZpbmRPcGVyYXRvcnMoYW5hbHlzaXMsICJPUkciKSkgPT8gMjsKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAKICAgICAgICBGb2xkR3JhZGUoIlRoZSBwcm9ncmFtIHN0YXJ0cyBhdCAwMjAwaCBpbiBtZW1vcnkiLCAxLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIGNvbW1hbmRzWzFdWzRdID0/ICIwMjAwIjsKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAKICAgICAgICBGb2xkR3JhZGUoIlRoZSB0YWJsZSBzdGFydHMgYXQgMDUwMGggaW4gbWVtb3J5IiwgMSwgVHJ1ZSkgCiAgICAgICAgewogICAgICAgICAgICBjb21tYW5kc1syXVs0XSA9PyAiMDUwMCI7CiAgICAgICAgfQogICAgICAgIAogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgCiAgICAgICAgRm9sZEdyYWRlKCJUaGUgcmVzdWx0IHRhYmxlIGlzIG5vdCBsb2FkZWQgaW50byBtZW1vcnkgd2hlbiB0aGUgcHJvZ3JhbSBpcyBsb2FkZWQiLCAxLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIFU2NTAyRHVtcCgiNTAwImhleCwgIjUwOSJoZXgsICkgIT0/IFsxOTUsMTcxLDEzLDkzLDExMywyMzAsMTYsMjA0LDE5OCwxNDZdOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIHByb2dyYW0gdXNlcyBhIGxvb3AiLCAxLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJDQyIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQkNTIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCRVEiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJORSIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQk1JIikgPj8gMCB8PwogICAgICAgICAgICBDb3VudCh0cmFuc3Bvc2VbM10sICJCUEwiKSA+PyAwIHw/CiAgICAgICAgICAgIENvdW50KHRyYW5zcG9zZVszXSwgIkJWQyIpID4/IDAgfD8KICAgICAgICAgICAgQ291bnQodHJhbnNwb3NlWzNdLCAiQlZTIikgPj8gMDsKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAKICAgICAgICBGb2xkR3JhZGUoIlRoZSBwcm9ncmFtIGNvbnRhaW5zIGF0IGxlYXN0IHR3byBpbnN0cnVjdGlvbnMgdGhhdCB1c2UgQWJzb2x1dGUsWCBhZGRyZXNzaW5nIG1vZGUiLCAzLCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIExvY2FsKGFic29sdXRlWENvdW50KTsKICAgICAgICAgICAgCiAgICAgICAgICAgIGFic29sdXRlWENvdW50IDo9IDA7CiAgICAKICAgICAgICAgICAgRm9yRWFjaChjb21tYW5kLCBhbmFseXNpcykKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgSWYoY29tbWFuZFszXSAhPT8gIkRCVCIgJj8gTGVuZ3RoKGNvbW1hbmRbNl0pID4/IDEpCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgSWYoQml0QW5kKFN0cmluZ1N1YnN0cmluZyhjb21tYW5kWzZdLCAxLCAyKSBoZXgsICIxQyIgaGV4KSA9PyAiMUMiIGhleCkKICAgICAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgICAgIGFic29sdXRlWENvdW50Kys7CiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CgogICAgICAgICAgICBhYnNvbHV0ZVhDb3VudCA+PyAxOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIAogICAgICAgIEZvbGRHcmFkZSgiVGhlIGNvcnJlY3QgcmVzdWx0IGlzIHBsYWNlZCBpbnRvIGFkZHJlc3MgMDUwMGgiLCA1LCBUcnVlKSAKICAgICAgICB7CiAgICAgICAgICAgIHVhcnQgOj0gSmF2YUNhbGwoIm9yZy5tYXRocGlwZXIuaWRlLnU2NTAyLkVNVTY1NTEiLCJnZXRJbnN0YW5jZSIpOwogICAgICAgICAgICAKICAgICAgICAgICAgVTY1MDJSZXNldCgpOwogICAgICAgICAgICAKICAgICAgICAgICAgSmF2YUNhbGwodWFydCwgInNlbmQiLCJMIiArIFVuaWNvZGVUb1N0cmluZygxMykpOwogICAgICAgICAgICAKICAgICAgICAgICAgSmF2YUNhbGwodWFydCwgInNlbmQiLCBUb1N0cmluZyhzMTkpKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIFU2NTAyU2V0TW9uaXRvck5vdFJlYWR5KCk7IFdoaWxlKCE/IFU2NTAyTW9uaXRvclJlYWR5PygpKSBEZWxheSgxMDApOwogICAgICAgICAgICAKICAgICAgICAgICAgSmF2YUNhbGwodWFydCwgInNlbmQiLCAiZyAwMjAwIiArIFVuaWNvZGVUb1N0cmluZygxMykpOwogICAgICAgICAgICAKICAgICAgICAgICAgVTY1MDJTZXRNb25pdG9yTm90UmVhZHkoKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIHRvb0xvbmdUaW1lIDo9IFN5c3RlbVRpbWVyKCkgKyA1MDAwOwogICAgICAgICAgICAKICAgICAgICAgICAgV2hpbGUoIT8gVTY1MDJNb25pdG9yUmVhZHk/KCkpCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIElmKFN5c3RlbVRpbWVyKCkgPj0/IHRvb0xvbmdUaW1lKQogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgIEV4Y2VwdGlvblRocm93KCJUSU1FT1VUIiwgIlRoZSBwcm9ncmFtIHdhcyB0YWtpbmcgdG9vIGxvbmcgdG8gcnVuLiIpOwogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgRGVsYXkoMTAwKTsKICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgVTY1MDJEdW1wKCI1MDAiaGV4LCAiNTA5ImhleCwgKSA9PyBbMTk1LDE3MSwxMyw5MywxMTMsMjMwLDE2LDIwNCwxOTgsMTQ2XTsKICAgICAgICB9CiAgICB9Cn0KIAo=
+
+%/info
+

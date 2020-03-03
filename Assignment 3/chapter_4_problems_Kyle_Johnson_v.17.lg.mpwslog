@@ -1,0 +1,415 @@
+%info,parentFoldType="mathpiper",parentFoldSubtype="problem",parent="Problem 0",sequence="1",timestamp="2019-02-05 01:10:08.341",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+¶[¶["firstName", "Kyle"],¶["lastName", "Johnson"],¶["ssuIDNumber", "264694"],¶];
+
+%/info
+
+%info,parentFoldType="mathpiper_grade",parent="Problem 0",sequence="2",timestamp="2019-02-05 01:10:12.466",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+Not logged.
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:15:16.29",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+adc #2d
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:15:17.023",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+adc #2d
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:15:17.909",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+adc #2d
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:15:18.801",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+adc #2d
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="3",timestamp="2019-02-05 01:16:26.351",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+¶ org 0200h¶ ¶ lda #1d¶ adc #2d¶ adc #3d¶ adc #4d¶ adc #5d¶ adc #6d¶ sta 0350h¶ brk¶ ¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="4",timestamp="2019-02-05 01:17:31.697",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+      	S00700005541534DC2¶      	S1130200A901690269036904690569068D5003003F¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65_grade",parent="Problem 1",sequence="5",timestamp="2019-02-05 01:19:54.853",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+¶{¶    Local(result, uart, s19, lst, symbolTable);¶    ¶    U6502Reset();¶    U6502Fill("200"hex, "400"hex,  0);¶    ¶    result := U6502Assemble(?foldCode);¶    ¶    // --------------------------------------------------------¶    ¶    FoldGrade("MathPiper version >= .259", 1, True)¶    {¶        StringToNumber(Version()) >=? .259;¶    }    ¶    ¶    // --------------------------------------------------------¶    ¶    FoldGrade("The code contains no syntax errors", 1, True) ¶    {¶        Length(result) >? 1;¶    }¶    ¶    // --------------------------------------------------------¶    ¶    If(Length(result) >? 1)¶    {¶        U6502Reset();¶        ¶        U6502Fill("200"hex, "400"hex,  0);¶        ¶        s19 := result[2];¶        ¶        analysis := U6502ConvertJavaList(result[4]);¶        ¶        transpose := Transpose(analysis);¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The program contains one ORG command", 1, True) ¶        {¶            Length(commands := U6502FindOperators(analysis, "ORG")) =? 1;¶        }¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The program starts at 0200h in memory", 1, True) ¶        {¶            commands[1][4] =? "0200";¶        }  ¶    ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The correct result is placed in address 350h", 1, True) ¶        {¶            [lst, s19, symbolTable] := U6502Assemble(?foldCode);¶            uart := JavaCall("org.mathpiper.ide.u6502.EMU6551","getInstance");¶            U6502Reset();¶            JavaCall(uart, "send","L" + UnicodeToString(13));¶            ¶            JavaCall(uart, "send", ToString(s19));¶            ¶            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);¶            ¶            JavaCall(uart, "send", "g 0200" + UnicodeToString(13));¶            ¶            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);¶            ¶            U6502Dump("350"hex) =? "15"hex; ¶        }¶    }¶}
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 2",sequence="6",timestamp="2019-02-05 01:23:05.908",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+Hint("CiAgICBvcmcgMDIwMGgKICAgCjsgU3RvcmUgdGhlIG51bWJlcnMgMSB0aG9yZ2ggNiBpbiBtZW1vcnkgc3RhcnRpbmcgYXQgYWRkcmVzcyAwMzUwaAogICAgbGRhICMxZAogICAgc3RhIDAzNTBoCiAgIAogICAgbGRhICMyZAogICAgc3RhIDAzNTFoCiAgICAKICAgIGxkYSAjM2QKICAgIHN0YSAwMzUyaAogICAgCiAgICBsZGEgIzRkCiAgICBzdGEgMDM1M2gKICAgIAogICAgbGRhICM1ZAogICAgc3RhIDAzNTRoCiAgICAKICAgIGxkYSAjNmQKICAgIHN0YSAwMzU1aAogICAKOyBSZXZlcnNlIHRoZSBudW1iZXJzIGluIG1lbW9yeSBieSBjb3B5aW5nIHRoZW0uIE1lbW9yeQo7IGxvY2F0aW9uIDA0MDBoIGlzIHVzZWQgZm9yIHRlbXBvcmFyeSBzdG9yYWdlLgoKOyBFeGNoYW5nZSAzNTBoIGFuZCAzNTVoLgogICAgbGRhIDAzNTBoCiAgICBzdGEgMDQwMGgKICAgCiAgICBsZGEgMDM1NWgKICAgIHN0YSAwMzUwaAogICAKICAgIGxkYSAwNDAwaAogICAgc3RhIDAzNTVoCiAgICAKOyBFeGNoYW5nZSAzNTFoIGFuZCAzNTRoLgogICAgbGRhIDAzNTFoCiAgICBzdGEgMDQwMGgKICAgCiAgICBsZGEgMDM1NGgKICAgIHN0YSAwMzUxaAogICAKICAgIGxkYSAwNDAwaAogICAgc3RhIDAzNTRoCiAgICAKOyBFeGNoYW5nZSAzNTJoIGFuZCAzNTRoLgogICAgbGRhIDAzNTJoCiAgICBzdGEgMDQwMGgKICAgCiAgICBsZGEgMDM1M2gKICAgIHN0YSAwMzUyaAogICAKICAgIGxkYSAwNDAwaAogICAgc3RhIDAzNTNoCiAgIAogICAgYnJrCiAgIAogICAgZW5kCiAgICAgCg==");
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:23:38.096",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+lda #1d
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:23:41.82",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+lda #1d
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:23:42.802",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+lda #1d
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:23:43.584",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+lda #1d
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:23:45.072",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+lda #1d
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:26:49.581",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+sta 0350
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:26:50.146",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+sta 0350
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:26:50.792",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+sta 0350
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:26:51.574",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+sta 0350
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:26:53.619",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+sta 0350
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:32:39.353",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+ lda #1d¶ sta 0350h¶ lda #2d¶ sta 0351h¶ lda #3d¶ sta 0352h¶ lda #4d¶ sta 0353h¶ lda #5d¶ sta 0354h¶ lda #6d¶ sta 0355h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:32:46.64",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+0350h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:32:50.097",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+0351h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:32:52.558",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+0352h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:32:55.732",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+0353h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:32:58.739",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+0354h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:33:01.59",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+0355h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:39:29.808",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+ lda 0351h¶ sta 0390h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:39:45.836",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+ lda 0351h¶ sta 0390h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:40:03.853",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+ lda 0351h¶ sta 0390h
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 2",sequence="7",timestamp="2019-02-05 01:40:38.891",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+¶ org 0200h¶ lda #1d¶ sta 0350h¶ lda #2d¶ sta 0351h¶ lda #3d¶ sta 0352h¶ lda #4d¶ sta 0353h¶ lda #5d¶ sta 0354h¶ lda #6d¶ sta 0355h¶ ¶ lda 0350h¶ sta 0390h¶ lda 0355h¶ sta 0350h¶ lda 0390h¶ sta 0355h¶ lda 0351h¶ sta 0390h¶ lda 0354h¶ sta 0351h¶ lda 0390h¶ sta 0354h¶ lda 0352h¶ sta 0390h¶ lda 0353h¶ sta 0352h¶ lda 0390h¶ sta 0353h¶ ¶ brk¶ ¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="8",timestamp="2019-02-05 01:40:41.85",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+      	S00700005541534DC2¶      	S1170200A9018D5003A9028D5103A9038D5203A9048D5303B2¶      	S1170214A9058D5403A9068D5503AD50038D9003AD55038DFA¶      	S11702285003AD90038D5503AD51038D9003AD54038D510340¶      	S117023CAD90038D5403AD52038D9003AD53038D5203AD9042¶      	S1080250038D530300BF¶      	S9030000FC
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:42:27.566",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+ lda 0350h¶ sta 0401h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:42:36.812",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+lda 0350h¶ sta 0401h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:42:37.258",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+lda 0350h¶ sta 0401h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:42:37.684",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+lda 0350h¶ sta 0401h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:42:38.114",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+lda 0350h¶ sta 0401h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:43:46.394",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+lda¶sta¶¶lda¶sta¶¶lda¶sta¶¶lda¶sta¶¶lda¶sta¶¶lda¶sta
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:44:13.128",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+0406h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:44:17.162",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+0405h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:44:20.424",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+0404h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:44:24.409",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+0403h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:44:28.353",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+ 0402h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:44:31.621",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+ 0401h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:44:41.072",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+ 0350h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:44:46.471",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+ 0351h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:44:52.014",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+ 0352h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:44:58.925",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+ 0353h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:45:02.829",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+ 0354h
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:45:07.295",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+ 0355h
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 2",sequence="9",timestamp="2019-02-05 01:45:16.477",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+¶ org 0200h¶ lda #1d¶ sta 0350h¶ lda #2d¶ sta 0351h¶ lda #3d¶ sta 0352h¶ lda #4d¶ sta 0353h¶ lda #5d¶ sta 0354h¶ lda #6d¶ sta 0355h¶ ¶ lda 0350h¶ sta 0401h¶ ¶ lda 0351h¶ sta 0402h¶ ¶ lda 0352h¶ sta 0403h¶ ¶ lda 0353h¶ sta 0404h¶ ¶ lda 0354h¶ sta 0405h¶ ¶ lda 0355h¶ sta 0406h¶ ¶ ¶ lda 0406h¶ sta 0350h¶¶ lda 0405h¶ sta 0351h¶¶ lda 0404h¶ sta 0352h¶¶ lda 0403h¶ sta 0353h¶¶ lda 0402h¶ sta 0354h¶¶ lda 0401h¶ sta 0355h¶¶ ¶ brk¶ ¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="10",timestamp="2019-02-05 01:45:18.522",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+      	S00700005541534DC2¶      	S1170200A9018D5003A9028D5103A9038D5203A9048D5303B2¶      	S1170214A9058D5403A9068D5503AD50038D0104AD51038D8C¶      	S11702280204AD52038D0304AD53038D0404AD54038D0504F0¶      	S117023CAD55038D0604AD06048D5003AD05048D5103AD042F¶      	S1170250048D5203AD03048D5303AD02048D5403AD01048D43¶      	S10602645503003B¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65_grade",parent="Problem 2",sequence="11",timestamp="2019-02-05 01:45:39.6",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+¶{¶    Local(uart, s19, lst, symbolTable);¶    ¶    U6502Reset();¶    U6502Fill("200"hex, "400"hex,  0);¶    ¶    result := U6502Assemble(?foldCode);¶    ¶    // --------------------------------------------------------¶    ¶    FoldGrade("MathPiper version >= .259", 1, True)¶    {¶        StringToNumber(Version()) >=? .259;¶    }    ¶    ¶    // --------------------------------------------------------¶    ¶    FoldGrade("The code contains no syntax errors", 1, True) ¶    {¶        Length(result) >? 1;¶    }¶    ¶    // --------------------------------------------------------¶    ¶    If(Length(result) >? 1)¶    {¶        U6502Reset();¶        ¶        U6502Fill("200"hex, "400"hex,  0);¶        ¶        s19 := result[2];¶        ¶        analysis := U6502ConvertJavaList(result[4]);¶        ¶        transpose := Transpose(analysis);¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The program contains one ORG command", 1, True) ¶        {¶            Length(commands := U6502FindOperators(analysis, "ORG")) =? 1;¶        }¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The program starts at 0200h in memory", 1, True) ¶        {¶            commands[1][4] =? "0200";¶        }   ¶        ¶        // --------------------------------------------------------¶    ¶        FoldGrade("The correct result is placed in addresses 350h-355h", 1, True) ¶        {¶            [lst, s19, symbolTable] := U6502Assemble(?foldCode);¶            uart := JavaCall("org.mathpiper.ide.u6502.EMU6551","getInstance");¶            U6502Reset();¶            JavaCall(uart, "send","L" + UnicodeToString(13));¶            ¶            JavaCall(uart, "send", ToString(s19));¶            ¶            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);¶            ¶            JavaCall(uart, "send", "g 0200" + UnicodeToString(13));¶            ¶            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);¶            ¶            U6502Dump("350"hex, "355"hex, ) =? [6,5,4,3,2,1]; ¶        }¶    }¶}
+
+%/info
+
+%info,parentFoldType="uasm65_grade",parent="Problem 2",sequence="12",timestamp="2019-02-05 01:47:06.52",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+¶{¶    Local(uart, s19, lst, symbolTable);¶    ¶    U6502Reset();¶    U6502Fill("200"hex, "400"hex,  0);¶    ¶    result := U6502Assemble(?foldCode);¶    ¶    // --------------------------------------------------------¶    ¶    FoldGrade("MathPiper version >= .259", 1, True)¶    {¶        StringToNumber(Version()) >=? .259;¶    }    ¶    ¶    // --------------------------------------------------------¶    ¶    FoldGrade("The code contains no syntax errors", 1, True) ¶    {¶        Length(result) >? 1;¶    }¶    ¶    // --------------------------------------------------------¶    ¶    If(Length(result) >? 1)¶    {¶        U6502Reset();¶        ¶        U6502Fill("200"hex, "400"hex,  0);¶        ¶        s19 := result[2];¶        ¶        analysis := U6502ConvertJavaList(result[4]);¶        ¶        transpose := Transpose(analysis);¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The program contains one ORG command", 1, True) ¶        {¶            Length(commands := U6502FindOperators(analysis, "ORG")) =? 1;¶        }¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The program starts at 0200h in memory", 1, True) ¶        {¶            commands[1][4] =? "0200";¶        }   ¶        ¶        // --------------------------------------------------------¶    ¶        FoldGrade("The correct result is placed in addresses 350h-355h", 1, True) ¶        {¶            [lst, s19, symbolTable] := U6502Assemble(?foldCode);¶            uart := JavaCall("org.mathpiper.ide.u6502.EMU6551","getInstance");¶            U6502Reset();¶            JavaCall(uart, "send","L" + UnicodeToString(13));¶            ¶            JavaCall(uart, "send", ToString(s19));¶            ¶            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);¶            ¶            JavaCall(uart, "send", "g 0200" + UnicodeToString(13));¶            ¶            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);¶            ¶            U6502Dump("350"hex, "355"hex, ) =? [6,5,4,3,2,1]; ¶        }¶    }¶}
+
+%/info
+
+%info,subtype="paste",timestamp="2019-02-05 01:48:46.605",username="Brumo",hostname="DESKTOP-2HHTJAH",mpversion=".267"
+ org 0200h¶ lda #1d¶ sta 0350h¶ lda #2d¶ sta 0351h¶ lda #3d¶ sta 0352h¶ lda #4d¶ sta 0353h¶ lda #5d¶ sta 0354h¶ lda #6d¶ sta 0355h
+
+%/info
+
+%info,parentFoldType="mathpiper",parentFoldSubtype="hint",parent="Problem 3",sequence="13",timestamp="2019-02-05 01:48:53.727",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+Hint("CiAgICBvcmcgMDIwMGgKICAgIAo7IFN0b3JlIHRoZSBudW1iZXJzIDEgdGhvcmdoIDYgaW4gbWVtb3J5IHN0YXJ0aW5nIGF0IGFkZHJlc3MgMDM1MGgKICAgIGxkYSAjMWQKICAgIHN0YSAwMzUwaAogICAKICAgIGxkYSAjMmQKICAgIHN0YSAwMzUxaAogICAgCiAgICBsZGEgIzNkCiAgICBzdGEgMDM1MmgKICAgIAogICAgbGRhICM0ZAogICAgc3RhIDAzNTNoCiAgICAKICAgIGxkYSAjNWQKICAgIHN0YSAwMzU0aAogICAgCiAgICBsZGEgIzZkCiAgICBzdGEgMDM1NWgKICAgIAogICAKICAgIGxkeCAjMGQKbG9vcDoKICAgIGNsYwogICAgbGRhIDAzNTBoLHgKICAgIGFkYyAjNWQKICAgIHN0YSAwMzUwaCx4CiAgICBpbngKICAgIGNweCAjNmQKICAgIGJuZSBsb29wCiAgIAogICAgYnJrCiAgIAogICAgZW5kCiAgICAgCg==");
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 3",sequence="14",timestamp="2019-02-05 01:50:52.379",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+¶ org 0200h¶ ¶ lda #1d¶ sta 0350h¶ lda #2d¶ sta 0351h¶ lda #3d¶ sta 0352h¶ lda #4d¶ sta 0353h¶ lda #5d¶ sta 0354h¶ lda #6d¶ sta 0355h¶¶ ldx #0d¶ ¶loop:¶ clc lda 0350h,x¶ adc #5d¶ sta 0350h,x¶ inx¶ cpx #6d¶ bne loop¶ ¶ brk¶ ¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="15",timestamp="2019-02-05 01:50:55.605",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+      	S00700005541534DC2¶      	S1170200A9018D5003A9028D5103A9038D5203A9048D5303B2¶      	S1170214A9058D5403A9068D5503A2001869059D5003E8E0CC¶      	S107022806D0F50003¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65_grade",parent="Problem 3",sequence="16",timestamp="2019-02-05 01:52:32.258",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+¶{¶    Local(result, analysis, s19, uart, transpose, commands);¶    ¶    result := U6502Assemble(?foldCode);¶    ¶    // --------------------------------------------------------¶    ¶    FoldGrade("MathPiper version >= .259", 1, True)¶    {¶        StringToNumber(Version()) >=? .259;¶    }    ¶    ¶    // --------------------------------------------------------¶    ¶    FoldGrade("The code contains no syntax errors", 1, True) ¶    {¶        Length(result) >? 1;¶    }¶    ¶    // --------------------------------------------------------¶    ¶    If(Length(result) >? 1)¶    {¶        U6502Reset();¶        ¶        U6502Fill("200"hex, "400"hex,  0);¶        ¶        s19 := result[2];¶        ¶        analysis := U6502ConvertJavaList(result[4]);¶        ¶        transpose := Transpose(analysis);¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The program contains one ORG command", 1, True) ¶        {¶            Length(commands := U6502FindOperators(analysis, "ORG")) =? 1;¶        }¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The program starts at 0200h in memory", 1, True) ¶        {¶            commands[1][4] =? "0200";¶        }        ¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The program uses a loop", 1, True) ¶        {¶            Count(transpose[3], "BCC") >? 0 |?¶            Count(transpose[3], "BCS") >? 0 |?¶            Count(transpose[3], "BEQ") >? 0 |?¶            Count(transpose[3], "BNE") >? 0 |?¶            Count(transpose[3], "BMI") >? 0 |?¶            Count(transpose[3], "BPL") >? 0 |?¶            Count(transpose[3], "BVC") >? 0 |?¶            Count(transpose[3], "BVS") >? 0;¶        }¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The correct result is placed in addresses 350h-355h", 1, True) ¶        {¶            uart := JavaCall("org.mathpiper.ide.u6502.EMU6551","getInstance");¶            ¶            U6502Reset();¶            ¶            JavaCall(uart, "send","L" + UnicodeToString(13));¶            ¶            JavaCall(uart, "send", ToString(s19));¶            ¶            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);¶            ¶            JavaCall(uart, "send", "g 0200" + UnicodeToString(13));¶            ¶            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);¶            ¶            U6502Dump("350"hex, "355"hex) =? ["06"hex, "07"hex, "08"hex, "09"hex, "0A"hex, "0B"hex]; ¶        }¶    }¶}
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 3",sequence="17",timestamp="2019-02-05 01:54:14.425",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+¶ org 0200h¶ ¶ lda #1d¶ sta 0350h¶ lda #2d¶ sta 0351h¶ lda #3d¶ sta 0352h¶ lda #4d¶ sta 0353h¶ lda #5d¶ sta 0354h¶ lda #6d¶ sta 0355h¶¶ ldx #0d¶¶loop:¶ clc ¶ lda 0350h,x¶ adc #5d¶ sta 0350h,x¶ inx¶ cpx #6d¶ bne loop¶ ¶ brk¶ ¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="18",timestamp="2019-02-05 01:54:16.391",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+      	S00700005541534DC2¶      	S1170200A9018D5003A9028D5103A9038D5203A9048D5303B2¶      	S1170214A9058D5403A9068D5503A20018BD500369059D5087¶      	S10A022803E8E006D0F20038¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="s19",sequence="19",timestamp="2019-02-05 01:54:32.594",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+      	S00700005541534DC2¶      	S1170200A9018D5003A9028D5103A9038D5203A9048D5303B2¶      	S1170214A9058D5403A9068D5503A20018BD500369059D5087¶      	S10A022803E8E006D0F20038¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 3",sequence="20",timestamp="2019-02-05 01:55:34.542",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+¶ org 0200h¶ ¶ lda #1d¶ sta 0350h¶ lda #2d¶ sta 0351h¶ lda #3d¶ sta 0352h¶ lda #4d¶ sta 0353h¶ lda #5d¶ sta 0354h¶ lda #6d¶ sta 0355h¶¶ ldx #0d¶¶loop:¶ clc ¶ lda 0350h,x¶ adc #5d¶ sta 0350h,x¶ inx¶ cpx #6d¶ bne loop¶ ¶ brk¶ ¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="21",timestamp="2019-02-05 01:55:37.604",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+      	S00700005541534DC2¶      	S1170200A9018D5003A9028D5103A9038D5203A9048D5303B2¶      	S1170214A9058D5403A9068D5503A20018BD500369059D5087¶      	S10A022803E8E006D0F20038¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65_grade",parent="Problem 3",sequence="22",timestamp="2019-02-05 01:55:58.95",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+¶{¶    Local(result, analysis, s19, uart, transpose, commands);¶    ¶    result := U6502Assemble(?foldCode);¶    ¶    // --------------------------------------------------------¶    ¶    FoldGrade("MathPiper version >= .259", 1, True)¶    {¶        StringToNumber(Version()) >=? .259;¶    }    ¶    ¶    // --------------------------------------------------------¶    ¶    FoldGrade("The code contains no syntax errors", 1, True) ¶    {¶        Length(result) >? 1;¶    }¶    ¶    // --------------------------------------------------------¶    ¶    If(Length(result) >? 1)¶    {¶        U6502Reset();¶        ¶        U6502Fill("200"hex, "400"hex,  0);¶        ¶        s19 := result[2];¶        ¶        analysis := U6502ConvertJavaList(result[4]);¶        ¶        transpose := Transpose(analysis);¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The program contains one ORG command", 1, True) ¶        {¶            Length(commands := U6502FindOperators(analysis, "ORG")) =? 1;¶        }¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The program starts at 0200h in memory", 1, True) ¶        {¶            commands[1][4] =? "0200";¶        }        ¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The program uses a loop", 1, True) ¶        {¶            Count(transpose[3], "BCC") >? 0 |?¶            Count(transpose[3], "BCS") >? 0 |?¶            Count(transpose[3], "BEQ") >? 0 |?¶            Count(transpose[3], "BNE") >? 0 |?¶            Count(transpose[3], "BMI") >? 0 |?¶            Count(transpose[3], "BPL") >? 0 |?¶            Count(transpose[3], "BVC") >? 0 |?¶            Count(transpose[3], "BVS") >? 0;¶        }¶        ¶        // --------------------------------------------------------¶        ¶        FoldGrade("The correct result is placed in addresses 350h-355h", 1, True) ¶        {¶            uart := JavaCall("org.mathpiper.ide.u6502.EMU6551","getInstance");¶            ¶            U6502Reset();¶            ¶            JavaCall(uart, "send","L" + UnicodeToString(13));¶            ¶            JavaCall(uart, "send", ToString(s19));¶            ¶            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);¶            ¶            JavaCall(uart, "send", "g 0200" + UnicodeToString(13));¶            ¶            U6502SetMonitorNotReady(); While(!? U6502MonitorReady?()) Delay(100);¶            ¶            U6502Dump("350"hex, "355"hex) =? ["06"hex, "07"hex, "08"hex, "09"hex, "0A"hex, "0B"hex]; ¶        }¶    }¶}
+
+%/info
+
+%info,parentFoldType="s19",sequence="1",timestamp="2019-02-05 01:58:44.287",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+      	S00700005541534DC2¶      	S1130200A901690269036904690569068D5003003F¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="2",timestamp="2019-02-05 01:58:57.326",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+¶ org 0200h¶ ¶ lda #1d¶ adc #2d¶ adc #3d¶ adc #4d¶ adc #5d¶ adc #6d¶ sta 0350h¶ brk¶ ¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="3",timestamp="2019-02-05 01:58:58.86",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+      	S00700005541534DC2¶      	S1130200A901690269036904690569068D5003003F¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="s19",sequence="4",timestamp="2019-02-05 01:59:09.472",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+      	S00700005541534DC2¶      	S1130200A901690269036904690569068D5003003F¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 1",sequence="5",timestamp="2019-02-05 01:59:48.678",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+¶ org 0200h¶ ¶ lda #1d¶ adc #2d¶ adc #3d¶ adc #4d¶ adc #5d¶ adc #6d¶ sta 0350h¶ brk¶ ¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="6",timestamp="2019-02-05 01:59:51.155",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+      	S00700005541534DC2¶      	S1130200A901690269036904690569068D5003003F¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 2",sequence="7",timestamp="2019-02-05 02:00:33.031",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+¶ org 0200h¶ lda #1d¶ sta 0350h¶ lda #2d¶ sta 0351h¶ lda #3d¶ sta 0352h¶ lda #4d¶ sta 0353h¶ lda #5d¶ sta 0354h¶ lda #6d¶ sta 0355h¶ ¶ lda 0350h¶ sta 0401h¶ ¶ lda 0351h¶ sta 0402h¶ ¶ lda 0352h¶ sta 0403h¶ ¶ lda 0353h¶ sta 0404h¶ ¶ lda 0354h¶ sta 0405h¶ ¶ lda 0355h¶ sta 0406h¶ ¶ ¶ lda 0406h¶ sta 0350h¶¶ lda 0405h¶ sta 0351h¶¶ lda 0404h¶ sta 0352h¶¶ lda 0403h¶ sta 0353h¶¶ lda 0402h¶ sta 0354h¶¶ lda 0401h¶ sta 0355h¶¶ ¶ brk¶ ¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="8",timestamp="2019-02-05 02:00:35.683",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+      	S00700005541534DC2¶      	S1170200A9018D5003A9028D5103A9038D5203A9048D5303B2¶      	S1170214A9058D5403A9068D5503AD50038D0104AD51038D8C¶      	S11702280204AD52038D0304AD53038D0404AD54038D0504F0¶      	S117023CAD55038D0604AD06048D5003AD05048D5103AD042F¶      	S1170250048D5203AD03048D5303AD02048D5403AD01048D43¶      	S10602645503003B¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="s19",sequence="9",timestamp="2019-02-05 02:00:43.334",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+      	S00700005541534DC2¶      	S1170200A9018D5003A9028D5103A9038D5203A9048D5303B2¶      	S1170214A9058D5403A9068D5503AD50038D0104AD51038D8C¶      	S11702280204AD52038D0304AD53038D0404AD54038D0504F0¶      	S117023CAD55038D0604AD06048D5003AD05048D5103AD042F¶      	S1170250048D5203AD03048D5303AD02048D5403AD01048D43¶      	S10602645503003B¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 2",sequence="10",timestamp="2019-02-05 02:01:58.735",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+¶ org 0200h¶ lda #1d¶ sta 0350h¶ lda #2d¶ sta 0351h¶ lda #3d¶ sta 0352h¶ lda #4d¶ sta 0353h¶ lda #5d¶ sta 0354h¶ lda #6d¶ sta 0355h¶ ¶ lda 0350h¶ sta 0401h¶ ¶ lda 0351h¶ sta 0402h¶ ¶ lda 0352h¶ sta 0403h¶ ¶ lda 0353h¶ sta 0404h¶ ¶ lda 0354h¶ sta 0405h¶ ¶ lda 0355h¶ sta 0406h¶ ¶ ¶ lda 0406h¶ sta 0350h¶¶ lda 0405h¶ sta 0351h¶¶ lda 0404h¶ sta 0352h¶¶ lda 0403h¶ sta 0353h¶¶ lda 0402h¶ sta 0354h¶¶ lda 0401h¶ sta 0355h¶¶ ¶ brk¶ ¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="11",timestamp="2019-02-05 02:02:02.147",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+      	S00700005541534DC2¶      	S1170200A9018D5003A9028D5103A9038D5203A9048D5303B2¶      	S1170214A9058D5403A9068D5503AD50038D0104AD51038D8C¶      	S11702280204AD52038D0304AD53038D0404AD54038D0504F0¶      	S117023CAD55038D0604AD06048D5003AD05048D5103AD042F¶      	S1170250048D5203AD03048D5303AD02048D5403AD01048D43¶      	S10602645503003B¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="s19",sequence="12",timestamp="2019-02-05 02:03:18.964",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+      	S00700005541534DC2¶      	S1170200A9018D5003A9028D5103A9038D5203A9048D5303B2¶      	S1170214A9058D5403A9068D5503AD50038D0104AD51038D8C¶      	S11702280204AD52038D0304AD53038D0404AD54038D0504F0¶      	S117023CAD55038D0604AD06048D5003AD05048D5103AD042F¶      	S1170250048D5203AD03048D5303AD02048D5403AD01048D43¶      	S10602645503003B¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="s19",sequence="13",timestamp="2019-02-05 02:03:33.954",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+      	S00700005541534DC2¶      	S1170200A9018D5003A9028D5103A9038D5203A9048D5303B2¶      	S1170214A9058D5403A9068D5503AD50038D0104AD51038D8C¶      	S11702280204AD52038D0304AD53038D0404AD54038D0504F0¶      	S117023CAD55038D0604AD06048D5003AD05048D5103AD042F¶      	S1170250048D5203AD03048D5303AD02048D5403AD01048D43¶      	S10602645503003B¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="s19",sequence="14",timestamp="2019-02-05 02:03:44.055",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+      	S00700005541534DC2¶      	S1170200A9018D5003A9028D5103A9038D5203A9048D5303B2¶      	S1170214A9058D5403A9068D5503AD50038D0104AD51038D8C¶      	S11702280204AD52038D0304AD53038D0404AD54038D0504F0¶      	S117023CAD55038D0604AD06048D5003AD05048D5103AD042F¶      	S1170250048D5203AD03048D5303AD02048D5403AD01048D43¶      	S10602645503003B¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="s19",sequence="23",timestamp="2019-02-05 02:15:14.524",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+      	S00700005541534DC2¶      	S1170200A9018D5003A9028D5103A9038D5203A9048D5303B2¶      	S1170214A9058D5403A9068D5503AD50038D0104AD51038D8C¶      	S11702280204AD52038D0304AD53038D0404AD54038D0504F0¶      	S117023CAD55038D0604AD06048D5003AD05048D5103AD042F¶      	S1170250048D5203AD03048D5303AD02048D5403AD01048D43¶      	S10602645503003B¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="s19",sequence="24",timestamp="2019-02-05 02:15:18.129",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+      	S00700005541534DC2¶      	S1170200A9018D5003A9028D5103A9038D5203A9048D5303B2¶      	S1170214A9058D5403A9068D5503AD50038D0104AD51038D8C¶      	S11702280204AD52038D0304AD53038D0404AD54038D0504F0¶      	S117023CAD55038D0604AD06048D5003AD05048D5103AD042F¶      	S1170250048D5203AD03048D5303AD02048D5403AD01048D43¶      	S10602645503003B¶      	S9030000FC
+
+%/info
+
+%info,parentFoldType="uasm65",parentFoldSubtype="problem",parent="Problem 3",sequence="25",timestamp="2019-02-05 02:17:12.072",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+¶ org 0200h¶ ¶ lda #1d¶ sta 0350h¶ lda #2d¶ sta 0351h¶ lda #3d¶ sta 0352h¶ lda #4d¶ sta 0353h¶ lda #5d¶ sta 0354h¶ lda #6d¶ sta 0355h¶¶ ldx #0d¶¶loop:¶ clc ¶ lda 0350h,x¶ adc #5d¶ sta 0350h,x¶ inx¶ cpx #6d¶ bne loop¶ ¶ brk¶ ¶ end
+
+%/info
+
+%info,parentFoldType="s19",sequence="26",timestamp="2019-02-05 02:17:13.648",username="Brumo",hostname="DESKTOP-2HHTJAH",hostaddresses="192.168.1.3",mpversion=".267"
+      	S00700005541534DC2¶      	S1170200A9018D5003A9028D5103A9038D5203A9048D5303B2¶      	S1170214A9058D5403A9068D5503A20018BD500369059D5087¶      	S10A022803E8E006D0F20038¶      	S9030000FC
+
+%/info
+

@@ -1,0 +1,486 @@
+Problem 1.)
+
+-u 0200
+
+0200  A2 00     LDX #00h
+0202  E8        INX 
+0203  E8        INX 
+0204  E8        INX 
+0205  E8        INX 
+0206  E8        INX 
+0207  00        BRK 
+0208  00        BRK 
+0209  00        BRK 
+020A  00        BRK 
+020B  00        BRK 
+020C  00        BRK 
+020D  00        BRK 
+020E  00        BRK 
+020F  00        BRK 
+0210  00        BRK 
+0211  00        BRK 
+0212  00        BRK 
+0213  00        BRK 
+0214  00        BRK 
+-t 0200
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0202         00         00        00        FF       00010110
+
+0202  E8        INX 
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0203         00         01        00        FF       00010100
+
+0203  E8        INX 
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0204         00         02        00        FF       00010100
+
+0204  E8        INX 
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0205         00         03        00        FF       00010100
+t
+0205  E8        INX 
+-
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0206         00         04        00        FF       00010100
+
+0206  E8        INX 
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0207         00         05        00        FF       00010100
+
+0207  00        BRK 
+-t
+
+Problem 2.)
+
+-u 0200
+
+0200  A0 00     LDY #00h
+0202  C8        INY 
+0203  C8        INY 
+0204  C8        INY 
+0205  C8        INY 
+0206  C8        INY 
+0207  00        BRK 
+0208  00        BRK 
+0209  00        BRK 
+020A  00        BRK 
+020B  00        BRK 
+020C  00        BRK 
+020D  00        BRK 
+020E  00        BRK 
+020F  00        BRK 
+0210  00        BRK 
+0211  00        BRK 
+0212  00        BRK 
+0213  00        BRK 
+0214  00        BRK 
+-t 0200
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0202         00         00        00        FF       00010110
+
+0202  C8        INY 
+-t
+t
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0203         00         00        01        FF       000101
+00
+
+0203  C8        INY 
+-
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(tSP)  NV-BDIZC(SR)
+   0204         00         00        02        FF       00010100
+
+0204  C8        INY 
+-
+t
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0205         00         00        03        FF       00010100
+
+
+0205  C8        INY 
+-
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0206         00         00        04        FF       00010100t
+
+0206  C8        INY 
+-
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0207         00         00        05        FF       00010100
+
+0207  00        BRK 
+-u 0200
+
+0200  A0 00     LDY #00h
+0202  C8        INY 
+0203  C8        INY 
+0204  C8        INY 
+0205  C8        INY 
+0206  C8        INY 
+0207  00        BRK 
+0208  00        BRK 
+0209  00        BRK 
+020A  00        BRK 
+020B  00        BRK 
+020C  00        BRK 
+020D  00        BRK 
+020E  00        BRK 
+020F  00        BRK 
+0210  00        BRK 
+0211  00        BRK 
+0212  00        BRK 
+0213  00        BRK 
+0214  00        BRK 
+-t 0200
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0202         00         00        00        FF       00010110
+
+0202  C8        INY 
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0203         00         00        01        FF       00010100
+
+0203  C8        INY 
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0204         00         00        02        FF       00010100
+
+0204  C8        INY 
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0205         00         00        03        FF       00010100
+
+0205  C8        INY 
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0206         00         00        04        FF       00010100
+
+0206  C8        INY 
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0207         00         00        05        FF       00010100
+
+0207  00        BRK 
+-t
+
+Problem 3.)
+
+-u 0200
+
+0200  A2 04     LDX #04h
+0202  CA        DEX 
+0203  CA        DEX 
+0204  CA        DEX 
+0205  CA        DEX 
+0206  CA        DEX 
+0207  CA        DEX 
+0208  CA        DEX 
+0209  00        BRK 
+020A  00        BRK 
+020B  00        BRK 
+020C  00        BRK 
+020D  00        BRK 
+020E  00        BRK 
+020F  00        BRK 
+0210  00        BRK 
+0211  00        BRK 
+0212  00        BRK 
+0213  00        BRK 
+0214  00        BRK 
+-t 0200
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0202         00         04        00        FF       00010100
+
+0202  CA        DEX 
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0203         00         03        00        FF       00010100
+
+0203  CA        DEX 
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0204         00         02        00        FF       00010100
+
+0204  CA        DEX 
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0205         00         01        00        FF       00010100
+
+0205  CA        DEX 
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0206         00         00        00        FF       00010110
+
+0206  CA        DEX 
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0207         00         FF        00        FF       10010100
+
+0207  CA        DEX 
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0208         00         FE        00        FF       10010100
+
+0208  CA        DEX 
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0209         00         FD        00        FF       10010100
+
+0209  00        BRK 
+-t
+
+Problem 4.)
+
+-u 0200
+
+0200  A9 00     LDA #00h
+0202  8D 20 02  STA 0220h
+0205  EE 20 02  INC 0220h
+0208  EE 20 02  INC 0220h
+020B  EE 20 02  INC 0220h
+020E  00        BRK 
+020F  00        BRK 
+0210  00        BRK 
+0211  00        BRK 
+0212  00        BRK 
+0213  00        BRK 
+0214  00        BRK 
+-t  
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   EE02         00         00        00        FD       00010100
+
+EE02  00        BRK 
+-t 0200
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0202         00         00        00        FF       00010110
+
+0202  8D 20 02  STA 0220h
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0205         00         00        00        FF       00010110
+
+0205  EE 20 02  INC 0220h
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0208         00         00        00        FF       00010100
+
+0208  EE 20 02  INC 0220h
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   020B         00         00        00        FF       00010100
+
+020B  EE 20 02  INC 0220h
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   020E         00         00        00        FF       00010100
+
+020E  00        BRK 
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   020E         00         00        00        FF       00010100
+
+020E  00        BRK 
+-d 0220
+
+Problem 5.)
+
+-u 0200
+
+0200  A2 08     LDX #08h
+0202  CA        DEX 
+0203  D0 FD     BNE 0202h
+0205  00        BRK 
+0206  20 02 EE  JSR EE02h
+0209  20 02 EE  JSR EE02h
+020C  20 02 00  JSR 0002h
+020F  00        BRK 
+0210  00        BRK 
+0211  00        BRK 
+0212  00        BRK 
+0213  00        BRK 
+0214  00        BRK 
+-t 0200
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0202         00         08        00        FF       00010100
+
+0202  CA        DEX 
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0203         00         07        00        FF       00010100
+
+0203  D0 FD     BNE 0202h
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0202         00         07        00        FF       00010100
+
+0202  CA        DEX 
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0203         00         06        00        FF       00010100
+
+0203  D0 FD     BNE 0202h
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0202         00         06        00        FF       00010100
+
+0202  CA        DEX 
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0203         00         05        00        FF       00010100
+
+0203  D0 FD     BNE 0202h
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0202         00         05        00        FF       00010100
+
+0202  CA        DEX 
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0203         00         04        00        FF       00010100
+
+0203  D0 FD     BNE 0202h
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0202         00         04        00        FF       00010100
+
+0202  CA        DEX 
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0203         00         03        00        FF       00010100
+
+0203  D0 FD     BNE 0202h
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0202         00         03        00        FF       00010100
+
+0202  CA        DEX 
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0203         00         02        00        FF       00010100
+
+0203  D0 FD     BNE 0202h
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0202         00         02        00        FF       00010100
+
+0202  CA        DEX 
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0203         00         01        00        FF       00010100
+
+0203  D0 FD     BNE 0202h
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0202         00         01        00        FF       00010100
+
+0202  CA        DEX 
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0203         00         00        00        FF       00010110
+
+0203  D0 FD     BNE 0202h
+-t
+
+
+PgmCntr(PC)  Accum(AC)  XReg(XR)  YReg(YR)  StkPtr(SP)  NV-BDIZC(SR)
+   0205         00         00        00        FF       00010110
+
+0205  00        BRK 
+-t
